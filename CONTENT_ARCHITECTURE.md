@@ -42,7 +42,7 @@ Ordered menu items, mega-menu groups for Expertise.
 
 ## Bilingual Field Pattern
 
-Every public-facing text field is duplicated per locale (`fieldAr` / `fieldEn`) rather than relying on Payload's localization UI auto-copy, so Arabic and English are always independently authored and neither can silently fall back to a machine/placeholder value in production.
+Implemented via Payload's native localization (`localization: { locales: ['ar', 'en'], defaultLocale: 'ar', fallback: false }`). Every public-facing text/richtext field sets `localized: true`. `fallback: false` is the deliberate choice here: if an English (or Arabic) value hasn't been authored yet, Payload returns `null` for that locale rather than silently serving the other language's text, so the frontend can detect and skip/flag missing translations instead of ever publishing a page that looks translated but isn't. This was chosen over hand-rolled `fieldAr`/`fieldEn` field pairs because it gives non-technical editors a standard locale switcher in the admin UI (per brief §46) and keeps the schema and generated types half the size.
 
 ## Relationship Rules
 
