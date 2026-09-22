@@ -4,19 +4,21 @@ Status: Phase 1.
 
 ## 1. Objective
 
-Turn Al Harraz's heritage (since 1983), 15-lawyer full-service bench, and Damietta/maritime positioning into a credible, high-performing bilingual digital platform that generates qualified consultation requests from individuals and businesses across Egypt.
+Turn Al Harraz's heritage (since 1983) and 15-lawyer full-service bench into a credible, high-performing bilingual digital platform that generates qualified consultation requests from individuals and businesses across Egypt.
+
+**Positioning correction (client direction, post-launch-prep review)**: the firm does not want the site centered on maritime law. Civil and criminal litigation are the firm's core, everyday strength and should read as the headline practice areas — the homepage's practice-area preview surfaces Civil Law and Criminal Law first (`featured` field, see `CONTENT_ARCHITECTURE.md`), and there is no longer a dedicated maritime spotlight section or elevated maritime nav link. Maritime/shipping remains a genuine practice area (real Damietta-location asset) but is presented as one of ~16 services, not a specialty headline. See `CMS_GUIDE.md`.
 
 ## 2. Audiences (see also §67 user segments in the brief)
 
-- Individuals with an urgent legal issue (civil, criminal, family, inheritance)
+- Individuals with an urgent legal issue (civil, criminal, family, inheritance) — primary focus
 - Business owners / SMEs (contracts, corporate, disputes)
 - Corporate legal departments and investors
-- Importers/exporters, shipping and logistics companies (maritime cluster)
 - Foreign businesses seeking Egyptian counsel (English site)
+- Importers/exporters, shipping and logistics companies (secondary — maritime/shipping practice area, not a homepage focus)
 
 ## 3. Positioning Pillars
 
-A. Heritage (since 1983) · B. Team (15 lawyers) · C. Full-service capability · D. Damietta + maritime/shipping/port-adjacent expertise.
+A. Heritage (since 1983) · B. Team (15 lawyers) · C. Full-service capability, with civil and criminal litigation as the core strength · D. Damietta presence (full-service, nationwide reach; maritime/shipping expertise available as one of many practice areas, not the headline).
 
 No superlative claims ("best", "#1", "highest success rate") without independently verifiable evidence.
 

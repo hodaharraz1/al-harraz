@@ -4,15 +4,7 @@ import type { Dictionary } from '@/lib/dictionary'
 import { siteConfig } from '@/lib/site-config'
 import { Container } from '@/components/ui/Container'
 
-export function Footer({
-  locale,
-  dict,
-  maritimeHubPublished,
-}: {
-  locale: Locale
-  dict: Dictionary
-  maritimeHubPublished: boolean
-}) {
+export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const p = `/${locale}`
   const year = new Date().getFullYear()
   const name = locale === 'ar' ? siteConfig.legalNameAr : siteConfig.legalNameEn
@@ -30,9 +22,6 @@ export function Footer({
           <h2 className="text-sm font-semibold text-white">{dict.footer.practiceAreas}</h2>
           <ul className="mt-3 space-y-2 text-sm text-neutral-100/80">
             <li><Link href={`${p}/practice-areas`}>{dict.common.viewAll}</Link></li>
-            {maritimeHubPublished ? (
-              <li><Link href={`${p}/practice-areas/maritime-shipping-port-law`}>{dict.nav.maritime}</Link></li>
-            ) : null}
             <li><Link href={`${p}/industries`}>{dict.footer.industries}</Link></li>
           </ul>
         </nav>

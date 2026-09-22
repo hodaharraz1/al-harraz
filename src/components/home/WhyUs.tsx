@@ -7,7 +7,7 @@ const copy = {
       { title: 'خبرة ممتدة منذ 1983', body: 'ممارسة قانونية مستمرة في دمياط لأكثر من أربعة عقود.' },
       { title: 'فريق يضم 15 محاميًا', body: 'تغطية لمختلف فروع القانون المصري تحت سقف واحد.' },
       { title: 'خدمات قانونية شاملة', body: 'من الاستشارات إلى التقاضي والتحكيم والصياغة القانونية.' },
-      { title: 'موقع استراتيجي بحري', body: 'خبرة في القانون البحري والشحن والجمارك نظرًا لموقعنا في دمياط.' },
+      { title: 'خبرة قوية في المدني والجنائي', body: 'تمثيل وتقاضي في القضايا المدنية والجنائية باعتبارها من أقوى مجالات عمل المكتب.' },
     ],
   },
   en: {
@@ -16,7 +16,7 @@ const copy = {
       { title: 'Experience Since 1983', body: 'Continuous legal practice in Damietta for over four decades.' },
       { title: 'A Team of 15 Lawyers', body: 'Coverage across major fields of Egyptian law under one roof.' },
       { title: 'Full-Service Capability', body: 'From advisory to litigation, arbitration and legal drafting.' },
-      { title: 'Strategic Maritime Location', body: 'Maritime, shipping and customs expertise rooted in our Damietta location.' },
+      { title: 'Strong Civil & Criminal Practice', body: 'Litigation and representation in civil and criminal matters as core strengths of the firm.' },
     ],
   },
 } as const

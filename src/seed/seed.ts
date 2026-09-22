@@ -84,7 +84,20 @@ async function run() {
   payload.logger.info('Seeding practice areas as DRAFTS (pending firm/legal review before publish)...')
   for (const pa of practiceAreas) {
     const existing = await payload.find({ collection: 'practice-areas', where: { slug: { equals: pa.slug } }, limit: 1 })
-    if (existing.docs.length > 0) continue
+    const existingDoc = existing.docs[0]
+    if (existingDoc) {
+      // Content/status is left alone once a doc exists (may have been
+      // reviewed/edited in the CMS since), but `featured` reflects the
+      // curated homepage priority set in data.ts, so keep it in sync.
+      if (Boolean(existingDoc['featured']) !== Boolean(pa.featured)) {
+        await payload.update({
+          collection: 'practice-areas',
+          id: existingDoc.id,
+          data: { featured: pa.featured ?? false },
+        })
+      }
+      continue
+    }
     const doc = await payload.create({
       collection: 'practice-areas',
       locale: 'ar',
@@ -92,7 +105,7 @@ async function run() {
         title: pa.title.ar,
         slug: pa.slug,
         summary: pa.summary.ar,
-        isFlagship: pa.isFlagship ?? false,
+        featured: pa.featured ?? false,
         status: 'draft',
         overview: richTextFromPlainText(pa.overview.ar),
       },

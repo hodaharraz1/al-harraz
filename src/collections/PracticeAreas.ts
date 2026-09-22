@@ -41,7 +41,12 @@ export const PracticeAreas: CollectionConfig = {
     { name: 'relatedLawyers', type: 'relationship', relationTo: 'lawyers', hasMany: true },
     { name: 'relatedFaqs', type: 'relationship', relationTo: 'faqs', hasMany: true },
     { name: 'relatedInsights', type: 'relationship', relationTo: 'articles', hasMany: true },
-    { name: 'isFlagship', type: 'checkbox', defaultValue: false, admin: { description: 'True only for the Maritime, Shipping & Port Law Center hub.' } },
+    {
+      name: 'featured',
+      type: 'checkbox',
+      defaultValue: false,
+      admin: { description: 'Shown first (ahead of the alphabetical sort) in the homepage "Major Practice Areas" preview and the practice-areas index.' },
+    },
     { name: 'legalReviewer', type: 'relationship', relationTo: 'users' },
     { name: 'lastReviewedDate', type: 'date' },
     statusField,

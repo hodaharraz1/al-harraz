@@ -2,6 +2,8 @@
 
 Status: Phase 1 — **qualitative priority only**. No search-volume tool was available in this session; priorities below are directional (commercial/geographic intent judgement), not measured data. Re-run this map through Google Search Console/Keyword Planner data post-launch and update priorities with real numbers before Month 2 of `POST_LAUNCH_PLAN.md`.
 
+**Updated per client direction**: Civil Law and Criminal Law keywords raised to High priority (core practice areas); Maritime-related keywords lowered from High to Medium — still a legitimate, real practice area worth targeting given the Damietta location, just no longer the site's headline focus. See `SITE_STRATEGY.md` §1.
+
 Legend — Intent: T=Transactional, C=Commercial, I=Informational, L=Local.
 
 ## Local — Damietta
@@ -13,26 +15,31 @@ Legend — Intent: T=Transactional, C=Commercial, I=Informational, L=Local.
 | محامي استئناف دمياط | L/C | Medium | About / Team |
 | استشارات قانونية دمياط | L/T | High | Consultation |
 | محامي شركات دمياط | L/C | Medium | Practice Areas: Corporate |
-| محامي قضايا دمياط | L/C | Medium | Practice Areas: Litigation |
-| محامي بحري دمياط | L/C | High | Maritime Hub |
-| محامي شحن دمياط | L/C | High | Maritime Hub |
-| محامي ميناء دمياط | L/C | Medium | Maritime Hub (careful: no port-affiliation claim) |
+| محامي قضايا مدنية دمياط | L/C | High | Practice Areas: Civil Law |
+| محامي قضايا جنائية دمياط | L/C | High | Practice Areas: Criminal Law |
+| محامي بحري دمياط | L/C | Medium | Practice Areas: Maritime |
+| محامي شحن دمياط | L/C | Medium | Practice Areas: Maritime |
+| محامي ميناء دمياط | L/C | Low-Medium | Practice Areas: Maritime (careful: no port-affiliation claim) |
 
 ## National — Egypt
 
 | Keyword (AR) | Intent | Priority | Target Page |
 |---|---|---|---|
 | مكتب محاماة في مصر | C | Medium | Home |
+| محامي مدني | C | High | Practice Areas: Civil Law |
+| محامي قضايا مدنية | C | High | Practice Areas: Civil Law |
+| محامي جنائي | C | High | Practice Areas: Criminal Law |
+| محامي قضايا جنائية | C | High | Practice Areas: Criminal Law |
 | محامي شركات في مصر | C | Medium | Practice Areas: Corporate |
 | محامي عقود | C | High | Practice Areas: Contracts |
 | محامي منازعات تجارية | C | High | Practice Areas: Commercial Disputes |
 | محامي استئناف | C | Medium | About / Team |
 | مكتب استشارات قانونية | C | Medium | Consultation |
-| محامي قانون بحري | C | High | Maritime Hub |
-| محامي شحن بحري | C | High | Maritime Hub |
-| محامي شركات شحن | C | High | Maritime Hub / Industries: Shipping |
-| محامي جمارك | C | High | Maritime Hub / Customs |
-| محامي استيراد وتصدير | C | High | Maritime Hub / Industries: Import-Export |
+| محامي قانون بحري | C | Medium | Practice Areas: Maritime |
+| محامي شحن بحري | C | Medium | Practice Areas: Maritime |
+| محامي شركات شحن | C | Medium | Practice Areas: Maritime / Industries: Shipping |
+| محامي جمارك | C | Medium | Practice Areas: Maritime / Customs |
+| محامي استيراد وتصدير | C | Medium | Practice Areas: Maritime / Industries: Import-Export |
 | محامي تحكيم | C | Medium | Practice Areas: Arbitration |
 | محامي تأسيس شركات | T | Medium | Practice Areas: Company Formation |
 
@@ -40,6 +47,10 @@ Legend — Intent: T=Transactional, C=Commercial, I=Informational, L=Local.
 
 | Topic | Intent | Priority | Target Page |
 |---|---|---|---|
+| أساسيات التعويض عن الأضرار المدنية | I | High | Insights / Civil |
+| إجراءات رفع دعوى مدنية في مصر | I | High | Insights / Civil |
+| حقوق المتهم في القضايا الجنائية | I | High | Insights / Criminal |
+| الفرق بين الجنحة والجناية | I | Medium | Insights / Criminal |
 | سند الشحن (Bill of Lading) explained | I | Medium | Insights / Maritime |
 | مطالبات تلف البضائع (Cargo damage claims) | I | Medium | Insights / Maritime |
 | مسؤولية الناقل البحري | I | Medium | Insights / Maritime |

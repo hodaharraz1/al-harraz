@@ -94,7 +94,7 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   CREATE TABLE "practice_areas" (
   	"id" serial PRIMARY KEY NOT NULL,
   	"slug" varchar,
-  	"is_flagship" boolean DEFAULT false,
+  	"featured" boolean DEFAULT false,
   	"legal_reviewer_id" integer,
   	"last_reviewed_date" timestamp(3) with time zone,
   	"status" "enum_practice_areas_status" DEFAULT 'draft',
@@ -135,7 +135,7 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   	"id" serial PRIMARY KEY NOT NULL,
   	"parent_id" integer,
   	"version_slug" varchar,
-  	"version_is_flagship" boolean DEFAULT false,
+  	"version_featured" boolean DEFAULT false,
   	"version_legal_reviewer_id" integer,
   	"version_last_reviewed_date" timestamp(3) with time zone,
   	"version_status" "enum__practice_areas_v_version_status" DEFAULT 'draft',

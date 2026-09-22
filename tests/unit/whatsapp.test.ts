@@ -10,12 +10,9 @@ describe('buildWhatsAppLink', () => {
 
   it('produces a different, URL-safe message per context', () => {
     const general = buildWhatsAppLink('ar', 'general')
-    const maritime = buildWhatsAppLink('ar', 'maritime')
     const consultation = buildWhatsAppLink('ar', 'consultation')
-    expect(general).not.toEqual(maritime)
     expect(general).not.toEqual(consultation)
-    expect(maritime).not.toEqual(consultation)
-    for (const link of [general, maritime, consultation]) {
+    for (const link of [general, consultation]) {
       expect(() => new URL(link)).not.toThrow()
     }
   })

@@ -608,8 +608,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "is_flagship": {
-          "name": "is_flagship",
+        "featured": {
+          "name": "featured",
           "type": "boolean",
           "primaryKey": false,
           "notNull": false,
@@ -1174,8 +1174,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "version_is_flagship": {
-          "name": "version_is_flagship",
+        "version_featured": {
+          "name": "version_featured",
           "type": "boolean",
           "primaryKey": false,
           "notNull": false,
@@ -8316,6 +8316,6 @@
     "tables": {},
     "columns": {}
   },
-  "id": "3a0f31dc-3f03-41c5-a6ab-6efbd1b4bff5",
+  "id": "b79467b4-c3b3-4467-b441-21107a4dbfe6",
   "prevId": "00000000-0000-0000-0000-000000000000"
 }

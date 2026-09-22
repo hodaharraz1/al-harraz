@@ -20,7 +20,7 @@ export async function PracticeAreasGrid({
     locale,
     where: { status: { equals: 'published' } },
     limit: limit ?? 100,
-    sort: 'title',
+    sort: '-featured,title',
     depth: 0,
   })
 

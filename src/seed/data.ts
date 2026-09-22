@@ -16,8 +16,21 @@ export const practiceAreas: Array<{
   title: Bilingual
   summary: Bilingual
   overview: Bilingual
-  isFlagship?: boolean
+  featured?: boolean
 }> = [
+  {
+    slug: 'civil-law',
+    title: { ar: 'القانون المدني', en: 'Civil Law' },
+    summary: {
+      ar: 'تمثيل قانوني واستشارات في المنازعات المدنية والعقود والالتزامات والتعويضات.',
+      en: 'Legal representation and advisory in civil disputes, contracts, obligations, and compensation claims.',
+    },
+    overview: {
+      ar: 'يقدم مكتب آل حراز خدمات قانونية شاملة في القانون المدني، وتشمل منازعات العقود والالتزامات والملكية والتعويضات، مع تمثيل موكلينا أمام المحاكم المدنية بمختلف درجاتها من أجل الوصول إلى أفضل نتيجة ممكنة.',
+      en: 'Al Harraz Law Firm provides comprehensive civil law services, including contract and obligations disputes, property matters, and compensation claims, representing clients before the civil courts at all levels to achieve the best possible outcome.',
+    },
+    featured: true,
+  },
   {
     slug: 'litigation-dispute-resolution',
     title: { ar: 'التقاضي وتسوية المنازعات', en: 'Litigation & Dispute Resolution' },
@@ -80,7 +93,6 @@ export const practiceAreas: Array<{
       ar: 'بحكم موقعنا الاستراتيجي في دمياط، يقدم مكتب آل حراز خدمات قانونية متخصصة في المسائل البحرية والشحن، وتشمل منازعات الشحن، مطالبات البضائع، سندات الشحن، مسؤولية الناقل البحري، التخليص الجمركي، والتجارة الدولية. لا يدّعي المكتب أي تبعية رسمية لهيئة ميناء دمياط.',
       en: 'Given our strategic location in Damietta, Al Harraz Law Firm provides specialized legal services in maritime and shipping matters, including shipping disputes, cargo claims, bills of lading, carrier liability, customs clearance, and international trade. The firm does not claim any official affiliation with Damietta Port Authority.',
     },
-    isFlagship: true,
   },
   {
     slug: 'customs-import-export',
@@ -144,6 +156,7 @@ export const practiceAreas: Array<{
       ar: 'نقدم الدفاع القانوني والتمثيل في القضايا الجنائية أمام النيابة العامة ومختلف درجات المحاكم الجنائية.',
       en: 'We provide legal defense and representation in criminal matters before the Public Prosecution and the criminal courts.',
     },
+    featured: true,
   },
   {
     slug: 'intellectual-property',

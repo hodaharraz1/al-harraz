@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation'
 import { isLocale, localeDirection, locales } from '@/lib/i18n'
 import { getDictionary } from '@/lib/dictionary'
 import { siteConfig } from '@/lib/site-config'
-import { isMaritimeHubPublished } from '@/lib/maritime'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { MobileCtaBar } from '@/components/layout/MobileCtaBar'
@@ -52,15 +51,14 @@ export default async function LocaleLayout({
   if (!isLocale(rawLocale)) notFound()
   const locale = rawLocale
   const dict = getDictionary(locale)
-  const maritimeHubPublished = await isMaritimeHubPublished()
 
   return (
     <html lang={locale} dir={localeDirection[locale]}>
       <body className="min-h-screen bg-neutral-50 pb-16 text-navy-950 antialiased lg:pb-0">
         <SkipLink locale={locale} />
-        <Header locale={locale} dict={dict} maritimeHubPublished={maritimeHubPublished} />
+        <Header locale={locale} dict={dict} />
         <main id="main-content">{children}</main>
-        <Footer locale={locale} dict={dict} maritimeHubPublished={maritimeHubPublished} />
+        <Footer locale={locale} dict={dict} />
         <MobileCtaBar locale={locale} dict={dict} />
       </body>
     </html>

@@ -8,8 +8,6 @@ import { Section } from '@/components/ui/Section'
 import { Hero } from '@/components/home/Hero'
 import { HelpSplit } from '@/components/home/HelpSplit'
 import { PracticeAreasGrid } from '@/components/home/PracticeAreasGrid'
-import { MaritimeFeature } from '@/components/home/MaritimeFeature'
-import { isMaritimeHubPublished } from '@/lib/maritime'
 import { HeritageSection } from '@/components/home/HeritageSection'
 import { TeamPreview } from '@/components/home/TeamPreview'
 import { IndustriesGrid } from '@/components/home/IndustriesGrid'
@@ -42,7 +40,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale: rawLocale } = await params
   const locale = isLocale(rawLocale) ? rawLocale : 'ar'
   const dict = getDictionary(locale)
-  const maritimeHubPublished = await isMaritimeHubPublished()
 
   return (
     <>
@@ -58,30 +55,26 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <HelpSplit locale={locale} />
 
       <Section tone="light">
-        <MaritimeFeature locale={locale} isPublished={maritimeHubPublished} />
-      </Section>
-
-      <Section tone="neutral">
         <HeritageSection locale={locale} />
       </Section>
 
-      <Section tone="light">
+      <Section tone="neutral">
         <TeamPreview locale={locale} heading={locale === 'ar' ? 'تعرف على فريقنا' : 'Meet the Team'} />
       </Section>
 
-      <Section tone="neutral">
+      <Section tone="light">
         <IndustriesGrid locale={locale} limit={8} heading={locale === 'ar' ? 'القطاعات' : 'Industries'} />
       </Section>
 
-      <Section tone="light">
+      <Section tone="neutral">
         <WhyUs locale={locale} />
       </Section>
 
-      <Section tone="neutral">
+      <Section tone="light">
         <InsightsPreview locale={locale} heading={locale === 'ar' ? 'أحدث المقالات' : 'Latest Insights'} />
       </Section>
 
-      <Section tone="light">
+      <Section tone="neutral">
         <FaqSection locale={locale} heading={dict.common.faqs} />
       </Section>
 

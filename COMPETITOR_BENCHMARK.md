@@ -32,7 +32,8 @@ No content, layout, or visual design from these firms is to be copied. This matr
 ## Differentiation Strategy
 
 1. **Heritage since 1983** — no verified regional competitor in this list markets a comparable multi-decade Damietta-rooted history this prominently.
-2. **Damietta + maritime/shipping/port positioning** — a genuine geographic and vertical niche none of the benchmarked firms own locally.
+2. **Strong civil and criminal litigation practice** — positioned as the firm's core, everyday strength, ahead of any single specialty.
 3. **Full-service capability at human scale** — 15 lawyers positioned as an accessible, responsive full-service team rather than a faceless mega-firm.
 4. **Arabic-first authority** — original Arabic legal content (not translated-down English), matching how most prospective individual clients actually search.
 5. **Mobile-first conversion discipline** — most competitor sites are desktop-optimized; Al Harraz targets a mobile-majority Egyptian search audience with frictionless call/WhatsApp/consultation paths.
+6. **Damietta presence + maritime/shipping expertise available** — a real, genuine local asset, but per client direction it is presented as one practice area among many rather than the headline positioning (see `SITE_STRATEGY.md` §1).

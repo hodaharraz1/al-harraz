@@ -10,33 +10,22 @@ import { LinkButton } from '@/components/ui/Button'
 
 type NavItem = { href: string; label: string; highlight?: boolean }
 
-function buildNavItems(locale: Locale, dict: Dictionary, maritimeHubPublished: boolean): NavItem[] {
+function buildNavItems(locale: Locale, dict: Dictionary): NavItem[] {
   const p = `/${locale}`
   return [
     { href: `${p}/about`, label: dict.nav.about },
     { href: `${p}/team`, label: dict.nav.people },
     { href: `${p}/practice-areas`, label: dict.nav.expertise },
     { href: `${p}/industries`, label: dict.nav.industries },
-    // Only linked once published — otherwise this is a dead 404 link on
-    // every page's nav (caught during a pre-launch internal-link crawl).
-    ...(maritimeHubPublished ? [{ href: `${p}/practice-areas/maritime-shipping-port-law`, label: dict.nav.maritime }] : []),
     { href: `${p}/insights`, label: dict.nav.insights },
     { href: `${p}/contact`, label: dict.nav.contact },
   ]
 }
 
-export function Header({
-  locale,
-  dict,
-  maritimeHubPublished,
-}: {
-  locale: Locale
-  dict: Dictionary
-  maritimeHubPublished: boolean
-}) {
+export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
-  const navItems = buildNavItems(locale, dict, maritimeHubPublished)
+  const navItems = buildNavItems(locale, dict)
   const homeHref = `/${locale}`
 
   return (

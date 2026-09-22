@@ -7,7 +7,7 @@ Payload CMS admin lives at `/admin`. First visit with an empty `users` table sho
 | Collection | Purpose | Draft/Publish | Notes |
 |---|---|---|---|
 | `pages` | Flexible standalone pages (About body copy, disclaimers, etc.) | Yes | Not yet wired into a live route — currently About/Privacy/Terms content is hardcoded bilingual copy in their page components, not CMS-driven. See "Known Gap" below. |
-| `practice-areas` | Service pages, including the Maritime flagship (`isFlagship: true`) | Yes | Seeded as 15 **drafts** — not publicly visible until reviewed and published. |
+| `practice-areas` | Service pages (16 seeded, incl. a distinct Civil Law entry and Maritime, Shipping & Port Law) | Yes | Seeded as **drafts** — not publicly visible until reviewed and published. Civil Law and Criminal Law are marked `featured: true` so they surface first in the homepage/index previews, per client direction — see `CONTENT_REQUIRED.md`. |
 | `industries` | Sector pages, written from the client's business-problem angle | Yes | Seeded as 7 **drafts**. |
 | `lawyers` | Team directory + individual profiles | Yes | Only the 3 named lawyers from the brief are seeded, and only with verified fields (name, founder flag) — **published**, since those facts are verified. The other 12 slots are not fabricated; add them here as real data arrives. |
 | `articles` | Insights/blog. Requires a `legalReviewer` before `status` can be set to `published` — enforced by a `beforeChange` hook, not just a UI hint. | Yes | Nothing seeded — see `CONTENT_REQUIRED.md`. |
