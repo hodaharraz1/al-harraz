@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { Locale } from '@/lib/i18n'
@@ -32,6 +33,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     <header className="sticky top-0 z-40 border-b border-navy-900/10 bg-neutral-50/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href={homeHref} className="flex items-center gap-2 text-base font-bold text-navy-950">
+          <Image src="/logo-icon.png" alt="" width={40} height={40} className="h-10 w-10" priority />
           {locale === 'ar' ? 'آل حراز' : 'Al Harraz'}
         </Link>
 

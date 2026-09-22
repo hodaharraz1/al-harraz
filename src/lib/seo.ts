@@ -41,7 +41,7 @@ export function buildMetadata({
       siteName: locale === 'ar' ? siteConfig.legalNameAr : siteConfig.legalNameEn,
       locale: locale === 'ar' ? 'ar_EG' : 'en_US',
       type: 'website',
-      images: ogImagePath ? [{ url: ogImagePath }] : undefined,
+      images: [{ url: ogImagePath ?? '/logo-full.png' }],
     },
     twitter: {
       card: 'summary_large_image',

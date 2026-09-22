@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Locale } from '@/lib/i18n'
 import type { Dictionary } from '@/lib/dictionary'
@@ -14,7 +15,10 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     <footer className="border-t border-navy-900/10 bg-navy-950 text-neutral-100">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="text-lg font-bold text-white">{name}</p>
+          <div className="flex items-center gap-2">
+            <Image src="/logo-icon.png" alt="" width={36} height={36} className="h-9 w-9" />
+            <p className="text-lg font-bold text-white">{name}</p>
+          </div>
           <p className="mt-3 text-sm text-neutral-100/80">{dict.footer.description}</p>
         </div>
 
