@@ -93,9 +93,13 @@ export function ConsultationForm({ locale, sourcePage }: { locale: Locale; sourc
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-5">
-      {/* Honeypot field — hidden from sighted users, left blank by bots. */}
-      <div aria-hidden="true" className="absolute -left-[9999px]">
+    <form onSubmit={handleSubmit} noValidate className="relative space-y-5">
+      {/* Honeypot field — hidden from sighted users, left blank by bots.
+          Clipped via a zero-size overflow-hidden wrapper (scoped to this
+          relatively-positioned form) rather than a large negative offset,
+          which previously escaped the form and caused page-wide horizontal
+          overflow — see TESTING.md. */}
+      <div aria-hidden="true" className="absolute h-0 w-0 overflow-hidden">
         <label htmlFor="companyWebsite">Company Website</label>
         <input type="text" id="companyWebsite" name="companyWebsite" tabIndex={-1} autoComplete="off" />
       </div>

@@ -43,8 +43,11 @@ describe('consultationSchema', () => {
   })
 
   it('rejects an unknown locale', () => {
-    // @ts-expect-error deliberately invalid input
-    const result = consultationSchema.safeParse({ ...validPayload, locale: 'fr' })
+    // safeParse's input is `unknown` at the type level (runtime validation is
+    // the point), so the invalid value is injected via a plain object rather
+    // than relying on a compile-time type error.
+    const invalid: Record<string, unknown> = { ...validPayload, locale: 'fr' }
+    const result = consultationSchema.safeParse(invalid)
     expect(result.success).toBe(false)
   })
 })
