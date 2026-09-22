@@ -47,6 +47,12 @@ export const PracticeAreas: CollectionConfig = {
       defaultValue: false,
       admin: { description: 'Shown first (ahead of the alphabetical sort) in the homepage "Major Practice Areas" preview and the practice-areas index.' },
     },
+    {
+      name: 'order',
+      type: 'number',
+      defaultValue: 100,
+      admin: { description: 'Business-priority display order (lower = earlier) — this is site information architecture, not a claim of specialization. See SITE_STRATEGY.md §1.' },
+    },
     { name: 'legalReviewer', type: 'relationship', relationTo: 'users' },
     { name: 'lastReviewedDate', type: 'date' },
     statusField,

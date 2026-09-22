@@ -17,9 +17,11 @@ export const practiceAreas: Array<{
   summary: Bilingual
   overview: Bilingual
   featured?: boolean
+  order: number
 }> = [
   {
     slug: 'civil-law',
+    order: 1,
     title: { ar: 'القانون المدني', en: 'Civil Law' },
     summary: {
       ar: 'تمثيل قانوني واستشارات في المنازعات المدنية والعقود والالتزامات والتعويضات.',
@@ -33,6 +35,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'litigation-dispute-resolution',
+    order: 2,
     title: { ar: 'التقاضي وتسوية المنازعات', en: 'Litigation & Dispute Resolution' },
     summary: {
       ar: 'تمثيل قانوني أمام مختلف درجات التقاضي في المنازعات المدنية والتجارية.',
@@ -45,6 +48,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'corporate-commercial-law',
+    order: 8,
     title: { ar: 'قانون الشركات والقانون التجاري', en: 'Corporate & Commercial Law' },
     summary: {
       ar: 'تأسيس الشركات، الحوكمة، والعقود التجارية.',
@@ -57,6 +61,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'company-formation-investment',
+    order: 9,
     title: { ar: 'تأسيس الشركات والاستثمار', en: 'Company Formation & Investment' },
     summary: { ar: 'إجراءات تأسيس الشركات والاستثمار في مصر.', en: 'Company formation and investment procedures in Egypt.' },
     overview: {
@@ -66,6 +71,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'contracts-commercial-agreements',
+    order: 3,
     title: { ar: 'العقود والاتفاقيات التجارية', en: 'Contracts & Commercial Agreements' },
     summary: { ar: 'صياغة ومراجعة وتفاوض العقود.', en: 'Drafting, reviewing, and negotiating contracts.' },
     overview: {
@@ -75,6 +81,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'arbitration',
+    order: 13,
     title: { ar: 'التحكيم', en: 'Arbitration' },
     summary: { ar: 'تمثيل الأطراف في إجراءات التحكيم التجاري.', en: 'Representing parties in commercial arbitration proceedings.' },
     overview: {
@@ -84,6 +91,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'maritime-shipping-port-law',
+    order: 20,
     title: { ar: 'القانون البحري والشحن والخدمات القانونية المرتبطة بالموانئ', en: 'Maritime, Shipping & Port-Related Legal Services' },
     summary: {
       ar: 'خبرة قانونية في الأعمال البحرية والشحن والخدمات المرتبطة بالموانئ، بحكم موقع المكتب في دمياط.',
@@ -96,6 +104,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'customs-import-export',
+    order: 21,
     title: { ar: 'الجمارك والاستيراد والتصدير', en: 'Customs & Import/Export' },
     summary: { ar: 'استشارات قانونية في المسائل الجمركية والتجارة الدولية.', en: 'Legal advisory on customs matters and international trade.' },
     overview: {
@@ -105,6 +114,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'employment-labour-law',
+    order: 12,
     title: { ar: 'قانون العمل والعمالة', en: 'Employment & Labour Law' },
     summary: { ar: 'استشارات قانونية لأصحاب العمل والعاملين.', en: 'Legal advisory for employers and employees.' },
     overview: {
@@ -114,6 +124,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'real-estate-property-registration',
+    order: 4,
     title: { ar: 'العقارات وتسجيل الملكية', en: 'Real Estate & Property Registration' },
     summary: { ar: 'استشارات قانونية في المعاملات العقارية وتسجيل الملكية.', en: 'Legal advisory on real estate transactions and property registration.' },
     overview: {
@@ -123,6 +134,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'family-law-personal-status',
+    order: 7,
     title: { ar: 'الأحوال الشخصية', en: 'Family Law & Personal Status' },
     summary: { ar: 'قضايا الأحوال الشخصية كالزواج والطلاق والحضانة.', en: 'Personal status matters such as marriage, divorce, and custody.' },
     overview: {
@@ -132,6 +144,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'administrative-law',
+    order: 11,
     title: { ar: 'القانون الإداري', en: 'Administrative Law' },
     summary: { ar: 'المنازعات أمام مجلس الدولة.', en: 'Disputes before the State Council.' },
     overview: {
@@ -141,6 +154,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'debt-recovery-enforcement',
+    order: 5,
     title: { ar: 'تحصيل الديون والتنفيذ', en: 'Debt Recovery & Enforcement' },
     summary: { ar: 'إجراءات تحصيل الديون وتنفيذ الأحكام.', en: 'Debt recovery procedures and judgment enforcement.' },
     overview: {
@@ -150,6 +164,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'criminal-law',
+    order: 10,
     title: { ar: 'القانون الجنائي', en: 'Criminal Law' },
     summary: { ar: 'الدفاع والتمثيل في القضايا الجنائية.', en: 'Defense and representation in criminal matters.' },
     overview: {
@@ -160,6 +175,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'intellectual-property',
+    order: 15,
     title: { ar: 'الملكية الفكرية', en: 'Intellectual Property' },
     summary: { ar: 'حماية العلامات التجارية وحقوق الملكية الفكرية.', en: 'Trademark protection and intellectual property rights.' },
     overview: {
@@ -169,6 +185,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'legal-advisory',
+    order: 19,
     title: { ar: 'الاستشارات القانونية العامة', en: 'General Legal Advisory' },
     summary: { ar: 'استشارات قانونية عامة للأفراد والشركات.', en: 'General legal advisory for individuals and businesses.' },
     overview: {
@@ -178,6 +195,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'inheritance-estates',
+    order: 6,
     title: { ar: 'الميراث والتركات', en: 'Inheritance & Estates' },
     summary: {
       ar: 'استشارات وتمثيل قانوني في قسمة التركات ومنازعات الميراث.',
@@ -190,6 +208,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'tax-law',
+    order: 14,
     title: { ar: 'القانون الضريبي', en: 'Tax Law' },
     summary: {
       ar: 'استشارات قانونية ضريبية للأفراد والشركات، وتمثيل في المنازعات الضريبية.',
@@ -202,6 +221,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'banking-finance-law',
+    order: 18,
     title: { ar: 'قانون البنوك والتمويل', en: 'Banking & Finance Law' },
     summary: {
       ar: 'استشارات قانونية في المعاملات المصرفية والتمويلية.',
@@ -214,6 +234,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'insurance-disputes',
+    order: 16,
     title: { ar: 'منازعات التأمين', en: 'Insurance Disputes' },
     summary: {
       ar: 'تمثيل قانوني في منازعات وثائق ومطالبات التأمين.',
@@ -226,6 +247,7 @@ export const practiceAreas: Array<{
   },
   {
     slug: 'consumer-protection',
+    order: 17,
     title: { ar: 'حماية المستهلك', en: 'Consumer Protection' },
     summary: {
       ar: 'استشارات وتمثيل قانوني في منازعات حماية المستهلك.',

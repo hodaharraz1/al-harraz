@@ -24,10 +24,14 @@ export async function HeritageSection({ locale }: { locale: Locale }) {
   const t = copy[locale]
 
   return (
-    <div>
-      <h2 className="text-2xl font-bold sm:text-3xl">{t.heading}</h2>
-      <p className="mt-3 max-w-2xl text-navy-900/80">{t.intro}</p>
-      <ol className="mt-8 space-y-6 border-s-2 border-cyan-600/30 ps-6">
+    <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-16">
+      <p className="font-heading text-6xl leading-none text-navy-900/10 sm:text-8xl lg:text-9xl" aria-hidden="true">
+        {siteConfig.foundingYear}
+      </p>
+      <div>
+        <h2 className="font-heading text-2xl sm:text-3xl">{t.heading}</h2>
+        <p className="mt-3 max-w-2xl text-navy-900/80">{t.intro}</p>
+        <ol className="mt-8 space-y-6 border-s-2 border-cyan-600/30 ps-6">
         {result.docs.length > 0
           ? result.docs.map((doc) => (
               <li key={doc.id}>
@@ -46,7 +50,8 @@ export async function HeritageSection({ locale }: { locale: Locale }) {
                 </p>
               </li>
             )}
-      </ol>
+        </ol>
+      </div>
     </div>
   )
 }

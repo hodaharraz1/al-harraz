@@ -20,7 +20,7 @@ export function OfficeSection({ locale }: { locale: Locale }) {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold sm:text-3xl">{t.heading}</h2>
+      <h2 className="text-2xl font-bold sm:text-3xl font-heading">{t.heading}</h2>
       <div className="mt-6 grid gap-6 sm:grid-cols-2">
         <div>
           <p className="text-navy-900/85">{address}</p>

@@ -1,18 +1,20 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
 
-type Variant = 'primary' | 'secondary' | 'ghost'
+type Variant = 'primary' | 'secondary' | 'ghost' | 'accent'
 
 const variantClasses: Record<Variant, string> = {
   primary:
     'bg-cyan-600 text-white hover:bg-cyan-500 focus-visible:outline-cyan-600',
   secondary:
-    'bg-navy-900 text-white hover:bg-navy-800 focus-visible:outline-navy-900',
+    'bg-transparent text-navy-900 border-2 border-navy-900 hover:bg-navy-900 hover:text-white focus-visible:outline-navy-900',
   ghost:
     'bg-transparent text-navy-900 border border-navy-900/20 hover:bg-navy-900/5 focus-visible:outline-navy-900',
+  accent:
+    'bg-bronze-500 text-white hover:bg-bronze-600 focus-visible:outline-bronze-600',
 }
 
 const base =
-  'inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-50'
+  'inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-50'
 
 export function Button({
   children,

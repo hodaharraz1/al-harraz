@@ -8,7 +8,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     <section className="bg-navy-950 text-neutral-50">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-wide text-cyan-400">{dict.trust.since}</p>
-        <h1 className="mt-3 max-w-3xl text-3xl font-bold leading-tight sm:text-5xl">{dict.hero.headline}</h1>
+        <h1 className="font-heading mt-3 max-w-3xl text-3xl leading-tight sm:text-5xl">{dict.hero.headline}</h1>
         <p className="mt-3 text-lg font-medium text-cyan-300">{dict.hero.subheadline}</p>
         <p className="mt-5 max-w-2xl text-base text-neutral-100/85 sm:text-lg">{dict.hero.valueProp}</p>
 
@@ -16,7 +16,13 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <LinkButton href={`/${locale}/consultation`} variant="primary">
             {dict.hero.ctaPrimary}
           </LinkButton>
-          <LinkButton href={buildWhatsAppLink(locale, 'general')} variant="secondary" target="_blank" rel="noopener noreferrer">
+          <LinkButton
+            href={buildWhatsAppLink(locale, 'general')}
+            variant="secondary"
+            className="border-white text-white hover:bg-white hover:text-navy-950"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {dict.hero.ctaSecondary}
           </LinkButton>
           <LinkButton href={buildTelLink()} variant="ghost" className="border-white/30 text-white hover:bg-white/10">

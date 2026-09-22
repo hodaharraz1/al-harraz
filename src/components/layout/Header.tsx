@@ -14,6 +14,7 @@ type NavItem = { href: string; label: string; highlight?: boolean }
 function buildNavItems(locale: Locale, dict: Dictionary): NavItem[] {
   const p = `/${locale}`
   return [
+    { href: p, label: dict.nav.home },
     { href: `${p}/about`, label: dict.nav.about },
     { href: `${p}/team`, label: dict.nav.people },
     { href: `${p}/practice-areas`, label: dict.nav.expertise },

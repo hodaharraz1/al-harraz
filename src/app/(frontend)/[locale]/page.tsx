@@ -6,8 +6,10 @@ import { organizationSchema, websiteSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Section } from '@/components/ui/Section'
 import { Hero } from '@/components/home/Hero'
+import { CivilFocus } from '@/components/home/CivilFocus'
 import { HelpSplit } from '@/components/home/HelpSplit'
 import { PracticeAreasGrid } from '@/components/home/PracticeAreasGrid'
+import { MaritimeNote } from '@/components/home/MaritimeNote'
 import { HeritageSection } from '@/components/home/HeritageSection'
 import { TeamPreview } from '@/components/home/TeamPreview'
 import { IndustriesGrid } from '@/components/home/IndustriesGrid'
@@ -48,8 +50,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <Hero locale={locale} dict={dict} />
 
+      <Section tone="neutral">
+        <CivilFocus locale={locale} />
+      </Section>
+
       <Section tone="light">
-        <PracticeAreasGrid locale={locale} limit={6} heading={locale === 'ar' ? 'أبرز مجالات العمل' : 'Major Practice Areas'} />
+        <PracticeAreasGrid locale={locale} limit={12} heading={locale === 'ar' ? 'أبرز مجالات العمل' : 'Major Practice Areas'} />
+        <div className="mt-10">
+          <MaritimeNote locale={locale} />
+        </div>
       </Section>
 
       <HelpSplit locale={locale} />

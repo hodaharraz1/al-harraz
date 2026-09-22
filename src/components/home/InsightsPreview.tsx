@@ -31,7 +31,7 @@ export async function InsightsPreview({
 
   return (
     <div>
-      <h2 className={visuallyHiddenHeading ? 'sr-only' : 'text-2xl font-bold sm:text-3xl'}>{heading}</h2>
+      <h2 className={visuallyHiddenHeading ? 'sr-only' : 'text-2xl font-bold sm:text-3xl font-heading'}>{heading}</h2>
       <div className="mt-8 grid gap-5 sm:grid-cols-3">
         {result.docs.map((doc) => (
           <Link key={doc.id} href={`/${locale}/insights/${doc['slug']}`}>

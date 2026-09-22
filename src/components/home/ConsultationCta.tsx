@@ -12,7 +12,7 @@ export function ConsultationCta({ locale, dict }: { locale: Locale; dict: Dictio
   const t = copy[locale]
   return (
     <div className="rounded-[var(--radius-card)] bg-cyan-600 p-8 text-center text-white sm:p-12">
-      <h2 className="text-2xl font-bold sm:text-3xl">{t.heading}</h2>
+      <h2 className="text-2xl font-bold sm:text-3xl font-heading">{t.heading}</h2>
       <p className="mt-2 text-cyan-50">{t.body}</p>
       <div className="mt-6 flex flex-wrap justify-center gap-3">
         <LinkButton href={`/${locale}/consultation`} variant="secondary">

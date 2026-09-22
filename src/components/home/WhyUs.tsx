@@ -25,7 +25,7 @@ export function WhyUs({ locale }: { locale: Locale }) {
   const t = copy[locale]
   return (
     <div>
-      <h2 className="text-2xl font-bold sm:text-3xl">{t.heading}</h2>
+      <h2 className="text-2xl font-bold sm:text-3xl font-heading">{t.heading}</h2>
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {t.items.map((item) => (
           <div key={item.title}>

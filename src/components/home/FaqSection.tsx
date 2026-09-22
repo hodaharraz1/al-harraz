@@ -28,7 +28,7 @@ export async function FaqSection({
 
   return (
     <div>
-      <h2 className="text-2xl font-bold sm:text-3xl">{heading}</h2>
+      <h2 className="text-2xl font-bold sm:text-3xl font-heading">{heading}</h2>
       <dl className="mt-8 divide-y divide-navy-900/10">
         {result.docs.map((doc) => (
           <div key={doc.id} className="py-5">

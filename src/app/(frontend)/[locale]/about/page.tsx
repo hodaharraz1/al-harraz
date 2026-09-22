@@ -53,7 +53,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
       <Section tone="light">
         <Breadcrumbs items={breadcrumbs} />
-        <h1 className="mt-4 text-3xl font-bold sm:text-4xl">{t.title}</h1>
+        <h1 className="mt-4 font-heading text-3xl sm:text-4xl">{t.title}</h1>
 
         <div className="mt-8 max-w-2xl space-y-4">
           <h2 className="text-xl font-semibold">{t.overviewHeading}</h2>

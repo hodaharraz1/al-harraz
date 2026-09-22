@@ -37,7 +37,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
       <Section tone="light">
         <Breadcrumbs items={breadcrumbs} />
-        <h1 className="mt-4 text-3xl font-bold sm:text-4xl">{t.title}</h1>
+        <h1 className="mt-4 font-heading text-3xl sm:text-4xl">{t.title}</h1>
         <div className="mt-6 flex flex-wrap gap-3">
           <LinkButton href={buildTelLink()} variant="primary">
             {dict.cta.call}

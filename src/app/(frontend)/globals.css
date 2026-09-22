@@ -7,8 +7,10 @@
  * restrained accent. No excessive gold per brief §04.
  */
 @theme {
-  --font-sans-en: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-sans-ar: 'IBM Plex Sans Arabic', 'Tajawal', ui-sans-serif, system-ui, sans-serif;
+  --font-sans-en: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-sans-ar: var(--font-ibm-plex-arabic), 'IBM Plex Sans Arabic', 'Tajawal', ui-sans-serif, system-ui, sans-serif;
+  --font-heading-en: var(--font-source-serif), 'Source Serif 4', Georgia, serif;
+  --font-heading-ar: var(--font-markazi), 'Markazi Text', var(--font-ibm-plex-arabic), serif;
 
   --color-navy-950: #05141f;
   --color-navy-900: #0a2233;
@@ -26,16 +28,21 @@
   --color-cyan-400: #35c2dd;
   --color-cyan-300: #7cd8ea;
 
+  --color-bronze-600: #8a6428;
   --color-bronze-500: #a67c3d;
   --color-bronze-400: #c0975a;
+  --color-bronze-100: #ede2cd;
 
   --color-neutral-950: #14181b;
-  --color-neutral-50: #f7f6f3;
-  --color-neutral-100: #eeece6;
+  --color-neutral-50: #faf8f3;
+  --color-neutral-100: #f1ece1;
+  --color-neutral-200: #e4dccb;
 
   --color-alert-red: #b3261e;
 
-  --radius-card: 0.75rem;
+  /* Kept small and architectural on purpose — the brief explicitly calls
+     out large border-radius as a "generic SaaS template" signal. */
+  --radius-card: 0.25rem;
 }
 
 html {
@@ -53,6 +60,19 @@ body {
 
 [dir='ltr'] body {
   font-family: var(--font-sans-en);
+}
+
+/* Editorial display face for headings — serif in both directions, used
+   sparingly (H1s and section headings) for the "established practice"
+   feel the brief asks for, distinct from the sans-serif body copy. */
+.font-heading {
+  font-family: var(--font-heading-ar);
+  font-weight: 600;
+}
+
+[dir='ltr'] .font-heading {
+  font-family: var(--font-heading-en);
+  font-weight: 600;
 }
 
 .skip-link {

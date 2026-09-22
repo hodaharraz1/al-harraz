@@ -13,7 +13,7 @@ const copy = {
     },
     businesses: {
       title: 'للشركات والمؤسسات',
-      body: 'تأسيس الشركات، العقود، المنازعات التجارية، الشحن والجمارك، والاستشارات القانونية للأعمال.',
+      body: 'العقود والالتزامات، المنازعات التجارية، تحصيل الديون، علاقات العمل، وتأسيس الشركات والاستشارات القانونية للأعمال.',
       cta: 'استشارة للشركات',
     },
   },
@@ -26,7 +26,7 @@ const copy = {
     },
     businesses: {
       title: 'For Businesses',
-      body: 'Company formation, contracts, commercial disputes, shipping and customs, and business legal advisory.',
+      body: 'Contracts and obligations, commercial disputes, debt recovery, employment matters, and company formation and business advisory.',
       cta: 'Business Consultation',
     },
   },
@@ -36,7 +36,7 @@ export function HelpSplit({ locale }: { locale: Locale }) {
   const t = copy[locale]
   return (
     <Section tone="neutral">
-      <h2 className="text-2xl font-bold sm:text-3xl">{t.heading}</h2>
+      <h2 className="text-2xl font-bold sm:text-3xl font-heading">{t.heading}</h2>
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         <Card>
           <h3 className="text-lg font-semibold">{t.individuals.title}</h3>

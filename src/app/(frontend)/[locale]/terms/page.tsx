@@ -70,7 +70,7 @@ export default async function TermsPage({ params }: { params: Promise<{ locale: 
   return (
     <Section tone="light">
       <Breadcrumbs items={breadcrumbs} />
-      <h1 className="mt-4 text-3xl font-bold sm:text-4xl">{t.title}</h1>
+      <h1 className="mt-4 font-heading text-3xl sm:text-4xl">{t.title}</h1>
       <div className="mt-8 max-w-2xl space-y-8">
         {t.sections.map((section) => (
           <div key={section.heading}>

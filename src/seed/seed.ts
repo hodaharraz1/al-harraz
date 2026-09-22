@@ -81,20 +81,21 @@ async function run() {
     })
   }
 
-  payload.logger.info('Seeding practice areas as DRAFTS (pending firm/legal review before publish)...')
+  payload.logger.info('Seeding practice areas (generic, non-fabricated service-capability copy; published per firm direction)...')
   for (const pa of practiceAreas) {
     const existing = await payload.find({ collection: 'practice-areas', where: { slug: { equals: pa.slug } }, limit: 1 })
     const existingDoc = existing.docs[0]
     if (existingDoc) {
-      // Content/status is left alone once a doc exists (may have been
-      // reviewed/edited in the CMS since), but `featured` reflects the
-      // curated homepage priority set in data.ts, so keep it in sync.
-      if (Boolean(existingDoc['featured']) !== Boolean(pa.featured)) {
-        await payload.update({
-          collection: 'practice-areas',
-          id: existingDoc.id,
-          data: { featured: pa.featured ?? false },
-        })
+      // Content is left alone once a doc exists (may have been reviewed/
+      // edited in the CMS since), but `featured`, `order` and `status`
+      // reflect the curated homepage priority set in data.ts, so keep
+      // those in sync.
+      const patch: Record<string, unknown> = {}
+      if (Boolean(existingDoc['featured']) !== Boolean(pa.featured)) patch.featured = pa.featured ?? false
+      if (existingDoc['order'] !== pa.order) patch.order = pa.order
+      if (existingDoc['status'] !== 'published') patch.status = 'published'
+      if (Object.keys(patch).length > 0) {
+        await payload.update({ collection: 'practice-areas', id: existingDoc.id, data: patch })
       }
       continue
     }
@@ -106,7 +107,8 @@ async function run() {
         slug: pa.slug,
         summary: pa.summary.ar,
         featured: pa.featured ?? false,
-        status: 'draft',
+        order: pa.order,
+        status: 'published',
         overview: richTextFromPlainText(pa.overview.ar),
       },
     })
@@ -122,10 +124,16 @@ async function run() {
     })
   }
 
-  payload.logger.info('Seeding industries as DRAFTS (pending firm/legal review before publish)...')
+  payload.logger.info('Seeding industries (generic, non-fabricated copy; published per firm direction)...')
   for (const ind of industries) {
     const existing = await payload.find({ collection: 'industries', where: { slug: { equals: ind.slug } }, limit: 1 })
-    if (existing.docs.length > 0) continue
+    const existingIndDoc = existing.docs[0]
+    if (existingIndDoc) {
+      if (existingIndDoc['status'] !== 'published') {
+        await payload.update({ collection: 'industries', id: existingIndDoc.id, data: { status: 'published' } })
+      }
+      continue
+    }
     const doc = await payload.create({
       collection: 'industries',
       locale: 'ar',
@@ -133,7 +141,7 @@ async function run() {
         title: ind.title.ar,
         slug: ind.slug,
         summary: ind.summary.ar,
-        status: 'draft',
+        status: 'published',
         businessProblems: richTextFromPlainText(ind.businessProblems.ar),
       },
     })

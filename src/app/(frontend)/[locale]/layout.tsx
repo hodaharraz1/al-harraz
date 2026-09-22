@@ -8,6 +8,7 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { MobileCtaBar } from '@/components/layout/MobileCtaBar'
 import { SkipLink } from '@/components/layout/SkipLink'
+import { fontVariables } from '@/lib/fonts'
 import '../globals.css'
 
 export function generateStaticParams() {
@@ -53,7 +54,7 @@ export default async function LocaleLayout({
   const dict = getDictionary(locale)
 
   return (
-    <html lang={locale} dir={localeDirection[locale]}>
+    <html lang={locale} dir={localeDirection[locale]} className={fontVariables}>
       <body className="min-h-screen bg-neutral-50 pb-16 text-navy-950 antialiased lg:pb-0">
         <SkipLink locale={locale} />
         <Header locale={locale} dict={dict} />

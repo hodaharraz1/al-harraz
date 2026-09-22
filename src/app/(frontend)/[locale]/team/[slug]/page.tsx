@@ -86,7 +86,7 @@ export default async function LawyerProfilePage({
         <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-start">
           <div className="h-32 w-32 shrink-0 rounded-full bg-navy-900/10" aria-hidden="true" />
           <div>
-            <h1 className="text-3xl font-bold sm:text-4xl">{doc['name'] as string}</h1>
+            <h1 className="font-heading text-3xl sm:text-4xl">{doc['name'] as string}</h1>
             {doc['role'] ? <p className="mt-1 text-lg text-cyan-600">{doc['role'] as string}</p> : null}
             {doc['isFounder'] ? (
               <p className="mt-2 text-sm text-navy-900/70">
