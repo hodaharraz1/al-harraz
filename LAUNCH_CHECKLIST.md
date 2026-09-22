@@ -5,7 +5,7 @@ Status legend: ✅ done and verified this session · ⚠️ built but not indepe
 ## Content
 
 - ❌ Domain purchased and DNS live (`DISCOVERY_REPORT.md` §3)
-- ⚠️ Practice areas / industries reviewed and published (currently all 16/7 seeded as drafts — `CONTENT_REQUIRED.md`; Civil Law and Criminal Law are marked `featured` per client direction to lead the homepage preview, not Maritime — `SITE_STRATEGY.md` §1)
+- ⚠️ Practice areas / industries reviewed and published (currently all 21/7 seeded as drafts — `CONTENT_REQUIRED.md`; Civil Law and Criminal Law are marked `featured` per client direction to lead the homepage preview, not Maritime — `SITE_STRATEGY.md` §1)
 - ❌ Remaining 12 lawyer profiles added
 - ❌ Real team/office photography added (placeholders in use)
 - ❌ Facebook/social URLs confirmed and linked

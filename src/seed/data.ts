@@ -124,10 +124,10 @@ export const practiceAreas: Array<{
   {
     slug: 'family-law-personal-status',
     title: { ar: 'الأحوال الشخصية', en: 'Family Law & Personal Status' },
-    summary: { ar: 'قضايا الأحوال الشخصية والميراث.', en: 'Personal status and inheritance matters.' },
+    summary: { ar: 'قضايا الأحوال الشخصية كالزواج والطلاق والحضانة.', en: 'Personal status matters such as marriage, divorce, and custody.' },
     overview: {
-      ar: 'نقدم التمثيل القانوني والاستشارات في قضايا الأحوال الشخصية، بما في ذلك الزواج والطلاق والحضانة والميراث.',
-      en: 'We provide legal representation and advisory in personal status matters, including marriage, divorce, custody, and inheritance.',
+      ar: 'نقدم التمثيل القانوني والاستشارات في قضايا الأحوال الشخصية، بما في ذلك الزواج والطلاق والحضانة والنفقة.',
+      en: 'We provide legal representation and advisory in personal status matters, including marriage, divorce, custody, and alimony.',
     },
   },
   {
@@ -174,6 +174,66 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'يقدم مكتب آل حراز استشارات قانونية عامة للأفراد والشركات في مختلف فروع القانون المصري.',
       en: 'Al Harraz Law Firm provides general legal advisory to individuals and businesses across the main areas of Egyptian law.',
+    },
+  },
+  {
+    slug: 'inheritance-estates',
+    title: { ar: 'الميراث والتركات', en: 'Inheritance & Estates' },
+    summary: {
+      ar: 'استشارات وتمثيل قانوني في قسمة التركات ومنازعات الميراث.',
+      en: 'Legal advisory and representation in estate division and inheritance disputes.',
+    },
+    overview: {
+      ar: 'نقدم الاستشارات القانونية والتمثيل في مسائل الميراث، بما في ذلك حصر التركة وقسمتها ومنازعات الورثة، وفقًا لأحكام الشريعة الإسلامية والقانون المصري.',
+      en: 'We provide legal advisory and representation in inheritance matters, including estate inventory, division among heirs, and inheritance disputes, in accordance with Islamic Sharia principles and Egyptian law.',
+    },
+  },
+  {
+    slug: 'tax-law',
+    title: { ar: 'القانون الضريبي', en: 'Tax Law' },
+    summary: {
+      ar: 'استشارات قانونية ضريبية للأفراد والشركات، وتمثيل في المنازعات الضريبية.',
+      en: 'Tax legal advisory for individuals and businesses, and representation in tax disputes.',
+    },
+    overview: {
+      ar: 'نقدم الاستشارات القانونية في المسائل الضريبية للأفراد والشركات، ونمثل موكلينا في المنازعات الضريبية أمام الجهات المختصة.',
+      en: 'We provide legal advisory on tax matters for individuals and businesses, and represent clients in tax disputes before the relevant authorities.',
+    },
+  },
+  {
+    slug: 'banking-finance-law',
+    title: { ar: 'قانون البنوك والتمويل', en: 'Banking & Finance Law' },
+    summary: {
+      ar: 'استشارات قانونية في المعاملات المصرفية والتمويلية.',
+      en: 'Legal advisory on banking and finance transactions.',
+    },
+    overview: {
+      ar: 'نقدم الاستشارات القانونية للأفراد والشركات في المعاملات المصرفية والتمويلية، بما في ذلك عقود التسهيلات الائتمانية ومنازعات القروض.',
+      en: 'We provide legal advisory to individuals and businesses on banking and finance transactions, including credit facility agreements and loan disputes.',
+    },
+  },
+  {
+    slug: 'insurance-disputes',
+    title: { ar: 'منازعات التأمين', en: 'Insurance Disputes' },
+    summary: {
+      ar: 'تمثيل قانوني في منازعات وثائق ومطالبات التأمين.',
+      en: 'Legal representation in insurance policy and claims disputes.',
+    },
+    overview: {
+      ar: 'نمثل موكلينا في المنازعات المتعلقة بوثائق التأمين والمطالبات بالتعويضات، سواء التأمين الشخصي أو تأمين الممتلكات والأعمال.',
+      en: 'We represent clients in disputes relating to insurance policies and compensation claims, covering both personal and property/business insurance.',
+    },
+  },
+  {
+    slug: 'consumer-protection',
+    title: { ar: 'حماية المستهلك', en: 'Consumer Protection' },
+    summary: {
+      ar: 'استشارات وتمثيل قانوني في منازعات حماية المستهلك.',
+      en: 'Legal advisory and representation in consumer protection disputes.',
+    },
+    overview: {
+      ar: 'نقدم الاستشارات القانونية والتمثيل في منازعات حماية المستهلك، بما يشمل عيوب المنتجات والخدمات وشروط التعاقد غير العادلة.',
+      en: 'We provide legal advisory and representation in consumer protection disputes, including defective products and services and unfair contract terms.',
     },
   },
 ]

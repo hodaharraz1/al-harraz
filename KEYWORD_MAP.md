@@ -42,6 +42,12 @@ Legend — Intent: T=Transactional, C=Commercial, I=Informational, L=Local.
 | محامي استيراد وتصدير | C | Medium | Practice Areas: Maritime / Industries: Import-Export |
 | محامي تحكيم | C | Medium | Practice Areas: Arbitration |
 | محامي تأسيس شركات | T | Medium | Practice Areas: Company Formation |
+| محامي ميراث | C | High | Practice Areas: Inheritance & Estates |
+| محامي قسمة تركات | C | Medium | Practice Areas: Inheritance & Estates |
+| محامي ضرائب | C | Medium | Practice Areas: Tax Law |
+| محامي بنوك وتمويل | C | Medium | Practice Areas: Banking & Finance |
+| محامي تأمين | C | Medium | Practice Areas: Insurance Disputes |
+| محامي حماية المستهلك | C | Medium | Practice Areas: Consumer Protection |
 
 ## Informational (Insights, first clusters)
 
