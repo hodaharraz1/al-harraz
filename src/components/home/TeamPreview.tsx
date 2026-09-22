@@ -6,10 +6,12 @@ import { Card } from '@/components/ui/Card'
 export async function TeamPreview({
   locale,
   heading,
+  visuallyHiddenHeading = false,
   limit = 4,
 }: {
   locale: Locale
   heading: string
+  visuallyHiddenHeading?: boolean
   limit?: number
 }) {
   const payload = await getPayloadClient()
@@ -28,7 +30,7 @@ export async function TeamPreview({
 
   return (
     <div>
-      {heading ? <h2 className="text-2xl font-bold sm:text-3xl">{heading}</h2> : null}
+      <h2 className={visuallyHiddenHeading ? 'sr-only' : 'text-2xl font-bold sm:text-3xl'}>{heading}</h2>
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {result.docs.map((doc) => (
           <Link key={doc.id} href={`/${locale}/team/${doc['slug']}`}>

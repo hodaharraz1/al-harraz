@@ -79,7 +79,7 @@ export default async function PracticeAreaDetailPage({
         <h1 className="mt-4 text-3xl font-bold sm:text-4xl">{doc['title'] as string}</h1>
         {doc['summary'] ? <p className="mt-3 max-w-2xl text-lg text-navy-900/80">{doc['summary'] as string}</p> : null}
         {doc['lastReviewedDate'] ? (
-          <p className="mt-2 text-xs text-navy-900/50">
+          <p className="mt-2 text-xs text-navy-900/70">
             {dict.common.lastReviewed}: {new Date(doc['lastReviewedDate'] as string).toLocaleDateString(locale)}
           </p>
         ) : null}

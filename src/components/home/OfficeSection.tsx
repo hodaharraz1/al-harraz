@@ -38,7 +38,7 @@ export function OfficeSection({ locale }: { locale: Locale }) {
             </a>
           ) : null}
         </div>
-        <div className="flex items-center justify-center rounded-[var(--radius-card)] border border-dashed border-navy-900/20 bg-neutral-100 p-6 text-center text-sm text-navy-900/60">
+        <div className="flex items-center justify-center rounded-[var(--radius-card)] border border-dashed border-navy-900/20 bg-neutral-100 p-6 text-center text-sm text-navy-900/70">
           {t.mapPending}
         </div>
       </div>

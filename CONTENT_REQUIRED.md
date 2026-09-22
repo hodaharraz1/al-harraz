@@ -8,6 +8,7 @@ Status: living document — update as facts are confirmed. Nothing listed here h
 - [ ] `NEXT_PUBLIC_SITE_URL` and production `DATABASE_URI`/`PAYLOAD_SECRET` set in the real hosting environment.
 - [ ] Legal review and sign-off on every seeded practice-area/industry description before flipping its status to `published` in the CMS (currently all seeded as drafts — see `src/seed/data.ts`).
 - [ ] At minimum, placeholder or licensed photography for hero/team (see `SHOT_LIST` below) — current UI uses plain gray circle/placeholder blocks, not stock photos of unrelated people, per brief §37.
+- [ ] Replace the placeholder "AH" monogram favicon (`src/app/favicon.ico`, `src/app/(frontend)/icon.svg`) with the real logo once a vector master exists (brief §05).
 
 ## Not Blocking, but Needed Soon
 

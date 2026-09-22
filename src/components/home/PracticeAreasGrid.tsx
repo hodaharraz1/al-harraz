@@ -7,10 +7,12 @@ export async function PracticeAreasGrid({
   locale,
   limit,
   heading,
+  visuallyHiddenHeading = false,
 }: {
   locale: Locale
   limit?: number
-  heading?: string
+  heading: string
+  visuallyHiddenHeading?: boolean
 }) {
   const payload = await getPayloadClient()
   const result = await payload.find({
@@ -28,7 +30,7 @@ export async function PracticeAreasGrid({
 
   return (
     <div>
-      {heading ? <h2 className="text-2xl font-bold sm:text-3xl">{heading}</h2> : null}
+      <h2 className={visuallyHiddenHeading ? 'sr-only' : 'text-2xl font-bold sm:text-3xl'}>{heading}</h2>
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {result.docs.map((doc) => (
           <Link key={doc.id} href={`/${locale}/practice-areas/${doc['slug']}`}>

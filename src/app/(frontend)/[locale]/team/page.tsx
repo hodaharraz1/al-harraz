@@ -38,13 +38,13 @@ export default async function TeamIndexPage({ params }: { params: Promise<{ loca
         <Breadcrumbs items={breadcrumbs} />
         <h1 className="mt-4 text-3xl font-bold sm:text-4xl">{t.title}</h1>
         <p className="mt-3 max-w-2xl text-navy-900/80">{t.description}</p>
-        <p className="mt-6 text-sm text-navy-900/60">
+        <p className="mt-6 text-sm text-navy-900/70">
           {locale === 'ar'
             ? 'يتم نشر الملفات الشخصية للفريق المكون من 15 محاميًا تباعًا فور توفر بياناتها الموثقة.'
             : 'Profiles for the 15-lawyer team are published progressively as verified data becomes available.'}
         </p>
         <div className="mt-10">
-          <TeamPreview locale={locale} heading="" limit={100} />
+          <TeamPreview locale={locale} heading={t.title} visuallyHiddenHeading limit={100} />
         </div>
       </Section>
     </>

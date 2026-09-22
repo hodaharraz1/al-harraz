@@ -16,7 +16,12 @@
   --color-navy-700: #164361;
   --color-navy-600: #1d5679;
 
-  --color-cyan-600: #0891a8;
+  /* cyan-600 is deliberately darker than the logo's raw cyan: at #0891a8 it
+     only hit ~3.7:1 contrast for white-on-cyan buttons and cyan-on-white
+     text, failing WCAG AA (4.5:1) — caught by a Lighthouse accessibility
+     audit before launch (see TESTING.md). #086d80 keeps the same hue but
+     clears AA (~5.5-6:1) in both directions. */
+  --color-cyan-600: #086d80;
   --color-cyan-500: #10a8c4;
   --color-cyan-400: #35c2dd;
   --color-cyan-300: #7cd8ea;

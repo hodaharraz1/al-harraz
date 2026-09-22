@@ -37,10 +37,17 @@ test.describe('navigation and key pages', () => {
     }
   })
 
-  test('maritime hub is reachable from the homepage feature block', async ({ page }) => {
+  test('homepage never links to the Maritime hub while it is unpublished', async ({ page }) => {
+    // The seeded maritime-shipping-port-law practice area is a draft (see
+    // CONTENT_REQUIRED.md), so the homepage/header/footer must not render a
+    // link to it — a dead link here was caught by a pre-launch crawl (see
+    // TESTING.md). Once the firm reviews and publishes it, replace this with
+    // a test that the link resolves to a 200 page.
     await page.goto('/ar')
-    await page.getByRole('link', { name: 'استكشف مركز القانون البحري' }).click()
-    await expect(page).toHaveURL(/practice-areas\/maritime-shipping-port-law/)
+    await expect(page.getByRole('link', { name: 'استكشف مركز القانون البحري' })).toHaveCount(0)
+    // The WhatsApp fallback CTA must still be present so the feature block
+    // stays actionable even while the hub page itself isn't public yet.
+    await expect(page.getByRole('link', { name: 'استفسار بحري عبر واتساب' })).toBeVisible()
   })
 
   test('a non-existent slug renders the custom 404 page', async ({ page }) => {

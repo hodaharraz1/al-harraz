@@ -25,14 +25,14 @@ Status legend: ✅ done and verified this session · ⚠️ built but not indepe
 - ✅ Phone / WhatsApp CTAs correct and contextual
 - ✅ SEO metadata, canonical, hreflang implemented on every page
 - ✅ Dynamic sitemap.xml + robots.txt, both verified serving correctly
-- ✅ JSON-LD (Organization/LegalService, WebSite, BreadcrumbList, Person, Article) implemented — not validated against Google's Rich Results Test (no network access to Google's tool from this session; do this before launch)
+- ✅ JSON-LD (Organization/LegalService, WebSite, BreadcrumbList, Person, Article) — valid JSON with correct schema.org properties, verified by parsing the rendered output; not yet run through Google's Rich Results Test (needs the real production URL — do this once live)
 - ❌ `redirects` collection wired into `middleware.ts` (schema exists, lookup logic doesn't yet — `CMS_GUIDE.md`)
-- ⚠️ No broken internal links check has been run as an automated crawl — only the specific links covered by the Playwright suite were verified
-- ❌ No console-error audit across all pages in a real browser session (only the smoke-tested pages were watched)
+- ✅ Automated internal-link crawl run (`TESTING.md`) — found and fixed 2 dead-link sources (Header/Footer/homepage hard-linking to the still-draft Maritime hub); re-crawl after the fix found 0 broken links across all 28 sitemap URLs
+- ✅ Console-error audit run via Lighthouse on 13 pages — found and fixed a missing-favicon 404; 0 console errors on the final pass
 
 ## Accessibility
 
-- ⚠️ Baseline built in (skip link, `prefers-reduced-motion`, tap targets, required alt text) — no automated axe/Lighthouse audit run (`TESTING.md`)
+- ✅ Lighthouse Accessibility: **100/100 on all 13 audited pages** (`TESTING.md`). Found and fixed 2 real WCAG AA contrast failures (brand cyan token, secondary text opacity) and an invalid heading hierarchy on 4 index pages before reaching 100 — this was not clean on the first pass, so treat it as "measured and fixed," not "designed to pass."
 
 ## Security
 
@@ -43,7 +43,8 @@ Status legend: ✅ done and verified this session · ⚠️ built but not indepe
 
 ## Performance
 
-- ❌ No Lighthouse/Core Web Vitals measurement taken (`TESTING.md`)
+- ✅ Lighthouse Performance: 98-100/100 across all 13 audited pages; homepage LCP ~1.7s, CLS 0, TBT ~100ms (`TESTING.md`). Measured against a local server in this sandbox, not the real production host — re-measure once deployed.
+- ✅ Lighthouse Best Practices and SEO: **100/100 on all 13 pages**
 
 ## Forms Anti-Spam
 

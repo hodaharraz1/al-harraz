@@ -7,10 +7,12 @@ import { Badge } from '@/components/ui/Badge'
 export async function InsightsPreview({
   locale,
   heading,
+  visuallyHiddenHeading = false,
   limit = 3,
 }: {
   locale: Locale
   heading: string
+  visuallyHiddenHeading?: boolean
   limit?: number
 }) {
   const payload = await getPayloadClient()
@@ -29,7 +31,7 @@ export async function InsightsPreview({
 
   return (
     <div>
-      {heading ? <h2 className="text-2xl font-bold sm:text-3xl">{heading}</h2> : null}
+      <h2 className={visuallyHiddenHeading ? 'sr-only' : 'text-2xl font-bold sm:text-3xl'}>{heading}</h2>
       <div className="mt-8 grid gap-5 sm:grid-cols-3">
         {result.docs.map((doc) => (
           <Link key={doc.id} href={`/${locale}/insights/${doc['slug']}`}>

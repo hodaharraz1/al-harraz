@@ -19,7 +19,13 @@ export const Industries: CollectionConfig = {
   fields: [
     { name: 'title', type: 'text', required: true, localized: true },
     { name: 'slug', type: 'text', required: true, unique: true },
-    { name: 'summary', type: 'textarea', localized: true },
+    {
+      name: 'summary',
+      type: 'textarea',
+      localized: true,
+      required: true,
+      admin: { description: 'Used as the SEO meta description fallback. Keep it non-empty.' },
+    },
     {
       name: 'businessProblems',
       type: 'richText',

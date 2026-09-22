@@ -43,7 +43,7 @@ export default async function ConsultationPage({ params }: { params: Promise<{ l
           <ConsultationForm locale={locale} sourcePage={`/${locale}/consultation`} />
         </div>
 
-        <p className="mt-10 max-w-xl border-t border-navy-900/10 pt-6 text-xs text-navy-900/60">{dict.disclaimer}</p>
+        <p className="mt-10 max-w-xl border-t border-navy-900/10 pt-6 text-xs text-navy-900/70">{dict.disclaimer}</p>
       </Section>
     </>
   )

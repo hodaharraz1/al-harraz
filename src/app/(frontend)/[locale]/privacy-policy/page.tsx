@@ -87,7 +87,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
             <p className="mt-2 text-navy-900/85">{section.body}</p>
           </div>
         ))}
-        <p className="text-sm text-navy-900/60">
+        <p className="text-sm text-navy-900/70">
           {locale === 'ar'
             ? `للاستفسار عن هذه السياسة، تواصل معنا على ${siteConfig.phoneDisplay}.`
             : `Questions about this policy can be directed to us at ${siteConfig.phoneDisplay}.`}

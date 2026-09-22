@@ -7,7 +7,7 @@ Implemented as Tailwind v4 CSS-first tokens in `src/app/(frontend)/globals.css` 
 | Token | Value | Use |
 |---|---|---|
 | `--color-navy-950` … `-600` | `#05141f` → `#1d5679` | Primary — headers, dark sections, primary text on light backgrounds |
-| `--color-cyan-600` … `-300` | `#0891a8` → `#7cd8ea` | Secondary/accent — derived from the existing logo, used for CTAs and highlights |
+| `--color-cyan-600` … `-300` | `#086d80` → `#7cd8ea` | Secondary/accent — derived from the existing logo, used for CTAs and highlights. `cyan-600` was darkened from the initial `#0891a8` after a Lighthouse audit measured it at only ~3.7:1 contrast (fails WCAG AA's 4.5:1) for both white-on-cyan buttons and cyan-on-white text — `#086d80` clears AA (5.5–6:1) in both directions while staying the same hue. See `TESTING.md`. |
 | `--color-bronze-500` / `-400` | `#a67c3d` / `#c0975a` | Reserved, restrained accent — not yet used in a component; available for a future premium touch without becoming a "black-and-gold cliché" (brief §04 explicitly warns against this) |
 | `--color-neutral-950` / `-50` / `-100` | near-black / warm off-white / light gray | Text and section backgrounds |
 | `--color-alert-red` | `#b3261e` | Form errors, the consultation-form sensitivity warning |
@@ -41,7 +41,7 @@ Every layout uses logical CSS properties where it matters (`border-s-2`, `ps-6`,
 - `prefers-reduced-motion` respected globally (`globals.css`).
 - Minimum `44px`/`min-h-11` touch targets on all buttons and the mobile CTA bar.
 - Every `<img>`-equivalent (Payload `Media` uploads) has a **required** `alt` field in the CMS (`src/collections/Media.ts`) — content cannot be saved without it.
-- See `TESTING.md` for what accessibility testing has and hasn't actually been run (no automated axe/Lighthouse pass has been executed in this session — this is a documented gap, not a claim of WCAG 2.2 AA compliance).
+- Lighthouse's automated Accessibility audit scores 100/100 on all 13 pages tested (`TESTING.md`), after fixing two real contrast failures and a heading-hierarchy bug it caught. That is a real, useful signal but it is not the same thing as a full WCAG 2.2 AA conformance review — Lighthouse/axe-core only catches a subset of WCAG success criteria (contrast, headings, labels, ARIA misuse, etc.), not things like logical tab order across complex interactions, screen-reader-only manual testing, or every 2.2-specific criterion. Treat "100/100" as "no automated red flags," not "certified AA compliant."
 
 ## Logo
 

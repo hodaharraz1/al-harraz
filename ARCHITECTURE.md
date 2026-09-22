@@ -60,6 +60,10 @@ Server Components call Payload's **Local API** directly (`src/lib/payload.ts` �
 
 Static pages with no CMS dependency (`/privacy-policy`, `/terms`) are fully static. CMS-backed pages (home, team, practice-areas, industries, insights, history) use `export const revalidate = 60` (ISR) so a CMS publish appears within a minute **without a redeploy** — this was deliberately added after discovering that plain SSG pages built before the seed script ran would otherwise never pick up new content (see `TESTING.md`). Detail pages (`[slug]`) are server-rendered on demand (`ƒ` in the Next build output) since their set of valid slugs changes as content is published.
 
+## Defensive Linking to Draft Content
+
+`src/lib/maritime.ts` checks whether the flagship Maritime practice area is published, wrapped in React's `cache()` so the layout (Header/Footer) and the homepage share one query per request instead of three. The Header nav, Footer nav, and homepage feature block all consume this and only render a link to the hub page when it's actually live. This exists because an internal-link crawl during testing found that hard-coded links to a still-draft page produced site-wide 404s — see `TESTING.md`. The same pattern (check publish status before linking, rather than assuming a known slug is live) should be followed for any other CMS content linked from static/shared components.
+
 ## Security Headers & CSP
 
 Configured centrally in `next.config.ts` — see `SECURITY.md` for the full list and its known gaps (CSP still allows `'unsafe-inline'` for scripts/styles; nonce-based CSP is a pre-launch follow-up).

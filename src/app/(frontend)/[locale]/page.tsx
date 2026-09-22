@@ -9,6 +9,7 @@ import { Hero } from '@/components/home/Hero'
 import { HelpSplit } from '@/components/home/HelpSplit'
 import { PracticeAreasGrid } from '@/components/home/PracticeAreasGrid'
 import { MaritimeFeature } from '@/components/home/MaritimeFeature'
+import { isMaritimeHubPublished } from '@/lib/maritime'
 import { HeritageSection } from '@/components/home/HeritageSection'
 import { TeamPreview } from '@/components/home/TeamPreview'
 import { IndustriesGrid } from '@/components/home/IndustriesGrid'
@@ -41,6 +42,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale: rawLocale } = await params
   const locale = isLocale(rawLocale) ? rawLocale : 'ar'
   const dict = getDictionary(locale)
+  const maritimeHubPublished = await isMaritimeHubPublished()
 
   return (
     <>
@@ -56,7 +58,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <HelpSplit locale={locale} />
 
       <Section tone="light">
-        <MaritimeFeature locale={locale} />
+        <MaritimeFeature locale={locale} isPublished={maritimeHubPublished} />
       </Section>
 
       <Section tone="neutral">

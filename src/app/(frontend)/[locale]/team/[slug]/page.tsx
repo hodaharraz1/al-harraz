@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { isLocale, type Locale } from '@/lib/i18n'
 import { getDictionary } from '@/lib/dictionary'
 import { getPayloadClient } from '@/lib/payload'
+import { siteConfig } from '@/lib/site-config'
 import { buildMetadata } from '@/lib/seo'
 import { breadcrumbSchema, personSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -36,11 +37,17 @@ export async function generateMetadata({
   const doc = await getLawyer(locale, slug)
   if (!doc) return {}
   const seo = doc['seo'] as { metaTitle?: string; metaDescription?: string } | undefined
+  const name = doc['name'] as string
+  const role = doc['role'] as string | undefined
+  const firmName = locale === 'ar' ? siteConfig.legalNameAr : siteConfig.legalNameEn
+  const fallbackDescription =
+    role ||
+    (locale === 'ar' ? `${name} — ${firmName}، دمياط.` : `${name} — ${firmName}, Damietta, Egypt.`)
   return buildMetadata({
     locale,
     path: `/team/${slug}`,
-    title: seo?.metaTitle || (doc['name'] as string),
-    description: seo?.metaDescription || (doc['role'] as string) || '',
+    title: seo?.metaTitle || name,
+    description: seo?.metaDescription || fallbackDescription,
   })
 }
 
