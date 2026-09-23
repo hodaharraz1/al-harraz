@@ -15,11 +15,19 @@ export const siteConfig = {
   phoneDisplay: '01005029501',
   phoneInternational: '+201005029501',
   whatsappNumber: '201005029501',
+  // Coordinates for برج آل حراز (confirmed by the firm, given as the pin for
+  // a landmark in the same building — see CONTENT_REQUIRED.md for why this
+  // isn't yet the firm's own claimed Google Business Profile listing).
+  latitude: 31.4181633,
+  longitude: 31.7882557,
   // Populate once a domain/mailbox exists — see CONTENT_REQUIRED.md.
   email: undefined as string | undefined,
   // Populate once supplied — see CONTENT_REQUIRED.md.
   facebookUrl: undefined as string | undefined,
-  googleBusinessProfileUrl: undefined as string | undefined,
+  // Not yet the firm's own claimed Google Business Profile (see
+  // CONTENT_REQUIRED.md) — this is a plain coordinates-based Maps link,
+  // used for the "Get Directions" CTA and the embedded map only.
+  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=31.4181633,31.7882557',
   siteUrl: process.env['NEXT_PUBLIC_SITE_URL'] ?? 'http://localhost:3000',
 } as const
 

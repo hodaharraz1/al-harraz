@@ -25,6 +25,9 @@ const securityHeaders = [
       "img-src 'self' data: blob:",
       "font-src 'self' data:",
       "connect-src 'self'",
+      // The office-location embed is a Google Maps iframe — everything else
+      // stays locked to 'self'.
+      "frame-src https://www.google.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",

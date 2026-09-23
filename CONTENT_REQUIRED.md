@@ -18,7 +18,7 @@ Status: living document — update as facts are confirmed. Nothing listed here h
 - [ ] Professional email addresses (`info@`, `consultations@`, `maritime@`) — pending domain purchase; see `README.md` DNS section for the SPF/DKIM/DMARC setup once a domain and mailbox provider are chosen.
 - [ ] Facebook page URL (exists per the brief, but the URL was not supplied to this session).
 - [ ] LinkedIn / Instagram / YouTube URLs, if/when created.
-- [ ] Google Business Profile URL — required before the Contact/Home office map section can embed a real map (currently shows a clearly-labeled "map pending" placeholder, never a fake one).
+- [ ] Google Business Profile for the firm itself — the office map now embeds real coordinates the firm confirmed (a landmark pin in the same building, برج آل حراز), so the map/directions are accurate. What's still missing is the firm *claiming* its own Business Profile listing at business.google.com — that's what makes "مكتب آل حراز" itself (not just the address) show up as a pinned result in Google Maps/Search. That's a manual step outside this codebase; once claimed, swap `googleMapsUrl` in `src/lib/site-config.ts` for the profile's own share link.
 
 ### Team (People)
 - [ ] Bios, qualifications, education, court admission level, years of experience, languages, and photos for all 15 lawyers. Currently only the 3 named lawyers in the brief are seeded (name + founder flag only, `status: published`) — 12 more lawyer profiles are entirely missing and must be added via the CMS once HR/the firm supplies verified data. Do **not** invent placeholder names to reach "15."

@@ -15,6 +15,12 @@ export function organizationSchema(locale: Locale) {
       addressLocality: 'Damietta',
       addressCountry: 'EG',
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: siteConfig.latitude,
+      longitude: siteConfig.longitude,
+    },
+    hasMap: siteConfig.googleMapsUrl,
     areaServed: 'EG',
     ...(siteConfig.email ? { email: siteConfig.email } : {}),
   }
