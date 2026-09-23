@@ -9,6 +9,7 @@ import { Footer } from '@/components/layout/Footer'
 import { MobileCtaBar } from '@/components/layout/MobileCtaBar'
 import { SkipLink } from '@/components/layout/SkipLink'
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics'
+import { CtaClickTracking } from '@/components/analytics/CtaClickTracking'
 import { fontVariables } from '@/lib/fonts'
 import '../globals.css'
 
@@ -70,6 +71,7 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-screen bg-neutral-50 pb-16 text-navy-950 antialiased lg:pb-0">
         <GoogleAnalytics />
+        <CtaClickTracking />
         <SkipLink locale={locale} />
         <Header locale={locale} dict={dict} />
         <main id="main-content">{children}</main>

@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import { isLocale } from '@/lib/i18n'
 import { getDictionary } from '@/lib/dictionary'
 import { buildMetadata } from '@/lib/seo'
-import { organizationSchema, websiteSchema } from '@/lib/structured-data'
+import { organizationSchema, websiteSchema, faqPageSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
+import { getPayloadClient } from '@/lib/payload'
 import { Section } from '@/components/ui/Section'
 import { Hero } from '@/components/home/Hero'
 import { CivilFocus } from '@/components/home/CivilFocus'
@@ -43,10 +44,24 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const locale = isLocale(rawLocale) ? rawLocale : 'ar'
   const dict = getDictionary(locale)
 
+  const payload = await getPayloadClient()
+  const faqResult = await payload.find({
+    collection: 'faqs',
+    locale,
+    where: { status: { equals: 'published' } },
+    limit: 10,
+    depth: 0,
+  })
+  const faqItems = faqResult.docs.map((doc) => ({
+    question: doc['question'] as string,
+    answer: doc['answer'] as string,
+  }))
+
   return (
     <>
       <JsonLd data={organizationSchema(locale)} />
       <JsonLd data={websiteSchema()} />
+      {faqItems.length > 0 ? <JsonLd data={faqPageSchema(faqItems)} /> : null}
 
       <Hero locale={locale} dict={dict} />
 
