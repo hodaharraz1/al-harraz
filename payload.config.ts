@@ -16,6 +16,7 @@ import { Pages } from '@/collections/Pages'
 import { HistoryTimeline } from '@/collections/HistoryTimeline'
 import { Redirects } from '@/collections/Redirects'
 import { ConsultationSubmissions } from '@/collections/ConsultationSubmissions'
+import { RateLimitEntries } from '@/collections/RateLimitEntries'
 import { SiteSettings } from '@/collections/globals/SiteSettings'
 
 const filename = fileURLToPath(import.meta.url)
@@ -42,6 +43,7 @@ export default buildConfig({
     HistoryTimeline,
     Redirects,
     ConsultationSubmissions,
+    RateLimitEntries,
   ],
   globals: [SiteSettings],
   localization: {

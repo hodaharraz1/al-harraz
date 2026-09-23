@@ -60,8 +60,9 @@ export async function GET(request: NextRequest) {
     })
 
     const deleted = await cleanupOldBackups()
+    const rateLimitEntriesDeleted = await cleanupStaleRateLimitEntries(payload)
 
-    return NextResponse.json({ ok: true, url: blob.url, deleted })
+    return NextResponse.json({ ok: true, url: blob.url, deleted, rateLimitEntriesDeleted })
   } catch (error) {
     console.error('Backup cron failed', error)
     return NextResponse.json({ error: 'Backup failed' }, { status: 500 })
@@ -76,4 +77,23 @@ async function cleanupOldBackups(): Promise<string[]> {
     await del(stale.map((blob) => blob.url))
   }
   return stale.map((blob) => blob.pathname)
+}
+
+// The rate limiter (see src/lib/shared-rate-limit.ts) only ever looks at a
+// 10-minute window, so any entry that hasn't been touched in a full day is
+// certainly stale — nobody is still "recently rate limited" from a day ago.
+// Left alone, this table would grow by one row per distinct caller forever;
+// this piggybacks on the existing daily cron rather than adding a second one.
+const RATE_LIMIT_RETENTION_DAYS = 1
+
+async function cleanupStaleRateLimitEntries(
+  payload: Awaited<ReturnType<typeof getPayloadClient>>,
+): Promise<number> {
+  const cutoff = new Date(Date.now() - RATE_LIMIT_RETENTION_DAYS * 24 * 60 * 60 * 1000).toISOString()
+  const result = await payload.delete({
+    collection: 'rate-limit-entries',
+    where: { updatedAt: { less_than: cutoff } },
+    overrideAccess: true,
+  })
+  return result.docs.length
 }

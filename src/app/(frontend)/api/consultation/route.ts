@@ -1,14 +1,14 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { consultationSchema } from '@/lib/validation'
-import { isRateLimited } from '@/lib/rate-limit'
+import { isRateLimitedShared } from '@/lib/shared-rate-limit'
 import { getPayloadClient } from '@/lib/payload'
 import { readJsonBody, BodyTooLargeError } from '@/lib/read-json-body'
 
 export async function POST(request: NextRequest) {
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown'
 
-  if (isRateLimited(ip)) {
+  if (await isRateLimitedShared(ip)) {
     return NextResponse.json({ error: 'Too many requests. Please try again later.' }, { status: 429 })
   }
 
