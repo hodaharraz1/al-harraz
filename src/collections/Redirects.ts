@@ -5,7 +5,8 @@ export const Redirects: CollectionConfig = {
   slug: 'redirects',
   admin: {
     useAsTitle: 'fromPath',
-    description: 'Old URL → new URL, consulted by middleware so URL changes never silently 404 (SEO_STRATEGY.md §3).',
+    description:
+      'Old URL → new URL. NOT YET consulted automatically by the app — this table is a place to record URL changes for when redirect handling is implemented (see REDIRECT_MAP.md). Until then, a moved/renamed page must also be wired up in code.',
   },
   access: {
     read: () => true,

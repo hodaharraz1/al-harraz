@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe('locale routing and RTL/LTR', () => {
   test('bare root redirects to the Arabic homepage regardless of browser locale', async ({ browser }) => {
-    // Arabic-first by design (see middleware.ts): a first visit with no
+    // Arabic-first by design (see proxy.ts): a first visit with no
     // locale cookie yet always lands on /ar, independent of the browser's
     // Accept-Language/locale. Uses a dedicated context so this is isolated
     // from other tests' cookies, regardless of the runner's default locale.
