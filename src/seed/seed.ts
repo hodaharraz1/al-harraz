@@ -6,6 +6,24 @@ import { practiceAreas, industries, articles, faqs, retiredFaqQuestionsAr } from
 async function run() {
   const payload = await getPayload({ config })
 
+  // Self-healing safety net for the new role-based access control on the
+  // Users collection (see Users.ts — only role: 'admin' can manage other
+  // users' accounts or roles now). If literally no user has role: 'admin'
+  // yet (e.g. an existing account was created before roles were enforced
+  // and still has the 'editor' default), nobody could ever grant
+  // themselves admin through the UI — only an admin can update the role
+  // field. Promote the oldest account instead of leaving that possible.
+  // No-op once any admin exists; never demotes or touches anyone else.
+  const hasAdmin = await payload.find({ collection: 'users', where: { role: { equals: 'admin' } }, limit: 1 })
+  if (hasAdmin.docs.length === 0) {
+    const oldestUser = await payload.find({ collection: 'users', limit: 1, sort: 'createdAt' })
+    const doc = oldestUser.docs[0]
+    if (doc) {
+      await payload.update({ collection: 'users', id: doc.id, data: { role: 'admin' } })
+      payload.logger.info(`No admin user existed — promoted the oldest account (id ${doc.id}) to admin.`)
+    }
+  }
+
   payload.logger.info('Seeding SiteSettings (verified firm facts)...')
   await payload.updateGlobal({
     slug: 'site-settings',
