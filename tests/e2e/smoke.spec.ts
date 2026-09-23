@@ -53,6 +53,19 @@ test.describe('navigation and key pages', () => {
   })
 })
 
+test.describe('mobile menu accessibility', () => {
+  test('Escape closes the mobile menu and returns focus to the toggle button', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+    await page.goto('/ar')
+    const toggle = page.getByRole('button', { name: 'فتح القائمة' })
+    await toggle.click()
+    await expect(page.getByRole('button', { name: 'إغلاق القائمة' })).toHaveAttribute('aria-expanded', 'true')
+    await page.keyboard.press('Escape')
+    await expect(page.getByRole('button', { name: 'فتح القائمة' })).toHaveAttribute('aria-expanded', 'false')
+    await expect(page.getByRole('button', { name: 'فتح القائمة' })).toBeFocused()
+  })
+})
+
 test.describe('lead generation CTAs', () => {
   test('mobile CTA bar exposes call, WhatsApp, and consultation actions', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 })

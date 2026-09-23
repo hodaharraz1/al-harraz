@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -29,6 +29,19 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const pathname = usePathname()
   const navItems = buildNavItems(locale, dict)
   const homeHref = `/${locale}`
+  const menuToggleRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setOpen(false)
+        menuToggleRef.current?.focus()
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [open])
 
   return (
     <header className="sticky top-0 z-40 bg-neutral-50/80 backdrop-blur-md">
@@ -54,11 +67,14 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         </div>
 
         <button
+          ref={menuToggleRef}
           type="button"
           className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-navy-900/20 lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
-          aria-label={locale === 'ar' ? 'فتح القائمة' : 'Open menu'}
+          aria-label={
+            open ? (locale === 'ar' ? 'إغلاق القائمة' : 'Close menu') : locale === 'ar' ? 'فتح القائمة' : 'Open menu'
+          }
           onClick={() => setOpen((v) => !v)}
         >
           <span aria-hidden="true">{open ? '✕' : '☰'}</span>
