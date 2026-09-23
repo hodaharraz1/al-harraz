@@ -80,6 +80,19 @@ export const practiceAreas: Array<{
     },
   },
   {
+    slug: 'contract-translation',
+    order: 22,
+    title: { ar: 'ترجمة العقود القانونية', en: 'Legal Contract Translation' },
+    summary: {
+      ar: 'ترجمة دقيقة للعقود والمستندات القانونية بين العربية والإنجليزية.',
+      en: 'Accurate translation of contracts and legal documents between Arabic and English.',
+    },
+    overview: {
+      ar: 'نقدم خدمة ترجمة العقود والمستندات القانونية بمختلف أنواعها من وإلى اللغتين العربية والإنجليزية، مع مراعاة الدقة القانونية والمصطلحات الفنية الخاصة بكل عقد، بما يضمن توافق الترجمة مع المعنى والالتزامات الواردة في النص الأصلي.',
+      en: 'We translate contracts and legal documents of all kinds, to and from Arabic and English, with close attention to legal accuracy and the technical terminology specific to each contract — ensuring the translation faithfully reflects the meaning and obligations of the original text.',
+    },
+  },
+  {
     slug: 'arbitration',
     order: 13,
     title: { ar: 'التحكيم', en: 'Arbitration' },
