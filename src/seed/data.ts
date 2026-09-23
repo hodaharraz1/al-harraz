@@ -349,6 +349,71 @@ export const practiceAreas: Array<{
       en: 'We help companies and individuals draft and review commercial agency and distribution agreements, clarifying each party’s legal rights and obligations under the Egyptian law governing this activity.',
     },
   },
+  {
+    slug: 'bankruptcy-liquidation-restructuring',
+    order: 29,
+    title: { ar: 'الإفلاس وتصفية الشركات وإعادة الهيكلة', en: 'Bankruptcy, Liquidation & Restructuring' },
+    summary: {
+      ar: 'استشارات وتمثيل قانوني في إجراءات الإفلاس وتصفية الشركات.',
+      en: 'Legal advisory and representation in bankruptcy and company liquidation proceedings.',
+    },
+    overview: {
+      ar: 'نقدم الاستشارات القانونية والتمثيل في إجراءات الإفلاس وتصفية الشركات وإعادة الهيكلة المالية، بما يشمل حقوق الدائنين والمدينين وإجراءات التصفية أمام الجهات المختصة.',
+      en: 'We provide legal advisory and representation in bankruptcy, company liquidation, and financial restructuring proceedings, covering the rights of creditors and debtors and liquidation procedures before the competent authorities.',
+    },
+  },
+  {
+    slug: 'medical-malpractice-liability',
+    order: 30,
+    title: { ar: 'الأخطاء الطبية والمسؤولية الطبية', en: 'Medical Malpractice & Healthcare Liability' },
+    summary: {
+      ar: 'تمثيل قانوني في دعاوى الأخطاء الطبية والمسؤولية الطبية.',
+      en: 'Legal representation in medical malpractice and healthcare liability claims.',
+    },
+    overview: {
+      ar: 'نمثل موكلينا في دعاوى الأخطاء الطبية والمسؤولية المترتبة على الممارسة الطبية، ونساعدهم على تقييم موقفهم القانوني وإثبات الضرر والمطالبة بالتعويض المناسب.',
+      en: 'We represent clients in medical malpractice claims and liability arising from medical practice, helping them assess their legal position, establish harm, and pursue appropriate compensation.',
+    },
+  },
+  {
+    slug: 'immigration-residency-nationality',
+    order: 31,
+    title: { ar: 'الهجرة وإقامة الأجانب والجنسية', en: 'Immigration, Foreign Residency & Nationality' },
+    summary: {
+      ar: 'استشارات قانونية في إجراءات الإقامة والجنسية للأجانب في مصر.',
+      en: 'Legal advisory on residency and nationality procedures for foreigners in Egypt.',
+    },
+    overview: {
+      ar: 'نقدم الاستشارات القانونية للأفراد والشركات بشأن إجراءات إقامة الأجانب في مصر وطلبات الجنسية، بما يشمل توضيح المتطلبات القانونية ومتابعة الإجراءات أمام الجهات المختصة.',
+      en: 'We advise individuals and companies on the legal procedures for foreign residency in Egypt and nationality applications, including clarifying legal requirements and following up on procedures before the competent authorities.',
+    },
+  },
+  {
+    slug: 'anti-money-laundering-compliance',
+    order: 32,
+    title: { ar: 'مكافحة غسل الأموال والامتثال', en: 'Anti-Money Laundering & Compliance' },
+    summary: {
+      ar: 'استشارات قانونية في الالتزام بقواعد مكافحة غسل الأموال.',
+      en: 'Legal advisory on anti-money laundering compliance obligations.',
+    },
+    overview: {
+      ar: 'نقدم الاستشارات القانونية للشركات بشأن الالتزام بقواعد مكافحة غسل الأموال وفقًا للقانون المصري، ونساعدها في تقييم مدى توافق أنشطتها وإجراءاتها الداخلية مع هذه الالتزامات.',
+      en: 'We advise companies on complying with anti-money laundering rules under Egyptian law, and help them assess how well their activities and internal procedures align with these obligations.',
+    },
+  },
+  {
+    slug: 'ngo-foundation-registration',
+    order: 33,
+    title: { ar: 'تسجيل وإشهار الجمعيات الأهلية والمؤسسات', en: 'NGO & Foundation Registration' },
+    summary: {
+      ar: 'استشارات ومتابعة قانونية لتأسيس الجمعيات الأهلية والمؤسسات.',
+      en: 'Legal advisory and support for establishing NGOs and foundations.',
+    },
+    overview: {
+      ar: 'نساعد الأفراد والمجموعات في إجراءات تأسيس وإشهار الجمعيات الأهلية والمؤسسات الخاصة وفقًا للقانون المصري، ومتابعة أوضاعها القانونية بعد التأسيس.',
+      en: 'We help individuals and groups with the procedures for establishing and registering NGOs and private foundations under Egyptian law, and with their ongoing legal compliance after establishment.',
+    },
+  },
 ]
 
 export const industries: Array<{ slug: string; title: Bilingual; summary: Bilingual; businessProblems: Bilingual }> = [
@@ -594,71 +659,109 @@ export const articles: Array<{
 ]
 
 /**
+ * FAQs previously seeded, now replaced (see `faqs` below) — kept here only
+ * so seed.ts can find-and-remove them by their old Arabic question text on
+ * the next deploy. Do not add to this list; remove entries once confirmed
+ * gone from production.
+ */
+export const retiredFaqQuestionsAr: string[] = [
+  'ما الفرق بين الاستشارة القانونية والتمثيل القضائي؟',
+  'هل يمكن حل النزاع دون اللجوء للمحكمة؟',
+  'متى يجب أن أستشير محاميًا بخصوص عقد؟',
+  'ما هي مدة صلاحية الحق في رفع الدعوى؟',
+  'كيف أحجز استشارة مع مكتب آل حراز؟',
+  'هل الحصول على حكم قضائي يعني استيفاء حقي فعليًا؟',
+]
+
+/**
  * General FAQs shown on the homepage (no relatedPracticeArea, so they are
- * not scoped to one practice area). Same YMYL discipline as `articles`:
- * general process/education only, no firm-specific claims that aren't
- * independently verified (pricing, guarantees, case outcomes, geographic
- * coverage beyond what's already stated elsewhere on the site).
+ * not scoped to one practice area). Written from a prospective client's
+ * point of view — the practical questions someone actually weighs before
+ * reaching out (cost, confidentiality, process, attendance) rather than
+ * abstract legal-education explainers. Same YMYL discipline as `articles`:
+ * no firm-specific claims that aren't independently verified (no promise of
+ * free consultations, no specific fee figures, no coverage-area claim
+ * beyond what's verified elsewhere on the site).
  */
 export const faqs: Array<{ question: Bilingual; answer: Bilingual }> = [
   {
     question: {
-      ar: 'ما الفرق بين الاستشارة القانونية والتمثيل القضائي؟',
-      en: 'What is the difference between a legal consultation and court representation?',
+      ar: 'هل يمكنني حجز استشارة عن طريق الهاتف أو واتساب من غير ما أحضر المكتب؟',
+      en: 'Can I book a consultation by phone or WhatsApp without visiting the office in person?',
     },
     answer: {
-      ar: 'الاستشارة القانونية توضح لك موقفك القانوني والخيارات المتاحة أمامك، أما التمثيل القضائي فهو أن يتولى المحامي متابعة قضيتك أمام المحكمة نيابة عنك من البداية حتى صدور الحكم.',
-      en: 'A legal consultation explains your legal position and the options available to you, while court representation means a lawyer handles your case before the court on your behalf, from filing through to judgment.',
+      ar: 'نعم، يمكنك التواصل الأولي وحجز استشارة من خلال نموذج طلب الاستشارة على الموقع، أو عبر الهاتف أو واتساب الموضحين في صفحة تواصل معنا، وبعدها نوضح لك إذا كان موضوعك يحتاج حضورك للمكتب أو يمكن استكمال جزء منه عن بُعد.',
+      en: 'Yes — you can make initial contact and book a consultation through the consultation request form on the website, or by phone or WhatsApp using the details on the Contact page. We’ll then let you know whether your matter needs an in-person visit or can be handled partly remotely.',
     },
   },
   {
     question: {
-      ar: 'هل يمكن حل النزاع دون اللجوء للمحكمة؟',
-      en: 'Can a dispute be resolved without going to court?',
+      ar: 'كام تكلفة الاستشارة أو أتعاب المحامي؟',
+      en: 'How much does a consultation or legal fees cost?',
     },
     answer: {
-      ar: 'في كثير من الحالات نعم، من خلال التفاوض المباشر أو الوساطة أو التحكيم، وهي وسائل قد تكون أسرع وأقل تكلفة من التقاضي، حسب طبيعة النزاع ورغبة الأطراف.',
-      en: 'In many cases, yes — through direct negotiation, mediation, or arbitration, which can be faster and less costly than litigation, depending on the nature of the dispute and the parties’ willingness.',
+      ar: 'تختلف الأتعاب حسب طبيعة القضية أو الموضوع ودرجة تعقيده والوقت المتوقع للتعامل معه، ولذلك يتم توضيح التكلفة لك بعد تقييم موقفك في الاستشارة الأولى، وليس قبل ذلك.',
+      en: 'Fees vary depending on the nature of the matter, its complexity, and the time it is expected to take, so the cost is explained to you after your situation is assessed in the first consultation, not before.',
     },
   },
   {
     question: {
-      ar: 'متى يجب أن أستشير محاميًا بخصوص عقد؟',
-      en: 'When should I consult a lawyer about a contract?',
+      ar: 'إيه المستندات اللي المفروض أجيبها معايا لما أطلب استشارة؟',
+      en: 'What documents should I bring with me when I request a consultation?',
     },
     answer: {
-      ar: 'يُفضَّل استشارة محامٍ قبل توقيع أي عقد ذي قيمة أو التزامات مهمة، وليس بعد نشوء خلاف، لأن المراجعة المسبقة تحمي حقوقك وتقلل احتمالية النزاع لاحقًا.',
-      en: 'It is best to consult a lawyer before signing any contract of significant value or obligations, not after a dispute arises — a review beforehand protects your rights and reduces the likelihood of a later dispute.',
+      ar: 'يُفضَّل إحضار أي أوراق متعلقة بموضوعك (عقود، مراسلات، إخطارات، مستندات ملكية، أحكام سابقة إن وجدت)، لأن ذلك يساعدنا على تقييم موقفك بدقة من أول استشارة بدلاً من الاعتماد على الوصف الشفهي فقط.',
+      en: 'It’s best to bring any papers related to your matter (contracts, correspondence, notices, ownership documents, prior judgments if any) — this helps us assess your situation accurately from the first consultation rather than relying on a verbal description alone.',
     },
   },
   {
     question: {
-      ar: 'ما هي مدة صلاحية الحق في رفع الدعوى؟',
-      en: 'Is there a time limit on the right to file a lawsuit?',
+      ar: 'هل المعلومات والمستندات اللي هشاركها مع المكتب بتفضل سرية؟',
+      en: 'Does information I share with the firm stay confidential?',
     },
     answer: {
-      ar: 'تختلف مدة التقادم (سقوط الحق في رفع الدعوى) باختلاف نوع الحق والقضية، لذلك من المهم استشارة محامٍ في أقرب وقت بمجرد نشوء المشكلة حتى لا تفوت أي مواعيد قانونية.',
-      en: 'The limitation period (after which the right to sue lapses) varies depending on the type of right and case, so it is important to consult a lawyer as soon as a problem arises so that no legal deadlines are missed.',
+      ar: 'نعم، كل ما تشاركه معنا من معلومات ومستندات يخضع للسرية المهنية التي يلتزم بها كل محامٍ قانونًا، ولا يُفصح عنه لأي طرف آخر دون إذنك.',
+      en: 'Yes — everything you share with us is protected by the professional confidentiality every licensed lawyer is legally bound to, and is not disclosed to any other party without your permission.',
     },
   },
   {
     question: {
-      ar: 'كيف أحجز استشارة مع مكتب آل حراز؟',
-      en: 'How do I book a consultation with Al Harraz Law Firm?',
+      ar: 'قضيتي هتاخد وقت قد إيه لحد ما تخلص؟',
+      en: 'How long will my case take from start to finish?',
     },
     answer: {
-      ar: 'يمكنك حجز استشارة من خلال نموذج طلب الاستشارة على الموقع، أو التواصل مباشرة عبر الهاتف أو واتساب الموضح في صفحة تواصل معنا.',
-      en: 'You can book a consultation through the consultation request form on the website, or reach out directly by phone or WhatsApp using the details on the Contact page.',
+      ar: 'المدة تختلف كثيرًا حسب نوع القضية، درجة تعقيدها، وعدد درجات التقاضي التي قد تمر بها، فلا يوجد مدة موحدة تنطبق على كل الحالات — لكن بعد مناقشة تفاصيل موضوعك يمكننا إعطاؤك تصورًا تقريبيًا أوضح.',
+      en: 'The timeline varies a great deal depending on the type of case, its complexity, and how many levels of court it may go through, so there is no single duration that fits every case — but once we discuss the specifics of your matter, we can give you a clearer general estimate.',
     },
   },
   {
     question: {
-      ar: 'هل الحصول على حكم قضائي يعني استيفاء حقي فعليًا؟',
-      en: 'Does winning a court judgment mean I have actually received what I’m owed?',
+      ar: 'لو كسبت القضية، المكتب بيتابع تنفيذ الحكم فعليًا ولا مسؤوليتي أنا؟',
+      en: 'If I win my case, does the firm follow through on enforcing the judgment, or is that on me?',
     },
     answer: {
-      ar: 'ليس بالضرورة — إذا لم يلتزم الطرف المحكوم عليه بتنفيذ الحكم طواعية، يصبح من الضروري اللجوء إلى إجراءات التنفيذ الجبري لاستيفاء الحق فعليًا، ومتابعة هذه المرحلة جزء أساسي من العمل على أي قضية.',
-      en: 'Not necessarily — if the losing party does not comply voluntarily, enforcement proceedings become necessary to actually collect what is owed, and following through on that stage is an essential part of handling any case.',
+      ar: 'متابعة تنفيذ الحكم واستيفاء الحق فعليًا جزء أساسي من عملنا على أي قضية، لأن صدور الحكم لصالحك لا يعني تلقائيًا أنك استلمت حقك إذا لم يلتزم الطرف الآخر بالتنفيذ طواعية.',
+      en: 'Following through on enforcing a judgment and actually collecting what you are owed is a core part of how we handle any case, since winning a judgment does not automatically mean you have received what you’re owed if the other party doesn’t comply voluntarily.',
+    },
+  },
+  {
+    question: {
+      ar: 'لازم أحضر بنفسي كل جلسة في المحكمة؟',
+      en: 'Do I have to personally attend every court session?',
+    },
+    answer: {
+      ar: 'في أغلب الحالات يستطيع المحامي الحضور نيابة عنك بموجب توكيل، ولا يستلزم الأمر حضورك الشخصي في كل جلسة، إلا في حالات معينة يحددها القانون أو تقتضيها طبيعة قضيتك.',
+      en: 'In most cases, your lawyer can appear on your behalf under a power of attorney, so you do not need to personally attend every session — except in specific situations the law requires, or that the nature of your case makes necessary.',
+    },
+  },
+  {
+    question: {
+      ar: 'في أنهي أيام وساعات أقدر أتواصل مع المكتب؟',
+      en: 'On which days and hours can I reach the firm?',
+    },
+    answer: {
+      ar: 'المكتب متاح للتواصل طوال أيام الأسبوع ما عدا الجمعة، من الساعة 11 صباحًا حتى 11 مساءً.',
+      en: 'The firm is available every day of the week except Friday, from 11:00 AM to 11:00 PM.',
     },
   },
 ]

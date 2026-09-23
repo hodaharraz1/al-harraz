@@ -1,7 +1,7 @@
 import { getPayload } from 'payload'
 import config from '../../payload.config'
 import { siteConfig } from '@/lib/site-config'
-import { practiceAreas, industries, articles, faqs } from './data'
+import { practiceAreas, industries, articles, faqs, retiredFaqQuestionsAr } from './data'
 
 async function run() {
   const payload = await getPayload({ config })
@@ -209,6 +209,20 @@ async function run() {
           body: richTextFromParagraphs(article.body.en),
         },
       })
+    }
+  }
+
+  payload.logger.info('Removing retired FAQs (replaced by client-perspective questions)...')
+  for (const retiredQuestionAr of retiredFaqQuestionsAr) {
+    const retired = await payload.find({
+      collection: 'faqs',
+      locale: 'ar',
+      where: { question: { equals: retiredQuestionAr } },
+      limit: 1,
+    })
+    const retiredDoc = retired.docs[0]
+    if (retiredDoc) {
+      await payload.delete({ collection: 'faqs', id: retiredDoc.id })
     }
   }
 
