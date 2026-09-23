@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server'
 import { consultationSchema } from '@/lib/validation'
 import { isRateLimited } from '@/lib/rate-limit'
 import { getPayloadClient } from '@/lib/payload'
+import { readJsonBody, BodyTooLargeError } from '@/lib/read-json-body'
 
 export async function POST(request: NextRequest) {
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown'
@@ -11,10 +12,41 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Too many requests. Please try again later.' }, { status: 429 })
   }
 
+  const contentType = request.headers.get('content-type') ?? ''
+  if (!contentType.toLowerCase().includes('application/json')) {
+    return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 })
+  }
+
+  // Lightweight CSRF mitigation: this endpoint has no session/auth token to
+  // protect (it's a public lead-gen form), so a full CSRF-token scheme
+  // would be overkill — but a cross-site page could still script a fetch()
+  // POST here, so reject any request whose Origin (or, if the browser
+  // omitted it, Referer) doesn't match the host this request actually
+  // arrived on. Deliberately compared against the request's own host
+  // (request.nextUrl.origin), not a separately-configured site URL, so this
+  // can't drift out of sync with reality (e.g. on a preview deployment).
+  const siteOrigin = request.nextUrl.origin
+  const requestOrigin = request.headers.get('origin')
+  const requestReferer = request.headers.get('referer')
+  let sourceOrigin: string | null = requestOrigin
+  if (sourceOrigin === null && requestReferer) {
+    try {
+      sourceOrigin = new URL(requestReferer).origin
+    } catch {
+      sourceOrigin = null
+    }
+  }
+  if (sourceOrigin !== null && sourceOrigin !== siteOrigin) {
+    return NextResponse.json({ error: 'Invalid request origin.' }, { status: 403 })
+  }
+
   let body: unknown
   try {
-    body = await request.json()
-  } catch {
+    body = await readJsonBody(request)
+  } catch (error) {
+    if (error instanceof BodyTooLargeError) {
+      return NextResponse.json({ error: 'Request body too large.' }, { status: 413 })
+    }
     return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 })
   }
 

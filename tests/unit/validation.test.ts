@@ -47,6 +47,32 @@ describe('consultationSchema', () => {
     expect(result.success).toBe(true)
   })
 
+  it('normalizes Arabic-Indic digits in the phone number', () => {
+    const result = consultationSchema.safeParse({ ...validPayload, phone: '٠١٠٠٥٠٢٩٥٠١' })
+    expect(result.success).toBe(true)
+    if (result.success) {
+      expect(result.data.phone).toBe('01005029501')
+    }
+  })
+
+  it('normalizes Extended Arabic-Indic (Persian) digits in the phone number', () => {
+    const result = consultationSchema.safeParse({ ...validPayload, phone: '۰۱۰۰۵۰۲۹۵۰۱' })
+    expect(result.success).toBe(true)
+    if (result.success) {
+      expect(result.data.phone).toBe('01005029501')
+    }
+  })
+
+  it('requires a non-empty email when email is the preferred contact method', () => {
+    const result = consultationSchema.safeParse({ ...validPayload, preferredContact: 'email', email: '' })
+    expect(result.success).toBe(false)
+  })
+
+  it('accepts email as the preferred contact method when a real email is given', () => {
+    const result = consultationSchema.safeParse({ ...validPayload, preferredContact: 'email', email: 'client@example.com' })
+    expect(result.success).toBe(true)
+  })
+
   it('rejects an unknown locale', () => {
     // safeParse's input is `unknown` at the type level (runtime validation is
     // the point), so the invalid value is injected via a plain object rather

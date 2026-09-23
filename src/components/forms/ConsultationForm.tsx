@@ -10,6 +10,7 @@ const copy = {
     name: 'الاسم بالكامل',
     phone: 'رقم الهاتف',
     email: 'البريد الإلكتروني (اختياري)',
+    emailRequired: 'البريد الإلكتروني',
     clientType: 'نوع العميل',
     individual: 'فرد',
     company: 'شركة',
@@ -29,6 +30,7 @@ const copy = {
     name: 'Full Name',
     phone: 'Phone Number',
     email: 'Email (optional)',
+    emailRequired: 'Email',
     clientType: 'Client Type',
     individual: 'Individual',
     company: 'Company',
@@ -61,6 +63,7 @@ export function ConsultationForm({
 }) {
   const t = copy[locale]
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const [preferredContact, setPreferredContact] = useState('phone')
   const hasTrackedStart = useRef(false)
 
   function handleFirstInteraction() {
@@ -137,8 +140,17 @@ export function ConsultationForm({
       </div>
 
       <div>
-        <label htmlFor="email" className="text-sm font-medium text-navy-900">{t.email}</label>
-        <input id="email" name="email" type="email" maxLength={200} className={inputClass} />
+        <label htmlFor="email" className="text-sm font-medium text-navy-900">
+          {preferredContact === 'email' ? t.emailRequired : t.email}
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          maxLength={200}
+          required={preferredContact === 'email'}
+          className={inputClass}
+        />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
@@ -151,7 +163,14 @@ export function ConsultationForm({
         </div>
         <div>
           <label htmlFor="preferredContact" className="text-sm font-medium text-navy-900">{t.preferredContact}</label>
-          <select id="preferredContact" name="preferredContact" required className={inputClass}>
+          <select
+            id="preferredContact"
+            name="preferredContact"
+            required
+            className={inputClass}
+            value={preferredContact}
+            onChange={(event) => setPreferredContact(event.target.value)}
+          >
             <option value="phone">{locale === 'ar' ? 'الهاتف' : 'Phone'}</option>
             <option value="whatsapp">WhatsApp</option>
             <option value="email">{locale === 'ar' ? 'البريد الإلكتروني' : 'Email'}</option>
