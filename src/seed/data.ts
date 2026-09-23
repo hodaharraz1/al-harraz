@@ -453,6 +453,84 @@ export const practiceAreas: Array<{
       en: 'We help founders of tech startups and digital apps meet the legal registration and licensing requirements for operating their business before the relevant authorities, and draft the contracts and policies this kind of activity needs.',
     },
   },
+  {
+    slug: 'company-amendments-restructuring',
+    order: 37,
+    title: { ar: 'تعديل عقود الشركات وإعادة هيكلتها', en: 'Company Amendments & Restructuring' },
+    summary: {
+      ar: 'متابعة تعديل عقود التأسيس وزيادة رأس المال ونقل ملكية الحصص.',
+      en: 'Handling amendments to articles of association, capital changes, and share transfers.',
+    },
+    overview: {
+      ar: 'نساعد الشركات في إجراءات تعديل عقد التأسيس والنظام الأساسي، سواء بزيادة أو تخفيض رأس المال، أو تغيير النشاط، أو نقل ملكية الحصص والأسهم بين الشركاء، أمام الجهات المختصة.',
+      en: 'We help companies amend their articles of association — whether by increasing or decreasing capital, changing the company’s activity, or transferring ownership of shares between partners — before the relevant authorities.',
+    },
+  },
+  {
+    slug: 'bounced-checks-negotiable-instruments',
+    order: 38,
+    title: { ar: 'قضايا الشيكات والأوراق التجارية', en: 'Bounced Checks & Negotiable Instruments' },
+    summary: {
+      ar: 'تمثيل قانوني في قضايا الشيكات بدون رصيد والأوراق التجارية.',
+      en: 'Legal representation in bounced check cases and negotiable instrument disputes.',
+    },
+    overview: {
+      ar: 'نمثل موكلينا في قضايا الشيكات بدون رصيد وغيرها من الأوراق التجارية كالكمبيالة والسند الإذني، سواء بصفتهم مستفيدين يطالبون باستيفاء حقهم أو ساحبين يحتاجون الدفاع عن موقفهم.',
+      en: 'We represent clients in bounced check cases and disputes over other negotiable instruments such as bills of exchange and promissory notes, whether as a beneficiary seeking to collect what is owed or a drawer needing to defend their position.',
+    },
+  },
+  {
+    slug: 'power-of-attorney-drafting',
+    order: 39,
+    title: { ar: 'صياغة التوكيلات', en: 'Power of Attorney Drafting' },
+    summary: {
+      ar: 'صياغة التوكيلات العامة والخاصة بما يخدم غرضك بدقة.',
+      en: 'Drafting general and special powers of attorney tailored precisely to your purpose.',
+    },
+    overview: {
+      ar: 'نساعدك في صياغة التوكيل المناسب لغرضك، سواء كان توكيلًا عامًا أو خاصًا بأعمال محددة، مع الحرص على تحديد صلاحيات الوكيل بوضوح لتجنب أي لبس أو تجاوز لاحق.',
+      en: 'We help you draft the right power of attorney for your purpose, whether general or limited to specific matters, taking care to clearly define the agent’s authority to avoid any ambiguity or overreach later.',
+    },
+  },
+  {
+    slug: 'legal-notices-formal-warnings',
+    order: 40,
+    title: { ar: 'الإنذارات القانونية الرسمية', en: 'Formal Legal Notices' },
+    summary: {
+      ar: 'تحرير وإرسال الإنذارات القانونية على يد محضر.',
+      en: 'Drafting and serving formal legal notices through a court bailiff.',
+    },
+    overview: {
+      ar: 'نتولى تحرير الإنذارات القانونية الرسمية وإرسالها على يد محضر في مختلف المسائل، كإنذارات إخلاء العقارات أو المطالبة بالمستحقات أو فسخ العقود، كخطوة أولى قد تجنبك اللجوء إلى التقاضي.',
+      en: 'We draft and serve formal legal notices through a court bailiff on a range of matters — such as property eviction notices, demands for payment, or contract termination notices — as a first step that may help you avoid resorting to litigation.',
+    },
+  },
+  {
+    slug: 'wills-drafting',
+    order: 41,
+    title: { ar: 'كتابة الوصايا', en: 'Wills Drafting' },
+    summary: {
+      ar: 'صياغة الوصايا وفقًا لأحكام الشريعة والقانون المصري.',
+      en: 'Drafting wills in accordance with Sharia principles and Egyptian law.',
+    },
+    overview: {
+      ar: 'نساعدك في صياغة وصيتك بما يتوافق مع أحكام الشريعة الإسلامية والقانون المصري، بما يضمن وضوح رغباتك وتنفيذها بالشكل القانوني الصحيح.',
+      en: 'We help you draft your will in a way that complies with Islamic Sharia principles and Egyptian law, ensuring your wishes are clear and can be properly carried out.',
+    },
+  },
+  {
+    slug: 'urgent-interim-matters',
+    order: 42,
+    title: { ar: 'قضايا الأمور المستعجلة', en: 'Urgent & Interim Court Matters' },
+    summary: {
+      ar: 'التمثيل في الدعاوى المستعجلة كوقف الأعمال الجديدة وإثبات الحالة.',
+      en: 'Representation in urgent matters such as halting unauthorized work and evidence preservation.',
+    },
+    overview: {
+      ar: 'نمثل موكلينا أمام قضاء الأمور المستعجلة في المسائل التي تستلزم إجراءً سريعًا، مثل دعاوى وقف الأعمال الجديدة أو إثبات الحالة أو طلبات الحراسة القضائية، حفاظًا على الحق من ضرر قد يتعذر تداركه لاحقًا.',
+      en: 'We represent clients before the interim/urgent-matters courts on issues requiring swift action, such as halting unauthorized new work, evidence preservation, or requests for judicial sequestration, to protect a right from harm that may later be difficult to remedy.',
+    },
+  },
 ]
 
 export const industries: Array<{ slug: string; title: Bilingual; summary: Bilingual; businessProblems: Bilingual }> = [
