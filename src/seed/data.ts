@@ -502,4 +502,74 @@ export const articles: Array<{
   },
 ]
 
+/**
+ * General FAQs shown on the homepage (no relatedPracticeArea, so they are
+ * not scoped to one practice area). Same YMYL discipline as `articles`:
+ * general process/education only, no firm-specific claims that aren't
+ * independently verified (pricing, guarantees, case outcomes, geographic
+ * coverage beyond what's already stated elsewhere on the site).
+ */
+export const faqs: Array<{ question: Bilingual; answer: Bilingual }> = [
+  {
+    question: {
+      ar: 'ما الفرق بين الاستشارة القانونية والتمثيل القضائي؟',
+      en: 'What is the difference between a legal consultation and court representation?',
+    },
+    answer: {
+      ar: 'الاستشارة القانونية توضح لك موقفك القانوني والخيارات المتاحة أمامك، أما التمثيل القضائي فهو أن يتولى المحامي متابعة قضيتك أمام المحكمة نيابة عنك من البداية حتى صدور الحكم.',
+      en: 'A legal consultation explains your legal position and the options available to you, while court representation means a lawyer handles your case before the court on your behalf, from filing through to judgment.',
+    },
+  },
+  {
+    question: {
+      ar: 'هل يمكن حل النزاع دون اللجوء للمحكمة؟',
+      en: 'Can a dispute be resolved without going to court?',
+    },
+    answer: {
+      ar: 'في كثير من الحالات نعم، من خلال التفاوض المباشر أو الوساطة أو التحكيم، وهي وسائل قد تكون أسرع وأقل تكلفة من التقاضي، حسب طبيعة النزاع ورغبة الأطراف.',
+      en: 'In many cases, yes — through direct negotiation, mediation, or arbitration, which can be faster and less costly than litigation, depending on the nature of the dispute and the parties’ willingness.',
+    },
+  },
+  {
+    question: {
+      ar: 'متى يجب أن أستشير محاميًا بخصوص عقد؟',
+      en: 'When should I consult a lawyer about a contract?',
+    },
+    answer: {
+      ar: 'يُفضَّل استشارة محامٍ قبل توقيع أي عقد ذي قيمة أو التزامات مهمة، وليس بعد نشوء خلاف، لأن المراجعة المسبقة تحمي حقوقك وتقلل احتمالية النزاع لاحقًا.',
+      en: 'It is best to consult a lawyer before signing any contract of significant value or obligations, not after a dispute arises — a review beforehand protects your rights and reduces the likelihood of a later dispute.',
+    },
+  },
+  {
+    question: {
+      ar: 'ما هي مدة صلاحية الحق في رفع الدعوى؟',
+      en: 'Is there a time limit on the right to file a lawsuit?',
+    },
+    answer: {
+      ar: 'تختلف مدة التقادم (سقوط الحق في رفع الدعوى) باختلاف نوع الحق والقضية، لذلك من المهم استشارة محامٍ في أقرب وقت بمجرد نشوء المشكلة حتى لا تفوت أي مواعيد قانونية.',
+      en: 'The limitation period (after which the right to sue lapses) varies depending on the type of right and case, so it is important to consult a lawyer as soon as a problem arises so that no legal deadlines are missed.',
+    },
+  },
+  {
+    question: {
+      ar: 'كيف أحجز استشارة مع مكتب آل حراز؟',
+      en: 'How do I book a consultation with Al Harraz Law Firm?',
+    },
+    answer: {
+      ar: 'يمكنك حجز استشارة من خلال نموذج طلب الاستشارة على الموقع، أو التواصل مباشرة عبر الهاتف أو واتساب الموضح في صفحة تواصل معنا.',
+      en: 'You can book a consultation through the consultation request form on the website, or reach out directly by phone or WhatsApp using the details on the Contact page.',
+    },
+  },
+  {
+    question: {
+      ar: 'هل الحصول على حكم قضائي يعني استيفاء حقي فعليًا؟',
+      en: 'Does winning a court judgment mean I have actually received what I’m owed?',
+    },
+    answer: {
+      ar: 'ليس بالضرورة — إذا لم يلتزم الطرف المحكوم عليه بتنفيذ الحكم طواعية، يصبح من الضروري اللجوء إلى إجراءات التنفيذ الجبري لاستيفاء الحق فعليًا، ومتابعة هذه المرحلة جزء أساسي من العمل على أي قضية.',
+      en: 'Not necessarily — if the losing party does not comply voluntarily, enforcement proceedings become necessary to actually collect what is owed, and following through on that stage is an essential part of handling any case.',
+    },
+  },
+]
+
 export const founderYear = 1983

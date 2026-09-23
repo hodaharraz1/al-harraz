@@ -1,7 +1,7 @@
 import { getPayload } from 'payload'
 import config from '../../payload.config'
 import { siteConfig } from '@/lib/site-config'
-import { practiceAreas, industries, articles } from './data'
+import { practiceAreas, industries, articles, faqs } from './data'
 
 async function run() {
   const payload = await getPayload({ config })
@@ -210,6 +210,41 @@ async function run() {
         },
       })
     }
+  }
+
+  payload.logger.info('Seeding FAQs (general, published; deduplicated by Arabic question text)...')
+  for (const faq of faqs) {
+    const existing = await payload.find({
+      collection: 'faqs',
+      locale: 'ar',
+      where: { question: { equals: faq.question.ar } },
+      limit: 1,
+    })
+    const existingFaqDoc = existing.docs[0]
+    if (existingFaqDoc) {
+      if (existingFaqDoc['status'] !== 'published') {
+        await payload.update({ collection: 'faqs', id: existingFaqDoc.id, data: { status: 'published' } })
+      }
+      continue
+    }
+    const doc = await payload.create({
+      collection: 'faqs',
+      locale: 'ar',
+      data: {
+        question: faq.question.ar,
+        answer: faq.answer.ar,
+        status: 'published',
+      },
+    })
+    await payload.update({
+      collection: 'faqs',
+      id: doc.id,
+      locale: 'en',
+      data: {
+        question: faq.question.en,
+        answer: faq.answer.en,
+      },
+    })
   }
 
   payload.logger.info('Seed complete.')
