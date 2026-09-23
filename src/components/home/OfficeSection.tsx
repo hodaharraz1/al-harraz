@@ -6,13 +6,30 @@ const copy = {
     heading: 'مقر المكتب',
     directions: 'الحصول على الاتجاهات',
     mapTitle: 'خريطة توضح موقع المكتب',
+    hoursLabel: 'مواعيد العمل',
+    openDays: 'السبت – الخميس',
+    closedDay: 'الجمعة: مغلق',
   },
   en: {
     heading: 'Our Office',
     directions: 'Get Directions',
     mapTitle: 'Map showing the office location',
+    hoursLabel: 'Working Hours',
+    openDays: 'Saturday – Thursday',
+    closedDay: 'Closed Fridays',
   },
 } as const
+
+function formatHour(time: string, locale: Locale): string {
+  const [h, m] = time.split(':').map(Number)
+  const date = new Date(Date.UTC(2000, 0, 1, h, m))
+  return new Intl.DateTimeFormat(locale === 'ar' ? 'ar-EG' : 'en-US', {
+    hour: 'numeric',
+    minute: m ? '2-digit' : undefined,
+    hour12: true,
+    timeZone: 'UTC',
+  }).format(date)
+}
 
 export function OfficeSection({ locale }: { locale: Locale }) {
   const t = copy[locale]
@@ -28,6 +45,15 @@ export function OfficeSection({ locale }: { locale: Locale }) {
           <p className="mt-2 text-navy-900/85">
             <a href={`tel:${siteConfig.phoneInternational}`}>{siteConfig.phoneDisplay}</a>
           </p>
+
+          <div className="mt-5">
+            <p className="text-sm font-semibold text-navy-950">{t.hoursLabel}</p>
+            <p className="mt-1 text-sm text-navy-900/75">
+              {t.openDays}: {formatHour(siteConfig.openingHours.opens, locale)} – {formatHour(siteConfig.openingHours.closes, locale)}
+            </p>
+            <p className="text-sm text-navy-900/75">{t.closedDay}</p>
+          </div>
+
           <a
             href={siteConfig.googleMapsUrl}
             target="_blank"

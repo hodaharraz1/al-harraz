@@ -21,6 +21,12 @@ export function organizationSchema(locale: Locale) {
       longitude: siteConfig.longitude,
     },
     hasMap: siteConfig.googleMapsUrl,
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: siteConfig.openingHours.daysOpen,
+      opens: siteConfig.openingHours.opens,
+      closes: siteConfig.openingHours.closes,
+    },
     areaServed: 'EG',
     ...(siteConfig.email ? { email: siteConfig.email } : {}),
   }

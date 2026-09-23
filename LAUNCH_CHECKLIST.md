@@ -10,7 +10,7 @@ Status legend: ✅ done and verified this session · ⚠️ built but not indepe
 - ❌ Real team/office photography added (placeholders in use)
 - ❌ Facebook/social URLs confirmed and linked
 - ❌ Google Business Profile created and linked
-- ❌ Business hours confirmed
+- ✅ Business hours confirmed (every day except Friday, 11:00–23:00)
 - ❌ Professional email addresses configured
 
 ## Technical

@@ -14,7 +14,7 @@ Status: living document — update as facts are confirmed. Nothing listed here h
 
 ### Firm facts
 - [ ] Verified standardized English postal address (current `siteConfig.addressEn` is a working translation, not a verified official form).
-- [ ] Business hours (not currently displayed anywhere — no hours are invented).
+- [x] Business hours — confirmed by the firm: every day except Friday, 11:00–23:00. Live in `siteConfig.openingHours`, shown on the office/contact section, and in the `LegalService` structured data.
 - [ ] Professional email addresses (`info@`, `consultations@`, `maritime@`) — pending domain purchase; see `README.md` DNS section for the SPF/DKIM/DMARC setup once a domain and mailbox provider are chosen.
 - [ ] Facebook page URL (exists per the brief, but the URL was not supplied to this session).
 - [ ] LinkedIn / Instagram / YouTube URLs, if/when created.

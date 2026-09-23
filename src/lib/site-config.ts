@@ -28,6 +28,15 @@ export const siteConfig = {
   // CONTENT_REQUIRED.md) — this is a plain coordinates-based Maps link,
   // used for the "Get Directions" CTA and the embedded map only.
   googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=31.4181633,31.7882557',
+  // Confirmed by the firm: open every day except Friday, 11:00–23:00.
+  openingHours: {
+    opens: '11:00',
+    closes: '23:00',
+    // schema.org day-of-week names, in week order starting Saturday (the
+    // start of the work week in Egypt) — Friday is the day off.
+    daysOpen: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'] as const,
+    dayClosed: 'Friday',
+  },
   siteUrl: process.env['NEXT_PUBLIC_SITE_URL'] ?? 'http://localhost:3000',
 } as const
 

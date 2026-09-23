@@ -8,6 +8,7 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { MobileCtaBar } from '@/components/layout/MobileCtaBar'
 import { SkipLink } from '@/components/layout/SkipLink'
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics'
 import { fontVariables } from '@/lib/fonts'
 import '../globals.css'
 
@@ -24,6 +25,8 @@ export async function generateMetadata({
   const locale = isLocale(rawLocale) ? rawLocale : 'ar'
   const dict = getDictionary(locale)
 
+  const googleSiteVerification = process.env['GOOGLE_SITE_VERIFICATION']
+
   return {
     metadataBase: new URL(siteConfig.siteUrl),
     title: {
@@ -38,6 +41,9 @@ export async function generateMetadata({
         'x-default': '/ar',
       },
     },
+    // Only rendered once GOOGLE_SITE_VERIFICATION is set — see
+    // POST_LAUNCH_PLAN.md for how to get the code from Search Console.
+    ...(googleSiteVerification ? { verification: { google: googleSiteVerification } } : {}),
   }
 }
 
@@ -63,6 +69,7 @@ export default async function LocaleLayout({
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.replace('no-js','js')" }} />
       </head>
       <body className="min-h-screen bg-neutral-50 pb-16 text-navy-950 antialiased lg:pb-0">
+        <GoogleAnalytics />
         <SkipLink locale={locale} />
         <Header locale={locale} dict={dict} />
         <main id="main-content">{children}</main>
