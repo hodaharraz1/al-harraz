@@ -37,6 +37,19 @@ const securityHeaders = [
   },
 ]
 
+// Mirrors src/lib/indexing.ts's isSiteIndexable() — duplicated rather than
+// imported because next.config.ts is loaded outside the app's own module
+// resolution (the "@/" path alias isn't guaranteed to resolve here). Keep
+// both in sync if this logic changes.
+function isSiteIndexable(): boolean {
+  const override = process.env['SITE_INDEXABLE']
+  if (override === 'true') return true
+  if (override === 'false') return false
+  const vercelEnv = process.env['VERCEL_ENV']
+  if (vercelEnv) return vercelEnv === 'production'
+  return true
+}
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
@@ -53,6 +66,19 @@ const nextConfig: NextConfig = {
         source: '/admin/:path*',
         headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
+      ...(isSiteIndexable()
+        ? []
+        : [
+            {
+              // Belt-and-braces: a non-production deployment (Vercel preview,
+              // or SITE_INDEXABLE=false explicitly) gets this site-wide, not
+              // just a robots.txt disallow — a preview URL that leaks or gets
+              // linked to shouldn't end up indexed just because a crawler
+              // ignored robots.txt.
+              source: '/:path*',
+              headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+            },
+          ]),
     ]
   },
 }
