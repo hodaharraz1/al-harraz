@@ -326,4 +326,180 @@ export const industries: Array<{ slug: string; title: Bilingual; summary: Biling
   },
 ]
 
+/**
+ * General legal-education content — YMYL discipline: explains concepts and
+ * procedures in general terms only, cites no specific statute numbers (which
+ * change and could be misquoted), makes no case-specific promises or outcome
+ * guarantees, and always closes by pointing the reader to a real
+ * consultation rather than presenting itself as a substitute for one. Every
+ * article requires a legalReviewer at publish time (enforced in
+ * Articles.ts, not just by convention) — see seed.ts.
+ */
+type ArticleCategory =
+  | 'guides'
+  | 'updates'
+  | 'business'
+  | 'litigation'
+  | 'family'
+  | 'criminal'
+  | 'corporate'
+  | 'maritime'
+  | 'customs'
+  | 'employment'
+  | 'real-estate'
+  | 'faqs'
+
+export const articles: Array<{
+  slug: string
+  category: ArticleCategory
+  title: Bilingual
+  excerpt: Bilingual
+  body: { ar: string[]; en: string[] }
+}> = [
+  {
+    slug: 'what-is-civil-lawsuit',
+    category: 'guides',
+    title: { ar: 'ما هي الدعوى المدنية؟', en: 'What Is a Civil Lawsuit?' },
+    excerpt: {
+      ar: 'نظرة عامة على الدعوى المدنية: متى تُرفع، وما هي أطرافها، وما الفرق بينها وبين القضايا الجنائية.',
+      en: 'An overview of civil lawsuits: when one is filed, who the parties are, and how they differ from criminal cases.',
+    },
+    body: {
+      ar: [
+        'الدعوى المدنية هي الوسيلة القانونية التي يلجأ إليها شخص (المدعي) للمطالبة بحق أمام المحكمة في مواجهة شخص آخر (المدعى عليه)، سواء كان هذا الحق ماليًا كالمطالبة بدين أو تعويض، أو عينيًا كالمطالبة بملكية أو حيازة شيء معين.',
+        'تختلف الدعوى المدنية عن الدعوى الجنائية في أن الأولى تهدف إلى جبر ضرر أو استيفاء حق بين طرفين (أفراد أو شركات)، بينما تهدف الثانية إلى توقيع عقوبة على من يرتكب فعلاً مجرَّمًا قانونًا، وتُحرَّك الدعوى الجنائية من النيابة العامة وليس الأفراد.',
+        'تمر الدعوى المدنية عادة بمراحل: تقديم صحيفة الدعوى، إعلان الخصم، تبادل المذكرات والمستندات بين الطرفين، ثم إصدار الحكم من المحكمة. وقد تُستأنف الأحكام أمام درجة تقاضٍ أعلى إذا توافرت أسباب الاستئناف.',
+        'قبل رفع أي دعوى مدنية، من المهم تقييم موقفك القانوني والمستندات المتاحة لديك، لأن نجاح الدعوى يعتمد بشكل كبير على قوة الأدلة المقدمة. لمناقشة موقفك تحديدًا، يمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'A civil lawsuit is the legal route a person (the claimant) takes to assert a right before the court against another person (the defendant) — whether that right is financial, such as a debt or compensation claim, or relates to property, such as a claim of ownership or possession.',
+        'A civil case differs from a criminal case in that the former aims to remedy harm or enforce a right between two parties (individuals or companies), while the latter aims to impose a penalty for conduct the law criminalizes — and a criminal case is brought by the Public Prosecution, not by private individuals.',
+        'A civil case typically moves through several stages: filing the statement of claim, serving the other party, an exchange of memoranda and documents between the parties, and finally a judgment from the court. Judgments may be appealed to a higher court where grounds for appeal exist.',
+        'Before filing any civil claim, it is important to assess your legal position and the documentation available to you, since the outcome depends heavily on the strength of the evidence presented. To discuss your specific situation, you can book a consultation with our team.',
+      ],
+    },
+  },
+  {
+    slug: 'what-to-review-before-signing-contract',
+    category: 'business',
+    title: {
+      ar: 'أهم البنود التي يجب مراجعتها قبل توقيع أي عقد',
+      en: 'Key Clauses to Review Before Signing Any Contract',
+    },
+    excerpt: {
+      ar: 'قائمة بأهم البنود التي يجب الانتباه لها قبل توقيع عقد، سواء كان عقد عمل أو عقد بيع أو عقد شراكة.',
+      en: 'A checklist of the clauses most worth your attention before signing any contract — whether an employment, sale, or partnership agreement.',
+    },
+    body: {
+      ar: [
+        'العقد هو القانون الذي يحكم العلاقة بين أطرافه، وما يُكتب فيه هو ما يُعتد به عند أي خلاف لاحق — لذلك فإن مراجعته بعناية قبل التوقيع أهم بكثير من محاولة تعديله أو الاعتراض عليه بعد ذلك.',
+        'من أهم البنود التي تستحق مراجعة دقيقة: تحديد أطراف العقد ومحله بدقة، الالتزامات المتبادلة بين الطرفين ومواعيد تنفيذها، الشروط المالية وطريقة السداد، شروط الفسخ أو الإنهاء وأسبابه، وأي شروط جزائية أو غرامات تأخير.',
+        'يجب أيضًا الانتباه إلى بنود تسوية المنازعات (هل يتم اللجوء للقضاء أم للتحكيم؟) والجهة أو المحكمة المختصة بالفصل في أي خلاف، لأن هذا يحدد الإجراءات المتاحة لك لاحقًا إذا لم يلتزم الطرف الآخر بتعهداته.',
+        'لا تعتمد على الوعود الشفهية مهما كانت الثقة بين الأطراف — فقط ما هو مكتوب وموقَّع هو ما يُمكن إثباته والاستناد إليه. إذا كان لديك عقد تحتاج مراجعته قبل التوقيع، يسعدنا مساعدتك.',
+      ],
+      en: [
+        'A contract is the law that governs the relationship between its parties — what is written in it is what will be relied upon in any later dispute, so reviewing it carefully before signing matters far more than trying to amend or dispute it afterward.',
+        'Clauses that deserve close review include: a precise description of the parties and the contract\'s subject matter, the mutual obligations and their timelines, the financial terms and payment method, the conditions for termination and their grounds, and any penalty clauses or late-payment charges.',
+        'Pay attention too to the dispute-resolution clause (litigation or arbitration?) and which court or body has jurisdiction over any dispute, since this determines what options are available to you later if the other party fails to honor their commitments.',
+        'Do not rely on verbal promises, however much trust exists between the parties — only what is written and signed can be proven and relied upon. If you have a contract you need reviewed before signing, we would be glad to help.',
+      ],
+    },
+  },
+  {
+    slug: 'when-can-you-claim-compensation',
+    category: 'litigation',
+    title: { ar: 'متى يحق لك المطالبة بالتعويض؟', en: 'When Are You Entitled to Claim Compensation?' },
+    excerpt: {
+      ar: 'الأسس العامة للمطالبة بالتعويض عن ضرر مدني، والعناصر التي تحتاج لإثباتها لدعم مطالبتك.',
+      en: 'The general grounds for a civil compensation claim, and the elements you typically need to establish to support it.',
+    },
+    body: {
+      ar: [
+        'تقوم المسؤولية المدنية التي تستوجب التعويض عادة على توافر ثلاثة عناصر: وقوع خطأ (سواء بالإخلال بالتزام عقدي أو بارتكاب فعل ضار)، ووقوع ضرر فعلي على المتضرر، وقيام علاقة سببية مباشرة بين الخطأ والضرر.',
+        'يشمل الضرر الذي يمكن المطالبة بالتعويض عنه الضرر المادي، كالخسارة المالية المباشرة أو الكسب الذي فات على المتضرر، وقد يشمل في حالات معينة الضرر الأدبي وفقًا لتقدير المحكمة للوقائع المعروضة عليها.',
+        'يعتمد نجاح أي مطالبة بالتعويض بشكل أساسي على قدرة صاحب الحق على إثبات هذه العناصر بالمستندات والأدلة المتاحة — لذلك يُنصح بتوثيق أي واقعة ضرر فور حدوثها (مراسلات، فواتير، تقارير، شهود) بدلاً من الاعتماد على الذاكرة لاحقًا.',
+        'كل حالة تعويض لها ظروفها الخاصة التي تؤثر على تقدير المحكمة لقيمة التعويض المناسب. إذا كنت تعرضت لضرر وتفكر في المطالبة بالتعويض، يمكننا مناقشة تفاصيل حالتك في استشارة مباشرة.',
+      ],
+      en: [
+        'Civil liability that gives rise to compensation generally rests on three elements: a fault (whether a breach of a contractual obligation or a harmful act), actual harm suffered by the injured party, and a direct causal link between the fault and the harm.',
+        'Compensable harm includes material damage, such as direct financial loss or lost gains the injured party would otherwise have made, and in certain cases may include moral/non-material harm, depending on the court\'s assessment of the facts before it.',
+        'The success of any compensation claim depends primarily on the claimant\'s ability to establish these elements with available documents and evidence — so it is advisable to document any harmful incident as soon as it occurs (correspondence, invoices, reports, witnesses) rather than relying on memory later.',
+        'Every compensation case has its own circumstances that affect how a court assesses the appropriate amount. If you have suffered harm and are considering a compensation claim, we can discuss the specifics of your case in a direct consultation.',
+      ],
+    },
+  },
+  {
+    slug: 'how-civil-judgments-are-enforced',
+    category: 'litigation',
+    title: { ar: 'كيف يتم تنفيذ الأحكام المدنية؟', en: 'How Are Civil Judgments Enforced?' },
+    excerpt: {
+      ar: 'الحصول على حكم قضائي ليس نهاية الطريق دائمًا — إليك نظرة عامة على مرحلة التنفيذ وكيفية استيفاء الحق فعليًا.',
+      en: 'Winning a judgment is not always the end of the road — an overview of the enforcement stage and how a right is actually collected.',
+    },
+    body: {
+      ar: [
+        'الحصول على حكم قضائي نهائي لصالحك هو خطوة مهمة، لكنه لا يعني تلقائيًا استلام حقك — فإذا لم يلتزم الطرف المحكوم عليه بتنفيذ الحكم طواعية، يصبح من الضروري اللجوء إلى إجراءات التنفيذ الجبري للحصول على الحق فعليًا.',
+        'تبدأ إجراءات التنفيذ عادة بإعلان الحكم للمحكوم عليه ومنحه مهلة للتنفيذ الاختياري، فإذا لم يستجب، يمكن اللجوء إلى وسائل التنفيذ الجبري المتاحة قانونًا، والتي قد تشمل الحجز على أموال المدين أو ممتلكاته.',
+        'تختلف الإجراءات والمدة الزمنية اللازمة للتنفيذ حسب طبيعة الحكم (مبلغ مالي، إخلاء عقار، تسليم منقول، إلخ) ووضع المدين المالي وتعاونه أو عدمه، لذلك من الصعب تحديد مدة موحدة لكل الحالات.',
+        'متابعة ملف التنفيذ باستمرار ومعرفة الخطوة التالية المتاحة قانونيًا في كل مرحلة أمر أساسي لضمان استيفاء الحق فعليًا، وليس فقط الحصول على الحكم على الورق. لمساعدتك في متابعة تنفيذ حكم لصالحك، تواصل معنا.',
+      ],
+      en: [
+        'Obtaining a final judgment in your favor is an important step, but it does not automatically mean you have received what you are owed — if the party against whom judgment was rendered does not comply voluntarily, resorting to enforcement proceedings becomes necessary to actually collect on the judgment.',
+        'Enforcement proceedings typically begin by serving the judgment on the losing party and giving them a period for voluntary compliance; if they do not respond, the legally available means of compulsory enforcement can be pursued, which may include attaching the debtor\'s funds or property.',
+        'The procedures and time required for enforcement vary depending on the nature of the judgment (a monetary sum, eviction of a property, delivery of movable property, etc.) and the debtor\'s financial situation and degree of cooperation, which makes it difficult to state a single timeline that applies to every case.',
+        'Actively following up on an enforcement file and knowing the next legally available step at each stage is essential to actually collecting what you are owed, not just holding a judgment on paper. To get help pursuing enforcement of a judgment in your favor, get in touch with us.',
+      ],
+    },
+  },
+  {
+    slug: 'how-is-an-estate-divided',
+    category: 'family',
+    title: { ar: 'كيف تُقسَّم التركة بين الورثة؟', en: 'How Is an Estate Divided Among Heirs?' },
+    excerpt: {
+      ar: 'خطوات عامة لتقسيم التركة بعد الوفاة، من حصر الأصول والديون إلى تحديد نصيب كل وارث.',
+      en: 'The general steps for dividing an estate after death — from taking stock of assets and debts to determining each heir\'s share.',
+    },
+    body: {
+      ar: [
+        'تبدأ عملية تقسيم التركة عادة بحصرها بشكل دقيق: تحديد كل ما يملكه المتوفى من أموال وعقارات ومنقولات وحقوق مالية، إلى جانب حصر ما عليه من ديون والتزامات، حيث تُسدَّد الديون والالتزامات من التركة أولاً قبل توزيع الباقي على الورثة.',
+        'بعد تحديد صافي التركة (الأصول بعد سداد الديون)، يتم تحديد الورثة الشرعيين ونصيب كل منهم وفقًا لأحكام الميراث المقررة، والتي تختلف الأنصبة فيها بحسب درجة القرابة للمتوفى ووجود ورثة آخرين من عدمه.',
+        'كثيرًا ما تنشأ خلافات بين الورثة حول تقييم بعض عناصر التركة (خاصة العقارات وحصص الشركات) أو حول كيفية القسمة العملية للأصول غير القابلة للتجزئة، وفي هذه الحالات يمكن اللجوء إلى القسمة الرضائية بين الورثة أو دعوى القسمة القضائية إذا تعذر الاتفاق.',
+        'كل تركة لها تفاصيلها الخاصة من حيث طبيعة الأصول وعدد الورثة والعلاقة بينهم. إذا كنت تواجه مسألة متعلقة بتقسيم تركة أو نزاع بين الورثة، يمكننا مساعدتك في استشارة مخصصة.',
+      ],
+      en: [
+        'Dividing an estate typically begins with an accurate inventory: identifying everything the deceased owned — funds, real estate, movable property, and financial rights — alongside an inventory of their debts and obligations, since debts and obligations are settled from the estate first, before the remainder is distributed to the heirs.',
+        'Once the net estate is determined (assets after debts are settled), the legal heirs are identified and each one\'s share is determined according to the applicable inheritance rules, which vary depending on the degree of kinship to the deceased and whether other heirs exist.',
+        'Disputes among heirs often arise over how to value certain estate assets (particularly real estate and company shares) or over how to practically divide assets that cannot easily be split, and in such cases the heirs can pursue a consensual division among themselves or a judicial partition claim if agreement cannot be reached.',
+        'Every estate has its own particulars in terms of the nature of the assets, the number of heirs, and the relationships among them. If you are facing an estate-division matter or a dispute among heirs, we can help in a dedicated consultation.',
+      ],
+    },
+  },
+  {
+    slug: 'legal-considerations-real-estate-purchase-contracts',
+    category: 'real-estate',
+    title: {
+      ar: 'أهم الاعتبارات القانونية في عقود بيع العقارات',
+      en: 'Key Legal Considerations in Real Estate Purchase Contracts',
+    },
+    excerpt: {
+      ar: 'نقاط أساسية يجب الانتباه لها قبل التوقيع على عقد بيع أو شراء عقار، من التحقق من الملكية إلى شروط التسجيل.',
+      en: 'Essential points to check before signing a property sale contract — from verifying ownership to registration terms.',
+    },
+    body: {
+      ar: [
+        'قبل التوقيع على أي عقد بيع عقاري، من الضروري التحقق من سند ملكية البائع للعقار وخلوّه من أي نزاعات أو حقوق للغير عليه (كرهن أو حجز)، لأن شراء عقار من غير مالكه الحقيقي أو عقار مثقل بحقوق للغير قد يعرضك لخسارة كبيرة لاحقًا.',
+        'يجب أن يتضمن العقد وصفًا دقيقًا للعقار (المساحة، الحدود، رقم القطعة إن وجد)، والثمن وطريقة وموعد سداده، وتاريخ التسليم الفعلي، والتزامات كل طرف بشأن المصروفات المرتبطة بالتسجيل والضرائب إن وجدت.',
+        'تسجيل العقد بالشكل القانوني الصحيح أمر بالغ الأهمية لحماية حق الملكية بشكل كامل، ذلك أن العقد غير المسجَّل قد لا يمنح المشتري كافة الحقوق المقررة قانونًا في مواجهة الغير.',
+        'كل صفقة عقارية لها ظروفها الخاصة، سواء كانت شراء وحدة سكنية أو أرض أو عقار تجاري. قبل توقيع أي عقد عقاري، تواصل معنا لمراجعته والتأكد من حماية حقوقك.',
+      ],
+      en: [
+        'Before signing any real estate purchase contract, it is essential to verify the seller\'s title to the property and confirm it is free of disputes or third-party rights (such as a mortgage or attachment), since buying a property from someone who is not its true owner, or one encumbered by third-party rights, can expose you to significant loss later.',
+        'The contract should include an accurate description of the property (area, boundaries, plot number if applicable), the price and how and when it will be paid, the actual delivery date, and each party\'s obligations regarding registration expenses and any applicable taxes.',
+        'Properly registering the contract is critical to fully protecting ownership rights, since an unregistered contract may not grant the buyer the full rights the law provides against third parties.',
+        'Every real estate transaction has its own particulars, whether it is the purchase of a residential unit, land, or a commercial property. Before signing any real estate contract, get in touch with us to have it reviewed and ensure your rights are protected.',
+      ],
+    },
+  },
+]
+
 export const founderYear = 1983

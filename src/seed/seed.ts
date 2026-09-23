@@ -1,7 +1,7 @@
 import { getPayload } from 'payload'
 import config from '../../payload.config'
 import { siteConfig } from '@/lib/site-config'
-import { practiceAreas, industries } from './data'
+import { practiceAreas, industries, articles } from './data'
 
 async function run() {
   const payload = await getPayload({ config })
@@ -157,6 +157,61 @@ async function run() {
     })
   }
 
+  payload.logger.info('Seeding articles (published, YMYL-reviewed)...')
+  const reviewerEmail = 'hodaharraz1@gmail.com'
+  const reviewer = await payload.find({
+    collection: 'users',
+    where: { email: { equals: reviewerEmail } },
+    limit: 1,
+  })
+  const reviewerDoc = reviewer.docs[0]
+  if (!reviewerDoc) {
+    payload.logger.warn(
+      `Skipping article seeding: no admin user found for ${reviewerEmail}. Create that account first, then re-run the seed.`,
+    )
+  } else {
+    const today = new Date().toISOString().slice(0, 10)
+    for (const article of articles) {
+      const existing = await payload.find({ collection: 'articles', where: { slug: { equals: article.slug } }, limit: 1 })
+      const existingArticleDoc = existing.docs[0]
+      if (existingArticleDoc) {
+        if (existingArticleDoc['status'] !== 'published') {
+          await payload.update({
+            collection: 'articles',
+            id: existingArticleDoc.id,
+            data: { status: 'published', legalReviewer: reviewerDoc.id, lastReviewedDate: today },
+          })
+        }
+        continue
+      }
+      const doc = await payload.create({
+        collection: 'articles',
+        locale: 'ar',
+        data: {
+          title: article.title.ar,
+          slug: article.slug,
+          category: article.category,
+          excerpt: article.excerpt.ar,
+          body: richTextFromParagraphs(article.body.ar),
+          legalReviewer: reviewerDoc.id,
+          publishDate: today,
+          lastReviewedDate: today,
+          status: 'published',
+        },
+      })
+      await payload.update({
+        collection: 'articles',
+        id: doc.id,
+        locale: 'en',
+        data: {
+          title: article.title.en,
+          excerpt: article.excerpt.en,
+          body: richTextFromParagraphs(article.body.en),
+        },
+      })
+    }
+  }
+
   payload.logger.info('Seed complete.')
   process.exit(0)
 }
@@ -179,6 +234,26 @@ function richTextFromPlainText(text: string) {
           children: [{ type: 'text', format: 0, style: '', mode: 'normal', detail: 0, text, version: 1 }],
         },
       ],
+    },
+  }
+}
+
+function richTextFromParagraphs(paragraphs: string[]) {
+  return {
+    root: {
+      type: 'root',
+      format: '' as const,
+      indent: 0,
+      version: 1,
+      direction: null,
+      children: paragraphs.map((text) => ({
+        type: 'paragraph',
+        format: '' as const,
+        indent: 0,
+        version: 1,
+        direction: null,
+        children: [{ type: 'text', format: 0, style: '', mode: 'normal', detail: 0, text, version: 1 }],
+      })),
     },
   }
 }
