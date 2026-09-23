@@ -8,7 +8,7 @@ Implemented as Tailwind v4 CSS-first tokens in `src/app/(frontend)/globals.css` 
 |---|---|---|
 | `--color-navy-950` … `-600` | `#05141f` → `#1d5679` | Primary — headers, dark sections, primary text on light backgrounds |
 | `--color-cyan-600` … `-300` | `#086d80` → `#7cd8ea` | Secondary/accent — derived from the existing logo, used for CTAs and highlights. `cyan-600` was darkened from the initial `#0891a8` after a Lighthouse audit measured it at only ~3.7:1 contrast (fails WCAG AA's 4.5:1) for both white-on-cyan buttons and cyan-on-white text — `#086d80` clears AA (5.5–6:1) in both directions while staying the same hue. See `TESTING.md`. |
-| `--color-bronze-500` / `-400` | `#a67c3d` / `#c0975a` | Reserved, restrained accent — not yet used in a component; available for a future premium touch without becoming a "black-and-gold cliché" (brief §04 explicitly warns against this) |
+| `--color-bronze-600` … `-100` | `#8a6428` → `#ede2cd` | Restrained accent — the `Button` `accent` variant, the civil-law focus section's eyebrow/numerals, the footer tagline. Used sparingly by design, never as a background-filling gold treatment (brief §04 explicitly warns against this). |
 | `--color-neutral-950` / `-50` / `-100` | near-black / warm off-white / light gray | Text and section backgrounds |
 | `--color-alert-red` | `#b3261e` | Form errors, the consultation-form sensitivity warning |
 
@@ -16,20 +16,21 @@ No stock gavel/scales imagery, no heavy gradients, no gold-heavy treatment — p
 
 ## Typography
 
-- Arabic: `IBM Plex Sans Arabic`/`Tajawal` fallback stack (`--font-sans-ar`), applied automatically when `dir="rtl"`.
-- English: `Inter` fallback stack (`--font-sans-en`), applied when `dir="ltr"`.
-- **Known gap**: no `@font-face`/Google Fonts `<link>` is wired up yet — the stack currently falls back to system fonts of the same shape. Adding the actual webfonts is a one-line addition once font licensing/self-hosting is decided (see `LAUNCH_CHECKLIST.md`).
-- Font selection switches automatically via the `[dir='rtl'] body` / `[dir='ltr'] body` rules in `globals.css` — no per-component logic needed.
+- Body: `IBM Plex Sans Arabic` (AR) / `Inter` (EN), self-hosted via `next/font/google` in `src/lib/fonts.ts` and exposed as CSS variables consumed by `--font-sans-ar`/`--font-sans-en`. (Earlier versions of this file only referenced these fonts by name in CSS without ever loading them, so the site silently rendered in the browser's fallback system font — fixed; there is no remaining font gap.)
+- Headings: a `.font-heading` utility (`globals.css`) switches to a serif display face — `Markazi Text` (AR) / `Source Serif 4` (EN) — applied to H1s and section headings. This is the main lever for the "established practice since 1983" feel distinct from the sans-serif body copy; used only on headings, never body text.
+- Direction-aware selection is automatic via `[dir='rtl']`/`[dir='ltr']` rules in `globals.css` — no per-component logic needed for either the body or heading fonts.
 
 ## Spacing & Layout
 
 - `Container` (`src/components/ui/Container.tsx`): `max-w-6xl`, responsive `px-4 sm:px-6 lg:px-8`.
 - `Section` (`src/components/ui/Section.tsx`): consistent `py-14 sm:py-20` rhythm, with a `tone` prop (`light` / `neutral` / `dark`) so every page section keeps one of three consistent backgrounds instead of ad hoc colors per page.
-- `--radius-card: 0.75rem` — the one shared corner radius for cards and feature blocks.
+- `--radius-card: 0.25rem` — the one shared corner radius for cards, feature blocks and buttons. Deliberately small — large rounded corners read as a "SaaS template" signal the brief explicitly asks to avoid, so this stays architectural rather than pill-shaped.
 
 ## Components
 
-`Button`/`LinkButton` (3 variants: primary/secondary/ghost, `min-h-11` for comfortable tap targets per brief §19), `Card`, `Badge`, `Breadcrumbs`, `RichText` (renders Payload lexical JSON with hand-rolled `.legal-richtext` prose styling — see below).
+`Button`/`LinkButton` (4 variants — `primary` solid navy-adjacent brand cyan (kept per brief §04 for on-dark-hero contrast and brand recognition), `secondary` true outline, `ghost` light outline, `accent` bronze solid for sparing emphasis; `min-h-11` for comfortable tap targets per brief §19), `Card` (border-driven, not shadow-driven — a `hover:border` state instead of a growing drop shadow), `Badge`, `Breadcrumbs`, `RichText` (renders Payload lexical JSON with hand-rolled `.legal-richtext` prose styling — see below).
+
+Homepage-specific editorial components (`src/components/home/`): `CivilFocus` (large asymmetric numbered-list block — the "primary practice" section, deliberately not a card grid) and `MaritimeNote` (one restrained text block + link — maritime's entire homepage footprint, by design).
 
 ## RTL / LTR
 

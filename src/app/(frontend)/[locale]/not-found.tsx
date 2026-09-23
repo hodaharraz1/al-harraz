@@ -11,8 +11,8 @@ export default function NotFound() {
 
   return (
     <Section tone="light" className="text-center">
-      <p className="text-6xl font-bold text-cyan-600">404</p>
-      <h1 className="mt-4 text-2xl font-bold">{dict.common.notFoundTitle}</h1>
+      <p className="font-heading text-6xl text-navy-900/15">404</p>
+      <h1 className="mt-4 font-heading text-2xl">{dict.common.notFoundTitle}</h1>
       <p className="mt-2 text-navy-900/75">{dict.common.notFoundBody}</p>
       <LinkButton href={`/${defaultLocale}`} variant="primary" className="mt-6">
         {dict.common.backHome}

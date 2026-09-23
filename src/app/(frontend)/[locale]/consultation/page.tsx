@@ -6,7 +6,10 @@ import { breadcrumbSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Section } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { LinkButton } from '@/components/ui/Button'
 import { ConsultationForm } from '@/components/forms/ConsultationForm'
+import { getPayloadClient } from '@/lib/payload'
+import { buildWhatsAppLink, buildTelLink } from '@/lib/whatsapp'
 
 const copy = {
   ar: { title: 'احجز استشارة', description: 'احجز استشارة قانونية مع فريق مكتب آل حراز.' },
@@ -30,6 +33,17 @@ export default async function ConsultationPage({ params }: { params: Promise<{ l
     { name: t.title, url: `/${locale}/consultation` },
   ]
 
+  const payload = await getPayloadClient()
+  const practiceAreas = await payload.find({
+    collection: 'practice-areas',
+    locale,
+    where: { status: { equals: 'published' } },
+    sort: 'order',
+    limit: 100,
+    depth: 0,
+  })
+  const practiceAreaOptions = practiceAreas.docs.map((doc) => doc['title'] as string)
+
   return (
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
@@ -39,8 +53,17 @@ export default async function ConsultationPage({ params }: { params: Promise<{ l
         <p className="mt-3 max-w-xl text-navy-900/80">{t.description}</p>
         <p className="mt-3 max-w-xl text-sm font-medium text-alert-red">{dict.consultationWarning}</p>
 
-        <div className="mt-10 max-w-xl">
-          <ConsultationForm locale={locale} sourcePage={`/${locale}/consultation`} />
+        <div className="mt-6 flex flex-wrap gap-3">
+          <LinkButton href={buildTelLink()} variant="ghost">
+            {dict.hero.ctaTertiary}
+          </LinkButton>
+          <LinkButton href={buildWhatsAppLink(locale, 'consultation')} variant="ghost" target="_blank" rel="noopener noreferrer">
+            {dict.hero.ctaSecondary}
+          </LinkButton>
+        </div>
+
+        <div className="mt-8 max-w-xl">
+          <ConsultationForm locale={locale} sourcePage={`/${locale}/consultation`} practiceAreaOptions={practiceAreaOptions} />
         </div>
 
         <p className="mt-10 max-w-xl border-t border-navy-900/10 pt-6 text-xs text-navy-900/70">{dict.disclaimer}</p>

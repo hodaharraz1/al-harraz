@@ -49,7 +49,15 @@ const copy = {
 const inputClass =
   'mt-1 block w-full rounded-md border border-navy-900/20 bg-white px-3 py-2.5 text-sm text-navy-950 focus:border-cyan-600 focus:outline-none focus:ring-1 focus:ring-cyan-600'
 
-export function ConsultationForm({ locale, sourcePage }: { locale: Locale; sourcePage: string }) {
+export function ConsultationForm({
+  locale,
+  sourcePage,
+  practiceAreaOptions,
+}: {
+  locale: Locale
+  sourcePage: string
+  practiceAreaOptions: string[]
+}) {
   const t = copy[locale]
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
 
@@ -140,7 +148,17 @@ export function ConsultationForm({ locale, sourcePage }: { locale: Locale; sourc
 
       <div>
         <label htmlFor="legalArea" className="text-sm font-medium text-navy-900">{t.legalArea}</label>
-        <input id="legalArea" name="legalArea" type="text" maxLength={200} className={inputClass} />
+        <select id="legalArea" name="legalArea" className={inputClass} defaultValue="">
+          <option value="" disabled>
+            {locale === 'ar' ? 'اختر المجال' : 'Select an area'}
+          </option>
+          {practiceAreaOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+          <option value={locale === 'ar' ? 'غير ذلك' : 'Other'}>{locale === 'ar' ? 'غير ذلك' : 'Other'}</option>
+        </select>
       </div>
 
       <div>

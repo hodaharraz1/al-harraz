@@ -4,6 +4,12 @@ import type { Locale } from '@/lib/i18n'
 import type { Dictionary } from '@/lib/dictionary'
 import { siteConfig } from '@/lib/site-config'
 import { Container } from '@/components/ui/Container'
+import { buildWhatsAppLink } from '@/lib/whatsapp'
+
+const tagline = {
+  ar: 'خبرة قانونية ممتدة منذ عام 1983',
+  en: 'Legal Experience Since 1983',
+} as const
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const p = `/${locale}`
@@ -17,8 +23,9 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         <div>
           <div className="flex items-center gap-2">
             <Image src="/logo-icon.png" alt="" width={36} height={36} className="h-9 w-9" />
-            <p className="text-lg font-bold text-white">{name}</p>
+            <p className="font-heading text-lg text-white">{name}</p>
           </div>
+          <p className="mt-2 text-sm text-bronze-400">{tagline[locale]}</p>
           <p className="mt-3 text-sm text-neutral-100/80">{dict.footer.description}</p>
         </div>
 
@@ -44,6 +51,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <ul className="mt-3 space-y-2 text-sm text-neutral-100/80">
             <li>{address}</li>
             <li><a href={`tel:${siteConfig.phoneInternational}`}>{siteConfig.phoneDisplay}</a></li>
+            <li><a href={buildWhatsAppLink(locale, 'general')} target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
             {siteConfig.email ? <li><a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></li> : null}
           </ul>
         </div>
