@@ -414,6 +414,45 @@ export const practiceAreas: Array<{
       en: 'We help individuals and groups with the procedures for establishing and registering NGOs and private foundations under Egyptian law, and with their ongoing legal compliance after establishment.',
     },
   },
+  {
+    slug: 'terms-privacy-policy-drafting',
+    order: 34,
+    title: { ar: 'صياغة الشروط والأحكام وسياسات الخصوصية', en: 'Terms of Service & Privacy Policy Drafting' },
+    summary: {
+      ar: 'صياغة شروط الاستخدام وسياسات الخصوصية للمواقع والتطبيقات.',
+      en: 'Drafting terms of use and privacy policies for websites and mobile apps.',
+    },
+    overview: {
+      ar: 'نساعد أصحاب المواقع الإلكترونية والتطبيقات في صياغة شروط الاستخدام وسياسات الخصوصية بما يتوافق مع القانون المصري، بما يوضح حقوق والتزامات المستخدمين وأصحاب المنصة على حد سواء.',
+      en: 'We help website and app owners draft terms of use and privacy policies that comply with Egyptian law, clarifying the rights and obligations of both users and the platform owner.',
+    },
+  },
+  {
+    slug: 'commercial-activity-business-licensing',
+    order: 35,
+    title: { ar: 'تراخيص الأنشطة التجارية والمحال', en: 'Commercial Activity & Business Premises Licensing' },
+    summary: {
+      ar: 'متابعة إجراءات استخراج السجل التجاري والبطاقة الضريبية وتراخيص المحال.',
+      en: 'Handling commercial registration, tax card, and business premises licensing procedures.',
+    },
+    overview: {
+      ar: 'نساعد أصحاب الأعمال في متابعة إجراءات استخراج السجل التجاري والبطاقة الضريبية وترخيص المحال التجارية أمام الجهات المختصة، بما يضمن مزاولة النشاط بشكل قانوني سليم.',
+      en: 'We help business owners with the procedures for obtaining commercial registration, a tax card, and business-premises licensing before the relevant authorities, ensuring the activity is carried out on a sound legal footing.',
+    },
+  },
+  {
+    slug: 'tech-activity-licensing-compliance',
+    order: 36,
+    title: { ar: 'تراخيص وامتثال الأنشطة التقنية', en: 'Tech Activity Licensing & Compliance' },
+    summary: {
+      ar: 'المساعدة في استيفاء متطلبات الترخيص والتسجيل القانوني للشركات الناشئة التقنية.',
+      en: 'Helping tech startups meet licensing and legal registration requirements.',
+    },
+    overview: {
+      ar: 'نساعد أصحاب الشركات الناشئة والتطبيقات الرقمية في استيفاء متطلبات التسجيل والترخيص القانوني اللازمة لمزاولة النشاط أمام الجهات المختصة، وفي صياغة العقود والسياسات التي يحتاجها هذا النوع من الأنشطة.',
+      en: 'We help founders of tech startups and digital apps meet the legal registration and licensing requirements for operating their business before the relevant authorities, and draft the contracts and policies this kind of activity needs.',
+    },
+  },
 ]
 
 export const industries: Array<{ slug: string; title: Bilingual; summary: Bilingual; businessProblems: Bilingual }> = [
@@ -762,6 +801,16 @@ export const faqs: Array<{ question: Bilingual; answer: Bilingual }> = [
     answer: {
       ar: 'المكتب متاح للتواصل طوال أيام الأسبوع ما عدا الجمعة، من الساعة 11 صباحًا حتى 11 مساءً.',
       en: 'The firm is available every day of the week except Friday, from 11:00 AM to 11:00 PM.',
+    },
+  },
+  {
+    question: {
+      ar: 'هل المكتب بيشتغل مع عملاء برا دمياط، في محافظات تانية؟',
+      en: 'Does the firm take clients outside Damietta, in other governorates?',
+    },
+    answer: {
+      ar: 'نعم، نقدم خدماتنا القانونية لعملاء في أي مكان في مصر، ونمثلهم أمام المحاكم والجهات المختصة بغض النظر عن محافظة إقامتهم.',
+      en: 'Yes — we provide our legal services to clients anywhere in Egypt, and represent them before courts and the relevant authorities regardless of which governorate they live in.',
     },
   },
 ]
