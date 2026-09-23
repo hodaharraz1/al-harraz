@@ -1,4 +1,4 @@
-import { IBM_Plex_Sans_Arabic, Inter, Markazi_Text, Source_Serif_4 } from 'next/font/google'
+import { IBM_Plex_Sans_Arabic, Inter } from 'next/font/google'
 
 // Arabic body copy — already referenced by name in globals.css but never
 // actually loaded before this, so it was silently falling back to the
@@ -10,15 +10,6 @@ export const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   display: 'swap',
 })
 
-// Arabic display/heading face — a serif built for large sizes, used to give
-// headings editorial weight without tipping into a Kufic/geometric look.
-export const markaziText = Markazi_Text({
-  subsets: ['arabic'],
-  weight: ['500', '600', '700'],
-  variable: '--font-markazi',
-  display: 'swap',
-})
-
 export const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
@@ -26,11 +17,10 @@ export const inter = Inter({
   display: 'swap',
 })
 
-export const sourceSerif4 = Source_Serif_4({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
-  variable: '--font-source-serif',
-  display: 'swap',
-})
-
-export const fontVariables = `${ibmPlexSansArabic.variable} ${markaziText.variable} ${inter.variable} ${sourceSerif4.variable}`
+// Markazi Text and Source Serif 4 were previously loaded here too (6 font
+// files across their weights) but neither is referenced anywhere in
+// globals.css's font-family declarations or any component — dead weight on
+// every page load, downloaded and preloaded for text that was never
+// actually set in either face. Removed; only the two faces the CSS
+// actually uses remain.
+export const fontVariables = `${ibmPlexSansArabic.variable} ${inter.variable}`
