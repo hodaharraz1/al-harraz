@@ -22,8 +22,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
+  // Arabic-first by design: the firm's primary market is Egypt, so a first
+  // visit always lands on /ar regardless of the browser's Accept-Language
+  // (a visitor with an English-language OS/browser — common even among
+  // Arabic speakers — was previously redirected straight to English, which
+  // is wrong for this audience). Once someone uses the language switch,
+  // the cookie remembers their actual choice on later visits.
   const cookieLocale = request.cookies.get('locale')?.value
-  const preferredLocale = cookieLocale && isLocale(cookieLocale) ? cookieLocale : detectLocale(request)
+  const preferredLocale = cookieLocale && isLocale(cookieLocale) ? cookieLocale : defaultLocale
 
   const url = request.nextUrl.clone()
   url.pathname = `/${preferredLocale}${pathname === '/' ? '' : pathname}`
@@ -31,14 +37,6 @@ export function middleware(request: NextRequest) {
   const response = NextResponse.redirect(url)
   response.cookies.set('locale', preferredLocale, { maxAge: 60 * 60 * 24 * 365, path: '/' })
   return response
-}
-
-function detectLocale(request: NextRequest): 'ar' | 'en' {
-  const header = request.headers.get('accept-language') ?? ''
-  if (header.toLowerCase().includes('en') && !header.toLowerCase().includes('ar')) {
-    return 'en'
-  }
-  return defaultLocale
 }
 
 export const config = {

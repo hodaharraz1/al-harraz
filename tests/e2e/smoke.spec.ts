@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test'
 
 test.describe('locale routing and RTL/LTR', () => {
-  test('bare root redirects to the Arabic homepage for an Arabic-preferring visitor', async ({ browser }) => {
-    // Locale is chosen from Accept-Language when no locale cookie is set yet
-    // (see middleware.ts); use a dedicated context with an Arabic browser
-    // locale so the test is deterministic and isolated from other tests'
-    // cookies, regardless of the runner's default browser locale.
-    const context = await browser.newContext({ locale: 'ar' })
+  test('bare root redirects to the Arabic homepage regardless of browser locale', async ({ browser }) => {
+    // Arabic-first by design (see middleware.ts): a first visit with no
+    // locale cookie yet always lands on /ar, independent of the browser's
+    // Accept-Language/locale. Uses a dedicated context so this is isolated
+    // from other tests' cookies, regardless of the runner's default locale.
+    const context = await browser.newContext({ locale: 'en' })
     const page = await context.newPage()
     await page.goto('/')
     await expect(page).toHaveURL(/\/ar\/?$/)
