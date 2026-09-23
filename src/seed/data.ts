@@ -271,6 +271,84 @@ export const practiceAreas: Array<{
       en: 'We provide legal advisory and representation in consumer protection disputes, including defective products and services and unfair contract terms.',
     },
   },
+  {
+    slug: 'mediation',
+    order: 23,
+    title: { ar: 'الوساطة', en: 'Mediation' },
+    summary: {
+      ar: 'تسوية النزاعات وديًا من خلال الوساطة كبديل للتقاضي.',
+      en: 'Resolving disputes amicably through mediation as an alternative to litigation.',
+    },
+    overview: {
+      ar: 'نساعد الأطراف على الوصول إلى تسوية ودية لنزاعاتهم من خلال الوساطة، وهي وسيلة أسرع وأقل تكلفة من التقاضي في كثير من الأحيان، مع الحفاظ على العلاقة بين الأطراف قدر الإمكان.',
+      en: 'We help parties reach an amicable settlement of their disputes through mediation — often a faster, less costly alternative to litigation that helps preserve the relationship between the parties.',
+    },
+  },
+  {
+    slug: 'construction-contracting-law',
+    order: 24,
+    title: { ar: 'قانون المقاولات والعقود الإنشائية', en: 'Construction & Contracting Law' },
+    summary: {
+      ar: 'صياغة ومراجعة عقود المقاولات ومتابعة منازعات التنفيذ.',
+      en: 'Drafting and reviewing construction contracts and handling execution disputes.',
+    },
+    overview: {
+      ar: 'نقدم الاستشارات القانونية وصياغة ومراجعة عقود المقاولات والإنشاءات بين المالكين والمقاولين والموردين، ونمثل موكلينا في المنازعات الناشئة عن التأخير في التنفيذ أو عيوب الأعمال أو المطالبات المالية المرتبطة بهذه العقود.',
+      en: 'We provide legal advisory and draft and review construction and contracting agreements between owners, contractors, and suppliers, and represent clients in disputes arising from execution delays, defective work, or financial claims connected to these contracts.',
+    },
+  },
+  {
+    slug: 'document-notarization-authentication',
+    order: 25,
+    title: { ar: 'التوثيق والتصديق على المستندات', en: 'Document Notarization & Authentication' },
+    summary: {
+      ar: 'متابعة إجراءات توثيق وتصديق العقود والتوكيلات.',
+      en: 'Handling the procedures for notarizing and authenticating contracts and powers of attorney.',
+    },
+    overview: {
+      ar: 'نتولى متابعة إجراءات توثيق وتصديق العقود والتوكيلات والمستندات القانونية أمام الجهات المختصة، بما يضمن سلامة الإجراءات من الناحية القانونية والشكلية.',
+      en: 'We handle the procedures for notarizing and authenticating contracts, powers of attorney, and legal documents before the relevant authorities, ensuring the process is legally and procedurally sound.',
+    },
+  },
+  {
+    slug: 'data-protection-it-law',
+    order: 26,
+    title: { ar: 'حماية البيانات الشخصية وقانون تقنية المعلومات', en: 'Data Protection & IT Law' },
+    summary: {
+      ar: 'استشارات قانونية في حماية البيانات الشخصية والالتزامات الرقمية.',
+      en: 'Legal advisory on personal data protection and digital compliance obligations.',
+    },
+    overview: {
+      ar: 'نقدم استشارات قانونية للشركات والأفراد بشأن الالتزامات المتعلقة بحماية البيانات الشخصية وفقًا للقانون المصري، إلى جانب المسائل القانونية المرتبطة باستخدام التقنية والتعاملات الإلكترونية.',
+      en: 'We advise companies and individuals on personal-data-protection obligations under Egyptian law, alongside legal matters related to the use of technology and electronic transactions.',
+    },
+  },
+  {
+    slug: 'competition-law',
+    order: 27,
+    title: { ar: 'قانون المنافسة ومنع الاحتكار', en: 'Competition & Antitrust Law' },
+    summary: {
+      ar: 'استشارات قانونية بشأن قواعد المنافسة ومنع الاحتكار.',
+      en: 'Legal advisory on competition rules and anti-monopoly compliance.',
+    },
+    overview: {
+      ar: 'نقدم الاستشارات القانونية للشركات بشأن الالتزام بقواعد المنافسة وتجنب الممارسات الاحتكارية وفقًا للقانون المصري، ونمثل موكلينا في المسائل المتعلقة بهذا المجال عند الحاجة.',
+      en: 'We advise companies on complying with competition rules and avoiding monopolistic practices under Egyptian law, and represent clients on related matters as needed.',
+    },
+  },
+  {
+    slug: 'commercial-agency-distribution',
+    order: 28,
+    title: { ar: 'الوكالات التجارية والتوزيع', en: 'Commercial Agency & Distribution Law' },
+    summary: {
+      ar: 'استشارات قانونية في عقود الوكالة التجارية والتوزيع.',
+      en: 'Legal advisory on commercial agency and distribution agreements.',
+    },
+    overview: {
+      ar: 'نساعد الشركات والأفراد في صياغة ومراجعة عقود الوكالة التجارية والتوزيع، وتوضيح الحقوق والالتزامات القانونية لكل طرف وفقًا للقانون المصري المنظم لهذا النشاط.',
+      en: 'We help companies and individuals draft and review commercial agency and distribution agreements, clarifying each party’s legal rights and obligations under the Egyptian law governing this activity.',
+    },
+  },
 ]
 
 export const industries: Array<{ slug: string; title: Bilingual; summary: Bilingual; businessProblems: Bilingual }> = [
