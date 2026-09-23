@@ -3,6 +3,7 @@ import type { Locale } from '@/lib/i18n'
 import { getPayloadClient } from '@/lib/payload'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
+import { articleCategoryLabel } from '@/lib/article-categories'
 
 export async function InsightsPreview({
   locale,
@@ -36,7 +37,7 @@ export async function InsightsPreview({
         {result.docs.map((doc) => (
           <Link key={doc.id} href={`/${locale}/insights/${doc['slug']}`}>
             <Card className="h-full">
-              {doc['category'] ? <Badge>{doc['category'] as string}</Badge> : null}
+              {doc['category'] ? <Badge>{articleCategoryLabel(doc['category'] as string, locale)}</Badge> : null}
               <h3 className="mt-3 text-sm font-semibold text-navy-950">{doc['title'] as string}</h3>
               {doc['excerpt'] ? (
                 <p className="mt-2 line-clamp-2 text-xs text-navy-900/70">{doc['excerpt'] as string}</p>

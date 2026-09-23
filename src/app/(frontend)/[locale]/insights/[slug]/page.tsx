@@ -10,6 +10,7 @@ import { Section } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { RichText } from '@/components/ui/RichText'
 import { Badge } from '@/components/ui/Badge'
+import { articleCategoryLabel } from '@/lib/article-categories'
 
 // CMS-backed page: revalidate periodically so CMS publishes appear without a redeploy.
 export const revalidate = 60
@@ -79,7 +80,11 @@ export default async function ArticlePage({
       />
       <Section tone="light">
         <Breadcrumbs items={breadcrumbs} />
-        {doc['category'] ? <div className="mt-4"><Badge>{doc['category'] as string}</Badge></div> : null}
+        {doc['category'] ? (
+          <div className="mt-4">
+            <Badge>{articleCategoryLabel(doc['category'] as string, locale)}</Badge>
+          </div>
+        ) : null}
         <h1 className="mt-3 font-heading text-3xl sm:text-4xl">{doc['title'] as string}</h1>
         <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-navy-900/70">
           {author?.name ? <span>{author.name}</span> : null}
