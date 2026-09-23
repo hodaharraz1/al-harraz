@@ -107,12 +107,12 @@ export const practiceAreas: Array<{
     order: 20,
     title: { ar: 'القانون البحري والشحن والخدمات القانونية المرتبطة بالموانئ', en: 'Maritime, Shipping & Port-Related Legal Services' },
     summary: {
-      ar: 'خبرة قانونية في الأعمال البحرية والشحن والخدمات المرتبطة بالموانئ، بحكم موقع المكتب في دمياط.',
-      en: 'Legal expertise in maritime affairs, shipping, and port-related services, given the firm’s Damietta location.',
+      ar: 'خبرة قانونية متخصصة في الأعمال البحرية والشحن والخدمات المرتبطة بالموانئ.',
+      en: 'Specialized legal expertise in maritime affairs, shipping, and port-related services.',
     },
     overview: {
-      ar: 'بحكم موقعنا الاستراتيجي في دمياط، يقدم مكتب آل حراز خدمات قانونية متخصصة في المسائل البحرية والشحن، وتشمل منازعات الشحن، مطالبات البضائع، سندات الشحن، مسؤولية الناقل البحري، التخليص الجمركي، والتجارة الدولية. لا يدّعي المكتب أي تبعية رسمية لهيئة ميناء دمياط.',
-      en: 'Given our strategic location in Damietta, Al Harraz Law Firm provides specialized legal services in maritime and shipping matters, including shipping disputes, cargo claims, bills of lading, carrier liability, customs clearance, and international trade. The firm does not claim any official affiliation with Damietta Port Authority.',
+      ar: 'يقدم مكتب آل حراز خدمات قانونية متخصصة في المسائل البحرية والشحن، وتشمل منازعات الشحن، مطالبات البضائع، سندات الشحن، مسؤولية الناقل البحري، التخليص الجمركي، والتجارة الدولية.',
+      en: 'Al Harraz Law Firm provides specialized legal services in maritime and shipping matters, including shipping disputes, cargo claims, bills of lading, carrier liability, customs clearance, and international trade.',
     },
   },
   {

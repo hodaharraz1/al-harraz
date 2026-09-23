@@ -42,7 +42,7 @@ export async function generateMetadata({
   const firmName = locale === 'ar' ? siteConfig.legalNameAr : siteConfig.legalNameEn
   const fallbackDescription =
     role ||
-    (locale === 'ar' ? `${name} — ${firmName}، دمياط.` : `${name} — ${firmName}, Damietta, Egypt.`)
+    (locale === 'ar' ? `${name} — ${firmName}.` : `${name} — ${firmName}, Egypt.`)
   return buildMetadata({
     locale,
     path: `/team/${slug}`,

@@ -5,11 +5,11 @@ import { siteConfig } from '@/lib/site-config'
 const copy = {
   ar: {
     heading: 'إرثنا',
-    intro: 'أكثر من أربعة عقود من الممارسة القانونية، بدأت في دمياط عام 1983 وما زالت مستمرة حتى اليوم.',
+    intro: 'أكثر من أربعة عقود من الممارسة القانونية، بدأت عام 1983 وما زالت مستمرة حتى اليوم.',
   },
   en: {
     heading: 'Our Heritage',
-    intro: 'Four decades-plus of legal practice, started in Damietta in 1983 and continuing today.',
+    intro: 'Four decades-plus of legal practice, started in 1983 and continuing today.',
   },
 } as const
 

@@ -11,8 +11,8 @@ import { LinkButton } from '@/components/ui/Button'
 import { buildWhatsAppLink, buildTelLink } from '@/lib/whatsapp'
 
 const copy = {
-  ar: { title: 'تواصل معنا', description: 'تواصل مع مكتب آل حراز للمحاماة والاستشارات القانونية في دمياط.' },
-  en: { title: 'Contact', description: 'Get in touch with Al Harraz Law Firm & Legal Consultants in Damietta.' },
+  ar: { title: 'تواصل معنا', description: 'تواصل مع مكتب آل حراز للمحاماة والاستشارات القانونية.' },
+  en: { title: 'Contact', description: 'Get in touch with Al Harraz Law Firm & Legal Consultants.' },
 } as const
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

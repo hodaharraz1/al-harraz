@@ -124,6 +124,31 @@ async function run() {
     })
   }
 
+  // One-off content correction: this slug's summary/overview were rewritten
+  // to drop "given our Damietta location" framing (the firm serves clients
+  // nationwide), so force-sync its content even though the doc already
+  // exists — the loop above intentionally leaves existing content alone.
+  const contentResyncSlugs = ['maritime-shipping-port-law']
+  for (const slug of contentResyncSlugs) {
+    const pa = practiceAreas.find((p) => p.slug === slug)
+    if (!pa) continue
+    const existing = await payload.find({ collection: 'practice-areas', where: { slug: { equals: slug } }, limit: 1 })
+    const existingDoc = existing.docs[0]
+    if (!existingDoc) continue
+    await payload.update({
+      collection: 'practice-areas',
+      id: existingDoc.id,
+      locale: 'ar',
+      data: { summary: pa.summary.ar, overview: richTextFromPlainText(pa.overview.ar) },
+    })
+    await payload.update({
+      collection: 'practice-areas',
+      id: existingDoc.id,
+      locale: 'en',
+      data: { summary: pa.summary.en, overview: richTextFromPlainText(pa.overview.en) },
+    })
+  }
+
   payload.logger.info('Seeding industries (generic, non-fabricated copy; published per firm direction)...')
   for (const ind of industries) {
     const existing = await payload.find({ collection: 'industries', where: { slug: { equals: ind.slug } }, limit: 1 })
