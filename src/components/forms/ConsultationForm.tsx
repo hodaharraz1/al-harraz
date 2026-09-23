@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
+import { useRef, useState, type FormEvent } from 'react'
 import type { Locale } from '@/lib/i18n'
 import { Button } from '@/components/ui/Button'
+import { trackEvent } from '@/lib/analytics'
 
 const copy = {
   ar: {
@@ -60,6 +61,13 @@ export function ConsultationForm({
 }) {
   const t = copy[locale]
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const hasTrackedStart = useRef(false)
+
+  function handleFirstInteraction() {
+    if (hasTrackedStart.current) return
+    hasTrackedStart.current = true
+    trackEvent('consultation_form_start', { locale })
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -72,7 +80,11 @@ export function ConsultationForm({
       phone: formData.get('phone'),
       email: formData.get('email'),
       clientType: formData.get('clientType'),
-      legalArea: formData.get('legalArea'),
+      // A <select> whose only "selected" option is disabled (our unset
+      // placeholder) submits as null, not '' — normalize it so an optional
+      // field left untouched doesn't fail server-side validation and
+      // silently drop the enquiry (see TESTING.md).
+      legalArea: formData.get('legalArea') ?? '',
       preferredContact: formData.get('preferredContact'),
       message: formData.get('message'),
       urgency: formData.get('urgency'),
@@ -90,6 +102,7 @@ export function ConsultationForm({
       })
       if (!res.ok) throw new Error('Request failed')
       setStatus('success')
+      trackEvent('consultation_form_submit', { locale })
       form.reset()
     } catch {
       setStatus('error')
@@ -101,7 +114,7 @@ export function ConsultationForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="relative space-y-5">
+    <form onSubmit={handleSubmit} onFocusCapture={handleFirstInteraction} className="relative space-y-5">
       {/* Honeypot field — hidden from sighted users, left blank by bots.
           Clipped via a zero-size overflow-hidden wrapper (scoped to this
           relatively-positioned form) rather than a large negative offset,

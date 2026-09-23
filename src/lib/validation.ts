@@ -5,7 +5,10 @@ export const consultationSchema = z.object({
   phone: z.string().trim().min(7).max(30),
   email: z.string().trim().email().max(200).optional().or(z.literal('')),
   clientType: z.enum(['individual', 'company']),
-  legalArea: z.string().trim().max(200).optional().or(z.literal('')),
+  // Accepts null too: a <select> whose only selected option is disabled
+  // (our unset placeholder) submits FormData as null, not '' — see
+  // ConsultationForm.tsx.
+  legalArea: z.string().trim().max(200).optional().or(z.literal('')).nullable(),
   preferredContact: z.enum(['phone', 'whatsapp', 'email']),
   message: z.string().trim().max(2000).optional().or(z.literal('')),
   urgency: z.enum(['urgent', 'normal']),

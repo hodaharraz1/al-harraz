@@ -42,6 +42,11 @@ describe('consultationSchema', () => {
     expect(result.success).toBe(false)
   })
 
+  it('accepts a null legalArea (an unselected <select> submits null, not empty string)', () => {
+    const result = consultationSchema.safeParse({ ...validPayload, legalArea: null })
+    expect(result.success).toBe(true)
+  })
+
   it('rejects an unknown locale', () => {
     // safeParse's input is `unknown` at the type level (runtime validation is
     // the point), so the invalid value is injected via a plain object rather
