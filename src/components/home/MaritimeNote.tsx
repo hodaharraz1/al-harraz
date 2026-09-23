@@ -4,12 +4,12 @@ import Link from 'next/link'
 const copy = {
   ar: {
     heading: 'القانون البحري والشحن',
-    body: 'بحكم موقعنا في دمياط، نقدم أيضًا خدمات قانونية للمسائل المتعلقة بالنقل البحري والشحن والجمارك والأعمال المرتبطة بالموانئ.',
+    body: 'نقدم أيضًا خدمات قانونية للمسائل المتعلقة بالنقل البحري والشحن والجمارك والأعمال المرتبطة بالموانئ.',
     cta: 'تعرف على خدمات القانون البحري',
   },
   en: {
     heading: 'Maritime, Shipping & Ports',
-    body: 'Given our Damietta location, we also provide legal services for matters related to shipping, maritime transport, customs, and port-related business.',
+    body: 'We also provide legal services for matters related to shipping, maritime transport, customs, and port-related business.',
     cta: 'Explore Maritime Legal Services',
   },
 } as const
