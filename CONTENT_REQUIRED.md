@@ -1,12 +1,12 @@
 # Content Required Before Launch
 
-Status: living document — update as facts are confirmed. Nothing listed here has been fabricated anywhere in the codebase; every gap below is either left blank, unset, or (for practice areas/industries) seeded as an unpublished **draft** pending review. See `SITE_STRATEGY.md` §5 and brief §57 (No Fabrication Rule).
+Status: living document — update as facts are confirmed. Nothing listed here has been fabricated anywhere in the codebase; every gap below is either left blank, unset, or genuinely pending real-world input. See `SITE_STRATEGY.md` §5 and brief §57 (No Fabrication Rule).
 
-## Blocking for Launch
+The site is live in production at https://al-harraz.vercel.app (Vercel + Neon Postgres, both free tier). Practice areas, industries, articles, and FAQs are seeded as **published** per the firm's explicit direction this session — not drafts.
 
-- [ ] Domain purchase + DNS (`alharrazlaw.com` or an approved alternative — see `DISCOVERY_REPORT.md` §3; availability not yet confirmed).
-- [ ] `NEXT_PUBLIC_SITE_URL` and production `DATABASE_URI`/`PAYLOAD_SECRET` set in the real hosting environment.
-- [ ] Legal review and sign-off on every seeded practice-area/industry description before flipping its status to `published` in the CMS (currently all seeded as drafts — see `src/seed/data.ts`).
+## Blocking for a Custom Domain / Final Launch
+
+- [ ] Domain purchase + DNS (see `DOMAIN_MIGRATION_PLAN.md` for the full cutover checklist) — the site currently runs on the free `al-harraz.vercel.app` URL, which is production but not the long-term canonical domain.
 - [ ] At minimum, placeholder or licensed photography for hero/team (see `SHOT_LIST` below) — current UI uses plain gray circle/placeholder blocks, not stock photos of unrelated people, per brief §37.
 - [ ] Replace the placeholder "AH" monogram favicon (`src/app/favicon.ico`, `src/app/(frontend)/icon.svg`) with the real logo once a vector master exists (brief §05).
 
@@ -18,15 +18,15 @@ Status: living document — update as facts are confirmed. Nothing listed here h
 - [ ] Professional email addresses (`info@`, `consultations@`, `maritime@`) — pending domain purchase; see `README.md` DNS section for the SPF/DKIM/DMARC setup once a domain and mailbox provider are chosen.
 - [ ] Facebook page URL (exists per the brief, but the URL was not supplied to this session).
 - [ ] LinkedIn / Instagram / YouTube URLs, if/when created.
-- [ ] Google Business Profile for the firm itself — the office map now embeds real coordinates the firm confirmed (a landmark pin in the same building, برج آل حراز), so the map/directions are accurate. What's still missing is the firm *claiming* its own Business Profile listing at business.google.com — that's what makes "مكتب آل حراز" itself (not just the address) show up as a pinned result in Google Maps/Search. That's a manual step outside this codebase; once claimed, swap `googleMapsUrl` in `src/lib/site-config.ts` for the profile's own share link.
+- [ ] Google Business Profile for the firm itself — the office map now embeds real coordinates the firm confirmed (a landmark pin in the same building, برج آل حراز), so the map/directions are accurate. What's still missing is confirmation that the firm's video-verification step (business.google.com) was completed — once claimed, swap `googleMapsUrl` in `src/lib/site-config.ts` for the profile's own share link. See `LOCAL_SEO_PLAN.md`.
 
 ### Team (People)
 - [ ] Bios, qualifications, education, court admission level, years of experience, languages, and photos for all 15 lawyers. Currently only the 3 named lawyers in the brief are seeded (name + founder flag only, `status: published`) — 12 more lawyer profiles are entirely missing and must be added via the CMS once HR/the firm supplies verified data. Do **not** invent placeholder names to reach "15."
 - [ ] Confirm whether any of the 3 named lawyers hold a specific verified court-admission level before publishing that field.
 
 ### Content
-- [ ] Legally reviewed Insights/articles — none are seeded (brief explicitly warns against filler AI articles). See `SEO_STRATEGY.md` §6 and the editorial cadence in `POST_LAUNCH_PLAN.md`.
-- [ ] FAQs — none seeded yet; add real, reviewed Q&As per practice area via the CMS.
+- [x] Insights/articles — 6 general-education articles published (general process/education only, no invented statute numbers or case outcomes), each with `legalReviewer` set per the firm's admin account and `lastReviewedDate` set. See `src/seed/data.ts`.
+- [x] FAQs — 9 published, written from a prospective client's perspective (cost, confidentiality, process, attendance, geographic coverage), not abstract legal-education explainers.
 - [ ] Any real, permissioned client testimonials (none exist yet — none are fabricated).
 - [ ] Any verifiable case experience suitable for public description (service-capability language is used instead everywhere currently).
 

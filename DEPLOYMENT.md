@@ -1,13 +1,14 @@
 # Deployment
 
-Nothing in this repo has been deployed to a real hosting provider from this session — this documents the intended production setup, not a completed deployment.
+**Live now**: https://al-harraz.vercel.app — Vercel (free tier) + Neon Postgres (free tier, via Vercel's marketplace integration). The project's build command is `npx payload migrate && npm run seed && next build`, so every deploy runs migrations and the idempotent seed before building. Not yet on a custom domain — see `DOMAIN_MIGRATION_PLAN.md`.
 
-## Recommended Architecture
+## Architecture (as deployed)
 
-- **App hosting**: Vercel (first-party Next.js support, handles the Turbopack build and ISR out of the box) or any Node-capable host that can run `next build && next start` — the app has no Vercel-only APIs.
-- **Database**: managed Postgres (e.g. Neon, Supabase, RDS, DigitalOcean Managed Postgres, or a coolify/self-hosted instance) — the local dev database used in this session (`postgresql://postgres:...@127.0.0.1:5432/al_harraz`) is not reachable outside this sandbox and must not be used in production.
-- **Media storage**: Payload's local `media/` upload dir works for a single-instance deploy but does not survive redeploys on most serverless hosts. For Vercel or any ephemeral filesystem host, add `@payloadcms/storage-s3` (or an equivalent adapter) pointing at S3/R2/Spaces before launch — **not yet configured in this codebase**.
-- **CDN**: whatever the host provides by default (Vercel's edge network, or a CDN in front of another host) — no extra configuration needed for this app.
+- **App hosting**: Vercel — first-party Next.js support, handles the Turbopack build and ISR out of the box.
+- **Database**: Neon Postgres, connected via Vercel Storage.
+- **Media storage**: no lawyer/office photography exists yet to upload (see `CONTENT_REQUIRED.md`), so this hasn't been exercised in production. Payload's local `media/` upload dir does **not** survive redeploys on Vercel's ephemeral filesystem — before any real image is uploaded through the CMS, add `@payloadcms/storage-s3` (or an equivalent adapter) pointing at S3/R2/Vercel Blob. **Not yet configured.**
+- **CDN**: Vercel's edge network — no extra configuration needed for this app.
+- **Content backups**: daily Vercel Blob export of public content (`src/app/(frontend)/api/cron/backup/route.ts`) plus Neon's own point-in-time recovery — see `BACKUPS.md`.
 
 ## Environments
 
