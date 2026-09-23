@@ -54,7 +54,14 @@ export default async function LocaleLayout({
   const dict = getDictionary(locale)
 
   return (
-    <html lang={locale} dir={localeDirection[locale]} className={fontVariables}>
+    <html lang={locale} dir={localeDirection[locale]} className={`no-js ${fontVariables}`}>
+      <head>
+        {/* Synchronous, before first paint: flips the reveal-on-scroll
+            animations from "always visible" (the no-js/SSR default) to
+            "hidden until scrolled into view" only once JS is actually
+            running — see the .reveal rules in globals.css. */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.replace('no-js','js')" }} />
+      </head>
       <body className="min-h-screen bg-neutral-50 pb-16 text-navy-950 antialiased lg:pb-0">
         <SkipLink locale={locale} />
         <Header locale={locale} dict={dict} />

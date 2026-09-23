@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { Container } from '@/components/ui/Container'
+import { Reveal } from '@/components/ui/Reveal'
 
 type Tone = 'light' | 'dark' | 'neutral'
 
@@ -14,15 +15,18 @@ export function Section({
   tone = 'light',
   className = '',
   id,
+  reveal = true,
 }: {
   children: ReactNode
   tone?: Tone
   className?: string
   id?: string
+  /** Set false for the hero/first section — content above the fold should render visible immediately, not wait on scroll. */
+  reveal?: boolean
 }) {
   return (
-    <section id={id} className={`py-14 sm:py-20 ${toneClasses[tone]} ${className}`}>
-      <Container>{children}</Container>
+    <section id={id} className={`py-20 sm:py-28 lg:py-32 ${toneClasses[tone]} ${className}`}>
+      <Container>{reveal ? <Reveal>{children}</Reveal> : children}</Container>
     </section>
   )
 }

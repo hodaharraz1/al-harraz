@@ -31,24 +31,24 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const homeHref = `/${locale}`
 
   return (
-    <header className="sticky top-0 z-40 border-b border-navy-900/10 bg-neutral-50/95 backdrop-blur">
+    <header className="sticky top-0 z-40 bg-neutral-50/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href={homeHref} className="flex items-center gap-2 text-base font-bold text-navy-950">
-          <Image src="/logo-icon.png" alt="" width={40} height={40} className="h-10 w-10" priority />
+        <Link href={homeHref} className="flex items-center gap-2 text-sm font-semibold text-navy-950">
+          <Image src="/logo-icon.png" alt="" width={32} height={32} className="h-8 w-8" priority />
           {locale === 'ar' ? 'آل حراز' : 'Al Harraz'}
         </Link>
 
-        <nav aria-label={locale === 'ar' ? 'التنقل الرئيسي' : 'Primary navigation'} className="hidden items-center gap-6 lg:flex">
+        <nav aria-label={locale === 'ar' ? 'التنقل الرئيسي' : 'Primary navigation'} className="hidden items-center gap-7 lg:flex">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm font-medium text-navy-900 hover:text-cyan-600">
+            <Link key={item.href} href={item.href} className="text-[13px] font-medium text-navy-900/80 hover:text-navy-950">
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-4 lg:flex">
           <LanguageSwitch locale={locale} currentPath={pathname} />
-          <LinkButton href={`/${locale}/consultation`} variant="primary">
+          <LinkButton href={`/${locale}/consultation`} variant="primary" className="text-[13px]">
             {dict.nav.consultation}
           </LinkButton>
         </div>

@@ -15,13 +15,12 @@ export function ConsultationCta({ locale, dict }: { locale: Locale; dict: Dictio
       <h2 className="text-2xl font-bold sm:text-3xl font-heading">{t.heading}</h2>
       <p className="mt-2 text-cyan-50">{t.body}</p>
       <div className="mt-6 flex flex-wrap justify-center gap-3">
-        <LinkButton href={`/${locale}/consultation`} variant="secondary">
+        <LinkButton href={`/${locale}/consultation`} variant="invert">
           {dict.hero.ctaPrimary}
         </LinkButton>
         <LinkButton
           href={buildWhatsAppLink(locale, 'consultation')}
-          variant="ghost"
-          className="border-white/40 text-white hover:bg-white/10"
+          variant="invert-outline"
           target="_blank"
           rel="noopener noreferrer"
         >

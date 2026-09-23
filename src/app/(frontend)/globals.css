@@ -2,21 +2,26 @@
 
 /*
  * Design tokens — see DESIGN_SYSTEM.md.
- * Palette: deep navy/petroleum (primary), turquoise/cyan (secondary, derived
- * from the existing logo), warm off-white/gray neutrals, muted bronze as a
- * restrained accent. No excessive gold per brief §04.
+ * Palette: near-black on white/light-gray (primary text/surfaces, Apple-
+ * style restraint), deep navy reserved for dark sections, turquoise/cyan
+ * (secondary, derived from the logo) used sparingly for links/accents,
+ * muted bronze as a rare highlight. No excessive gold per brief §04.
  */
 @theme {
   --font-sans-en: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-sans-ar: var(--font-ibm-plex-arabic), 'IBM Plex Sans Arabic', 'Tajawal', ui-sans-serif, system-ui, sans-serif;
-  --font-heading-en: var(--font-source-serif), 'Source Serif 4', Georgia, serif;
-  --font-heading-ar: var(--font-markazi), 'Markazi Text', var(--font-ibm-plex-arabic), serif;
+  --font-heading-en: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-heading-ar: var(--font-ibm-plex-arabic), 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif;
 
-  --color-navy-950: #05141f;
-  --color-navy-900: #0a2233;
-  --color-navy-800: #0f3149;
-  --color-navy-700: #164361;
-  --color-navy-600: #1d5679;
+  /* navy-950 doubles as both the primary text color and the dark-section
+     background — nudged from a saturated near-black-blue to a more neutral
+     near-black (closer to Apple's #1d1d1f) so body copy and dark hero
+     sections read as restrained black/gray rather than "brand navy blue". */
+  --color-navy-950: #0a0d10;
+  --color-navy-900: #14181d;
+  --color-navy-800: #1f2937;
+  --color-navy-700: #374151;
+  --color-navy-600: #4b5563;
 
   /* cyan-600 is deliberately darker than the logo's raw cyan: at #0891a8 it
      only hit ~3.7:1 contrast for white-on-cyan buttons and cyan-on-white
@@ -40,9 +45,8 @@
 
   --color-alert-red: #b3261e;
 
-  /* Kept small and architectural on purpose — the brief explicitly calls
-     out large border-radius as a "generic SaaS template" signal. */
-  --radius-card: 0.25rem;
+  --radius-card: 1.25rem;
+  --radius-pill: 9999px;
 }
 
 html {
@@ -62,17 +66,41 @@ body {
   font-family: var(--font-sans-en);
 }
 
-/* Editorial display face for headings — serif in both directions, used
-   sparingly (H1s and section headings) for the "established practice"
-   feel the brief asks for, distinct from the sans-serif body copy. */
+/* Display headings: the same sans family as body copy, but bold and
+   tight-tracked — large, confident type standing in for a distinct display
+   face (an Apple-style "big bold statement" rather than a legal-serif
+   flourish). */
 .font-heading {
   font-family: var(--font-heading-ar);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 [dir='ltr'] .font-heading {
   font-family: var(--font-heading-en);
-  font-weight: 600;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* Scroll-reveal: fade + rise into place as sections enter the viewport.
+   Reveal.tsx toggles `.is-visible`; until JS runs (or on a client where
+   IntersectionObserver never fires, e.g. a crawler) content stays fully
+   visible via the no-js fallback below, so this is progressive
+   enhancement, never a way to hide content. */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
 }
 
 .skip-link {

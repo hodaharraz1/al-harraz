@@ -5,12 +5,12 @@ const copy = {
   ar: {
     heading: 'مقر المكتب',
     directions: 'الحصول على الاتجاهات',
-    mapPending: 'سيتم إضافة خريطة تفاعلية بعد التحقق من صفحة النشاط التجاري على جوجل — راجع CONTENT_REQUIRED.md.',
+    callForDirections: 'اتصل بنا للاستفسار عن أقرب الطرق للوصول إلى المكتب.',
   },
   en: {
     heading: 'Our Office',
     directions: 'Get Directions',
-    mapPending: 'An interactive map will be added once the Google Business Profile is verified — see CONTENT_REQUIRED.md.',
+    callForDirections: 'Call us and we can help you find the office.',
   },
 } as const
 
@@ -38,8 +38,8 @@ export function OfficeSection({ locale }: { locale: Locale }) {
             </a>
           ) : null}
         </div>
-        <div className="flex items-center justify-center rounded-[var(--radius-card)] border border-dashed border-navy-900/20 bg-neutral-100 p-6 text-center text-sm text-navy-900/70">
-          {t.mapPending}
+        <div className="flex items-center justify-center rounded-[var(--radius-card)] bg-neutral-100 p-8 text-center text-sm text-navy-900/70">
+          {t.callForDirections}
         </div>
       </div>
     </div>
