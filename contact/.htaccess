@@ -1,0 +1,24 @@
+# Al Harraz Contact — Apache hardening.
+# Most shared hosting runs Apache with mod_rewrite/mod_authz available;
+# these rules are a defense-in-depth layer on top of the PHP-side checks
+# (this project would still be safe without them, since config.php and
+# includes/ contain no page output of their own — but blocking direct
+# requests to them removes an entire class of "what if" questions).
+
+<FilesMatch "^(config\.php|data\.json|generate-qr\.php)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^includes/ - [F,L]
+    RewriteRule ^assets/lib/ - [F,L]
+</IfModule>
+
+Options -Indexes
