@@ -37,7 +37,7 @@ const ADMIN_PASSWORD_HASH = '$2y$12$jIRfn9hJbiDb9WLM4FTLkOKYuNJWsDMlcv5hUR8MtANF
 // uploaded to its permanent home, then regenerate the QR from admin.php.
 // Until then it stays a placeholder and the QR (if generated) will point
 // nowhere real yet.
-const CONTACT_PAGE_URL = 'https://yourdomain.com/contact/';
+const CONTACT_PAGE_URL = 'https://alharraz.infinityfreeapp.com/';
 
 // ---------------------------------------------------------------------
 // Internal paths — no need to change these
