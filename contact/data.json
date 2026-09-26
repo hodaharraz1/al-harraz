@@ -2,8 +2,14 @@
     "office_name_ar": "مكتب آل حراز للمحاماة والاستشارات القانونية",
     "office_name_en": "Al Harraz Law Firm & Legal Consultants",
     "phones": [
-        "01005029501",
-        "01112345659"
+        {
+            "label": "الأستاذ محمد",
+            "number": "01005029501"
+        },
+        {
+            "label": "الأستاذ مصطفى",
+            "number": "01112345659"
+        }
     ],
     "whatsapp": "+201005029501",
     "email": "",

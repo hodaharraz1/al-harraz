@@ -4,16 +4,30 @@
 (function () {
     'use strict';
 
-    function makeRow(value) {
+    function makeRow(index, label, number) {
         var row = document.createElement('div');
         row.className = 'phone-row';
 
-        var input = document.createElement('input');
-        input.type = 'text';
-        input.name = 'phones[]';
-        input.placeholder = window.ADMIN_I18N.phonePlaceholder;
-        input.value = value || '';
-        input.maxLength = 25;
+        var inputsWrap = document.createElement('div');
+        inputsWrap.className = 'phone-inputs';
+
+        var labelInput = document.createElement('input');
+        labelInput.type = 'text';
+        labelInput.name = 'phones[' + index + '][label]';
+        labelInput.placeholder = window.ADMIN_I18N.phoneLabelPlaceholder;
+        labelInput.value = label || '';
+        labelInput.maxLength = 80;
+        labelInput.className = 'phone-label-input';
+
+        var numberInput = document.createElement('input');
+        numberInput.type = 'text';
+        numberInput.name = 'phones[' + index + '][number]';
+        numberInput.placeholder = window.ADMIN_I18N.phoneNumberPlaceholder;
+        numberInput.value = number || '';
+        numberInput.maxLength = 25;
+
+        inputsWrap.appendChild(labelInput);
+        inputsWrap.appendChild(numberInput);
 
         var removeBtn = document.createElement('button');
         removeBtn.type = 'button';
@@ -24,7 +38,7 @@
             row.remove();
         });
 
-        row.appendChild(input);
+        row.appendChild(inputsWrap);
         row.appendChild(removeBtn);
         return row;
     }
@@ -36,12 +50,17 @@
             return;
         }
 
+        var nextIndex = parseInt(list.getAttribute('data-next-index'), 10);
+        if (isNaN(nextIndex)) {
+            nextIndex = list.children.length;
+        }
+
         if (list.children.length === 0) {
-            list.appendChild(makeRow(''));
+            list.appendChild(makeRow(nextIndex++, '', ''));
         }
 
         addBtn.addEventListener('click', function () {
-            list.appendChild(makeRow(''));
+            list.appendChild(makeRow(nextIndex++, '', ''));
         });
     });
 })();

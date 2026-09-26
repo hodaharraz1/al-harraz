@@ -69,13 +69,35 @@ function load_data(): array
     if (!is_array($data['phones'] ?? null)) {
         $data['phones'] = [];
     }
-    // Keep only non-empty, string phone entries.
-    $data['phones'] = array_values(array_filter(
-        array_map(static fn ($p) => is_string($p) ? trim($p) : '', $data['phones']),
-        static fn (string $p) => $p !== ''
-    ));
+    $data['phones'] = normalize_phones($data['phones']);
 
     return $data;
+}
+
+/**
+ * Each phone is {label, number} — label is who answers that line (e.g.
+ * "الأستاذ محمد"), shown next to the number on the public page and in the
+ * vCard. Also accepts the older plain-string format (a phone with no
+ * label) so a data.json saved before labels existed keeps working.
+ */
+function normalize_phones(array $phones): array
+{
+    $clean = [];
+    foreach ($phones as $entry) {
+        if (is_string($entry)) {
+            $entry = ['label' => '', 'number' => $entry];
+        }
+        if (!is_array($entry)) {
+            continue;
+        }
+        $number = trim((string) ($entry['number'] ?? ''));
+        if ($number === '') {
+            continue;
+        }
+        $label = trim((string) ($entry['label'] ?? ''));
+        $clean[] = ['label' => $label, 'number' => $number];
+    }
+    return $clean;
 }
 
 /**
@@ -217,16 +239,30 @@ function build_vcard(array $data): string
     $lines[] = 'ORG:' . vcf_escape($orgName);
     $lines[] = 'X-ABSHOWAS:COMPANY';
 
+    // "itemN.X-ABLabel" is an Apple Contacts extension for attaching a
+    // free-text label (a person's name here) to one TEL/URL line — readers
+    // that don't understand it just show the plain TEL, so nothing is lost
+    // on other apps. Each itemN index must be unique within the vCard.
+    $itemIndex = 1;
     foreach ($data['phones'] as $phone) {
-        $lines[] = 'TEL;TYPE=WORK,VOICE:' . vcf_escape($phone);
+        $number = $phone['number'] ?? '';
+        $label = trim((string) ($phone['label'] ?? ''));
+        if ($label !== '') {
+            $item = 'item' . $itemIndex++;
+            $lines[] = $item . '.TEL;TYPE=WORK,VOICE:' . vcf_escape($number);
+            $lines[] = $item . '.X-ABLabel:' . vcf_escape($label);
+        } else {
+            $lines[] = 'TEL;TYPE=WORK,VOICE:' . vcf_escape($number);
+        }
     }
 
     if ($data['whatsapp'] !== '') {
         $lines[] = 'TEL;TYPE=CELL:' . vcf_escape($data['whatsapp']);
         $waDigits = phone_for_whatsapp($data['whatsapp']);
         if ($waDigits !== '') {
-            $lines[] = 'item1.URL:' . vcf_escape('https://wa.me/' . $waDigits);
-            $lines[] = 'item1.X-ABLabel:WhatsApp';
+            $item = 'item' . $itemIndex++;
+            $lines[] = $item . '.URL:' . vcf_escape('https://wa.me/' . $waDigits);
+            $lines[] = $item . '.X-ABLabel:WhatsApp';
         }
     }
 

@@ -73,15 +73,23 @@ function validate_submission(array $post): array
     }
     $cleanPhones = [];
     foreach ($rawPhones as $rawPhone) {
-        $phone = trim(strip_tags((string) $rawPhone));
-        if ($phone === '') {
+        if (!is_array($rawPhone)) {
             continue;
         }
-        if (!valid_phone($phone)) {
+        $number = trim(strip_tags((string) ($rawPhone['number'] ?? '')));
+        $label = trim(strip_tags((string) ($rawPhone['label'] ?? '')));
+        if ($number === '' && $label === '') {
+            continue; // a fully empty row from the repeater — not an error
+        }
+        if (!valid_phone($number)) {
             $errors['phones'] = 'في رقم تليفون بصيغة غير صحيحة — استخدم أرقام ومسافات و+ فقط.';
             continue;
         }
-        $cleanPhones[] = $phone;
+        if (mb_strlen($label) > 80) {
+            $errors['phones'] = 'اسم صاحب الرقم طويل أوي.';
+            continue;
+        }
+        $cleanPhones[] = ['label' => $label, 'number' => $number];
     }
     $data['phones'] = $cleanPhones;
 
@@ -252,10 +260,13 @@ $vcardQrExists = is_file(QR_VCARD_OUTPUT_PATH);
 
                 <div class="field">
                     <label>أرقام الهاتف</label>
-                    <div id="phone-list">
-                        <?php foreach ($data['phones'] as $phone): ?>
+                    <div id="phone-list" data-next-index="<?= count($data['phones']) ?>">
+                        <?php foreach ($data['phones'] as $i => $phone): ?>
                             <div class="phone-row">
-                                <input type="text" name="phones[]" value="<?= e($phone) ?>" maxlength="25">
+                                <div class="phone-inputs">
+                                    <input type="text" name="phones[<?= (int) $i ?>][label]" value="<?= e($phone['label']) ?>" maxlength="80" placeholder="اسم صاحب الرقم (اختياري)" class="phone-label-input">
+                                    <input type="text" name="phones[<?= (int) $i ?>][number]" value="<?= e($phone['number']) ?>" maxlength="25" placeholder="رقم التليفون">
+                                </div>
                                 <button type="button" class="phone-remove" aria-label="حذف الرقم" onclick="this.parentElement.remove()">&#10005;</button>
                             </div>
                         <?php endforeach; ?>
@@ -348,7 +359,7 @@ $vcardQrExists = is_file(QR_VCARD_OUTPUT_PATH);
 
 </div>
 <script>
-window.ADMIN_I18N = { phonePlaceholder: 'رقم التليفون', removePhone: 'حذف الرقم' };
+window.ADMIN_I18N = { phoneLabelPlaceholder: 'اسم صاحب الرقم (اختياري)', phoneNumberPlaceholder: 'رقم التليفون', removePhone: 'حذف الرقم' };
 </script>
 <script src="assets/js/admin.js"></script>
 </body>

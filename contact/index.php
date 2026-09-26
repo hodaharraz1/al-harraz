@@ -76,9 +76,17 @@ $hasLogo = is_file(__DIR__ . '/assets/logo/logo.png');
             <?= e($labels['save_contact']) ?>
         </a>
 
-        <?php foreach ($data['phones'] as $index => $phone): ?>
-            <a class="btn btn-outline" href="tel:<?= e(phone_for_tel($phone)) ?>">
-                <?= e($labels['call']) ?><?= count($data['phones']) > 1 ? ' (' . e($phone) . ')' : '' ?>
+        <?php foreach ($data['phones'] as $phone):
+            if ($phone['label'] !== '') {
+                $callText = e($labels['call']) . ' — ' . e($phone['label']);
+            } elseif (count($data['phones']) > 1) {
+                $callText = e($labels['call']) . ' (' . e($phone['number']) . ')';
+            } else {
+                $callText = e($labels['call']);
+            }
+        ?>
+            <a class="btn btn-outline" href="tel:<?= e(phone_for_tel($phone['number'])) ?>">
+                <?= $callText ?>
             </a>
         <?php endforeach; ?>
 
