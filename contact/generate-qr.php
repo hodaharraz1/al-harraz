@@ -3,14 +3,15 @@
  * Al Harraz Contact — QR code generator.
  *
  * Regenerates assets/qr/qr.png from CONTACT_PAGE_URL (config.php). This is
- * the ONLY thing that ever needs to change the QR image — everyday edits
- * to phone numbers, hours, etc. happen in data.json via admin.php and
- * never touch the QR at all, so a printed/laminated QR code keeps working
- * forever.
+ * the ONLY thing that ever needs to change that QR image — everyday edits
+ * to phone numbers, hours, etc. happen directly in data.json and never
+ * touch it at all, so a printed/laminated QR code keeps working forever.
  *
- * Run this once after you set the real CONTACT_PAGE_URL in config.php
- * (from admin.php's "Regenerate QR" button, or from the command line:
- * `php generate-qr.php`).
+ * There's no admin panel, so this only runs from the command line:
+ * `php generate-qr.php` (regenerates both QR images, matching the current
+ * data.json and CONTACT_PAGE_URL). Run it locally and re-upload the
+ * resulting assets/qr/*.png files whenever CONTACT_PAGE_URL changes, or
+ * whenever data.json changes and the vCard QR should reflect it.
  */
 
 declare(strict_types=1);

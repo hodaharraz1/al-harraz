@@ -1,7 +1,12 @@
 <?php
 /**
  * Al Harraz Contact — shared helper functions.
- * Included by index.php, admin.php and vcard.php (after config.php).
+ * Included by index.php and vcard.php (after config.php).
+ *
+ * There is no admin panel — data.json is edited by hand (via the
+ * hosting's File Manager or a fresh upload) rather than through a web
+ * form, by design: the firm asked for the simplest possible setup, with
+ * no login page at all.
  */
 
 declare(strict_types=1);
@@ -34,9 +39,9 @@ function default_data(): array
 }
 
 /**
- * Reads data.json with a shared (read) lock so a concurrent admin save
- * can't be read mid-write. Falls back to defaults if the file is missing
- * or unreadable, so the public page never fatals over a data problem.
+ * Reads data.json with a shared (read) lock, in case it's ever mid-write
+ * from a manual edit. Falls back to defaults if the file is missing or
+ * unreadable, so the public page never fatals over a data problem.
  */
 function load_data(): array
 {
@@ -100,70 +105,6 @@ function normalize_phones(array $phones): array
     return $clean;
 }
 
-/**
- * Writes data.json atomically: write to a temp file in the same directory,
- * then rename() over the real file. rename() is atomic on the same
- * filesystem, so readers never see a half-written file. An exclusive lock
- * on the real file additionally serializes concurrent admin saves.
- */
-function save_data(array $data): bool
-{
-    $lockHandle = fopen(DATA_FILE, 'c+');
-    if ($lockHandle === false) {
-        return false;
-    }
-
-    if (!flock($lockHandle, LOCK_EX)) {
-        fclose($lockHandle);
-        return false;
-    }
-
-    $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-    if ($json === false) {
-        flock($lockHandle, LOCK_UN);
-        fclose($lockHandle);
-        return false;
-    }
-
-    $tmpPath = DATA_FILE . '.tmp-' . bin2hex(random_bytes(4));
-    $written = file_put_contents($tmpPath, $json, LOCK_EX);
-    if ($written === false) {
-        flock($lockHandle, LOCK_UN);
-        fclose($lockHandle);
-        return false;
-    }
-
-    $ok = rename($tmpPath, DATA_FILE);
-
-    flock($lockHandle, LOCK_UN);
-    fclose($lockHandle);
-
-    return $ok;
-}
-
-/** CSRF token bound to the current session, created once per session. */
-function csrf_token(): string
-{
-    if (empty($_SESSION['csrf_token'])) {
-        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-    }
-    return $_SESSION['csrf_token'];
-}
-
-function csrf_field(): string
-{
-    return '<input type="hidden" name="csrf_token" value="' . e(csrf_token()) . '">';
-}
-
-/** Timing-safe comparison against the session's CSRF token. */
-function csrf_valid(?string $submitted): bool
-{
-    if (!is_string($submitted) || empty($_SESSION['csrf_token'])) {
-        return false;
-    }
-    return hash_equals($_SESSION['csrf_token'], $submitted);
-}
-
 function valid_url(string $url): bool
 {
     if ($url === '') {
@@ -182,15 +123,6 @@ function valid_email(string $email): bool
         return true;
     }
     return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
-}
-
-/** Accepts digits, spaces, +, -, (, ) — rejects anything else (letters, tags, etc). */
-function valid_phone(string $phone): bool
-{
-    if ($phone === '') {
-        return false;
-    }
-    return (bool) preg_match('/^[+0-9\s\-()]{5,25}$/', $phone);
 }
 
 /** Digits only, with a leading + kept if present — for tel: links. */
