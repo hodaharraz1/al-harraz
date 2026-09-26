@@ -334,6 +334,14 @@ body {
     margin: 10px 0 16px;
 }
 
+.qr-desc {
+    font-size: 13px;
+    color: var(--navy-600);
+    text-align: start;
+    margin: 0 0 16px;
+    line-height: 1.6;
+}
+
 .qr-regen-btn {
     padding: 10px 18px;
     border-radius: 10px;

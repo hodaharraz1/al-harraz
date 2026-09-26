@@ -144,6 +144,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $result = validate_submission($_POST);
             if (empty($result['errors'])) {
                 if (save_data($result['data'])) {
+                    // Keep the data-embedded QR preview in sync automatically —
+                    // note this only affects the file admin.php shows/serves
+                    // next; any copy already printed still has the old data
+                    // baked in, which is an inherent property of this QR type.
+                    regenerate_vcard_qr_code();
                     $_SESSION['flash'] = ['type' => 'success', 'text' => 'تم حفظ البيانات بنجاح.'];
                     header('Location: admin.php');
                     exit;
@@ -166,6 +171,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: admin.php');
             exit;
         }
+    } elseif ($action === 'regenerate_vcard_qr' && is_logged_in()) {
+        if (!csrf_valid($_POST['csrf_token'] ?? null)) {
+            $flash = ['type' => 'error', 'text' => 'الجلسة انتهت، حدّث الصفحة وجرب تاني.'];
+        } else {
+            $result = regenerate_vcard_qr_code();
+            $_SESSION['flash'] = ['type' => $result['ok'] ? 'success' : 'error', 'text' => $result['message']];
+            header('Location: admin.php');
+            exit;
+        }
     }
 }
 
@@ -177,6 +191,7 @@ if ($flash === null && !empty($_SESSION['flash'])) {
 $loggedIn = is_logged_in();
 $data = $formData ?? load_data();
 $qrExists = is_file(QR_OUTPUT_PATH);
+$vcardQrExists = is_file(QR_VCARD_OUTPUT_PATH);
 ?>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
@@ -298,7 +313,24 @@ $qrExists = is_file(QR_OUTPUT_PATH);
         </div>
 
         <div class="admin-card qr-preview">
-            <h1 class="admin-title">QR Code</h1>
+            <h1 class="admin-title">QR ببيانات المكتب (يعمل فوراً)</h1>
+            <p class="qr-desc">الـQR ده فيه بيانات المكتب كلها متخزنة جواه مباشرة — بيشتغل فوراً بمجرد ما حد يعمله Scan، من غير ما نحتاج نرفع أي حاجة على الإنترنت. بيتحدّث تلقائي كل ما تحفظ تعديلات فوق. <strong>ملحوظة:</strong> أي نسخة مطبوعة قبل كده هتفضل شايلة البيانات القديمة وقت الطباعة — لو غيرت بيانات مهمة، اطبع نسخة جديدة.</p>
+            <?php if ($vcardQrExists): ?>
+                <img src="<?= e(QR_VCARD_OUTPUT_URL) ?>?v=<?= filemtime(QR_VCARD_OUTPUT_PATH) ?>" alt="QR بيانات المكتب" width="160" height="160">
+                <div><a href="<?= e(QR_VCARD_OUTPUT_URL) ?>?v=<?= filemtime(QR_VCARD_OUTPUT_PATH) ?>" download class="qr-regen-btn" style="display:inline-block;text-decoration:none;margin-top:10px;">تنزيل الصورة</a></div>
+            <?php else: ?>
+                <p>لسه مفيش QR متولد — احفظ البيانات فوق الأول.</p>
+            <?php endif; ?>
+            <form method="post" style="margin-top:10px;">
+                <input type="hidden" name="action" value="regenerate_vcard_qr">
+                <?= csrf_field() ?>
+                <button type="submit" class="qr-regen-btn">إعادة توليد QR</button>
+            </form>
+        </div>
+
+        <div class="admin-card qr-preview">
+            <h1 class="admin-title">QR برابط الصفحة (اختياري)</h1>
+            <p class="qr-desc">ده بديل تاني — QR بيوجّه لرابط ثابت لصفحة التواصل بدل ما يشيل البيانات جواه، بحيث لو غيرت البيانات لاحقاً نفس الـQR المطبوع يفضل شغال. <strong>يحتاج إن المشروع يكون مرفوع على استضافة حقيقية بدومين معروف أولاً</strong> (شوف config.php و README.md).</p>
             <?php if ($qrExists): ?>
                 <img src="<?= e(QR_OUTPUT_URL) ?>?v=<?= filemtime(QR_OUTPUT_PATH) ?>" alt="QR Code" width="160" height="160">
             <?php else: ?>

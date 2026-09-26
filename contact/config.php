@@ -46,6 +46,12 @@ const DATA_FILE = __DIR__ . '/data.json';
 const QR_LIB_DIR = __DIR__ . '/assets/lib/phpqrcode/';
 const QR_OUTPUT_PATH = __DIR__ . '/assets/qr/qr.png';
 const QR_OUTPUT_URL = 'assets/qr/qr.png';
+// A second QR that embeds the office's vCard data directly — scans and
+// offers "Add Contact" with no hosting/domain/internet connection needed
+// at all, unlike QR_OUTPUT_PATH above which only works once this project
+// is actually deployed somewhere.
+const QR_VCARD_OUTPUT_PATH = __DIR__ . '/assets/qr/qr-vcard.png';
+const QR_VCARD_OUTPUT_URL = 'assets/qr/qr-vcard.png';
 
 // Idle session timeout for the admin panel (seconds). 30 minutes.
 const ADMIN_SESSION_IDLE_TIMEOUT = 1800;

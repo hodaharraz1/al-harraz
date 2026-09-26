@@ -193,3 +193,65 @@ function vcf_escape(string $value): string
     $value = str_replace(';', '\\;', $value);
     return $value;
 }
+
+/**
+ * Builds a vCard 3.0 string from the office data — shared by vcard.php
+ * (the "Save Contact" download) and the data-embedded QR code (which
+ * encodes this same text directly, so it needs no hosting at all).
+ * Only non-empty fields are included, matching data.json's contents.
+ */
+function build_vcard(array $data): string
+{
+    $nameAr = trim((string) $data['office_name_ar']);
+    $nameEn = trim((string) $data['office_name_en']);
+    $orgName = $nameAr !== '' ? $nameAr : ($nameEn !== '' ? $nameEn : 'Al Harraz Law Firm');
+
+    $lines = [];
+    $lines[] = 'BEGIN:VCARD';
+    $lines[] = 'VERSION:3.0';
+    // Organization-only card (not a person): empty N, FN/ORG carry the
+    // office name, and X-ABSHOWAS:COMPANY tells Apple's Contacts app to
+    // render it as a company rather than as a person named "Al Harraz".
+    $lines[] = 'N:;;;;';
+    $lines[] = 'FN:' . vcf_escape($orgName);
+    $lines[] = 'ORG:' . vcf_escape($orgName);
+    $lines[] = 'X-ABSHOWAS:COMPANY';
+
+    foreach ($data['phones'] as $phone) {
+        $lines[] = 'TEL;TYPE=WORK,VOICE:' . vcf_escape($phone);
+    }
+
+    if ($data['whatsapp'] !== '') {
+        $lines[] = 'TEL;TYPE=CELL:' . vcf_escape($data['whatsapp']);
+        $waDigits = phone_for_whatsapp($data['whatsapp']);
+        if ($waDigits !== '') {
+            $lines[] = 'item1.URL:' . vcf_escape('https://wa.me/' . $waDigits);
+            $lines[] = 'item1.X-ABLabel:WhatsApp';
+        }
+    }
+
+    if ($data['email'] !== '' && valid_email($data['email'])) {
+        $lines[] = 'EMAIL;TYPE=WORK:' . vcf_escape($data['email']);
+    }
+
+    if ($data['website'] !== '' && valid_url($data['website'])) {
+        $lines[] = 'URL:' . vcf_escape($data['website']);
+    }
+
+    $addressForCard = $nameAr !== '' ? $data['address_ar'] : $data['address_en'];
+    if (trim((string) $addressForCard) !== '') {
+        // ADR;TYPE=WORK:PO Box;Extended;Street;City;Region;PostalCode;Country
+        // We only have one free-text address string, so it goes in the
+        // "street" component — every reader still displays it correctly.
+        $lines[] = 'ADR;TYPE=WORK:;;' . vcf_escape($addressForCard) . ';;;;';
+    }
+
+    $workingHours = trim((string) ($data['working_hours_ar'] ?? ''));
+    if ($workingHours !== '') {
+        $lines[] = 'NOTE:' . vcf_escape($workingHours);
+    }
+
+    $lines[] = 'END:VCARD';
+
+    return implode("\r\n", $lines) . "\r\n";
+}

@@ -1,13 +1,15 @@
 {
     "office_name_ar": "مكتب آل حراز للمحاماة والاستشارات القانونية",
-    "office_name_en": "Al Harraz Law Firm & Legal Consultancy",
-    "phones": [],
-    "whatsapp": "",
+    "office_name_en": "Al Harraz Law Firm & Legal Consultants",
+    "phones": [
+        "01005029501"
+    ],
+    "whatsapp": "+201005029501",
     "email": "",
-    "website": "",
-    "address_ar": "",
-    "address_en": "",
-    "google_maps": "",
-    "working_hours_ar": "",
-    "working_hours_en": ""
+    "website": "https://al-harraz.vercel.app",
+    "address_ar": "دمياط – السنانية – أمام كوبري عبد المجيد – برج آل حراز – الدور الأول – جمهورية مصر العربية",
+    "address_en": "Al Senaneyah, Damietta, Egypt",
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=31.4181633,31.7882557",
+    "working_hours_ar": "كل يوم ما عدا الجمعة، من 11:00 صباحاً حتى 11:00 مساءً",
+    "working_hours_en": "Every day except Friday, 11:00 AM – 11:00 PM"
 }
