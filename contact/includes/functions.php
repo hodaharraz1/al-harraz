@@ -206,7 +206,7 @@ function phone_for_whatsapp(string $phone): string
     return preg_replace('/[^0-9]/', '', $phone) ?? '';
 }
 
-/** Escapes a value for use inside a vCard (VCF) field, per RFC 6350. */
+/** Escapes a value for a vCard TEXT-type field (names, addresses, notes), per RFC 6350. */
 function vcf_escape(string $value): string
 {
     $value = str_replace('\\', '\\\\', $value);
@@ -214,6 +214,19 @@ function vcf_escape(string $value): string
     $value = str_replace(',', '\\,', $value);
     $value = str_replace(';', '\\;', $value);
     return $value;
+}
+
+/**
+ * Escapes a value for a vCard URI-type field (URL, item.URL). Unlike
+ * vcf_escape(), commas and semicolons are valid, meaningful characters
+ * inside a URL (query separators, etc.) and must NOT be backslash-escaped
+ * there — a contact app reading URI values doesn't un-escape them, so
+ * doing so would corrupt the link (e.g. break a Google Maps query URL
+ * that contains a comma between latitude and longitude).
+ */
+function vcf_escape_uri(string $value): string
+{
+    return str_replace(["\r\n", "\n", "\r"], '', $value);
 }
 
 /**
@@ -261,7 +274,7 @@ function build_vcard(array $data): string
         $waDigits = phone_for_whatsapp($data['whatsapp']);
         if ($waDigits !== '') {
             $item = 'item' . $itemIndex++;
-            $lines[] = $item . '.URL:' . vcf_escape('https://wa.me/' . $waDigits);
+            $lines[] = $item . '.URL:' . vcf_escape_uri('https://wa.me/' . $waDigits);
             $lines[] = $item . '.X-ABLabel:WhatsApp';
         }
     }
@@ -271,7 +284,7 @@ function build_vcard(array $data): string
     }
 
     if ($data['website'] !== '' && valid_url($data['website'])) {
-        $lines[] = 'URL:' . vcf_escape($data['website']);
+        $lines[] = 'URL:' . vcf_escape_uri($data['website']);
     }
 
     $addressForCard = $nameAr !== '' ? $data['address_ar'] : $data['address_en'];
@@ -280,6 +293,25 @@ function build_vcard(array $data): string
         // We only have one free-text address string, so it goes in the
         // "street" component — every reader still displays it correctly.
         $lines[] = 'ADR;TYPE=WORK:;;' . vcf_escape($addressForCard) . ';;;;';
+    }
+
+    $googleMaps = trim((string) ($data['google_maps'] ?? ''));
+    if ($googleMaps !== '' && valid_url($googleMaps)) {
+        // A second, separately-labeled link straight to the exact pin —
+        // tapping the plain ADR address above only geocodes the free-text
+        // string, which can miss the exact building. This is more precise.
+        $item = 'item' . $itemIndex++;
+        $lines[] = $item . '.URL:' . vcf_escape_uri($googleMaps);
+        $lines[] = $item . '.X-ABLabel:الموقع على الخريطة';
+
+        // If the link is our own plain coordinates-based Maps URL (the
+        // common case before the firm's own Google Business Profile is
+        // fully claimed — see LOCAL_SEO_PLAN.md on the main site), also
+        // emit a GEO property so map apps that read it can pin the exact
+        // spot directly, without geocoding anything.
+        if (preg_match('/query=(-?\d+\.\d+),(-?\d+\.\d+)/', $googleMaps, $m)) {
+            $lines[] = 'GEO:' . $m[1] . ';' . $m[2];
+        }
     }
 
     $workingHours = trim((string) ($data['working_hours_ar'] ?? ''));
