@@ -2,6 +2,8 @@
 
 Date: 2026-09-23. Scope: technical completeness, SEO, content, security, forms, accessibility, performance, Arabic/English parity — **no visual/design changes were made**. Every finding below was independently verified (code read, local build, local Postgres seed, `npm audit`, a live Playwright browser against a local server, live `curl` checks against the production site at https://al-harraz.vercel.app) — nothing here is guessed.
 
+**Domain note (2026-09-28):** the production URL below (and in every dated entry in this file) reflects what was genuinely true on the date tested — the site really was at `al-harraz.vercel.app` then. It has since migrated to `https://alharrazlaw.com`; see `OLD_DOMAIN_MIGRATION.md` for that migration's own status. This file's historical dated entries are left as-written rather than retroactively edited.
+
 Status legend: **PASS** (verified working) · **PARTIAL** (works but has a caveat) · **FIXED** (was broken, fixed and verified this session) · **BLOCKED** (needs a business decision or real-world input, not code) · **NOT VERIFIED** (could not be checked with the tools available in this sandbox).
 
 ## 🚨 Headline finding: a real lead-loss bug, now fixed

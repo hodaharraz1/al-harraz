@@ -1,6 +1,6 @@
 # Deployment
 
-**Live now**: https://al-harraz.vercel.app — Vercel (free tier) + Neon Postgres (free tier, via Vercel's marketplace integration). The project's build command is `npx payload migrate && npm run seed && next build`, so every deploy runs migrations and the idempotent seed before building. Not yet on a custom domain — see `DOMAIN_MIGRATION_PLAN.md`.
+**Live now**: https://alharrazlaw.com — Vercel (free tier) + Neon Postgres (free tier, via Vercel's marketplace integration). The project's build command is `npx payload migrate && npm run seed && next build`, so every deploy runs migrations and the idempotent seed before building. Custom domain migration in progress — see `OLD_DOMAIN_MIGRATION.md`; `al-harraz.vercel.app` still resolves as of this writing and is planned to redirect to the custom domain.
 
 ## Architecture (as deployed)
 

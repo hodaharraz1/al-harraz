@@ -1,6 +1,8 @@
 # Domain Migration Plan
 
-The site is live in production at `https://al-harraz.vercel.app` — a free Vercel URL, not the long-term domain. This is a real, working, indexable site today; nothing here is blocking current operation. This plan is what to execute once a real domain is purchased.
+**Status update, 2026-09-28: this plan is now executing.** `alharrazlaw.com` has been purchased, attached to the Vercel project, and SSL is live. The remaining steps (updating `NEXT_PUBLIC_SITE_URL`, redirects, search-engine re-registration) are tracked in `OLD_DOMAIN_MIGRATION.md` and the other `*_DOMAIN_MIGRATION*.md` reports rather than duplicated here — this document is kept as the original planning record.
+
+~~The site is live in production at `https://al-harraz.vercel.app` — a free Vercel URL, not the long-term domain. This is a real, working, indexable site today; nothing here is blocking current operation. This plan is what to execute once a real domain is purchased.~~
 
 ## 1. Buy the domain
 

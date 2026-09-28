@@ -5,8 +5,9 @@
 ## Key
 
 - Key: `78b8835f0c80979083412bc56e66c97c`
-- Key file: `public/78b8835f0c80979083412bc56e66c97c.txt` → served at `https://al-harraz.vercel.app/78b8835f0c80979083412bc56e66c97c.txt`
+- Key file: `public/78b8835f0c80979083412bc56e66c97c.txt` — a static file, so it's served at whatever host the deployment answers for. Now that `alharrazlaw.com` points at the same deployment, it's reachable at both `https://alharrazlaw.com/78b8835f0c80979083412bc56e66c97c.txt` and the old `al-harraz.vercel.app` URL — no key regeneration needed for the domain migration, since IndexNow verifies per-submission `host`, not a fixed registered domain.
 - IndexNow verifies a submission by checking that this file is reachable at the submitted host and contains exactly the key — this proves ownership without a separate account/login.
+- Submissions are host-scoped: once `NEXT_PUBLIC_SITE_URL` is updated to `https://alharrazlaw.com` (see `OLD_DOMAIN_MIGRATION.md`), `submitToIndexNow()`'s `host` value automatically becomes `alharrazlaw.com` — no code change needed here, since it's derived from `siteConfig.siteUrl` like everything else. See `INDEXNOW_DOMAIN_MIGRATION.md` for the post-cutover re-submission step.
 
 ## Endpoint
 

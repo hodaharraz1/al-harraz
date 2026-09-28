@@ -2,11 +2,11 @@
 
 Status: living document — update as facts are confirmed. Nothing listed here has been fabricated anywhere in the codebase; every gap below is either left blank, unset, or genuinely pending real-world input. See `SITE_STRATEGY.md` §5 and brief §57 (No Fabrication Rule).
 
-The site is live in production at https://al-harraz.vercel.app (Vercel + Neon Postgres, both free tier). Practice areas, industries, articles, and FAQs are seeded as **published** per the firm's explicit direction this session — not drafts.
+The site is live in production at https://alharrazlaw.com (Vercel + Neon Postgres, both free tier). Practice areas, industries, articles, and FAQs are seeded as **published** per the firm's explicit direction this session — not drafts.
 
 ## Blocking for a Custom Domain / Final Launch
 
-- [ ] Domain purchase + DNS (see `DOMAIN_MIGRATION_PLAN.md` for the full cutover checklist) — the site currently runs on the free `al-harraz.vercel.app` URL, which is production but not the long-term canonical domain.
+- [x] Domain purchase + DNS — `alharrazlaw.com` is purchased, connected to Vercel, and SSL is live. Cutover to it as the canonical `NEXT_PUBLIC_SITE_URL` is in progress — see `OLD_DOMAIN_MIGRATION.md`.
 - [ ] At minimum, placeholder or licensed photography for hero/team (see `SHOT_LIST` below) — current UI uses plain gray circle/placeholder blocks, not stock photos of unrelated people, per brief §37.
 - [ ] Replace the placeholder "AH" monogram favicon (`src/app/favicon.ico`, `src/app/(frontend)/icon.svg`) with the real logo once a vector master exists (brief §05).
 

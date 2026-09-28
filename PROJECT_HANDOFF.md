@@ -4,8 +4,8 @@ This document orients an engineer picking up this project cold. For deeper detai
 
 ## Live site
 
-- Production: https://al-harraz.vercel.app (not yet on a custom domain — see `DOMAIN_MIGRATION_PLAN.md`)
-- Admin/CMS: https://al-harraz.vercel.app/admin
+- Production: https://alharrazlaw.com (custom domain; the `al-harraz.vercel.app` alias still resolves — see `OLD_DOMAIN_MIGRATION.md` for its planned redirect)
+- Admin/CMS: https://alharrazlaw.com/admin
 - Repo: `hodaharraz1/al-harraz` on GitHub, this snapshot is branch `claude/al-harraz-law-platform-oiq2y3`.
 
 ## Tech stack
