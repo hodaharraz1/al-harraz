@@ -1,6 +1,12 @@
 # Old Domain Migration — al-harraz.vercel.app + www.alharrazlaw.com
 
-## Status: PARTIAL — code shipped, two dashboard actions pending
+## Status: PASS — env var updated and live-verified; www domain still pending
+
+**Update 2026-09-28:** `NEXT_PUBLIC_SITE_URL` was updated to `https://alharrazlaw.com` in Vercel Production and successfully redeployed. Live-verified: canonical, `robots.txt`'s sitemap reference, and every `<loc>` in `sitemap.xml` now correctly use `alharrazlaw.com`. The `www.alharrazlaw.com` domain still needs to be added in Vercel (no DNS record exists for it yet) — the redirect code is ready and will pick it up automatically once added.
+
+### A real deployment-pipeline bug found and fixed along the way
+
+Getting the env var change live surfaced a genuine, separate bug: `npx payload migrate` (part of this project's build command) can hit an interactive confirmation prompt when the database has a "dev-mode push" sentinel row (`batch = -1` in the `payload_migrations` table). Answering "yes" to that prompt does **not** delete the sentinel row from the database — it only skips it for that one run — so it kept reappearing on every subsequent build, hanging indefinitely since Vercel's build environment is non-interactive (no one is there to type "yes"). This blocked several deployments in a row before being diagnosed via the build logs and fixed with a one-time `DELETE FROM payload_migrations WHERE batch = -1;` against production, run from the firm owner's own machine (this session's sandbox cannot reach Postgres directly). Confirmed fixed: the next build completed normally with no prompt.
 
 ## What's done (code-side, shipped and deployed)
 
