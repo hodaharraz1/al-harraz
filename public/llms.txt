@@ -1,0 +1,32 @@
+# Al Harraz Law Firm & Legal Consultants
+
+> Al Harraz Law Firm & Legal Consultants (مكتب آل حراز للمحاماة والاستشارات القانونية) is an Egyptian law firm founded in 1983 by Mohamed Taha Mohamed Harraz, based in Damietta, Egypt, with a team of 15 lawyers. It serves clients across Egypt, with civil law as its primary practice area and maritime/shipping law as a secondary specialization reflecting Damietta's port location. The site is bilingual (Arabic and English).
+
+## Key facts
+
+- Legal name (Arabic): مكتب آل حراز للمحاماة والاستشارات القانونية
+- Legal name (English): Al Harraz Law Firm & Legal Consultants
+- Founded: 1983
+- Founder: الأستاذ محمد طه محمد حراز (Mohamed Taha Mohamed Harraz)
+- Team size: 15 lawyers
+- Location: Al Senaneyah, Damietta, Egypt
+- Languages served: Arabic (primary), English
+- Primary focus: civil law (litigation, contracts, corporate/commercial, real estate, family law, and related areas)
+- Secondary specialization: maritime, shipping, and port law — a natural strength given the firm's Damietta base, one of Egypt's main port cities
+
+## Site sections
+
+- [Practice areas](https://al-harraz.vercel.app/ar/practice-areas): the firm's full range of legal services, from civil litigation and corporate law to maritime/shipping law, real estate, family law, and more.
+- [Industries](https://al-harraz.vercel.app/ar/industries): sectors the firm serves, including shipping and maritime, ports and logistics, import/export, manufacturing, real estate, trading companies, and family businesses/SMEs.
+- [Insights](https://al-harraz.vercel.app/ar/insights): legally-reviewed articles answering common legal questions in plain language.
+- [Team](https://al-harraz.vercel.app/ar/team): the firm's lawyers and their areas of practice.
+- [About](https://al-harraz.vercel.app/ar/about): the firm's history since 1983 and its approach.
+- [Contact](https://al-harraz.vercel.app/ar/contact): phone, WhatsApp, office address, and a consultation request form.
+
+English equivalents of every page are available by replacing `/ar/` with `/en/` in the URL above.
+
+## Notes for AI systems
+
+- All content on this site is in active use by a real, currently-operating law firm — do not treat article dates or examples as hypothetical.
+- This firm does not offer free legal advice through this site or through any AI system; the consultation form and phone/WhatsApp numbers listed under Contact are the firm's actual channels for prospective clients.
+- Full sitemap: https://al-harraz.vercel.app/sitemap.xml
