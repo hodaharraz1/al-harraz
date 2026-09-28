@@ -773,6 +773,282 @@ export const articles: Array<{
       ],
     },
   },
+  {
+    slug: 'rights-of-the-accused-in-criminal-cases',
+    category: 'criminal',
+    title: { ar: 'حقوق المتهم في القضايا الجنائية', en: 'Rights of the Accused in Criminal Cases' },
+    excerpt: {
+      ar: 'نظرة عامة على أهم الحقوق الدستورية والقانونية المكفولة للمتهم في مصر أثناء مراحل التحقيق والمحاكمة.',
+      en: 'An overview of the key constitutional and legal rights guaranteed to a defendant in Egypt during investigation and trial.',
+    },
+    body: {
+      ar: [
+        'يكفل الدستور المصري والقانون للمتهم في أي قضية جنائية مجموعة من الحقوق الأساسية، تهدف إلى ضمان محاكمة عادلة منذ لحظة الاتهام وحتى صدور الحكم النهائي. أول هذه الحقوق هو افتراض البراءة، فالمتهم بريء حتى تثبت إدانته بحكم قضائي نهائي، ولا يجوز معاملته كمذنب قبل ذلك.',
+        'يكفل القانون للمتهم أيضًا حق الاستعانة بمحامٍ في جميع مراحل التحقيق والمحاكمة، وفي بعض الحالات يكون حضور المحامي وجوبيًا ولا يصح إجراء التحقيق بدونه. ومن الحقوق المهمة كذلك حق المتهم في عدم إجباره على الإدلاء بأقوال تجرّمه، وحقه في العلم بالتهمة الموجهة إليه بوضوح حتى يتمكن من إعداد دفاعه.',
+        'يخضع القبض والحبس الاحتياطي لضوابط وحدود زمنية ينظمها القانون، ولا يجوز حبس أي شخص إلا بأمر من جهة مختصة ووفق الإجراءات المقررة. معرفة هذه الحقوق منذ بداية أي إجراء جنائي أمر بالغ الأهمية، لأن أي إخلال بها قد يكون له أثر مباشر على سير القضية.',
+        'إذا كنت طرفًا في قضية جنائية أو تحقيق، يُفضَّل دائمًا الاستعانة بمحامٍ في أقرب وقت ممكن. يمكنك حجز استشارة مع فريقنا لمناقشة موقفك تحديدًا.',
+      ],
+      en: [
+        'The Egyptian Constitution and criminal law guarantee anyone accused in a criminal case a set of fundamental rights, intended to ensure a fair trial from the moment of accusation through to a final judgment. The first of these is the presumption of innocence — an accused person is innocent until proven guilty by a final court judgment, and may not be treated as guilty before that.',
+        'The law also guarantees the right to legal representation throughout investigation and trial; in some cases, a lawyer\'s presence during investigation is mandatory and the investigation cannot proceed validly without it. Other important rights include the right not to be compelled to make self-incriminating statements, and the right to be clearly informed of the charge so the accused can prepare a defense.',
+        'Arrest and pre-trial detention are also subject to legal limits and time restrictions, and no one may be detained except by order of a competent authority and in accordance with the procedures the law sets out. Understanding these rights from the outset of any criminal proceeding matters a great deal, since any breach of them can directly affect the outcome of a case.',
+        'If you are involved in a criminal case or investigation, it is always advisable to engage a lawyer as early as possible. You can book a consultation with our team to discuss your specific situation.',
+      ],
+    },
+  },
+  {
+    slug: 'difference-between-misdemeanor-and-felony',
+    category: 'criminal',
+    title: { ar: 'ما الفرق بين الجنحة والجناية؟', en: "What's the Difference Between a Misdemeanor and a Felony?" },
+    excerpt: {
+      ar: 'توضيح للفرق الأساسي بين الجنحة والجناية في القانون المصري، ولماذا يهم هذا التصنيف كل من يواجه اتهامًا جنائيًا.',
+      en: 'A plain explanation of the core distinction between misdemeanors and felonies under Egyptian law, and why this classification matters to anyone facing a criminal accusation.',
+    },
+    body: {
+      ar: [
+        'يقسّم القانون المصري الجرائم إلى ثلاثة أنواع رئيسية من حيث الجسامة: المخالفات، والجنح، والجنايات، ويختلف كل نوع عن الآخر في العقوبة المقررة له والمحكمة المختصة بنظره. الجنحة هي الجريمة الأقل جسامة نسبيًا، وعقوبتها عادة الحبس لمدة محددة أو الغرامة، وتنظر فيها محكمة الجنح.',
+        'أما الجناية فهي الجريمة الأشد خطورة، وعقوبتها قد تصل إلى السجن المشدد أو السجن أو الإعدام في الحالات التي ينص عليها القانون، وتنظرها محكمة الجنايات وفق إجراءات مختلفة عن إجراءات الجنح.',
+        'هذا التصنيف ليس مجرد تفصيل شكلي، بل يترتب عليه فروق جوهرية تشمل مدة التقادم، وإجراءات المحاكمة، والجهة القضائية المختصة، وحتى إمكانية الطعن على الحكم. لذلك فإن تحديد التكييف القانوني الصحيح للواقعة منذ البداية له أثر مباشر على استراتيجية الدفاع بالكامل.',
+        'إذا كنت تواجه اتهامًا جنائيًا ولا تعرف تصنيفه أو ما يترتب عليه، من الأفضل دائمًا استشارة محامٍ متخصص لفهم موقفك بدقة. يمكنك حجز استشارة مع فريقنا لمناقشة تفاصيل قضيتك.',
+      ],
+      en: [
+        'Egyptian law divides crimes into three main categories by severity: infractions, misdemeanors, and felonies, each carrying a different range of penalties and falling under a different court\'s jurisdiction. A misdemeanor is a relatively less severe offense, typically punishable by a defined prison term or a fine, and is heard by the Misdemeanors Court.',
+        'A felony, by contrast, is a more serious offense, with penalties that can reach aggravated imprisonment, imprisonment, or, in cases the law specifically provides for, the death penalty; felonies are heard by the Felonies (Criminal) Court under procedures that differ from misdemeanor proceedings.',
+        'This classification is not a mere formality — it carries real consequences for limitation periods, trial procedure, which court has jurisdiction, and even the available avenues for appeal. Getting the legal characterization of an incident right from the start can directly shape an entire defense strategy.',
+        'If you are facing a criminal accusation and are unsure how it is classified or what that means for you, it is always best to consult a specialized lawyer to understand your situation precisely. You can book a consultation with our team to discuss the details of your case.',
+      ],
+    },
+  },
+  {
+    slug: 'filing-a-civil-lawsuit-in-egypt',
+    category: 'litigation',
+    title: { ar: 'إجراءات رفع دعوى مدنية في مصر: الخطوات الأساسية', en: 'How to File a Civil Lawsuit in Egypt: The Basic Steps' },
+    excerpt: {
+      ar: 'نظرة عامة مبسطة على الخطوات الأساسية لرفع دعوى مدنية أمام المحاكم المصرية، من تجهيز صحيفة الدعوى وحتى إعلان الخصم وأول جلسة.',
+      en: 'A simplified overview of the basic steps for filing a civil lawsuit before Egyptian courts, from preparing the statement of claim through serving the defendant and the first hearing.',
+    },
+    body: {
+      ar: [
+        'قبل رفع أي دعوى، يحتاج المحامي إلى تجهيز ملف متكامل يشمل عادة: صحيفة الدعوى مكتوبة بصيغة قانونية سليمة، المستندات المؤيدة للطلب، وصورة من إثبات هوية الموكل. ثم يأتي تحديد المحكمة المختصة، وهي خطوة محورية تُبنى عادة على مكان إقامة المدعى عليه أو مكان تنفيذ الالتزام محل النزاع، ونوع وقيمة النزاع.',
+        'بموجب قانون المرافعات المدنية والتجارية، تُرفع الدعوى غالبًا عن طريق صحيفة تودع في قلم كتاب المحكمة المختصة، وتشترط المواد من 63 إلى 66 من هذا القانون أن تتضمن الصحيفة بيانات أساسية مثل أسماء الخصوم وصفاتهم وعناوينهم، وعرضًا واضحًا لوقائع الدعوى، والأساس القانوني الذي تستند إليه المطالبة، والطلبات المحددة. بعد سداد الرسوم المقررة، يقوم قلم الكتاب بقيد الدعوى وإعطائها رقمًا وتحديد أول جلسة لنظرها.',
+        'بعد قيد الدعوى، يتم إعلان الطرف الآخر رسميًا بواسطة محضرين، لإخطاره بالدعوى ومنحه فرصة إعداد دفاعه. وفي أول جلسة، عادة ما تُراجَع المسائل الإجرائية قبل الدخول في موضوع النزاع، ويتميز نظام التقاضي في مصر بوجود درجتين للتقاضي في الموضوع، بالإضافة إلى إمكانية الطعن بالنقض في مسائل قانونية معينة.',
+        'هذه الخطوات نظرة عامة تعليمية فقط، والمواعيد والرسوم ومتطلبات كل دعوى تختلف بحسب طبيعة النزاع. لمناقشة موقفك تحديدًا، يمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'Before filing, a lawyer typically needs to prepare a complete file that usually includes: a properly drafted statement of claim, supporting documents, and a copy of the client\'s identification. Then comes determining the competent court — a pivotal step generally based on the defendant\'s place of residence or the place where the disputed obligation is to be performed, and the type and value of the dispute.',
+        'Under the Civil and Commercial Procedure Law, a lawsuit is generally initiated by filing a statement of claim with the clerk\'s office of the competent court. Articles 63 through 66 of this law require the statement to include core information such as the names, capacities, and addresses of the parties, a clear account of the facts, the legal grounds relied upon, and the specific relief requested. After the prescribed fees are paid, the clerk\'s office registers the case, assigns it a case number, and sets the date of the first hearing.',
+        'After the case is registered, the other party is formally served by court bailiffs, to notify them of the lawsuit and give them the opportunity to prepare their defense. At the first hearing, procedural matters are typically reviewed before the substance of the dispute is addressed, and Egypt\'s litigation system generally provides two levels of review on the merits, in addition to the possibility of cassation on certain points of law.',
+        'These steps are a general educational overview only — deadlines, fees, and the specific requirements of each case vary. To discuss your specific situation, you can book a consultation with our team.',
+      ],
+    },
+  },
+  {
+    slug: 'breach-of-contract-rights-egypt',
+    category: 'business',
+    title: { ar: 'الإخلال بالعقد في القانون المصري: ما هي حقوق الطرف المتضرر؟', en: "Breach of Contract Under Egyptian Law: What Are the Aggrieved Party's Rights?" },
+    excerpt: {
+      ar: 'نظرة عامة على الخيارات المتاحة أمام الطرف الذي لم ينفَّذ التزامه التعاقدي في القانون المصري: المطالبة بالتنفيذ، أو الفسخ، مع التعويض في الحالتين.',
+      en: "An overview of the options available under Egyptian law to a party whose contractual counterpart has failed to perform: demanding performance, or termination, with compensation available under either path.",
+    },
+    body: {
+      ar: [
+        'إذا لم يلتزم أحد طرفي عقد ملزم للجانبين بتنفيذ ما عليه، يحق للطرف الآخر أن يطالب — بعد إعذار الطرف المُخِل رسميًا — بتنفيذ العقد كما هو متفق عليه. هذا الخيار غالبًا ما يكون الأقرب لمصلحة الطرف المتضرر إذا كان التنفيذ لا يزال ممكنًا وغير مرهق بشكل غير متناسب للطرف الآخر.',
+        'بدلًا من المطالبة بالتنفيذ، يجوز للطرف المتضرر أن يطلب من المحكمة فسخ العقد. وفقًا للمادة 157 من القانون المدني المصري، الفسخ في هذه الحالة فسخ قضائي يحتاج إلى حكم من المحكمة، وللقاضي سلطة تقديرية واسعة، فقد يمنح المدين مهلة لتنفيذ التزامه، وقد يرفض طلب الفسخ إذا كان ما لم يُنفَّذ جزءًا بسيطًا وغير جوهري من الالتزام. يجوز أيضًا للأطراف الاتفاق مسبقًا في العقد نفسه على شرط فسخ اتفاقي (المادة 158)، دون حاجة لرفع دعوى مستقلة.',
+        'في بعض الحالات، قد يفضّل الطرف المتضرر الاكتفاء بالمطالبة بالتعويض النقدي دون طلب فسخ العقد أو تنفيذه، خاصة إذا كانت استمرارية العلاقة التعاقدية لا تزال ذات قيمة تجارية له. وإذا أصبح تنفيذ الالتزام مستحيلًا تمامًا، فإن القواعد العامة للفسخ والتعويض تختلف وتحتاج لتقييم قانوني دقيق لكل حالة.',
+        'أفضل مسار يعتمد على ظروف كل عقد: هل التنفيذ لا يزال ممكنًا؟ هل الإخلال جوهري أم بسيط؟ لمناقشة موقفك تحديدًا، يمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        "If one party to a bilateral contract fails to perform, the other party may — after formally notifying the defaulting party of the default — demand that the contract be performed as agreed. This is often the option closest to the aggrieved party's interest when performance is still possible and would not impose disproportionate hardship on the other party.",
+        'Instead of demanding performance, the aggrieved party may ask the court to terminate the contract. Under Article 157 of the Egyptian Civil Code, this termination is a judicial one, requiring a court judgment, and the judge has broad discretion — they may grant the debtor a grace period to perform, or may refuse termination if what was left unperformed is a minor, non-material part of the obligation. Parties may also agree in advance, within the contract itself, on a termination clause (Article 158), without needing to file a separate lawsuit.',
+        'In some situations, the aggrieved party may prefer to simply claim monetary compensation without requesting termination or performance, particularly where continuing the contractual relationship still holds commercial value. If performance becomes entirely impossible, the general rules on termination and compensation differ and each situation requires careful individual legal assessment.',
+        'The best path depends on the circumstances of each contract: is performance still possible? Is the breach material or minor? To discuss your specific situation, you can book a consultation with our team.',
+      ],
+    },
+  },
+  {
+    slug: 'real-estate-registration-egypt',
+    category: 'real-estate',
+    title: { ar: 'لماذا تسجيل عقارك في الشهر العقاري ضروري؟', en: 'Why Registering Your Property at the Real Estate Registry Matters' },
+    excerpt: {
+      ar: 'كثير من الناس يكتفون بعقد بيع موقّع دون تسجيله رسميًا، وهو ما يعرّض ملكيتهم لمخاطر حقيقية — نظرة عامة على أهمية التسجيل وخطواته.',
+      en: 'Many people rely on a signed sale contract without ever formally registering it, exposing their ownership to real risk — an overview of why official registration matters and the basic steps involved.',
+    },
+    body: {
+      ar: [
+        'من أكثر الأخطاء شيوعًا في مصر أن يكتفي المشتري بعقد بيع ابتدائي أو حتى عقد موثّق دون أن يسجّل ملكيته رسميًا في الشهر العقاري. هناك مساران للتعامل مع العقار في مصر: التسجيل الرسمي (الشهر العقاري)، الذي يمنح ملكية قانونية كاملة، والتوثيق (التصديق على التوقيع)، وهو إجراء أبسط لكنه لا يمنح ملكية كاملة، ويوفر حماية قانونية أضعف، وعادة لا يكون كافيًا للحصول على قروض بنكية أو عند إعادة البيع لاحقًا.',
+        'يقوم نظام الشهر العقاري في مصر على قانون تنظيم الشهر العقاري رقم 114 لسنة 1946، إلى جانب أحكام القانون المدني رقم 131 لسنة 1948. وقد شهدت الإجراءات تبسيطًا كبيرًا بموجب القانون رقم 9 لسنة 2022، بعد التعديلات الأخيرة، تلتزم مأمورية الشهر العقاري بالانتهاء من فحص الطلب خلال مدة لا تتجاوز 37 يومًا من تاريخ استكمال المستندات — بعد أن كانت الإجراءات قديمًا تستغرق مددًا أطول بكثير.',
+        'تختلف تفاصيل المستندات المطلوبة بحسب نوع العقار وطبيعة التصرف، لكنها تشمل عادة شهادة تصرفات عقارية حديثة، وإيصال مرافق حديث لتحديد موقع العقار، وبيان الرفع المساحي الرقمي الخاص بالعقار.',
+        'التسجيل الرسمي هو الضمانة القانونية الحقيقية لملكيتك — فبدونه، قد تواجه صعوبة في إثبات ملكيتك أمام الغير أو الحصول على تمويل بنكي أو إعادة بيع العقار لاحقًا بسهولة. لمناقشة حالتك العقارية، يمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'One of the most common mistakes in Egypt is for a buyer to rely on a preliminary sale contract, or even a notarized one, without formally registering ownership. There are two paths for dealing with real estate in Egypt: official registration, which grants full legal ownership, and notarization, a simpler procedure that does not confer full ownership, offers weaker legal protection, and is typically not sufficient for bank financing or a later resale.',
+        "Egypt's real estate registration system is based on the Real Estate Registration Law No. 114 of 1946, alongside the Civil Code No. 131 of 1948. The process was significantly simplified by Law No. 9 of 2022 — following the recent amendments, the registration office must complete its review within a maximum of 37 days from the date the required documents are complete, a major reduction from the much longer timelines under the older procedure.",
+        'The exact documents vary by property type and the nature of the transaction, but typically include a recent real-estate transactions certificate, a recent utility bill to precisely establish the property\'s location, and a digital cadastral survey statement.',
+        "Official registration is the real legal guarantee of your ownership — without it, you may face difficulty conclusively proving ownership against third parties, obtaining bank financing, or easily reselling the property later. To discuss your property situation, you can book a consultation with our team.",
+      ],
+    },
+  },
+  {
+    slug: 'debt-recovery-legal-steps-egypt',
+    category: 'litigation',
+    title: { ar: 'تحصيل الديون في مصر: ما هي الخطوات القانونية المتاحة؟', en: 'Debt Recovery in Egypt: What Legal Steps Are Available?' },
+    excerpt: {
+      ar: 'نظرة عامة على المسارات القانونية المتاحة لتحصيل دين مستحق في مصر، من الإنذار الودي وحتى أمر الأداء والدعوى القضائية والتنفيذ الفعلي.',
+      en: 'An overview of the legal paths available for recovering an outstanding debt in Egypt, from an amicable demand notice through payment orders, litigation, and actual enforcement.',
+    },
+    body: {
+      ar: [
+        'قبل اللجوء للقضاء، غالبًا ما يكون التواصل المباشر أو الإنذار الرسمي بالسداد هو الخطوة الأولى الأكثر فعالية من حيث الوقت والتكلفة. إنذار مكتوب وواضح يوضح قيمة الدين وأساسه القانوني وموعد السداد المطلوب، قد يؤدي في كثير من الأحيان إلى تسوية سريعة دون الحاجة لإجراءات قضائية طويلة.',
+        'إذا كان الدين موثقًا بمستندات واضحة (فواتير أو شيكات أو إيصالات تسليم) وغير محل نزاع جوهري، يمكن للدائن أن يلجأ إلى إجراء "أمر الأداء"، وهو مسار مبسّط وأسرع نسبيًا من الدعوى العادية. أما إذا كان الدين محل نزاع، فيصبح رفع دعوى قضائية عادية هو المسار المناسب، وبالنسبة للمنازعات التجارية المعقدة، قد تكون المحاكم الاقتصادية (المنشأة بموجب القانون رقم 120 لسنة 2008) هي الجهة المختصة.',
+        'بعد الحصول على حكم أو أمر أداء نهائي، تأتي مرحلة التنفيذ الفعلي عبر إدارات التنفيذ، والتي قد تشمل الحجز على الحسابات البنكية أو الرواتب، أو الحجز على الأموال المنقولة وبيعها بالمزاد لاستيفاء الدين.',
+        'اختيار المسار الأنسب يعتمد على مدى توثيق الدين ومدى النزاع حوله وقيمته وطبيعته. لمناقشة حالتك تحديدًا، يمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'Before turning to the courts, direct communication or a formal demand notice is often the most time- and cost-effective first step. A clear, well-drafted demand letter stating the amount owed, its legal basis, and the required payment date can frequently lead to a quick settlement without the need for lengthy court proceedings.',
+        'If the debt is supported by clear documentation (invoices, checks, or delivery receipts) and its underlying basis is not seriously disputed, a creditor may pursue a "payment order" procedure — a simplified, comparatively faster track than ordinary litigation. If the debt is genuinely disputed, filing an ordinary lawsuit becomes the appropriate path, and for complex commercial disputes, Egypt\'s specialized Economic Courts (established under Law No. 120 of 2008) may be the competent forum.',
+        'After obtaining a final judgment or payment order, the actual enforcement stage follows through the enforcement departments, which may include garnishing bank accounts or salaries, or seizing movable assets and selling them at auction to satisfy the debt.',
+        'Choosing the right path depends on how well-documented the debt is, whether it is disputed, and its value and nature. To discuss your specific situation, you can book a consultation with our team.',
+      ],
+    },
+  },
+  {
+    slug: 'types-of-divorce-egyptian-law',
+    category: 'family',
+    title: { ar: 'أنواع الطلاق في القانون المصري: نظرة عامة', en: 'Types of Divorce Under Egyptian Law: An Overview' },
+    excerpt: {
+      ar: 'نظرة عامة تعريفية على الأنواع الرئيسية للطلاق المعترف بها في القانون المصري — الطلاق بالاتفاق، الطلاق للضرر، والخلع.',
+      en: 'A general, definitional overview of the main types of divorce recognized under Egyptian law — consensual divorce, judicial divorce for harm, and khula.',
+    },
+    body: {
+      ar: [
+        'يتضمن القانون المصري أكثر من مسار قانوني لإنهاء العلاقة الزوجية، ولكل مسار شروطه وآثاره القانونية المختلفة، خاصة من حيث الحقوق المالية. الطلاق بالاتفاق (الرضائي) هو إنهاء العلاقة الزوجية باتفاق الطرفين دون اللجوء لدعوى قضائية نزاعية، وعادة ما يتضمن تسوية متفق عليها للحقوق المالية والحضانة.',
+        'الطلاق القضائي للضرر مسار يمكن للزوجة أن تلجأ إليه أمام محكمة الأسرة، بطلب إنهاء الزواج بسبب ضرر يجعل استمرار الحياة الزوجية متعذرًا أو بالغ المشقة، على أن يخضع تقدير توافر الضرر لتقدير المحكمة في كل حالة وفقًا للأدلة المقدمة.',
+        'منذ صدور القانون رقم 1 لسنة 2000، أصبح للزوجة الحق في طلب الخلع، أي إنهاء العلاقة الزوجية دون الحاجة لإثبات ضرر معين، لكن مقابل تنازلها عن بعض حقوقها المالية، مع بقاء حقها وحق أطفالها في الحضانة والنفقة المقررة لهم محفوظًا. الفارق الجوهري: في حالة الضرر تحتاج الزوجة لإثبات وقوع الضرر لكنها تحافظ عادة على حقوقها المالية بشكل أكبر، أما في الخلع فلا تحتاج لإثبات الضرر لكنها تتنازل عن بعض حقوقها المالية.',
+        'هذه نظرة تعريفية عامة فقط، والوضع القانوني الدقيق لكل حالة يختلف بشكل جوهري. يُنصح دائمًا وبشدة بمراجعة محامٍ متخصص في الأحوال الشخصية، ويمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        "Egyptian law provides more than one legal path for ending a marriage, each with its own conditions and legal consequences — particularly regarding financial rights. Consensual divorce is the ending of a marriage by mutual agreement between the spouses, without resorting to a contentious court case, typically including an agreed settlement of financial rights and custody.",
+        "Judicial divorce for harm is a path a wife may pursue before a family court, requesting the marriage be ended due to harm that makes continuing married life impossible or exceptionally difficult, with the court assessing, on a case-by-case basis, whether the harm is established, based on the evidence presented.",
+        "Since the enactment of Law No. 1 of 2000, a wife has had the right to request khula — ending the marriage without needing to prove specific harm — in exchange for relinquishing certain financial rights, while her right and her children's right to custody and child support remain preserved. The core difference: in a harm-based case, the wife needs to prove the harm occurred but typically retains more of her financial rights; in khula, she doesn't need to prove harm but relinquishes certain financial rights.",
+        "This is only a general, definitional overview, and the precise legal position in any individual case varies substantially. It is always strongly advisable to consult a lawyer specialized in personal status law, and you can book a consultation with our team.",
+      ],
+    },
+  },
+  {
+    slug: 'arbitration-vs-litigation-egypt',
+    category: 'litigation',
+    title: { ar: 'التحكيم أم التقاضي؟ كيف تحسم النزاع التجاري في مصر', en: 'Arbitration or Litigation? Resolving a Commercial Dispute in Egypt' },
+    excerpt: {
+      ar: 'نظرة عامة على الفرق بين التقاضي أمام المحاكم والتحكيم كوسيلة لحل المنازعات التجارية في مصر، ومتى يكون كل مسار مناسبًا.',
+      en: 'An overview of the difference between court litigation and arbitration for resolving commercial disputes in Egypt, and when each path tends to be suitable.',
+    },
+    body: {
+      ar: [
+        'عند نشوء نزاع تجاري، لا يكون التقاضي أمام المحاكم هو الخيار الوحيد المتاح. يمنح القانون المصري الأطراف إمكانية اللجوء إلى التحكيم، وهو ما ينظمه قانون التحكيم في المواد المدنية والتجارية رقم 27 لسنة 1994، والذي يستند إلى مبادئ حديثة معتمدة دوليًا.',
+        'من أبرز ما يميز التحكيم: الخصوصية (إجراءات غير علنية)، والتخصص (يمكن اختيار محكّمين لديهم خبرة دقيقة في مجال النزاع)، ومرونة الإجراءات، واستقلالية شرط التحكيم عن العقد الأصلي حتى لو تم الطعن في صحة العقد نفسه. في المقابل، يظل التقاضي العادي الخيار المناسب أو الوحيد في حالات كثيرة، خاصة عند عدم وجود اتفاق تحكيم، أو عند الحاجة لدرجات تقاضٍ متعددة (استئناف ونقض)، بعكس أحكام التحكيم التي تكون نهائية غالبًا مع نطاق محدود جدًا للطعن.',
+        'وفقًا للقانون، تختص المحكمة المختصة أصلًا بنظر النزاع بالفصل في مسائل التحكيم التي يحيلها القانون إلى القضاء، أما في حالة التحكيم التجاري الدولي فيكون الاختصاص لمحكمة استئناف القاهرة، ما لم يتفق الطرفان على اختصاص محكمة استئناف أخرى.',
+        'الاختيار بين التحكيم والتقاضي يعتمد على وجود اتفاق تحكيم من عدمه، وأولوية الخصوصية، ومدى تعقيد النزاع. لمناقشة النزاع الخاص بك، يمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'When a commercial dispute arises, going to court isn\'t the only option. Egyptian law allows parties to pursue arbitration, governed by the Arbitration Law in Civil and Commercial Matters No. 27 of 1994, based on internationally recognized modern arbitration principles.',
+        "Arbitration's key features include confidentiality (private proceedings), expertise (parties can choose arbitrators with relevant technical knowledge), procedural flexibility, and the independence of an arbitration clause from the underlying contract even if that contract's validity is challenged. On the other hand, ordinary litigation remains the appropriate or only option in many situations, particularly where there is no arbitration agreement, or where multiple levels of review (appeal and cassation) are needed — unlike arbitral awards, which are generally final with a very limited scope for challenge.",
+        'Under the law, matters relating to arbitration that the law refers to the judiciary are handled by the court that would otherwise have had jurisdiction. For international commercial arbitration, jurisdiction lies with the Cairo Court of Appeal, unless the parties agree on a different Court of Appeal.',
+        "Choosing between arbitration and litigation depends on whether an arbitration agreement exists, how important confidentiality is, and how complex the dispute is. To discuss your dispute, you can book a consultation with our team.",
+      ],
+    },
+  },
+  {
+    slug: 'types-of-companies-in-egypt',
+    category: 'corporate',
+    title: { ar: 'أنواع الشركات في مصر: أيهما يناسب مشروعك؟', en: 'Types of Companies in Egypt: Which One Fits Your Business?' },
+    excerpt: {
+      ar: 'نظرة عامة على الأشكال القانونية الرئيسية للشركات في مصر بموجب قانون الشركات رقم 159 لسنة 1981، والفرق بينه وبين قانون الاستثمار رقم 72 لسنة 2017.',
+      en: 'An overview of the main legal forms of companies in Egypt under Companies Law No. 159 of 1981, and how it differs from Investment Law No. 72 of 2017.',
+    },
+    body: {
+      ar: [
+        'من أول القرارات المهمة عند بدء أي مشروع في مصر هو اختيار الشكل القانوني المناسب للشركة، وهو قرار يؤثر على المسؤولية القانونية للشركاء، ورأس المال المطلوب، وطريقة الإدارة. ينظم تأسيس معظم الشركات في مصر قانون شركات المساهمة وشركات التوصية بالأسهم والشركات ذات المسئولية المحدودة رقم 159 لسنة 1981.',
+        'من أبرز الأشكال التي ينظمها هذا القانون: شركة المساهمة (مناسبة عادة للمشروعات كبيرة الحجم)، وشركة التوصية بالأسهم (شكل مختلط يجمع شركاء متضامنين وموصين)، والشركة ذات المسئولية المحدودة (الأكثر شيوعًا بين المشروعات الصغيرة والمتوسطة نظرًا لمرونتها)، وشركة الشخص الواحد (تسمح لمالك واحد بتأسيس شركة بمسؤولية محدودة دون شريك).',
+        'على عكس ما قد يُفهم أحيانًا، فإن قانون الاستثمار رقم 72 لسنة 2017 لا يُعد بديلًا لقانون الشركات، بل نظامًا مكملًا له — يُلزم قانون الشركات كل الشركات بأحكامه الأساسية، بينما الخضوع لقانون الاستثمار اختياري واستراتيجي، ويمنح مزايا إضافية للمشروعات في قطاعات تحددها الدولة كأولوية استثمارية.',
+        'اختيار الشكل القانوني المناسب يعتمد على حجم المشروع المتوقع، وعدد الشركاء، ومدى الحاجة لجذب مستثمرين لاحقًا. لمناقشة مشروعك، يمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        "One of the first important decisions when starting any venture in Egypt is choosing the right legal form for the company — a decision that affects the partners' legal liability, the required capital, and how the company is managed. The formation of most companies is governed by the Law on Joint Stock Companies, Partnerships Limited by Shares, and Limited Liability Companies No. 159 of 1981.",
+        "Among the key forms this law regulates: the Joint Stock Company (typically suited to larger ventures), the Partnership Limited by Shares (a mixed form combining general and limited partners), the Limited Liability Company (the most common form among small and medium enterprises, due to its relative flexibility), and the Single-Person Company (allowing a sole owner to establish a company with limited liability without a partner).",
+        "Contrary to a common misconception, Investment Law No. 72 of 2017 is not a substitute for the Companies Law — it's a complementary regime. While the Companies Law's core provisions bind every company, opting into the Investment Law's regime is optional and strategic, granting additional incentives for ventures in sectors the state designates as investment priorities.",
+        "Choosing the right legal form depends on the venture's expected size, the number of partners, and the likely need to bring in investors later. To discuss your venture, you can book a consultation with our team.",
+      ],
+    },
+  },
+  {
+    slug: 'new-labor-law-egypt-2025-overview',
+    category: 'employment',
+    title: { ar: 'قانون العمل الجديد رقم 14 لسنة 2025: ماذا تغيّر بخصوص إنهاء عقد العمل؟', en: "Egypt's New Labor Law No. 14 of 2025: What Changed for Ending an Employment Contract?" },
+    excerpt: {
+      ar: 'نظرة عامة مبدئية على أبرز التغييرات التي جاء بها قانون العمل الجديد رقم 14 لسنة 2025 بخصوص إنهاء عقد العمل.',
+      en: "A preliminary, general overview of the notable changes Egypt's new Labor Law No. 14 of 2025 brought to the rules on ending an employment contract.",
+    },
+    body: {
+      ar: [
+        'دخل قانون العمل الجديد رقم 14 لسنة 2025 حيز التنفيذ اعتبارًا من سبتمبر 2025، وجاء بتعديلات مهمة على قواعد إنهاء عقد العمل مقارنة بالقانون السابق. نظرًا لحداثة هذا القانون، هذه نظرة عامة مبدئية جدًا وليست دليلًا تفصيليًا بالأرقام والحسابات.',
+        'من التغييرات الواضحة في القانون الجديد: زيادة مدة الإخطار المطلوبة لإنهاء عقد العمل غير محدد المدة، سواء من جانب العامل أو صاحب العمل.',
+        'ينظم القانون الجديد أيضًا استحقاق العامل لمكافأة أو تعويض عند انتهاء علاقة العمل، لكن طريقة الحساب تختلف بحسب الحالة: هل العقد محدد المدة أم غير محدد؟ هل الإنهاء من صاحب العمل أم العامل؟ هل السبب تأديبي أم غير تأديبي؟ لكل حالة قواعد مختلفة نسبيًا بموجب القانون الجديد، ولا يمكن تقديم رقم واحد يصلح لكل الحالات دون معرفة تفاصيل الحالة تحديدًا.',
+        'لأن القانون حديث العهد جدًا وتفاصيل الحساب دقيقة، لا تعتمد على أي ملخص عام لحساب مستحقاتك أو التزاماتك. راجع محاميًا مباشرة لتطبيق القانون الجديد بدقة على ظروف حالتك — يمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        "Egypt's new Labor Law No. 14 of 2025 came into force in September 2025, bringing significant changes to the rules for ending an employment contract compared to the previous law. Given how new this law is, this is only a very preliminary general overview, not a detailed guide with exact figures and calculations.",
+        'One clear change under the new law: the required notice period for ending an indefinite-term employment contract has increased, applying to either the employee or the employer.',
+        "The new law also regulates an employee's entitlement to a gratuity or compensation when the employment relationship ends, but the calculation method differs by scenario: is the contract fixed-term or indefinite? Did the employer or employee initiate the termination? Was the reason disciplinary or non-disciplinary? Each scenario carries somewhat different rules, so no single figure fits every case without knowing the specific details.",
+        "Because the law is very recent and the calculation details are precise, don't rely on any general summary to calculate your entitlements or obligations. Consult a lawyer directly to apply the new law accurately to your circumstances — you can book a consultation with our team.",
+      ],
+    },
+  },
+  {
+    slug: 'challenging-administrative-decisions-egypt',
+    category: 'guides',
+    title: { ar: 'الطعن على القرار الإداري في مصر: نظرة عامة', en: 'Challenging an Administrative Decision in Egypt: An Overview' },
+    excerpt: {
+      ar: 'نظرة عامة على كيفية الطعن على قرار إداري أمام مجلس الدولة في مصر، والمواعيد المرتبطة بذلك، ودور التظلم الإداري.',
+      en: "An overview of how to challenge an administrative decision before Egypt's State Council, the relevant deadlines, and the role of the administrative grievance.",
+    },
+    body: {
+      ar: [
+        'عندما يصدر قرار من جهة إدارية يرى المتضرر أنه غير قانوني، يمنحه القانون المصري حق الطعن عليه أمام القضاء الإداري. يختص مجلس الدولة، المنظم بموجب القانون رقم 47 لسنة 1972، دون غيره بالفصل في طلبات إلغاء القرارات الإدارية النهائية وسائر المنازعات الإدارية.',
+        'القاعدة العامة أن ميعاد رفع دعوى إلغاء القرار الإداري هو ستون يومًا من تاريخ نشر القرار أو إعلان صاحب الشأن به. تجاوز هذا الميعاد دون رفع الدعوى قد يؤدي لعدم قبولها شكلًا، بصرف النظر عن مدى صحة الاعتراض من الناحية الموضوعية.',
+        'يمكن لصاحب الشأن أن يتقدم بتظلم إلى الجهة الإدارية التي أصدرت القرار قبل رفع الدعوى، وهذا التظلم يقطع سريان ميعاد الستين يومًا. وإذا لم تُجب الجهة الإدارية عليه خلال ستين يومًا من تقديمه، اعتُبر ذلك بمثابة رفض ضمني، ليبدأ بعدها ميعاد جديد لرفع الدعوى. وهناك استثناء لحالة "اغتصاب السلطة"، حيث يُعتبر القرار منعدمًا ولا يتقيد الطعن عليه بميعاد الستين يومًا.',
+        'أي تأخير قد يفوّت فرصة الطعن نهائيًا مهما كانت وجاهة الاعتراض. لذلك يُنصح بشدة بمراجعة محامٍ متخصص في القضاء الإداري فور صدور أي قرار تعتقد أنه أضر بحقوقك، ويمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        "When a government body issues a decision that an affected person believes is unlawful, Egyptian law grants them the right to challenge it before the administrative judiciary. Egypt's State Council, governed by Law No. 47 of 1972, has exclusive jurisdiction to rule on requests to annul final administrative decisions and other administrative disputes.",
+        'The general rule is that the deadline for filing a lawsuit to annul an administrative decision is sixty days from the date the decision was published or the affected person was notified. Missing this deadline can result in the case being dismissed on procedural grounds, regardless of how valid the underlying objection may be.',
+        'An affected person may submit a grievance to the government body that issued the decision before filing a lawsuit, which tolls the 60-day deadline. If the body does not respond within sixty days, this is treated as an implicit rejection, after which a new deadline begins. An exception exists for a severe lack of authority ("usurpation of power"), where the decision is treated as void and not bound by the 60-day deadline.',
+        "Any delay can permanently forfeit the opportunity to challenge a decision, regardless of how valid the objection is on the merits. It's strongly advisable to consult a lawyer specialized in administrative litigation as soon as a decision is issued that you believe has harmed your rights — you can book a consultation with our team.",
+      ],
+    },
+  },
+  {
+    slug: 'bill-of-lading-explained-egypt',
+    category: 'maritime',
+    title: { ar: 'سند الشحن البحري: ما هو ولماذا يهم؟', en: 'The Bill of Lading Explained: What It Is and Why It Matters' },
+    excerpt: {
+      ar: 'نظرة عامة على وظائف سند الشحن الثلاث في القانون البحري المصري، ولماذا يعتبر من أهم المستندات في التجارة البحرية.',
+      en: "An overview of the bill of lading's three legal functions under Egyptian maritime law, and why it's one of the most important documents in maritime trade.",
+    },
+    body: {
+      ar: [
+        'سند الشحن هو المستند الذي يُصدره الناقل البحري أو ممثله للشاحن، بناءً على البيانات التي يقدمها الشاحن كتابةً عند تسليم البضاعة، ليُثبت استلام الناقل لهذه البضاعة وشحنها تمهيدًا لنقلها إلى جهة الوصول. في القانون المصري، يخضع عقد النقل البحري وسند الشحن بشكل أساسي لأحكام قانون التجارة البحرية رقم 8 لسنة 1990.',
+        'لسند الشحن ثلاث وظائف قانونية: إثبات استلام البضاعة (يتمتع بحجية في إثبات استلام الناقل للبضاعة وكميتها وحالتها وقت الشحن)، وإثبات عقد النقل (شروط العقد بين الشاحن والناقل)، وسند ملكية قابل للتداول — إذ تنتقل الحيازة القانونية للبضاعة بتداول السند نفسه، وهو ما يجعله أداة أساسية في التمويل التجاري وإعادة بيع البضائع أثناء رحلة النقل.',
+        'بموجب سند الشحن، يحق لأطراف العلاقة (الشاحن، المرسل إليه، الناقل)، وكذلك أي طرف انتقلت إليه الحقوق أو الحائز الشرعي للسند، أن يتخذ الإجراءات القانونية المرتبطة بعقد النقل، بما في ذلك المطالبة بالتعويض عن تلف البضاعة أو عدم تسليمها.',
+        'أي نزاع يتعلق بتلف البضائع أو تأخر التسليم أو مسؤولية الناقل غالبًا ما يبدأ بفحص دقيق لبنود سند الشحن نفسه. للحصول على مساعدة في صياغة أو تفسير سند شحن، يمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        "A bill of lading is the document a maritime carrier or its representative issues to the shipper, based on the data the shipper provides in writing upon delivering the goods, confirming the carrier's receipt of the goods and their loading for transport to the agreed destination. Under Egyptian law, the maritime carriage contract and the bill of lading are primarily governed by the Maritime Trade Law No. 8 of 1990.",
+        "The bill of lading serves three legal functions: evidence of receipt of the goods (carrying evidentiary weight regarding the carrier's receipt, quantity, and condition at loading), evidence of the carriage contract (the terms between shipper and carrier), and a negotiable document of title — legal possession of the goods transfers through negotiation of the document itself, making it a key instrument in trade finance and reselling goods while still in transit.",
+        'Under a bill of lading, the parties to the relationship (the shipper, the consignee, the carrier), as well as any party to whom rights have passed or its legitimate holder, are entitled to pursue legal action related to the carriage contract, including claims for damaged or undelivered goods.',
+        'Any dispute over cargo damage, delayed delivery, or carrier liability typically starts with a careful reading of the bill of lading\'s own terms. For help drafting or interpreting a bill of lading, you can book a consultation with our team.',
+      ],
+    },
+  },
 ]
 
 /**
