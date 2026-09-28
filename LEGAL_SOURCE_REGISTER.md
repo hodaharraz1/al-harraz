@@ -7,9 +7,11 @@ Verification-status legend (matches internal drafting notes):
 - **NEEDS_HUMAN_LEGAL_REVIEW** — source-verified but not yet reviewed by a firm lawyer.
 - **LAWYER APPROVED** — a named Al Harraz lawyer has actually reviewed and approved the content.
 
-**Reviewer confirmation (2026-09-28):** the firm owner (hodaharraz1@gmail.com) confirmed that **الأستاذ محمود حراز (Mahmoud Harraz)** reviewed the consolidated packet (`review-packet-for-mahmoud-harraz.md`) and approved all 12 articles below as-is, with no edits. All 12 have accordingly been added to `src/seed/data.ts` with `legalReviewer` set to the hodaharraz1@gmail.com admin account for publishing — the same mechanism already used for the 6 previously-published articles. **This repo/sandbox has no production database credentials, so `npm run seed` has not actually been run against the live site from here** — the code is ready and committed, but someone with production `DATABASE_URI`/`PAYLOAD_SECRET` access needs to run the seed script (or publish the 12 articles via the live `/admin` panel) to make them go live. See `BLOCKED_EXTERNAL_ACTIONS.md`.
+**Reviewer confirmation (2026-09-28):** the firm owner (hodaharraz1@gmail.com) confirmed that **الأستاذ محمود حراز (Mahmoud Harraz)** reviewed the consolidated packet (`review-packet-for-mahmoud-harraz.md`) and approved all 12 articles below as-is, with no edits. All 12 were added to `src/seed/data.ts` with `legalReviewer` set to the hodaharraz1@gmail.com admin account — the same mechanism used for the 6 previously-published articles.
 
-## Drafts — now lawyer-approved, pending the production publish step
+**Published (2026-09-28):** this sandbox has no direct Postgres access (outbound is HTTPS-only), so the firm owner ran `npm run seed` from his own machine (via `vercel env pull` for the production credentials) to complete the publish. Live-verified: sitemap grew from 138 to 162 URLs (12 × 2 locales), all 12 slugs return 200 with correct rendered titles in `/ar/` and `/en/`. All 12 articles below are now live on production, not just approved.
+
+## Drafts — lawyer-approved and now live in production
 
 | Topic (AR) | Target page | Status | Sources checked | Notes |
 |---|---|---|---|---|

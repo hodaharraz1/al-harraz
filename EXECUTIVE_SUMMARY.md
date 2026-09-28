@@ -31,7 +31,7 @@ Every P1 civil-law-first content cluster now has at least one draft, source-veri
 
 Plus 2 criminal-law drafts from earlier in this project (rights of the accused; misdemeanor vs. felony).
 
-**Update 2026-09-28: all 12 reviewed and approved by Mahmoud Harraz, as-is.** The firm owner confirmed Mahmoud reviewed the consolidated packet and approved every article with no edits. All 12 have been added to `src/seed/data.ts`, ready to publish with `legalReviewer` set to the same admin account used for the 6 already-live articles. The only remaining step is mechanical: this sandbox has no production database credentials, so someone with them needs to run `npm run seed` (or publish via the live `/admin` panel) — see `BLOCKED_EXTERNAL_ACTIONS.md`.
+**Update 2026-09-28: all 12 reviewed by Mahmoud Harraz, approved as-is, and now LIVE in production.** The firm owner confirmed Mahmoud reviewed the consolidated packet and approved every article with no edits. Since this sandbox's outbound network is HTTPS-only (no direct Postgres access), the firm owner ran `npm run seed` from his own machine using `vercel env pull` for the production credentials. Live-verified afterward: the sitemap grew from 138 to 162 URLs (exactly +24 = 12 × 2 locales), and all 12 article URLs return 200 with correct titles in both languages. See `BLOCKED_EXTERNAL_ACTIONS.md` for the recommended follow-up (rotating the DB credentials that were used for this, as routine hygiene).
 
 ## 3. Existing published content — re-audited, clean
 
@@ -39,7 +39,7 @@ Grep-based re-verification of every already-published Article/PracticeArea/FAQ f
 
 ## 4. What's genuinely blocked (not skipped, not silently dropped)
 
-See `BLOCKED_EXTERNAL_ACTIONS.md` for the full list and why each item can't be resolved from this session: GBP video verification (needs a physical visit), a custom domain (needs purchase authorization — zero-budget rule stands), the 12 remaining lawyer profiles and office photography (need real data/a real photoshoot), a live Lighthouse run (needs real internet access this sandbox doesn't have), and running the seed script against the live production database (needs credentials this sandbox doesn't have — the content itself is already lawyer-approved and code-ready).
+See `BLOCKED_EXTERNAL_ACTIONS.md` for the full list and why each item can't be resolved from this session: GBP video verification (needs a physical visit), a custom domain (needs purchase authorization — zero-budget rule stands), the 12 remaining lawyer profiles and office photography (need real data/a real photoshoot), a live Lighthouse run (needs real internet access this sandbox doesn't have), and rotating the production DB credentials used to complete the article publish above (routine hygiene, not yet confirmed done).
 
 ## 5. What was explicitly NOT claimed
 
