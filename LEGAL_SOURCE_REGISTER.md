@@ -7,6 +7,8 @@ Verification-status legend (matches internal drafting notes):
 - **NEEDS_HUMAN_LEGAL_REVIEW** — source-verified but not yet reviewed by a firm lawyer (the default state for every draft below until the firm confirms otherwise).
 - **LAWYER APPROVED** — a named Al Harraz lawyer has actually reviewed and approved the content. Nothing in this file currently holds this status.
 
+**Reviewer assignment (2026-09-28):** the firm owner has routed all 12 drafts below to **الأستاذ محمود حراز (Mahmoud Harraz)** for review, via a single consolidated packet (`review-packet-for-mahmoud-harraz.md`, delivered as a file). This is an assignment, not an approval — every row below stays `NEEDS_HUMAN_LEGAL_REVIEW` until Mahmoud actually confirms a specific article and is recorded by name as `legalReviewer` in the CMS for that article. No article moves to `LAWYER APPROVED` from this note alone.
+
 ## Drafts pending firm-lawyer review
 
 | Topic (AR) | Target page | Status | Sources checked | Notes |
