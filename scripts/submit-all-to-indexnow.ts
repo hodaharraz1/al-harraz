@@ -19,7 +19,9 @@ async function main() {
     process.exit(1)
   }
   const xml = await response.text()
-  const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1])
+  const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)]
+    .map((m) => m[1])
+    .filter((url): url is string => Boolean(url))
 
   if (urls.length === 0) {
     console.error('No URLs found in sitemap.')

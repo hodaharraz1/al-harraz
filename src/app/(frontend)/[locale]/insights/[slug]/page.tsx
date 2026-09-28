@@ -65,6 +65,10 @@ export default async function ArticlePage({
   const author = doc['author'] as { name?: string } | null
   const publishDate = doc['publishDate'] as string | undefined
   const lastReviewedDate = doc['lastReviewedDate'] as string | undefined
+  const coverImage = doc['coverImage'] as { url?: string } | null
+  const imageUrl = coverImage?.url
+    ? `${process.env['NEXT_PUBLIC_SITE_URL'] ?? ''}${coverImage.url}`
+    : undefined
 
   return (
     <>
@@ -76,6 +80,7 @@ export default async function ArticlePage({
           authorName: author?.name,
           publishDate,
           lastReviewedDate,
+          imageUrl,
         })}
       />
       <Section tone="light">

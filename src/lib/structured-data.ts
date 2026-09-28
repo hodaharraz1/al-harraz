@@ -7,6 +7,8 @@ export function organizationSchema(locale: Locale) {
     '@type': 'LegalService',
     name: locale === 'ar' ? siteConfig.legalNameAr : siteConfig.legalNameEn,
     url: siteConfig.siteUrl,
+    logo: `${siteConfig.siteUrl}/logo-full.png`,
+    image: `${siteConfig.siteUrl}/logo-full.png`,
     telephone: siteConfig.phoneInternational,
     foundingDate: `${siteConfig.foundingYear}`,
     address: {
@@ -98,18 +100,30 @@ export function articleSchema({
   authorName,
   publishDate,
   lastReviewedDate,
+  imageUrl,
 }: {
   title: string
   description: string
   authorName?: string
   publishDate?: string
   lastReviewedDate?: string
+  /** Article cover image, if the CMS entry has one — falls back to the firm's logo, matching Google's Article schema guidance that `image` be present. */
+  imageUrl?: string
 }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
     description,
+    image: imageUrl ?? `${siteConfig.siteUrl}/logo-full.png`,
+    publisher: {
+      '@type': 'Organization',
+      name: siteConfig.legalNameEn,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteConfig.siteUrl}/logo-full.png`,
+      },
+    },
     ...(authorName ? { author: { '@type': 'Person', name: authorName } } : {}),
     ...(publishDate ? { datePublished: publishDate } : {}),
     ...(lastReviewedDate ? { dateModified: lastReviewedDate } : {}),
