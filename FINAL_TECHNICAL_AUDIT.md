@@ -207,3 +207,19 @@ Scope: proactive search-engine submission (IndexNow), AI-search discoverability 
 - No guarantee of ranking position or inclusion in any search engine or AI assistant was made or implied anywhere in this update.
 - No custom domain was purchased — still tracked as **BLOCKED — REQUIRES OWNER PURCHASE AUTHORIZATION** in `DOMAIN_MIGRATION_PLAN.md`, unchanged from the prior audit.
 - No fabricated legal citation, statute number, or case reference was added anywhere in this pass — this update was purely technical/infrastructure.
+
+---
+
+## Update — 2026-09-28 (existing published-content audit)
+
+Per the standing legal-content verification rules, re-audited every piece of **already-published** content (not the new draft articles, which are separately tracked in `LEGAL_SOURCE_REGISTER.md` and never entered the CMS) for fabricated citations, absolute/guarantee language, and stale numeric claims.
+
+| Check | Result | Method |
+|---|---|---|
+| Fabricated statute/article/law-number citations in any published Article, Practice Area, or FAQ | **PASS — zero found** | `grep -noE "المادة [0-9]+\|Article [0-9]+\|قانون رقم [0-9]+\|Law No\.? [0-9]+"` across `src/seed/data.ts` (the source of all seeded published content) — no matches. |
+| Absolute/guarantee language ("always succeeds", "دائمًا", "مضمون", "100% success", "the best lawyer") | **PASS — zero real hits** | Same method across AR/EN. Two `دائمًا`/`always` matches found, both in the enforcement article's own hedge — *"winning a judgment is not always the end of the road"* — the opposite of an overclaim, not a defect. |
+| Fabricated success-rate/case-count/client-count numbers | **PASS — zero found** | grep for numeric+"years/clients/cases/success" patterns across `src/seed/data.ts`, `src/components`, and `src/app` — no hardcoded matches anywhere in rendered content. |
+| Stale "years of experience" claim | **PASS** | `yearsOfExperience()` in `src/lib/site-config.ts` computes `currentYear - foundingYear` (1983) dynamically at request time — never a hardcoded number that could go stale. |
+| Author/reviewer attribution fabrication risk | **PASS** | No `author`/`legalReviewer` value is hardcoded in seed fixtures — both are live relationships set through the CMS by a real staff user, so there is no code path where Claude-authored fixture data could silently claim a named lawyer's review. |
+
+**Conclusion**: the already-published content was clean before this audit and remains clean — no correction was needed. This is a genuine re-verification (fresh greps run this session against the current `main`-adjacent content, not a restatement of the 2026-09-23 audit's findings).
