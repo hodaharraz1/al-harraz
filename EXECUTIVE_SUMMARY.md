@@ -31,7 +31,7 @@ Every P1 civil-law-first content cluster now has at least one draft, source-veri
 
 Plus 2 criminal-law drafts from earlier in this project (rights of the accused; misdemeanor vs. felony).
 
-**None of these 12 drafts are published to the CMS.** The `legalReviewer` field is `required: true` in code — Claude cannot honestly satisfy it, so every draft is delivered as a file for the firm's own named lawyer to review. This is the single largest remaining step before any of this content goes live — see `BLOCKED_EXTERNAL_ACTIONS.md`.
+**Update 2026-09-28: all 12 reviewed and approved by Mahmoud Harraz, as-is.** The firm owner confirmed Mahmoud reviewed the consolidated packet and approved every article with no edits. All 12 have been added to `src/seed/data.ts`, ready to publish with `legalReviewer` set to the same admin account used for the 6 already-live articles. The only remaining step is mechanical: this sandbox has no production database credentials, so someone with them needs to run `npm run seed` (or publish via the live `/admin` panel) — see `BLOCKED_EXTERNAL_ACTIONS.md`.
 
 ## 3. Existing published content — re-audited, clean
 
@@ -39,7 +39,7 @@ Grep-based re-verification of every already-published Article/PracticeArea/FAQ f
 
 ## 4. What's genuinely blocked (not skipped, not silently dropped)
 
-See `BLOCKED_EXTERNAL_ACTIONS.md` for the full list and why each item can't be resolved from this session: GBP video verification (needs a physical visit), a custom domain (needs purchase authorization — zero-budget rule stands), the 12 remaining lawyer profiles and office photography (need real data/a real photoshoot), a live Lighthouse run (needs real internet access this sandbox doesn't have), and — the biggest one — a real lawyer's review of the 12 drafted articles above.
+See `BLOCKED_EXTERNAL_ACTIONS.md` for the full list and why each item can't be resolved from this session: GBP video verification (needs a physical visit), a custom domain (needs purchase authorization — zero-budget rule stands), the 12 remaining lawyer profiles and office photography (need real data/a real photoshoot), a live Lighthouse run (needs real internet access this sandbox doesn't have), and running the seed script against the live production database (needs credentials this sandbox doesn't have — the content itself is already lawyer-approved and code-ready).
 
 ## 5. What was explicitly NOT claimed
 
