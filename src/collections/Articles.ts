@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { isStaff, publishedOrStaff } from '@/access/isStaff'
 import { seoField } from '@/collections/fields/seo'
+import { submitSlugToIndexNow } from '@/lib/indexnow'
 
 export const Articles: CollectionConfig = {
   slug: 'articles',
@@ -17,6 +18,20 @@ export const Articles: CollectionConfig = {
     delete: isStaff,
   },
   versions: { drafts: true },
+  hooks: {
+    // Public URL segment is "insights", not "articles" — matches the
+    // actual route at /[locale]/insights/[slug]. Fires on every save that
+    // leaves the doc published (a first publish or a later content edit),
+    // so search engines get pinged about updates too. Fire-and-forget:
+    // never block or fail the save over an IndexNow ping.
+    afterChange: [
+      ({ doc }) => {
+        if (doc['status'] === 'published' && doc['slug']) {
+          void submitSlugToIndexNow('insights', doc['slug'])
+        }
+      },
+    ],
+  },
   fields: [
     { name: 'title', type: 'text', required: true, localized: true },
     { name: 'slug', type: 'text', required: true, unique: true },

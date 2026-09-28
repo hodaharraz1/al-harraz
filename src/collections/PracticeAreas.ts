@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { isStaff, publishedOrStaff } from '@/access/isStaff'
 import { seoField, statusField } from '@/collections/fields/seo'
+import { submitSlugToIndexNow } from '@/lib/indexnow'
 
 export const PracticeAreas: CollectionConfig = {
   slug: 'practice-areas',
@@ -17,6 +18,18 @@ export const PracticeAreas: CollectionConfig = {
     delete: isStaff,
   },
   versions: { drafts: true },
+  hooks: {
+    // Fires on every save that leaves the doc published (first publish or
+    // a later edit) so IndexNow-participating engines get pinged about
+    // updates too. Fire-and-forget: never blocks or fails the save.
+    afterChange: [
+      ({ doc }) => {
+        if (doc['status'] === 'published' && doc['slug']) {
+          void submitSlugToIndexNow('practice-areas', doc['slug'])
+        }
+      },
+    ],
+  },
   fields: [
     { name: 'title', type: 'text', required: true, localized: true },
     {
