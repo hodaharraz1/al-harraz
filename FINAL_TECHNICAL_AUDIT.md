@@ -180,3 +180,30 @@ One side effect: verifying the production fix created one real test submission (
 1. `Fix consultation form silently dropping submissions` — the critical fix.
 2. `Migrate middleware.ts to Next.js 16's proxy.ts convention`.
 3. `Add FAQPage structured data and lead-generation event tracking`.
+
+---
+
+## Update — 2026-09-28 (search visibility / IndexNow / GEO pass)
+
+Scope: proactive search-engine submission (IndexNow), AI-search discoverability (`llms.txt`), and a re-verification of every P0 technical-SEO item on live production. No visual/design changes.
+
+| Item | Status | Evidence |
+|---|---|---|
+| Canonical tags | **PASS** | Live curl on homepage, a practice-area page, and an article page — correct absolute URLs via `metadataBase`, no localhost/staging leakage. |
+| hreflang (`ar`/`en`/`x-default`) | **PASS** | Live curl — reciprocal tags present and correct on all checked pages. |
+| Structured data (`LegalService`, `Article`) | **FIXED + PASS** | Found via live JSON-LD parse that `organizationSchema()` had no `logo`/`image` and `articleSchema()` had no `publisher`/`image`, both recommended by schema.org for rich-result eligibility. Fixed in `src/lib/structured-data.ts` (commit `ecf9d9d`); article page now passes its real cover image (falls back to the firm logo) via `src/app/(frontend)/[locale]/insights/[slug]/page.tsx`. |
+| sitemap.xml | **PASS** | Live: 200, 138 URLs (up from 126 at last audit — 12 new practice areas/pages published since). |
+| robots.txt | **PASS** | Live: 200, correctly allows `/`, disallows `/admin` and `/api`, points at the sitemap. |
+| IndexNow key file | **PASS** | `public/78b8835f0c80979083412bc56e66c97c.txt` live at 200 (was 404 immediately after deploy — resolved on its own once Vercel finished propagating, same pattern seen with `llms.txt` earlier). |
+| Submitted-URL spot-check | **PASS** | All 138 sitemap URLs individually fetched — 0 non-200. |
+| Broken-link crawl | **PASS** | Crawled all 138 pages, extracted every internal `<a href>` (147 unique targets found — the 9 not already in the sitemap are static assets: CSS/JS/font/favicon files, not pages, and all return 200). Zero broken links. |
+| Orphan-page audit | **PASS** | Every one of the 138 sitemap URLs is reachable via an internal link from at least one other sitemap page — 0 orphans. |
+
+### New this pass
+- **IndexNow implemented end-to-end** — see `INDEXNOW_SETUP.md`. `afterChange` hooks on Articles and PracticeAreas now ping Bing/Yandex-participating engines automatically on every publish; a one-time bulk script (`scripts/submit-all-to-indexnow.ts`) pushed all 138 existing URLs. **This has no effect on Google** (Google does not participate in IndexNow) — Google indexing is still handled solely via Search Console/sitemap, as already documented.
+- **`llms.txt` published** (`public/llms.txt`) — an orientation document for AI answer-engine crawlers (ChatGPT, Perplexity, etc.), per the `llmstxt.org` convention. This is **not a confirmed Google/Bing ranking factor and does not guarantee inclusion in any AI assistant's answers** — it only makes the site's own verified facts easier for a crawler to parse correctly if it does visit.
+
+### Explicitly not done / not claimed
+- No guarantee of ranking position or inclusion in any search engine or AI assistant was made or implied anywhere in this update.
+- No custom domain was purchased — still tracked as **BLOCKED — REQUIRES OWNER PURCHASE AUTHORIZATION** in `DOMAIN_MIGRATION_PLAN.md`, unchanged from the prior audit.
+- No fabricated legal citation, statute number, or case reference was added anywhere in this pass — this update was purely technical/infrastructure.
