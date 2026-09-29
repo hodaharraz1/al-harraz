@@ -32,7 +32,7 @@ Every line below reflects a check actually run against the live production site,
 | 22 | No visual change | ✅ PASS | Verified via `git diff --stat` across the whole migration — zero design/component/CSS files touched. See `DOMAIN_MIGRATION_VISUAL_QA.md` |
 | 23 | No old-domain leaks | ✅ PASS | See `OLD_DOMAIN_LEAK_REPORT.md` |
 | 24 | Search Console setup prepared/completed | ⛔ BLOCKED — REQUIRES USER GOOGLE ACCESS | Exact steps documented in `GOOGLE_SEARCH_CONSOLE_NEW_DOMAIN.md` |
-| 25 | Bing setup prepared/completed | ⛔ BLOCKED — REQUIRES USER ACCESS | Exact steps documented in `BING_NEW_DOMAIN_SETUP.md` |
+| 25 | Bing setup prepared/completed | ✅ PASS | Site verified via DNS CNAME, sitemap submitted and accepted ("Processing"). See `BING_NEW_DOMAIN_SETUP.md` |
 | 26 | GBP update plan documented | ✅ PASS (plan only, not executed — by design) | `GBP_DOMAIN_UPDATE_PLAN.md`; execution intentionally deferred until Google's in-progress verification completes |
 
 ## A real bug found and fixed along the way

@@ -1,10 +1,12 @@
 # Bing Webmaster Tools — New Domain Setup Plan
 
-## Status: BLOCKED — REQUIRES USER ACCESS (Microsoft/Bing account)
+## Status: PASS — site verified and sitemap submitted
 
-This session has no access to the firm's Bing Webmaster Tools account, so nothing below has been executed.
+**Update 2026-09-29:** The firm owner added `https://alharrazlaw.com` to Bing Webmaster Tools himself (this session has no Bing/Microsoft account access, so this required his own action, per the standing BLOCKED rule — now resolved). Verified via **DNS CNAME**: record `aed88ab2579cd89829078a3f62b89032` → `verify.bing.com` added at the registrar (Namecheap Advanced DNS), propagated, then confirmed by Bing with "Congratulations! Site addition successful — Your domain https://alharrazlaw.com/ is successfully added to Bing Webmaster Tools." Sitemap submitted immediately after: `https://alharrazlaw.com/sitemap.xml` → confirmed "Success: https://alharrazlaw.com/sitemap.xml is successfully submitted for processing," listed under Sitemaps with status "Processing" (normal — Bing crawls it shortly after submission; this is not a claim that indexing has completed, only that the sitemap was accepted).
 
-## Exact steps
+This was done through the site-switcher at the top of Bing Webmaster Tools (it defaults to whichever site was last open — the firm's existing unrelated `baytk-jeddah.com` property — so the sitemap submission had to be retried once after switching the selector to `alharrazlaw.com`; documented here in case it recurs).
+
+## Original plan (steps as executed)
 
 1. Go to [Bing Webmaster Tools](https://www.bing.com/webmasters) and sign in (a Microsoft account).
 2. **If the old `al-harraz.vercel.app` property already exists there:** use Bing's "Add a new site" flow for `https://alharrazlaw.com` — Bing also offers an **Import from Google Search Console** option if the GSC domain property above is verified first, which can save re-doing DNS verification. Otherwise, verify independently:
