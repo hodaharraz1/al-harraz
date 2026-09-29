@@ -1049,6 +1049,34 @@ export const articles: Array<{
       ],
     },
   },
+  {
+    slug: 'evidence-in-civil-cases-egypt',
+    category: 'litigation',
+    title: {
+      ar: 'إثبات الدعوى المدنية: ما هي وسائل الإثبات المعترف بها في القانون المصري؟',
+      en: 'Evidence in Civil Cases: What Means of Proof Does Egyptian Law Recognize?',
+    },
+    excerpt: {
+      ar: 'نظرة عامة على قانون الإثبات في المواد المدنية والتجارية في مصر: من يتحمل عبء الإثبات، وما هي وسائل الإثبات الأساسية التي يعتمدها القانون.',
+      en: "An overview of Egypt's Evidence Law in civil and commercial matters: who carries the burden of proof, and what core means of proof Egyptian law recognizes.",
+    },
+    body: {
+      ar: [
+        'يُنظَّم الإثبات في الدعاوى المدنية والتجارية في مصر بموجب قانون الإثبات في المواد المدنية والتجارية رقم 25 لسنة 1968. هذا القانون هو المرجع الأساسي الذي يحدد كيف يمكن لأي طرف في نزاع أن يُثبت حقه أمام القضاء، وأي وسائل الإثبات يعتد بها القانون.',
+        'القاعدة الأساسية في توزيع عبء الإثبات هي أن على المدعي إثبات الحق الذي يدعيه، وعلى من يدفع بانقضاء هذا الحق أو التحلل منه أن يثبت ذلك (المادة الأولى من قانون الإثبات) — وهو ما يُعرف بمبدأ "البينة على من ادّعى". بعبارة أخرى: من يطالب بحق أمام المحكمة هو من يتحمل، من حيث الأصل، عبء تقديم الدليل عليه.',
+        'يعتمد القانون المصري على عدة وسائل إثبات رئيسية، من أبرزها: الكتابة (المحررات) — وتُعد عمومًا من أقوى وسائل الإثبات في المسائل المدنية، وشهادة الشهود، والإقرار — وهو اعتراف الخصم أمام القضاء بواقعة يدّعيها خصمه، والقرائن — أي استنتاج واقعة مجهولة من واقعة أخرى ثابتة ومعلومة، واليمين — التي يلجأ إليها أحد الخصمين عند تعذر إثبات حقه بوسائل أخرى، والخبرة — أي الاستعانة بأهل الخبرة الفنية في المسائل التي تتطلب معرفة متخصصة، وقد تشمل أيضًا معاينة المحكمة للشيء محل النزاع.',
+        'من المهم التنبيه إلى أن المسائل التجارية تحظى عمومًا بمرونة أكبر في وسائل الإثبات مقارنة بالمسائل المدنية البحتة، نظرًا لطبيعة المعاملات التجارية السريعة. أما التفاصيل الدقيقة لكل وسيلة إثبات، وشروط قبولها في كل حالة، فتختلف باختلاف وقائع كل قضية، ولذلك تبقى الاستشارة القانونية المتخصصة ضرورية قبل الشروع في أي إجراء.',
+        'قوة موقفك في أي دعوى مدنية ترتبط ارتباطًا مباشرًا بجودة الأدلة التي تملكها وكيفية تقديمها للمحكمة. لتقييم الأدلة المتاحة لديك في نزاعكم تحديدًا، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'Evidence in Egyptian civil and commercial litigation is governed by the Law of Evidence in Civil and Commercial Matters No. 25 of 1968. This is the primary legislative reference that determines how a party to a dispute can prove their right before the court, and which means of proof the law recognizes.',
+        'The basic rule allocating the burden of proof is that the claimant must prove the right they are asserting, while a party arguing that a right has lapsed or been discharged must prove that (Article 1 of the Evidence Law) — commonly summarized as "the burden of proof falls on whoever asserts a claim." In other words, whoever brings a claim before the court generally bears, as a starting point, the burden of supporting it with evidence.',
+        "Egyptian law recognizes several principal means of proof, most notably: documentary evidence (writing) — generally regarded as among the strongest forms of proof in civil matters, witness testimony, admission — an acknowledgment by one party, before the court, of a fact asserted by the other party, presumptions — inferring an unknown fact from another fact that is established and known, oath — used by a party when other means of proving their right are unavailable, and expert opinion — engaging technical experts on matters requiring specialized knowledge, which may also involve the court's own inspection of the disputed matter.",
+        "It's worth noting that commercial matters generally enjoy greater flexibility in permissible means of proof compared to purely civil matters, given the fast-moving nature of commercial dealings. The precise conditions for each means of proof, and what's admissible in a given case, vary by the specific facts — which is why specialized legal advice remains essential before taking any action.",
+        'The strength of your position in any civil case is directly tied to the quality of the evidence you hold and how it\'s presented to the court. To evaluate the evidence available in your specific dispute, you can book a consultation with our team.',
+      ],
+    },
+  },
 ]
 
 /**
