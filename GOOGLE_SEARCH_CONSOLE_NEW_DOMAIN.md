@@ -1,6 +1,14 @@
 # Google Search Console — New Domain Setup Plan
 
-## Status: BLOCKED — REQUIRES USER GOOGLE ACCESS
+## Status: PASS — Domain property verified, sitemap submitted
+
+**Update 2026-09-29:** The firm owner created a **Domain property** for `alharrazlaw.com` himself (this session has no Google account access, so this required his own action, per the standing BLOCKED rule — now resolved). Verified via **DNS TXT record**: `google-site-verification=KyjEgthDqnW8M-dG_9ogGbDIm5KNyfJ_uvLMIMg4TDU` added at the registrar (Namecheap Advanced DNS, host `@`), propagated, then confirmed by Search Console: "تم التحقّق من الملكية" (Ownership verified). Sitemap submitted immediately after at `https://alharrazlaw.com/sitemap.xml` → confirmed "تم إرسال ملف خريطة الموقع بنجاح" (Sitemap submitted successfully), status "تم الإجراء بنجاح" with 162 pages discovered.
+
+Note: submitting the bare relative path `sitemap.xml` was initially rejected as invalid by this Domain property's submission form ("عنوان خريطة الموقع غير صالح"); the full absolute URL `https://alharrazlaw.com/sitemap.xml` was required and worked on the retry — documented here in case it recurs.
+
+The pre-existing `al-harraz.vercel.app` URL-prefix property was intentionally left in place (not deleted), per the original plan below — it retains historical performance data and lets Google observe the live 308 redirects from the old domain.
+
+## Original plan (steps as executed)
 
 This session has no access to the firm's Google account, so none of the steps below have been executed — this is a precise plan to execute, not a completion claim.
 

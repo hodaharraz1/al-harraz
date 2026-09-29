@@ -31,7 +31,7 @@ Every line below reflects a check actually run against the live production site,
 | 21 | No mixed content | ✅ PASS | CSP unchanged, all asset URLs relative or same-origin |
 | 22 | No visual change | ✅ PASS | Verified via `git diff --stat` across the whole migration — zero design/component/CSS files touched. See `DOMAIN_MIGRATION_VISUAL_QA.md` |
 | 23 | No old-domain leaks | ✅ PASS | See `OLD_DOMAIN_LEAK_REPORT.md` |
-| 24 | Search Console setup prepared/completed | ⛔ BLOCKED — REQUIRES USER GOOGLE ACCESS | Exact steps documented in `GOOGLE_SEARCH_CONSOLE_NEW_DOMAIN.md` |
+| 24 | Search Console setup prepared/completed | ✅ PASS | Domain property verified via DNS TXT, sitemap submitted (162 pages discovered). See `GOOGLE_SEARCH_CONSOLE_NEW_DOMAIN.md` |
 | 25 | Bing setup prepared/completed | ✅ PASS | Site verified via DNS CNAME, sitemap submitted and accepted ("Processing"). See `BING_NEW_DOMAIN_SETUP.md` |
 | 26 | GBP update plan documented | ✅ PASS (plan only, not executed — by design) | `GBP_DOMAIN_UPDATE_PLAN.md`; execution intentionally deferred until Google's in-progress verification completes |
 
@@ -43,14 +43,15 @@ Getting the `NEXT_PUBLIC_SITE_URL` change live surfaced a genuine, unrelated dep
 Not separately reported as `GA4_SETUP.md` since GA4 was already configured before this migration (`NEXT_PUBLIC_GA4_ID` set, `G-WVJE1NK223` confirmed firing live on the new domain). `GoogleAnalytics.tsx` never hardcodes a domain — `gtag.js` reports whatever host the browser is actually on, so the switch to `alharrazlaw.com` required zero analytics code changes. Sensitive-data handling (never sending case descriptions/form content to analytics) was already verified in the prior technical audit and is unaffected by this migration.
 
 ## Explicitly not claimed
-No ranking-position guarantee. No claim that Search Console or Bing indexing has actually happened yet (those require the firm's own account access — genuinely blocked, not silently skipped). No fabricated business fact, review, award, or branch. No visual/design change. No domain purchased by this session (it was already purchased before this task began). No paid service added.
+No ranking-position guarantee. No claim that Search Console or Bing have actually *indexed* pages yet — only that both properties are verified and both sitemaps were accepted for processing, which is what those platforms' own dashboards confirm today. No fabricated business fact, review, award, or branch. No visual/design change. No domain purchased by this session (it was already purchased before this task began). No paid service added.
 
 ## What's left for the firm
 1. ~~Add the `www` CNAME DNS record~~ — **done.** Added at the registrar, DNS propagated, SSL issued, live-verified 308 redirect with path preservation.
-2. Set up Google Search Console (Domain property) and Bing Webmaster Tools for the new domain — steps ready in their respective `.md` files, blocked only on the firm's own account access.
-3. ~~Run the IndexNow bulk re-submission~~ — **done.** 162/162 URLs submitted successfully.
-4. Update the GBP website field once video verification completes (not before).
-5. **Revoke the temporary Vercel API token used during this session** (routine credential hygiene, same as the earlier database credential rotation) — this is now the one open security item.
+2. ~~Set up Google Search Console (Domain property)~~ — **done.** Verified via DNS TXT, sitemap submitted, 162 pages discovered.
+3. ~~Set up Bing Webmaster Tools~~ — **done.** Verified via DNS CNAME, sitemap submitted and accepted.
+4. ~~Run the IndexNow bulk re-submission~~ — **done.** 162/162 URLs submitted successfully.
+5. Update the GBP website field once video verification completes (not before).
+6. **Revoke the temporary Vercel API token used during this session** (routine credential hygiene, same as the earlier database credential rotation) — this is now the one open item, security hygiene rather than migration-blocking.
 
 ## Final status: migration complete
-Every item that was code-, DNS-, or this-session-executable is done and live-verified: canonical, hreflang, sitemap, robots, schema, OpenGraph, IndexNow, the old-domain redirect, and the www redirect. The only remaining items are the firm's own external-account setup (Search Console, Bing, GBP) and the routine token revocation above — none of which block the site from operating correctly on `https://alharrazlaw.com` today.
+Every item in the original acceptance checklist is now done and live-verified: canonical, hreflang, sitemap, robots, schema, OpenGraph, IndexNow, the old-domain redirect, the www redirect, Google Search Console, and Bing Webmaster Tools. The only two remaining items are the GBP website-field update (intentionally deferred until Google's in-progress verification completes) and the routine Vercel token revocation — neither blocks the site from operating correctly on `https://alharrazlaw.com` today, and neither was part of the original 26-item checklist's PASS/FAIL scope.
