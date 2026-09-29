@@ -1,8 +1,10 @@
 # Old Domain Migration — al-harraz.vercel.app + www.alharrazlaw.com
 
-## Status: PASS — env var updated and live-verified; www domain still pending
+## Status: PASS — both old-domain and www redirects live-verified
 
-**Update 2026-09-28:** `NEXT_PUBLIC_SITE_URL` was updated to `https://alharrazlaw.com` in Vercel Production and successfully redeployed. Live-verified: canonical, `robots.txt`'s sitemap reference, and every `<loc>` in `sitemap.xml` now correctly use `alharrazlaw.com`. The `www.alharrazlaw.com` domain still needs to be added in Vercel (no DNS record exists for it yet) — the redirect code is ready and will pick it up automatically once added.
+**Update 2026-09-28:** `NEXT_PUBLIC_SITE_URL` was updated to `https://alharrazlaw.com` in Vercel Production and successfully redeployed. Live-verified: canonical, `robots.txt`'s sitemap reference, and every `<loc>` in `sitemap.xml` now correctly use `alharrazlaw.com`.
+
+**Update 2026-09-29:** `www.alharrazlaw.com` added as a domain in the Vercel project (via API), and a `CNAME` record (`www` → `cname.vercel-dns.com`) added at the registrar (Namecheap). DNS propagated and SSL issued within minutes. Live-verified: `https://www.alharrazlaw.com/ar/practice-areas/civil-law` → `308` → `https://alharrazlaw.com/ar/practice-areas/civil-law`, path fully preserved. Both redirect targets (old `.vercel.app` alias and `www`) are now confirmed working in production, handled by the same single `src/proxy.ts` redirect logic described below.
 
 ### A real deployment-pipeline bug found and fixed along the way
 

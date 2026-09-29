@@ -1,6 +1,8 @@
 # IndexNow Domain Migration
 
-## Status: PARTIAL — ready, pending the same env-var update as everything else
+## Status: PASS — bulk re-submission completed
+
+**Update 2026-09-28:** ran `NEXT_PUBLIC_SITE_URL=https://alharrazlaw.com npx tsx scripts/submit-all-to-indexnow.ts` against the now-live migrated site. Result: `Submitting 162 URLs to IndexNow... Batch 1: OK (162 URLs)` — all current canonical URLs under the new domain submitted successfully in a single batch.
 
 ## Verification key: no change needed
 
