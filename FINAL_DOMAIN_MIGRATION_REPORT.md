@@ -33,7 +33,7 @@ Every line below reflects a check actually run against the live production site,
 | 23 | No old-domain leaks | ✅ PASS | See `OLD_DOMAIN_LEAK_REPORT.md` |
 | 24 | Search Console setup prepared/completed | ✅ PASS | Domain property verified via DNS TXT, sitemap submitted (162 pages discovered). See `GOOGLE_SEARCH_CONSOLE_NEW_DOMAIN.md` |
 | 25 | Bing setup prepared/completed | ✅ PASS | Site verified via DNS CNAME, sitemap submitted and accepted ("Processing"). See `BING_NEW_DOMAIN_SETUP.md` |
-| 26 | GBP update plan documented | ✅ PASS (plan only, not executed — by design) | `GBP_DOMAIN_UPDATE_PLAN.md`; execution intentionally deferred until Google's in-progress verification completes |
+| 26 | GBP website field updated | ✅ PASS | Verification completed (listing shows "مُثبَتت الملكية" in GBP dashboard); website field live-confirmed as `https://alharrazlaw.com/`. See `GBP_DOMAIN_UPDATE_PLAN.md` |
 
 ## A real bug found and fixed along the way
 
@@ -50,8 +50,8 @@ No ranking-position guarantee. No claim that Search Console or Bing have actuall
 2. ~~Set up Google Search Console (Domain property)~~ — **done.** Verified via DNS TXT, sitemap submitted, 162 pages discovered.
 3. ~~Set up Bing Webmaster Tools~~ — **done.** Verified via DNS CNAME, sitemap submitted and accepted.
 4. ~~Run the IndexNow bulk re-submission~~ — **done.** 162/162 URLs submitted successfully.
-5. Update the GBP website field once video verification completes (not before).
-6. **Revoke the temporary Vercel API token used during this session** (routine credential hygiene, same as the earlier database credential rotation) — this is now the one open item, security hygiene rather than migration-blocking.
+5. ~~Update the GBP website field~~ — **done.** Video verification succeeded; website field confirmed as `https://alharrazlaw.com/`.
+6. **Revoke the temporary Vercel API token used during this session** (routine credential hygiene, same as the earlier database credential rotation) — this is now the only open item, security hygiene rather than migration-blocking.
 
 ## Final status: migration complete
-Every item in the original acceptance checklist is now done and live-verified: canonical, hreflang, sitemap, robots, schema, OpenGraph, IndexNow, the old-domain redirect, the www redirect, Google Search Console, and Bing Webmaster Tools. The only two remaining items are the GBP website-field update (intentionally deferred until Google's in-progress verification completes) and the routine Vercel token revocation — neither blocks the site from operating correctly on `https://alharrazlaw.com` today, and neither was part of the original 26-item checklist's PASS/FAIL scope.
+Every item in the original 26-item acceptance checklist is now done and live-verified: canonical, hreflang, sitemap, robots, schema, OpenGraph, IndexNow, the old-domain redirect, the www redirect, Google Search Console, Bing Webmaster Tools, and the GBP website field. The only remaining item is the routine Vercel API token revocation, which is security hygiene, not a migration blocker — the site is fully, verifiably operating under `https://alharrazlaw.com` today across every surface this migration covered.

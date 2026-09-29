@@ -1,8 +1,12 @@
 # Google Business Profile — Domain Update Plan
 
-## Status: PLAN ONLY — not executed, per explicit instruction
+## Status: PASS — verification completed, website field updated
 
-Per the task brief: "The Google Business Profile verification is currently being processed by Google. Do NOT interfere with the ongoing verification." Nothing in this plan has been executed. `LOCAL_SEO_PLAN.md` records the GBP video-verification step as still pending the firm's own in-person action — that status is unchanged by this migration.
+**Update 2026-09-29:** Google's video verification succeeded (the listing now shows "مُثبَتت الملكية" / Ownership confirmed, with a verified badge, in Google Business Profile's own locations dashboard — `business.google.com/locations`). The firm owner then updated the **Website** field himself; live-confirmed in the GBP contact-info panel: `https://alharrazlaw.com/`. This was intentionally deferred until verification completed, per the original instruction below, and is now done.
+
+## Original plan (executed once verification completed, as above)
+
+Per the task brief: "The Google Business Profile verification is currently being processed by Google. Do NOT interfere with the ongoing verification." `LOCAL_SEO_PLAN.md` recorded the GBP video-verification step as pending the firm's own in-person action at the time this plan was written — that step is now complete, see above.
 
 ## Exact steps to execute AFTER verification completes (not before)
 
