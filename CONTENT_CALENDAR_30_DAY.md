@@ -6,7 +6,7 @@ Derived from the gap priority list in `CIVIL_AUTHORITY_MAP.md`. Cadence target: 
 
 | # | Topic (AR) | Cluster | Priority | Target week | Status |
 |---|---|---|---|---|---|
-| 1 | إثبات الدعوى المدنية: ما هي وسائل الإثبات المقبولة؟ (Evidence in Civil Cases) | Civil Litigation | P1 | Week 1 | TODO |
+| 1 | إثبات الدعوى المدنية: ما هي وسائل الإثبات المقبولة؟ (Evidence in Civil Cases) | Civil Litigation | P1 | Week 1 | ✅ LIVE — approved, seeded, IndexNow-submitted (164/164). `/ar\|en/insights/evidence-in-civil-cases-egypt` |
 | 2 | قائمة مراجعة قانونية قبل شراء عقار في مصر (Real-Estate Buyer's Legal Checklist) | Real Estate | P1 | Week 1–2 | TODO — also the first digital-PR asset (§77) |
 | 3 | الخلافات الشائعة بين الورثة وكيفية حلها (Common Disputes Among Heirs) | Inheritance | P1 | Week 2 | TODO |
 | 4 | ما الذي يجب مراجعته عند صياغة عقد؟ (Drafting Contracts — Key Clauses) | Contracts | P2 | Week 3 | TODO |

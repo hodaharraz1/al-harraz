@@ -27,7 +27,8 @@ Statuses: `TODO` / `IN PROGRESS` / `PASS` / `PARTIAL` / `BLOCKED` / `FAILED`
 | Local citation tracker started | ✅ PASS | `LOCAL_CITATION_TRACKER.md` |
 | Backlink + outreach pipelines started | ✅ PASS | `BACKLINK_PIPELINE.md`, `OUTREACH_PIPELINE.md` |
 | 30-day content calendar built | ✅ PASS | `CONTENT_CALENDAR_30_DAY.md` |
-| Article #1 (Evidence in civil cases) — drafted, sourced, lawyer-review pending | IN PROGRESS | `LEGAL_SOURCE_REGISTER.md` |
+| Article #1 (Evidence in civil cases) — drafted, sourced, approved by Mahmoud Harraz, seeded, live, IndexNow-submitted | ✅ PASS | `LEGAL_SOURCE_REGISTER.md`, live at `/ar\|en/insights/evidence-in-civil-cases-egypt`, sitemap 162→164 |
+| Article #2 (Real-estate buyer's legal checklist) — next in queue | IN PROGRESS | `CONTENT_CALENDAR_30_DAY.md` |
 
 ### Reviews requested this cycle
 *(empty — log each request here as sent, per `REVIEW_GROWTH_PLAYBOOK.md`)*
