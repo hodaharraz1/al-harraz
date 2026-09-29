@@ -1,6 +1,7 @@
 import type { Locale } from '@/lib/i18n'
 import type { Dictionary } from '@/lib/dictionary'
 import { LinkButton } from '@/components/ui/Button'
+import { JusticeMark } from '@/components/ui/JusticeMark'
 import { buildWhatsAppLink, buildTelLink } from '@/lib/whatsapp'
 
 export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
@@ -12,7 +13,11 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(53, 194, 221, 0.16), transparent), radial-gradient(ellipse 60% 50% at 90% 100%, rgba(166, 124, 61, 0.12), transparent)',
       }}
     >
-      <div className="mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 sm:py-32 lg:py-40">
+      <JusticeMark
+        className="pointer-events-none absolute -end-24 top-1/2 hidden h-[140%] w-auto -translate-y-1/2 text-cyan-300/5 sm:block lg:-end-16 lg:h-[170%] lg:text-cyan-300/10"
+      />
+
+      <div className="relative mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 sm:py-32 lg:py-40">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">{dict.trust.since}</p>
         <h1 className="font-heading mx-auto mt-5 max-w-3xl text-5xl leading-[1.05] sm:text-7xl lg:text-8xl">
           {dict.hero.headline}

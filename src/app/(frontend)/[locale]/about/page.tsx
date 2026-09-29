@@ -7,6 +7,7 @@ import { JsonLd } from '@/components/seo/JsonLd'
 import { Section } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { LinkButton } from '@/components/ui/Button'
+import { JusticeMark } from '@/components/ui/JusticeMark'
 import { WhyUs } from '@/components/home/WhyUs'
 
 const copy = {
@@ -51,16 +52,18 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   return (
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
-      <Section tone="light">
+      <Section tone="light" className="relative overflow-hidden">
+        <JusticeMark className="pointer-events-none absolute -end-16 top-0 hidden h-72 w-auto text-cyan-600/[0.06] lg:block" />
+
         <Breadcrumbs items={breadcrumbs} />
         <h1 className="mt-4 font-heading text-3xl sm:text-4xl">{t.title}</h1>
 
-        <div className="mt-8 max-w-2xl space-y-4">
+        <div className="relative mt-8 max-w-2xl space-y-4">
           <h2 className="text-xl font-semibold">{t.overviewHeading}</h2>
           <p className="text-navy-900/85">{t.overviewBody}</p>
         </div>
 
-        <div className="mt-8 max-w-2xl space-y-2 border-t border-navy-900/10 pt-8">
+        <div className="relative mt-8 max-w-2xl space-y-2 border-t border-navy-900/10 pt-8">
           <h2 className="text-xl font-semibold">{t.founderHeading}</h2>
           <p className="text-navy-900/85">{t.founderBody}</p>
         </div>

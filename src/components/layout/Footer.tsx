@@ -4,6 +4,7 @@ import type { Locale } from '@/lib/i18n'
 import type { Dictionary } from '@/lib/dictionary'
 import { siteConfig } from '@/lib/site-config'
 import { Container } from '@/components/ui/Container'
+import { JusticeMark } from '@/components/ui/JusticeMark'
 import { buildWhatsAppLink } from '@/lib/whatsapp'
 
 const tagline = {
@@ -18,8 +19,10 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const address = locale === 'ar' ? siteConfig.addressAr : siteConfig.addressEn
 
   return (
-    <footer className="border-t border-navy-900/10 bg-navy-950 text-neutral-100">
-      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="relative overflow-hidden border-t border-navy-900/10 bg-navy-950 text-neutral-100">
+      <JusticeMark className="pointer-events-none absolute -end-10 -top-10 hidden h-56 w-auto text-cyan-300/5 md:block" />
+
+      <Container className="relative grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
             <Image src="/logo-icon.png" alt="" width={36} height={36} className="h-9 w-9" />
