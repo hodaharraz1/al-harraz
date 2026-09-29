@@ -14,7 +14,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       }}
     >
       <JusticeMark
-        className="pointer-events-none absolute -end-24 top-1/2 hidden h-[140%] w-auto -translate-y-1/2 text-cyan-300/5 sm:block lg:-end-16 lg:h-[170%] lg:text-cyan-300/10"
+        className="pointer-events-none absolute -end-20 top-1/2 hidden h-80 w-auto -translate-y-1/2 text-cyan-300/5 md:block lg:-end-10 lg:h-[28rem] lg:text-cyan-300/[0.07]"
       />
 
       <div className="relative mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 sm:py-32 lg:py-40">
