@@ -296,8 +296,22 @@ async function run() {
     }
   }
 
-  payload.logger.info('Seeding FAQs (general, published; deduplicated by Arabic question text)...')
+  payload.logger.info('Seeding FAQs (general + practice-area-scoped, published; deduplicated by Arabic question text)...')
   for (const faq of faqs) {
+    let relatedPracticeArea: number | undefined
+    if (faq.relatedPracticeAreaSlug) {
+      const pa = await payload.find({
+        collection: 'practice-areas',
+        where: { slug: { equals: faq.relatedPracticeAreaSlug } },
+        limit: 1,
+      })
+      relatedPracticeArea = pa.docs[0]?.id as number | undefined
+      if (!relatedPracticeArea) {
+        payload.logger.warn(
+          `FAQ "${faq.question.ar}" references unknown practice area slug "${faq.relatedPracticeAreaSlug}" — seeding without a relatedPracticeArea link.`,
+        )
+      }
+    }
     const existing = await payload.find({
       collection: 'faqs',
       locale: 'ar',
@@ -306,8 +320,12 @@ async function run() {
     })
     const existingFaqDoc = existing.docs[0]
     if (existingFaqDoc) {
-      if (existingFaqDoc['status'] !== 'published') {
-        await payload.update({ collection: 'faqs', id: existingFaqDoc.id, data: { status: 'published' } })
+      if (existingFaqDoc['status'] !== 'published' || (relatedPracticeArea && existingFaqDoc['relatedPracticeArea'] !== relatedPracticeArea)) {
+        await payload.update({
+          collection: 'faqs',
+          id: existingFaqDoc.id,
+          data: { status: 'published', ...(relatedPracticeArea ? { relatedPracticeArea } : {}) },
+        })
       }
       continue
     }
@@ -318,6 +336,7 @@ async function run() {
         question: faq.question.ar,
         answer: faq.answer.ar,
         status: 'published',
+        ...(relatedPracticeArea ? { relatedPracticeArea } : {}),
       },
     })
     await payload.update({

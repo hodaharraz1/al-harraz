@@ -1104,7 +1104,7 @@ export const retiredFaqQuestionsAr: string[] = [
  * free consultations, no specific fee figures, no coverage-area claim
  * beyond what's verified elsewhere on the site).
  */
-export const faqs: Array<{ question: Bilingual; answer: Bilingual }> = [
+export const faqs: Array<{ question: Bilingual; answer: Bilingual; relatedPracticeAreaSlug?: string }> = [
   {
     question: {
       ar: 'هل يمكنني حجز استشارة عن طريق الهاتف أو واتساب من غير ما أحضر المكتب؟',
@@ -1193,6 +1193,39 @@ export const faqs: Array<{ question: Bilingual; answer: Bilingual }> = [
     answer: {
       ar: 'نعم، نقدم خدماتنا القانونية لعملاء في أي مكان في مصر، ونمثلهم أمام المحاكم والجهات المختصة بغض النظر عن محافظة إقامتهم.',
       en: 'Yes — we provide our legal services to clients anywhere in Egypt, and represent them before courts and the relevant authorities regardless of which governorate they live in.',
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'civil-law',
+    question: {
+      ar: 'هل لازم أحضر شخصيًا كل جلسات الدعوى المدنية؟',
+      en: 'Do I need to personally attend every hearing in a civil case?',
+    },
+    answer: {
+      ar: 'في أغلب الأحيان يمكن لمحاميك الحضور نيابة عنك بموجب توكيل، ولا تحتاج لحضور كل جلسة بنفسك. قد يُطلب حضورك شخصيًا في مراحل معينة (كأداء اليمين مثلًا)، وسنوضح لك مسبقًا متى يكون حضورك ضروريًا.',
+      en: 'In most cases your lawyer can appear on your behalf under a power of attorney, and you do not need to attend every hearing yourself. Personal attendance may be required at certain stages (such as taking an oath), and we will let you know in advance whenever your presence is necessary.',
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'civil-law',
+    question: {
+      ar: 'هل يمكن الوصول لتسوية قبل انتهاء الدعوى المدنية في المحكمة؟',
+      en: 'Can a settlement be reached before a civil case concludes in court?',
+    },
+    answer: {
+      ar: 'نعم، يمكن للأطراف التوصل لتسوية ودية في أي مرحلة من مراحل التقاضي، وقد يوفر ذلك وقتًا وتكلفة مقارنة بالاستمرار حتى صدور حكم نهائي. مدى ملاءمة التسوية يعتمد على ظروف كل نزاع، ويمكننا مناقشة ذلك معك في استشارة مباشرة.',
+      en: 'Yes — the parties can reach an amicable settlement at any stage of litigation, which can save time and cost compared to continuing through to a final judgment. Whether settlement makes sense depends on the circumstances of each dispute, and we can discuss that with you in a direct consultation.',
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'civil-law',
+    question: {
+      ar: 'إيه المستندات اللي محتاج أجهزها قبل ما أرفع دعوى مدنية؟',
+      en: 'What documents do I need to prepare before filing a civil lawsuit?',
+    },
+    answer: {
+      ar: 'تختلف المستندات المطلوبة حسب نوع النزاع، لكنها تشمل عادة أي عقود أو مراسلات متعلقة بالموضوع، إثبات هويتك، وأي مستندات تدعم موقفك (فواتير، إيصالات، صور، شهادات). كلما كانت مستنداتك أكثر تنظيمًا، كان تقييم موقفك القانوني أدق. يمكنك إحضار ما تملكه معك عند الاستشارة الأولى.',
+      en: 'The required documents vary by the type of dispute, but typically include any contracts or correspondence related to the matter, proof of your identity, and anything supporting your position (invoices, receipts, photos, certificates). The more organized your documentation, the more accurately your legal position can be assessed. You can bring whatever you have with you to the initial consultation.',
     },
   },
 ]
