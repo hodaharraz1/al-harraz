@@ -1296,6 +1296,72 @@ export const faqs: Array<{ question: Bilingual; answer: Bilingual; relatedPracti
       en: 'The required documents vary by the type of dispute, but typically include any contracts or correspondence related to the matter, proof of your identity, and anything supporting your position (invoices, receipts, photos, certificates). The more organized your documentation, the more accurately your legal position can be assessed. You can bring whatever you have with you to the initial consultation.',
     },
   },
+  {
+    relatedPracticeAreaSlug: 'contracts-commercial-agreements',
+    question: {
+      ar: 'هل لازم المصادقة على العقد في الشهر العقاري أو التوثيق عشان يبقى له قيمة؟',
+      en: 'Does a contract need to be notarized or officially authenticated to have legal value?',
+    },
+    answer: {
+      ar: 'العقد الموقَّع من الطرفين له قيمة قانونية حتى بدون توثيق رسمي في أغلب الحالات، لكن التوثيق يعزز قوة العقد في الإثبات ويسهّل الاحتجاج به أمام الغير. بعض أنواع العقود (كعقود بيع العقارات) لها متطلبات تسجيل خاصة. يمكننا توضيح ما يناسب عقدكم تحديدًا في استشارة مباشرة.',
+      en: 'A contract signed by both parties generally has legal value even without official notarization in most cases, but notarization strengthens its evidentiary weight and makes it easier to assert against third parties. Certain contract types (such as real-estate sale agreements) have their own registration requirements. We can clarify what applies to your specific contract in a direct consultation.',
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'contracts-commercial-agreements',
+    question: {
+      ar: 'الطرف التاني مش بينفذ العقد، إيه أول خطوة؟',
+      en: "The other party isn't performing the contract — what's the first step?",
+    },
+    answer: {
+      ar: 'الخطوة الأولى عادة هي إعذار الطرف المُخِل رسميًا بتنفيذ التزامه، لأن هذا الإعذار شرط في كثير من الحالات قبل المطالبة بالفسخ أو التعويض. راجعوا [الإخلال بالعقد في القانون المصري](/ar/insights/breach-of-contract-rights-egypt) لنظرة عامة على الخيارات المتاحة، أو تواصلوا معنا مباشرة لتقييم موقفكم.',
+      en: "The first step is usually to formally notify the defaulting party of the default, since this notice is a requirement in many cases before claiming termination or compensation. See [Breach of Contract Under Egyptian Law](/en/insights/breach-of-contract-rights-egypt) for an overview of the available options, or contact us directly to assess your position.",
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'real-estate-property-registration',
+    question: {
+      ar: 'اشتريت عقار بعقد ابتدائي مش مسجَّل، أنا مالك ولا لأ؟',
+      en: "I bought a property with an unregistered preliminary contract — am I the owner or not?",
+    },
+    answer: {
+      ar: 'من الناحية القانونية، العقد المسجَّل في الشهر العقاري هو ما يُنشئ الملكية الكاملة في مصر. العقد الابتدائي غير المسجَّل يثبت وجود اتفاق بينك وبين البائع، لكنه لا يجعلك مالكًا نهائيًا بذاته. راجعوا [لماذا تسجيل عقارك في الشهر العقاري ضروري؟](/ar/insights/real-estate-registration-egypt) لتفاصيل أكتر، أو تواصلوا معنا لمعرفة خطوات تسجيل عقاركم.',
+      en: "Legally, a contract registered at the Real Estate Registry is what creates full ownership in Egypt. An unregistered preliminary contract proves an agreement exists between you and the seller, but does not by itself make you the final owner. See [Why Registering Your Property at the Real Estate Registry Matters](/en/insights/real-estate-registration-egypt) for more detail, or contact us to find out the steps to register your property.",
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'debt-recovery-enforcement',
+    question: {
+      ar: 'المدين مش عنده فلوس ظاهرة، هل يستاهل أرفع دعوى أصلًا؟',
+      en: "The debtor doesn't appear to have visible money — is it still worth filing a case?",
+    },
+    answer: {
+      ar: 'الحكم القضائي بحد ذاته لا يضمن التحصيل الفوري، لكنه خطوة ضرورية تفتح الباب لإجراءات التنفيذ الجبري لاحقًا (كالحجز على أموال أو ممتلكات تظهر مستقبلًا). تقييم جدوى الدعوى يعتمد على توثيق الدين ومدى معرفتكم بأصول المدين الحالية والمحتملة — يمكننا مناقشة ذلك في استشارة مباشرة.',
+      en: 'A court judgment by itself does not guarantee immediate collection, but it is a necessary step that opens the door to compulsory enforcement procedures later (such as attaching funds or assets that surface in the future). Whether filing is worthwhile depends on how well-documented the debt is and what you know about the debtor\'s current and potential assets — we can discuss that in a direct consultation.',
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'inheritance-estates',
+    question: {
+      ar: 'ورثة تانيين رافضين يوقعوا على تقسيم التركة، أعمل إيه؟',
+      en: 'Other heirs are refusing to sign off on dividing the estate — what can I do?',
+    },
+    answer: {
+      ar: 'إذا امتنع أحد الورثة عن التعاون في القسمة الودية، يمكن اللجوء لدعوى قسمة قضائية لإنهاء حالة الشيوع في الملكية. راجعوا [الخلافات الشائعة بين الورثة في مصر](/ar/insights/common-inheritance-disputes-egypt) لنظرة عامة على هذا النوع من الخلافات وكيفية التعامل معها.',
+      en: 'If an heir refuses to cooperate with an amicable division, a judicial partition claim can be pursued to end the state of co-ownership. See [Common Disputes Among Heirs in Egypt](/en/insights/common-inheritance-disputes-egypt) for an overview of this type of dispute and how it is typically handled.',
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'family-law-personal-status',
+    question: {
+      ar: 'هل ممكن أرفع دعوى طلاق أو خلع من غير ما أحضر لكل الجلسات؟',
+      en: 'Can I file for divorce or khula without attending every hearing in person?',
+    },
+    answer: {
+      ar: 'يمكن لمحاميكم الحضور نيابة عنكم في أغلب الجلسات، لكن بعض الإجراءات في قضايا الأحوال الشخصية (كجلسات الصلح الإلزامية في بعض الحالات) قد تتطلب حضورًا شخصيًا. سنوضح لكم مسبقًا أي الجلسات يلزم حضوركم فيها.',
+      en: 'Your lawyer can attend most hearings on your behalf, but certain procedures in personal-status cases (such as mandatory reconciliation sessions in some cases) may require your personal attendance. We will let you know in advance which hearings require you to be present.',
+    },
+  },
 ]
 
 export const founderYear = 1983
