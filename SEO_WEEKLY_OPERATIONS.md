@@ -30,10 +30,10 @@ Statuses: `TODO` / `IN PROGRESS` / `PASS` / `PARTIAL` / `BLOCKED` / `FAILED`
 | Article #1 (Evidence in civil cases) — drafted, sourced, approved by Mahmoud Harraz, seeded, live, IndexNow-submitted | ✅ PASS | `LEGAL_SOURCE_REGISTER.md`, live at `/ar\|en/insights/evidence-in-civil-cases-egypt`, sitemap 162→164 |
 | Article #2 (Real-estate buyer's legal checklist) — approved, live, cross-linked, IndexNow-submitted | ✅ PASS | Live-verified `/ar\|en/insights/real-estate-buyer-legal-checklist-egypt`, sitemap 162→168 |
 | Article #3 (Common inheritance disputes) — approved, live, cross-linked, IndexNow-submitted | ✅ PASS | Live-verified `/ar\|en/insights/common-inheritance-disputes-egypt` |
-| Article #4 (Contract drafting) | ⏳ BLOCKED — AWAITING LAWYER REVIEW | `contract-drafting-key-clauses-egypt` |
-| Article #5 (Property possession disputes) | ⏳ BLOCKED — AWAITING LAWYER REVIEW | `property-possession-disputes-egypt` |
-| Article #6 (Civil appeals process) | ⏳ BLOCKED — AWAITING LAWYER REVIEW | `civil-appeals-process-egypt` |
-| Article #7 (Commercial disputes overview) | ⏳ BLOCKED — AWAITING LAWYER REVIEW | `commercial-disputes-overview-egypt` |
+| Article #4 (Contract drafting) | ✅ PASS — LIVE | `/ar|en/insights/contract-drafting-key-clauses-egypt` |
+| Article #5 (Property possession disputes) | ✅ PASS — LIVE | `/ar|en/insights/property-possession-disputes-egypt` |
+| Article #6 (Civil appeals process) | ✅ PASS — LIVE | `/ar|en/insights/civil-appeals-process-egypt` |
+| Article #7 (Commercial disputes overview) | ✅ PASS — LIVE | `/ar|en/insights/commercial-disputes-overview-egypt` |
 | Internal links between civil-cluster articles (seed rich-text bug found and fixed along the way) | ✅ PASS | Live-verified as real `<a href>` tags, 6 cross-links across 5 article pairs |
 | Practice-area FAQ sections (were empty site-wide) | ✅ PASS | Live-verified on 12 of 42 practice areas: civil-law, contracts, real estate, debt recovery, inheritance, family law, company formation, employment, criminal, administrative, arbitration (+ homepage general FAQs) |
 | GBP optimization plan (Damietta + civil law emphasis) | ✅ PLAN READY — BLOCKED on firm owner's GBP login | `GBP_OPTIMIZATION_PLAN.md` |
@@ -44,7 +44,7 @@ Statuses: `TODO` / `IN PROGRESS` / `PASS` / `PARTIAL` / `BLOCKED` / `FAILED`
 | SERP gap / competitor research (Damietta civil-law) | ✅ PASS (research only — our own rankings not verifiable without GSC) | `SERP_GAP_ANALYSIS.md` |
 | Local citation candidates evaluated | ✅ PASS | Yellow Pages + Hujja Egypt confirmed legitimate with real submission info ready; Wakilly confirmed but needs license docs; El-Avocato downgraded |
 | First monthly report | ✅ DONE | `MONTHLY_SEO_REPORT_2026_10.md` |
-| Original 8-item civil-authority content gap queue | ✅ FULLY CLOSED | `CIVIL_AUTHORITY_MAP.md` — 7 articles produced (3 live, 4 pending review), 1 deliberately skipped as redundant |
+| Original 8-item civil-authority content gap queue | ✅ FULLY CLOSED | `CIVIL_AUTHORITY_MAP.md` — all 7 articles produced this cycle are now LIVE, 1 deliberately skipped as redundant. Sitemap 162→176, all URLs IndexNow-submitted. |
 
 ### Reviews requested this cycle
 *(empty — log each request here as sent, per `REVIEW_GROWTH_PLAYBOOK.md`)*

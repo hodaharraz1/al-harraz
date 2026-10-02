@@ -9,12 +9,12 @@ Derived from the gap priority list in `CIVIL_AUTHORITY_MAP.md`. Cadence target: 
 | 1 | إثبات الدعوى المدنية: ما هي وسائل الإثبات المقبولة؟ (Evidence in Civil Cases) | Civil Litigation | P1 | Week 1 | ✅ LIVE — approved, seeded, IndexNow-submitted (164/164). `/ar\|en/insights/evidence-in-civil-cases-egypt` |
 | 2 | قائمة مراجعة قانونية قبل شراء عقار في مصر (Real-Estate Buyer's Legal Checklist) | Real Estate | P1 | Week 1–2 | ✅ LIVE — approved, seeded, cross-linked, IndexNow-submitted. `/ar\|en/insights/real-estate-buyer-legal-checklist-egypt` — also the first digital-PR asset (§77), now eligible for outreach |
 | 3 | الخلافات الشائعة بين الورثة وكيفية حلها (Common Disputes Among Heirs) | Inheritance | P1 | Week 2 | ✅ LIVE — approved, seeded, cross-linked, IndexNow-submitted. `/ar\|en/insights/common-inheritance-disputes-egypt` |
-| 4 | ما الذي يجب مراجعته عند صياغة عقد؟ (Drafting Contracts — Key Clauses) | Contracts | P2 | Week 3 | ⏳ Drafted, sourced, sent for lawyer review — `contract-drafting-key-clauses-egypt` |
-| 5 | منازعات حيازة العقارات (Property Possession Disputes) | Real Estate | P2 | Week 3–4 | ⏳ Drafted, sourced, sent for lawyer review — `property-possession-disputes-egypt` |
-| 6 | الاستئناف في الأحكام المدنية (Civil Appeals Process) | Civil Litigation | P2 | Week 4 | ⏳ Drafted, sourced, sent for lawyer review — `civil-appeals-process-egypt` |
-| 7 | المنازعات التجارية: نظرة عامة (Commercial Disputes Overview) | Commercial | P2 | Week 4 | ⏳ Drafted, sourced, sent for lawyer review — `commercial-disputes-overview-egypt` |
+| 4 | ما الذي يجب مراجعته عند صياغة عقد؟ (Drafting Contracts — Key Clauses) | Contracts | P2 | Week 3 | ✅ LIVE — `/ar|en/insights/contract-drafting-key-clauses-egypt` |
+| 5 | منازعات حيازة العقارات (Property Possession Disputes) | Real Estate | P2 | Week 3–4 | ✅ LIVE — `/ar|en/insights/property-possession-disputes-egypt` |
+| 6 | الاستئناف في الأحكام المدنية (Civil Appeals Process) | Civil Litigation | P2 | Week 4 | ✅ LIVE — `/ar|en/insights/civil-appeals-process-egypt` |
+| 7 | المنازعات التجارية: نظرة عامة (Commercial Disputes Overview) | Commercial | P2 | Week 4 | ✅ LIVE — `/ar|en/insights/commercial-disputes-overview-egypt` |
 
-**Calendar exceeded:** 7 articles drafted this cycle against a 5-article target (3 live, 4 pending lawyer review) — cadence target for the month (4–8/month) already met in this single kickoff cycle.
+**Calendar exceeded:** all 7 articles drafted this cycle are now LIVE (against a 5-article target) — cadence target for the month (4–8/month) already met and fully published in this single kickoff cycle. Sitemap grew 162→176 across the cycle.
 
 ## Non-article execution items this cycle
 

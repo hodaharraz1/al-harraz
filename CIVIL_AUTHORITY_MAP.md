@@ -108,10 +108,10 @@ Ranked by (a) how central the topic is to the civil pillar and (b) how directly 
 1. ✅ Evidence in civil cases — live
 2. ✅ Buyer's legal due-diligence checklist for real estate (digital-PR asset, §77) — live
 3. ✅ Common disputes among heirs (Inheritance) — live
-4. ⏳ Drafting contracts — key clauses (Contracts pillar) — drafted, awaiting lawyer review
-5. ⏳ Property possession disputes (Real Estate) — drafted, awaiting lawyer review
+4. ✅ Drafting contracts — key clauses (Contracts pillar) — live
+5. ✅ Property possession disputes (Real Estate) — live
 6. ⚠️ Proving damage and causation — researched (2026-10-02), but the existing live `when-can-you-claim-compensation` article already covers the 3-element framework, evidence-documentation advice, and damage types in enough depth that a dedicated second article would mostly repeat it rather than add real value. Not drafted; revisit only if a genuinely distinct angle emerges (e.g., real GSC data showing search demand for a more detailed evidentiary how-to).
-7. ⏳ Appeals process in civil cases (Civil Litigation) — drafted, awaiting lawyer review
-8. ⏳ Commercial disputes — general overview (Commercial) — drafted, awaiting lawyer review
+7. ✅ Appeals process in civil cases (Civil Litigation) — live
+8. ✅ Commercial disputes — general overview (Commercial) — live
 
-**Original gap queue closed as of 2026-10-02:** every item from this list is now either live or drafted and sent for review (one deliberately skipped as redundant, see #6 above). Also extended beyond the original list: practice-area FAQ sections (previously empty on all 42 areas) now have content on 12 of them — civil-law, contracts, real estate, debt recovery, inheritance, family law, company formation, employment, criminal, administrative, and arbitration. Next-cycle priorities: FAQ coverage for the remaining ~30 practice areas (lower urgency — these are a content-completeness improvement, not a reported bug like the first batch), and genuinely new topics once real Search Console data identifies actual demand (see `SEO_OPPORTUNITY_QUEUE.md`) rather than continuing to guess at gaps.
+**Original gap queue fully closed as of 2026-10-02:** every item from this list is now LIVE (one deliberately skipped as redundant, see #6 above). Also extended beyond the original list: practice-area FAQ sections (previously empty on all 42 areas) now have content on 12 of them — civil-law, contracts, real estate, debt recovery, inheritance, family law, company formation, employment, criminal, administrative, and arbitration. Next-cycle priorities: FAQ coverage for the remaining ~30 practice areas (lower urgency — these are a content-completeness improvement, not a reported bug like the first batch), and genuinely new topics once real Search Console data identifies actual demand (see `SEO_OPPORTUNITY_QUEUE.md`) rather than continuing to guess at gaps.
