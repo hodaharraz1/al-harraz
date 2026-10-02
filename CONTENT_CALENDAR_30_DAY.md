@@ -9,20 +9,26 @@ Derived from the gap priority list in `CIVIL_AUTHORITY_MAP.md`. Cadence target: 
 | 1 | إثبات الدعوى المدنية: ما هي وسائل الإثبات المقبولة؟ (Evidence in Civil Cases) | Civil Litigation | P1 | Week 1 | ✅ LIVE — approved, seeded, IndexNow-submitted (164/164). `/ar\|en/insights/evidence-in-civil-cases-egypt` |
 | 2 | قائمة مراجعة قانونية قبل شراء عقار في مصر (Real-Estate Buyer's Legal Checklist) | Real Estate | P1 | Week 1–2 | ✅ LIVE — approved, seeded, cross-linked, IndexNow-submitted. `/ar\|en/insights/real-estate-buyer-legal-checklist-egypt` — also the first digital-PR asset (§77), now eligible for outreach |
 | 3 | الخلافات الشائعة بين الورثة وكيفية حلها (Common Disputes Among Heirs) | Inheritance | P1 | Week 2 | ✅ LIVE — approved, seeded, cross-linked, IndexNow-submitted. `/ar\|en/insights/common-inheritance-disputes-egypt` |
-| 4 | ما الذي يجب مراجعته عند صياغة عقد؟ (Drafting Contracts — Key Clauses) | Contracts | P2 | Week 3 | Drafted, sourced, sent for lawyer review — `common-inheritance-disputes-egypt` sibling article `contract-drafting-key-clauses-egypt` |
-| 5 | منازعات حيازة العقارات: نظرة عامة (Property Possession Disputes) | Real Estate | P2 | Week 3–4 | TODO |
+| 4 | ما الذي يجب مراجعته عند صياغة عقد؟ (Drafting Contracts — Key Clauses) | Contracts | P2 | Week 3 | ⏳ Drafted, sourced, sent for lawyer review — `contract-drafting-key-clauses-egypt` |
+| 5 | منازعات حيازة العقارات (Property Possession Disputes) | Real Estate | P2 | Week 3–4 | ⏳ Drafted, sourced, sent for lawyer review — `property-possession-disputes-egypt` |
+| 6 | الاستئناف في الأحكام المدنية (Civil Appeals Process) | Civil Litigation | P2 | Week 4 | ⏳ Drafted, sourced, sent for lawyer review — `civil-appeals-process-egypt` |
+| 7 | المنازعات التجارية: نظرة عامة (Commercial Disputes Overview) | Commercial | P2 | Week 4 | ⏳ Drafted, sourced, sent for lawyer review — `commercial-disputes-overview-egypt` |
+
+**Calendar exceeded:** 7 articles drafted this cycle against a 5-article target (3 live, 4 pending lawyer review) — cadence target for the month (4–8/month) already met in this single kickoff cycle.
 
 ## Non-article execution items this cycle
 
 | Item | Reference | Target week |
 |---|---|---|
-| Internal-linking pass across the 6 existing civil/contracts/debt-recovery articles (cross-link per `CIVIL_AUTHORITY_MAP.md`) | `SEO_OPPORTUNITY_QUEUE.md` P2 | Week 1 |
-| Verify Facebook Business Page NAP matches canonical | `LOCAL_NAP_AUDIT.md` | Week 1 |
-| Evaluate Bing Places for Business setup (needs firm owner's account) | `LOCAL_CITATION_TRACKER.md` | Week 1–2 |
-| Research and legitimacy-check 3–5 candidate local/legal directories | `LOCAL_CITATION_TRACKER.md` | Week 2 |
-| Send first review-request batch to recently concluded matters, if any | `REVIEW_GROWTH_PLAYBOOK.md` | Ongoing |
-| First outreach pitch, once article #2 (checklist) is live | `BACKLINK_PIPELINE.md`, `OUTREACH_PIPELINE.md` | Week 3–4 |
-| Request Search Console / Bing / GA4 data exports from the firm owner | `SEO_OPPORTUNITY_QUEUE.md` | Week 1 (unblocks real prioritization for month 2) |
+| Internal-linking pass across civil/contracts/debt-recovery/inheritance/real-estate articles | `CIVIL_AUTHORITY_MAP.md` | ✅ DONE — 6 cross-links live, verified as real `<a>` tags |
+| Practice-area FAQ sections (were empty site-wide) | `CIVIL_AUTHORITY_MAP.md` | ✅ DONE for 12 of 42 practice areas; remaining ~30 lower-priority |
+| Verify Facebook Business Page NAP matches canonical | `LOCAL_NAP_AUDIT.md` | ✅ DONE — real mismatch found and documented, fix needs firm owner |
+| Evaluate Bing Places for Business setup (needs firm owner's account) | `LOCAL_CITATION_TRACKER.md` | BLOCKED — needs firm owner's Microsoft account |
+| Research and legitimacy-check candidate local/legal directories | `LOCAL_CITATION_TRACKER.md` | ✅ DONE — Yellow Pages + Hujja Egypt confirmed legitimate with real submission processes; Wakilly confirmed but needs license docs; El-Avocato downgraded (quality flag) |
+| Send first review-request batch to recently concluded matters, if any | `REVIEW_GROWTH_PLAYBOOK.md` | Ongoing — requires the firm's real client interactions, not something this session executes |
+| First outreach pitch, now that the checklist article is live | `BACKLINK_PIPELINE.md`, `OUTREACH_PIPELINE.md` | Still open — no outreach sent yet |
+| Request Search Console / Bing / GA4 data exports from the firm owner | `SEO_OPPORTUNITY_QUEUE.md` | Still BLOCKED — the one dependency most of what's left needs |
+| GBP optimization (description, categories, services) | `GBP_OPTIMIZATION_PLAN.md` | ✅ Plan ready — BLOCKED on firm owner's GBP login to apply it |
 
 ## Notes
 - All 5 articles are in the primary civil-law growth cluster per program §8 and firm positioning §2 — no maritime or lower-priority-cluster content this cycle, consistent with "civil first."
