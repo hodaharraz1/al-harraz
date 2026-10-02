@@ -1077,6 +1077,40 @@ export const articles: Array<{
       ],
     },
   },
+  {
+    slug: 'real-estate-buyer-legal-checklist-egypt',
+    category: 'real-estate',
+    title: {
+      ar: 'قائمة مراجعة قانونية قبل شراء عقار في مصر: 6 نقاط لازم تتأكد منها',
+      en: 'Legal Checklist Before Buying Property in Egypt: 6 Things to Verify',
+    },
+    excerpt: {
+      ar: 'قائمة عملية بأهم النقاط القانونية اللي لازم تتحقق منها قبل شراء أي عقار في مصر، من التسجيل الرسمي للملكية لحد خلو العقار من الأعباء والمخالفات.',
+      en: 'A practical checklist of the key legal points to verify before buying any property in Egypt — from formal ownership registration to liens and building-code compliance.',
+    },
+    body: {
+      ar: [
+        'شراء عقار قرار كبير، والمخاطر القانونية فيه حقيقية لو اتعمل من غير مراجعة كافية. النقاط الست دي مش بديل عن استشارة محامٍ متخصص قبل التوقيع، لكنها نقطة بداية لأي شخص بيفكر يشتري عقار في مصر.',
+        'تأكد من وجود سند ملكية مُسجَّل رسميًا في الشهر العقاري. العقد المسجَّل هو سند الملكية الوحيد المعتد به قانونًا في مصر — عقد البيع الابتدائي (غير المسجَّل)، حتى لو موقَّع من الطرفين، لا يُنشئ ملكية نهائية بذاته، ويظل البائع الأصلي هو المالك المسجَّل حتى تمام تسجيل العقد. لمزيد من التفاصيل، راجع [لماذا تسجيل عقارك في الشهر العقاري ضروري؟](/ar/insights/real-estate-registration-egypt).',
+        'اطلب مستخرجًا رسميًا من الشهر العقاري يوضّح سلسلة الملكية. هذا يساعد في التحقق من أن كل انتقال سابق للملكية تم بشكل صحيح، وأن البائع الحالي يملك بالفعل الحق في البيع.',
+        'تحقق من خلو العقار من أي رهون أو أعباء أو حقوق للغير. الرهن العقاري أو أي نزاع قضائي قائم على العقار قد ينتقل معه حتى بعد البيع إذا لم يُكتشف قبل التوقيع.',
+        'راجع رخصة البناء وموقف العقار من مخالفات البناء إن وُجدت. التأكد من الجهة الإدارية المختصة بخصوص سلامة الترخيص وأي مخالفات قائمة يحتاج تصالحًا، لأن ذلك قد يؤثر على قيمة العقار أو حتى إمكانية التصرف فيه مستقبلًا.',
+        'تأكد من سداد آخر مستحقات الضرائب العقارية ورسوم المرافق. أي متأخرات ضريبية أو متأخرات كهرباء/مياه/غاز قد تنتقل كعبء إداري يواجهه المالك الجديد عند نقل العدادات باسمه.',
+        'إذا كان البيع يتم من خلال وكيل، تأكد من صحة وسريان التوكيل. التوكيل غير الساري أو غير الصحيح من أبرز أسباب النزاعات في صفقات العقارات — يجب التحقق من تاريخه ونطاق الصلاحيات الممنوحة فيه بدقة.',
+        'هذه القائمة تغطي النقاط الأساسية، لكن كل عقار له ظروفه الخاصة، ومراجعة محامٍ متخصص قبل التوقيع على أي عقد أو دفع أي مبلغ يبقى الخطوة الأهم لحماية حقوقك. يمكنكم حجز استشارة مع فريقنا لمراجعة عقاركم المحدد.',
+      ],
+      en: [
+        "Buying property is a major decision, and the legal risks are real without adequate review. These six points aren't a substitute for consulting a specialized lawyer before signing — they're a starting point for anyone considering a property purchase in Egypt.",
+        "Confirm there's a title formally registered at the Real Estate Registry (Shahr Al-Aqari). A registered contract is the only legally recognized proof of ownership in Egypt — an unregistered preliminary sale contract, even if signed by both parties, does not by itself create final ownership, and the original seller remains the registered owner until the contract is formally registered. For more detail, see [Why Registering Your Property at the Real Estate Registry Matters](/en/insights/real-estate-registration-egypt).",
+        'Request an official extract from the Real Estate Registry showing the chain of title. This helps confirm that every prior transfer of ownership was validly executed, and that the current seller genuinely holds the right to sell.',
+        'Verify the property is free of mortgages, liens, or third-party claims. A registered mortgage or an ongoing legal dispute over the property can carry over even after a sale if it isn\'t uncovered before signing.',
+        "Review the building permit and the property's building-code compliance status, if applicable. Confirming the license's validity and any outstanding violations with the relevant administrative authority matters, since this can affect the property's value or even the ability to deal with it in the future.",
+        'Confirm the latest property tax and utility payments are settled. Any outstanding tax or electricity/water/gas arrears can become an administrative burden for the new owner when transferring meters into their name.',
+        "If the sale is being made through an agent, verify the power of attorney is valid and current. An expired or invalid power of attorney is among the most common sources of disputes in property transactions — check its date and the exact scope of authority it grants.",
+        'This checklist covers the essentials, but every property has its own circumstances, and consulting a specialized lawyer before signing any contract or making any payment remains the most important step to protect your rights. You can book a consultation with our team to review your specific property.',
+      ],
+    },
+  },
 ]
 
 /**
