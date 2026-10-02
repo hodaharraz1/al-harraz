@@ -49,7 +49,7 @@ The primary growth cluster (§8 of the SEO growth program). Maps what's live tod
 | Supporting topic | Status | Page |
 |---|---|---|
 | When can you claim compensation? | ✅ Live | `/insights/when-can-you-claim-compensation` |
-| Proving damage and causation | ❌ Gap | — |
+| Proving damage and causation | ⚠️ Reassessed — likely too thin to justify a separate article | — |
 | Material vs. moral damages (where legally appropriate) | ❌ Gap | — |
 
 ## Pillar: Enforcement / Debt Recovery
@@ -110,6 +110,6 @@ Ranked by (a) how central the topic is to the civil pillar and (b) how directly 
 3. ✅ Common disputes among heirs (Inheritance) — live
 4. ⏳ Drafting contracts — key clauses (Contracts pillar) — drafted, awaiting lawyer review
 5. Property possession disputes (Real Estate) — next up
-6. Proving damage and causation (Compensation)
-7. Appeals process in civil cases (Civil Litigation)
-8. Commercial disputes — general overview (Commercial)
+6. ⚠️ Proving damage and causation — researched (2026-10-02), but the existing live `when-can-you-claim-compensation` article already covers the 3-element framework, evidence-documentation advice, and damage types in enough depth that a dedicated second article would mostly repeat it rather than add real value. Not drafted; revisit only if a genuinely distinct angle emerges (e.g., real GSC data showing search demand for a more detailed evidentiary how-to).
+7. Appeals process in civil cases (Civil Litigation) — drafting now
+8. Commercial disputes — general overview (Commercial) — next up

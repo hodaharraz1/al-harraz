@@ -53,6 +53,12 @@ Verification-status legend (matches internal drafting notes):
 |---|---|---|---|---|
 | منازعات حيازة العقارات (Property Possession Disputes) | Insights / Real Estate | NEEDS_HUMAN_LEGAL_REVIEW | 1. Mohamy Masr (AR) ×2 <br>2. Mena Fayek Lawyer (AR) ×3 <br>3. Legal 500/Lexology-aggregated (EN) | The possession/ownership distinction and the three possessory-action types (recovery, prevention of interference, halting new works) corroborated across 4 independent AR sources. The "cannot combine possessory and ownership claims" procedural rule corroborated via the EN source and consistent with established Egyptian civil-procedure doctrine. Deliberately omitted the specific Civil Code article range (958–975, single-sourced only) and excluded adverse possession entirely (a sensitive, complex topic, single-sourced and non-specialist in this search — real risk of being misread as encouragement to seize others' land). Draft delivered as a file — see `article-property-possession-disputes.md`. Fifth article of the SEO growth program's kickoff calendar. |
 
+## Drafts — pending lawyer review (2026-10-02, SEO growth program, continued)
+
+| Topic (AR) | Target page | Status | Sources checked | Notes |
+|---|---|---|---|---|
+| الاستئناف في الأحكام المدنية (Civil Appeals Process) | Insights / Litigation | NEEDS_HUMAN_LEGAL_REVIEW | 1. Egyptian Bar Association (AR) <br>2. Mostasharak (AR) <br>3. Mena Fayek Lawyer (AR) ×2 <br>4. Legal 500 (EN) <br>5. TIMEP (EN) | The 40-day general appeal deadline and 5-day urgent-matters deadline corroborated identically across two independent AR sources, one being the Bar Association itself. Standing/interest/capacity requirements and the filing procedure corroborated across 2 AR sources and consistent with the already-live filing-a-civil-lawsuit article. Three-tier court structure and cassation's law-only review scope corroborated via Legal 500. Deliberately omitted the specific cassation claim-value threshold and deadline (single-sourced, and known to change over time in Egyptian law) and the number/names of appellate courts (single-sourced). Draft delivered as a file — see `article-civil-appeals-process-egypt.md`. Sixth article of the SEO growth program's kickoff calendar. |
+
 ## Method
 
 For every new legal-education topic:
