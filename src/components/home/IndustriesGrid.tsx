@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Locale } from '@/lib/i18n'
 import { getPayloadClient } from '@/lib/payload'
 import { Card } from '@/components/ui/Card'
+import { AccentRule } from '@/components/ui/AccentRule'
 
 export async function IndustriesGrid({
   locale,
@@ -30,6 +31,7 @@ export async function IndustriesGrid({
 
   return (
     <div>
+      {visuallyHiddenHeading ? null : <AccentRule className="mb-3" />}
       <h2 className={visuallyHiddenHeading ? 'sr-only' : 'text-2xl font-bold sm:text-3xl font-heading'}>{heading}</h2>
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {result.docs.map((doc) => (

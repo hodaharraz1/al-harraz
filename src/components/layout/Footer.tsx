@@ -4,7 +4,8 @@ import type { Locale } from '@/lib/i18n'
 import type { Dictionary } from '@/lib/dictionary'
 import { siteConfig } from '@/lib/site-config'
 import { Container } from '@/components/ui/Container'
-import { JusticeMark } from '@/components/ui/JusticeMark'
+import { BrandScales } from '@/components/ui/BrandScales'
+import { AccentRule } from '@/components/ui/AccentRule'
 import { buildWhatsAppLink } from '@/lib/whatsapp'
 
 const tagline = {
@@ -20,7 +21,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
   return (
     <footer className="relative overflow-hidden border-t border-navy-900/10 bg-navy-950 text-neutral-100">
-      <JusticeMark className="pointer-events-none absolute -end-10 -top-10 hidden h-64 w-auto text-cyan-300/[0.08] md:block" />
+      <BrandScales className="pointer-events-none absolute -end-10 -top-10 hidden h-64 w-auto text-cyan-300/[0.1] md:block" />
 
       <Container className="relative grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
@@ -28,6 +29,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <Image src="/logo-icon.png" alt="" width={36} height={36} className="h-9 w-9" />
             <p className="font-heading text-lg text-white">{name}</p>
           </div>
+          <AccentRule className="mt-3" />
           <p className="mt-2 text-sm text-bronze-400">{tagline[locale]}</p>
           <p className="mt-3 text-sm text-neutral-100/80">{dict.footer.description}</p>
         </div>

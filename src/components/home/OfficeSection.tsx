@@ -1,5 +1,6 @@
 import type { Locale } from '@/lib/i18n'
 import { siteConfig } from '@/lib/site-config'
+import { AccentRule } from '@/components/ui/AccentRule'
 
 const copy = {
   ar: {
@@ -38,6 +39,7 @@ export function OfficeSection({ locale }: { locale: Locale }) {
 
   return (
     <div>
+      <AccentRule className="mb-3" />
       <h2 className="font-heading text-2xl sm:text-3xl">{t.heading}</h2>
       <div className="mt-6 grid gap-6 sm:grid-cols-2">
         <div>

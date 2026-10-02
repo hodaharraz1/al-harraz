@@ -45,6 +45,11 @@
 
   --color-alert-red: #b3261e;
 
+  /* Sampled directly from the official logo's underline accent
+     (public/logo-full.png) — used only as the brand "accent rule" motif
+     (kicker lines, wordmark underline echo), never for alerts/warnings. */
+  --color-accent-red: #e5473d;
+
   --radius-card: 1.25rem;
   --radius-pill: 9999px;
 }

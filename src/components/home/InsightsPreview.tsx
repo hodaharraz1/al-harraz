@@ -3,6 +3,7 @@ import type { Locale } from '@/lib/i18n'
 import { getPayloadClient } from '@/lib/payload'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
+import { AccentRule } from '@/components/ui/AccentRule'
 import { articleCategoryLabel } from '@/lib/article-categories'
 
 export async function InsightsPreview({
@@ -32,6 +33,7 @@ export async function InsightsPreview({
 
   return (
     <div>
+      {visuallyHiddenHeading ? null : <AccentRule className="mb-3" />}
       <h2 className={visuallyHiddenHeading ? 'sr-only' : 'text-2xl font-bold sm:text-3xl font-heading'}>{heading}</h2>
       <div className="mt-8 grid gap-5 sm:grid-cols-3">
         {result.docs.map((doc) => (

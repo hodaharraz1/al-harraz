@@ -6,7 +6,7 @@ import { breadcrumbSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Section } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
-import { JusticeMark } from '@/components/ui/JusticeMark'
+import { BrandScales } from '@/components/ui/BrandScales'
 import { OfficeSection } from '@/components/home/OfficeSection'
 import { LinkButton } from '@/components/ui/Button'
 import { buildWhatsAppLink, buildTelLink } from '@/lib/whatsapp'
@@ -37,7 +37,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
       <Section tone="light" className="relative overflow-hidden">
-        <JusticeMark className="pointer-events-none absolute -end-16 top-0 hidden h-80 w-auto text-cyan-600/[0.1] md:block lg:h-96" />
+        <BrandScales className="pointer-events-none absolute -end-16 top-0 hidden h-80 w-auto text-cyan-600/[0.1] md:block lg:h-96" />
 
         <Breadcrumbs items={breadcrumbs} />
         <h1 className="mt-4 font-heading text-3xl sm:text-4xl">{t.title}</h1>

@@ -2,13 +2,16 @@ import Link from 'next/link'
 import type { Locale } from '@/lib/i18n'
 import { getPayloadClient } from '@/lib/payload'
 import { Card } from '@/components/ui/Card'
+import { Hexagon } from '@/components/ui/Hexagon'
+import { AccentRule } from '@/components/ui/AccentRule'
 
 /**
  * One shared line-art document mark for every practice-area card, rather
  * than a distinct icon per specialty — with 40+ practice areas, a single
  * consistent glyph keeps the same restrained visual weight the rest of the
- * legal-identity system uses (see JusticeMark) instead of risking a mixed,
- * inconsistent icon library across dozens of categories.
+ * legal-identity system uses instead of risking a mixed, inconsistent icon
+ * library across dozens of categories. Housed in a teal hexagon badge,
+ * matching the logo's "glyph inside a hexagon" container.
  */
 function PracticeAreaMark({ className = '' }: { className?: string }) {
   return (
@@ -58,12 +61,15 @@ export async function PracticeAreasGrid({
 
   return (
     <div>
+      {visuallyHiddenHeading ? null : <AccentRule className="mb-3" />}
       <h2 className={visuallyHiddenHeading ? 'sr-only' : 'text-2xl font-bold sm:text-3xl font-heading'}>{heading}</h2>
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {result.docs.map((doc) => (
           <Link key={doc.id} href={`/${locale}/practice-areas/${doc['slug']}`}>
             <Card className="h-full">
-              <PracticeAreaMark className="h-6 w-6 text-cyan-600/70" />
+              <Hexagon className="h-10 w-10 bg-cyan-500">
+                <PracticeAreaMark className="h-5 w-5 text-white" />
+              </Hexagon>
               <h3 className="mt-3 text-base font-semibold text-navy-950">{doc['title'] as string}</h3>
               {doc['summary'] ? (
                 <p className="mt-2 line-clamp-3 text-sm text-navy-900/75">{doc['summary'] as string}</p>

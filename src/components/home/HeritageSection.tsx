@@ -1,6 +1,7 @@
 import type { Locale } from '@/lib/i18n'
 import { getPayloadClient } from '@/lib/payload'
 import { siteConfig } from '@/lib/site-config'
+import { AccentRule } from '@/components/ui/AccentRule'
 
 const copy = {
   ar: {
@@ -29,6 +30,7 @@ export async function HeritageSection({ locale }: { locale: Locale }) {
         {siteConfig.foundingYear}
       </p>
       <div>
+        <AccentRule className="mb-3" />
         <h2 className="font-heading text-2xl sm:text-3xl">{t.heading}</h2>
         <p className="mt-3 max-w-2xl text-navy-900/80">{t.intro}</p>
         <ol className="mt-8 space-y-6 border-s-2 border-cyan-600/30 ps-6">

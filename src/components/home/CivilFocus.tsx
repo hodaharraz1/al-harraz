@@ -1,5 +1,6 @@
 import type { Locale } from '@/lib/i18n'
 import { LinkButton } from '@/components/ui/Button'
+import { AccentRule } from '@/components/ui/AccentRule'
 
 const copy = {
   ar: {
@@ -37,6 +38,7 @@ export function CivilFocus({ locale }: { locale: Locale }) {
   return (
     <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
       <div>
+        <AccentRule className="mb-3" />
         <p className="text-sm font-semibold uppercase tracking-wide text-bronze-500">{t.eyebrow}</p>
         <h2 className="font-heading mt-3 text-2xl leading-tight sm:text-4xl">{t.heading}</h2>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-navy-900/80 sm:text-lg">{t.body}</p>

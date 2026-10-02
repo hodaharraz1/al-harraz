@@ -1,5 +1,6 @@
 import type { Locale } from '@/lib/i18n'
 import { getPayloadClient } from '@/lib/payload'
+import { AccentRule } from '@/components/ui/AccentRule'
 
 export async function FaqSection({
   locale,
@@ -28,6 +29,7 @@ export async function FaqSection({
 
   return (
     <div>
+      <AccentRule className="mb-3" />
       <h2 className="text-2xl font-bold sm:text-3xl font-heading">{heading}</h2>
       <dl className="mt-8 divide-y divide-navy-900/10">
         {result.docs.map((doc) => (

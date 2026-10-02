@@ -2,6 +2,7 @@ import type { Locale } from '@/lib/i18n'
 import { Section } from '@/components/ui/Section'
 import { Card } from '@/components/ui/Card'
 import { LinkButton } from '@/components/ui/Button'
+import { AccentRule } from '@/components/ui/AccentRule'
 
 const copy = {
   ar: {
@@ -36,6 +37,7 @@ export function HelpSplit({ locale }: { locale: Locale }) {
   const t = copy[locale]
   return (
     <Section tone="neutral">
+      <AccentRule className="mb-3" />
       <h2 className="text-2xl font-bold sm:text-3xl font-heading">{t.heading}</h2>
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         <Card>
