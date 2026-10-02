@@ -20,7 +20,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
   return (
     <footer className="relative overflow-hidden border-t border-navy-900/10 bg-navy-950 text-neutral-100">
-      <JusticeMark className="pointer-events-none absolute -end-10 -top-10 hidden h-56 w-auto text-cyan-300/5 md:block" />
+      <JusticeMark className="pointer-events-none absolute -end-10 -top-10 hidden h-64 w-auto text-cyan-300/[0.08] md:block" />
 
       <Container className="relative grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>

@@ -76,7 +76,7 @@ export default async function PracticeAreaDetailPage({
       <JsonLd data={organizationSchema(locale)} />
 
       <Section tone="light" className="relative overflow-hidden">
-        <JusticeMark className="pointer-events-none absolute -end-20 top-0 hidden h-80 w-auto text-cyan-600/[0.05] xl:block" />
+        <JusticeMark className="pointer-events-none absolute -end-20 top-0 hidden h-80 w-auto text-cyan-600/[0.1] lg:block lg:h-96" />
 
         <Breadcrumbs items={breadcrumbs} />
         <h1 className="relative mt-4 font-heading text-3xl sm:text-4xl">{doc['title'] as string}</h1>

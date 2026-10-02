@@ -49,7 +49,7 @@ export default async function ConsultationPage({ params }: { params: Promise<{ l
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
       <Section tone="light" className="relative overflow-hidden">
-        <JusticeMark className="pointer-events-none absolute -end-16 top-0 hidden h-72 w-auto text-cyan-600/[0.05] lg:block" />
+        <JusticeMark className="pointer-events-none absolute -end-16 top-0 hidden h-80 w-auto text-cyan-600/[0.1] md:block lg:h-96" />
 
         <Breadcrumbs items={breadcrumbs} />
         <h1 className="relative mt-4 font-heading text-3xl sm:text-4xl">{t.title}</h1>
