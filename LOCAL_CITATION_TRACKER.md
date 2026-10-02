@@ -12,7 +12,7 @@ Tracks legitimate directory submissions using the exact canonical NAP from `LOCA
 
 | Directory | URL | Legitimacy note | Status |
 |---|---|---|---|
-| Egyptian Yellow Pages | yellowpages.com.eg | Confirmed real — has a dedicated, actively-ranking Damietta lawyers/law-firms category page. High local-visibility citation target. | NOT STARTED |
+| Egyptian Yellow Pages | yellowpages.com.eg | Confirmed real — has a dedicated, actively-ranking Damietta lawyers/law-firms category page. High local-visibility citation target. **Free submission form confirmed at yellowmedia.com.eg/ar/advertise-with-us-free** — "احصل على عملك مدرجًا مجانًا اليوم" (get listed free). Asks for: business name, category, city (select Damietta), area, optionally website/hours. Ready for the firm owner to submit using the exact canonical NAP from `LOCAL_NAP_AUDIT.md`. | READY TO SUBMIT — needs firm owner (form likely requires an account/contact details only the firm can provide) |
 | Wakilly | wakilly.com | A lawyer-finder platform with per-specialty/per-city pages; appears real and active. Check their submission/claim-listing process before adding. | NOT STARTED — needs process check |
 | El-Avocato | el-avocato.live | Lawyer search platform with per-governorate listing pages. | NOT STARTED — needs process check |
 | Hujja Egypt ("حُجّة مصر") | hujjaegypt.com | Surfaced in search; not yet independently evaluated for legitimacy/traffic. | NOT EVALUATED |
