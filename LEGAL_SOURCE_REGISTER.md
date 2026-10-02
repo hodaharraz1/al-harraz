@@ -59,6 +59,12 @@ Verification-status legend (matches internal drafting notes):
 |---|---|---|---|---|
 | الاستئناف في الأحكام المدنية (Civil Appeals Process) | Insights / Litigation | NEEDS_HUMAN_LEGAL_REVIEW | 1. Egyptian Bar Association (AR) <br>2. Mostasharak (AR) <br>3. Mena Fayek Lawyer (AR) ×2 <br>4. Legal 500 (EN) <br>5. TIMEP (EN) | The 40-day general appeal deadline and 5-day urgent-matters deadline corroborated identically across two independent AR sources, one being the Bar Association itself. Standing/interest/capacity requirements and the filing procedure corroborated across 2 AR sources and consistent with the already-live filing-a-civil-lawsuit article. Three-tier court structure and cassation's law-only review scope corroborated via Legal 500. Deliberately omitted the specific cassation claim-value threshold and deadline (single-sourced, and known to change over time in Egyptian law) and the number/names of appellate courts (single-sourced). Draft delivered as a file — see `article-civil-appeals-process-egypt.md`. Sixth article of the SEO growth program's kickoff calendar. |
 
+## Drafts — pending lawyer review (2026-10-02, SEO growth program, continued)
+
+| Topic (AR) | Target page | Status | Sources checked | Notes |
+|---|---|---|---|---|
+| المنازعات التجارية في مصر: نظرة عامة (Commercial Disputes Overview) | Insights / Corporate | NEEDS_HUMAN_LEGAL_REVIEW | 1. Al-Eqtisadiya (AR, business newspaper) <br>2. Dawood Law Firm (AR) <br>3. Mena Fayek Lawyer (AR) <br>4. Consortio Law Firm (EN) <br>5. Badawy Law (EN) | Law 120/2008 (Economic Courts) corroborated across multiple AR/EN sources, consistent with its prior use in the live debt-recovery article. Dispute-type categories (general commercial, company/shareholder, bankruptcy/restructuring) corroborated between a business newspaper and 2 specialized legal sources. The conciliation-body feature is single-sourced (EN) but consistent with general knowledge of the Economic Courts' design. Deliberately excluded a broader marketing-sourced dispute-type list (real estate, construction, energy, franchise) to avoid thin duplication with other already-live articles. Draft delivered as a file — see `article-commercial-disputes-overview-egypt.md`. Seventh article of this cycle, closing the last clearly-scoped content gap from the original queue. |
+
 ## Method
 
 For every new legal-education topic:
