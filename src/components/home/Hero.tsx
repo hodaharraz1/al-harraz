@@ -14,8 +14,8 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(53, 194, 221, 0.16), transparent), radial-gradient(ellipse 60% 50% at 90% 100%, rgba(166, 124, 61, 0.12), transparent)',
       }}
     >
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8 lg:py-32">
-        <div className="text-center lg:text-start">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 sm:gap-12 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8 lg:py-32">
+        <div className="order-last text-center lg:order-none lg:text-start">
           <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
             <span className="h-1.5 w-1.5 rounded-full bg-cyan-300" aria-hidden="true" />
             {dict.trust.since}
@@ -54,8 +54,8 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </div>
         </div>
 
-        <div className="relative mx-auto flex w-full max-w-sm items-center justify-center lg:max-w-none">
-          <HeroJusticeEmblem className="h-64 w-64 text-cyan-300 sm:h-80 sm:w-80 lg:h-[26rem] lg:w-[26rem]" />
+        <div className="order-first relative mx-auto flex w-full max-w-sm items-center justify-center lg:order-none lg:max-w-none">
+          <HeroJusticeEmblem className="h-48 w-48 text-cyan-300 sm:h-80 sm:w-80 lg:h-[26rem] lg:w-[26rem]" />
           <div className="absolute inset-x-0 bottom-2 flex justify-center sm:bottom-6 lg:bottom-10">
             <span className="inline-flex flex-col items-center rounded-lg border border-bronze-400/30 bg-navy-950/60 px-5 py-2 text-center backdrop-blur-sm">
               <span className="font-heading text-2xl text-bronze-100 sm:text-3xl">{siteConfig.foundingYear}</span>
