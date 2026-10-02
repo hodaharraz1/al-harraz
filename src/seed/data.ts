@@ -1145,6 +1145,110 @@ export const articles: Array<{
       ],
     },
   },
+  {
+    slug: 'contract-drafting-key-clauses-egypt',
+    category: 'business',
+    title: {
+      ar: 'ما الذي يجب مراعاته عند صياغة عقد؟ البنود الأساسية اللي محتاج تضمّنها',
+      en: 'What Should You Consider When Drafting a Contract? The Essential Clauses to Include',
+    },
+    excerpt: {
+      ar: 'دليل عملي للبنود الأساسية اللي لازم يحتويها أي عقد عند صياغته من البداية، سواء كان عقد بيع أو إيجار أو خدمات أو شراكة.',
+      en: 'A practical guide to the essential clauses any contract should include when drafted from scratch — whether a sale, lease, services, or partnership agreement.',
+    },
+    body: {
+      ar: [
+        'يخضع إبرام العقود في مصر بشكل أساسي لأحكام القانون المدني رقم 131 لسنة 1948، الذي يضع الإطار العام لانعقاد العقد وصحته — أبرزها توافق الإيجاب والقبول بين الأطراف، وتوافر الأهلية القانونية الكاملة لدى الموقِّعين، وأن يكون محل العقد وسببه مشروعين وغير مخالفين للنظام العام. العقد المكتوب بعناية هو ما يحمي الطرفين عند أي خلاف لاحق، لذلك فإن صياغته من البداية بشكل سليم أهم بكثير من محاولة تعديله بعد التوقيع.',
+        'عند صياغة أي عقد، هناك بنود أساسية يجب أن يتضمنها بغض النظر عن نوعه: تحديد الأطراف بدقة (الأسماء الكاملة والصفات القانونية وبيانات التواصل)، وموضوع العقد (وصف واضح ومحدد لما يتفق عليه الطرفان)، والالتزامات المتبادلة بين الطرفين وبأي مواعيد، والقيمة المالية وطريقة السداد، ومدة العقد ومتى يبدأ وينتهي.',
+        'كذلك: شروط الإنهاء أو الفسخ وأي شرط جزائي متفق عليه مسبقًا، وبند تسوية المنازعات (تقاضٍ أم تحكيم، وأي محكمة مختصة)، والظروف الطارئة والقوة القاهرة — ماذا يحدث إذا أصبح التنفيذ مستحيلاً أو مرهقًا بشكل استثنائي — وأخيرًا تاريخ ومكان تحرير العقد وتوقيع الطرفين.',
+        'كل بند من هذه البنود يحتاج صياغة دقيقة تناسب طبيعة العقد المحدد — فعقد البيع يختلف عن عقد الإيجار، وعقد الخدمات يختلف عن عقد الشراكة، ومحاولة استخدام نموذج عام جاهز دون تكييفه مع تفاصيل كل اتفاق قد يترك ثغرات تظهر فقط عند حدوث خلاف فعلي. لمراجعة أو صياغة عقد يناسب احتياجك تحديدًا، يمكنكم حجز استشارة مع فريقنا. ولو كان لديك عقد جاهز مُقدَّم لك من طرف آخر وتحتاج مراجعته قبل التوقيع، راجع [أهم البنود التي يجب مراجعتها قبل توقيع أي عقد](/ar/insights/what-to-review-before-signing-contract).',
+      ],
+      en: [
+        'Contract formation in Egypt is primarily governed by the Civil Code No. 131 of 1948, which sets out the general framework for a contract\'s formation and validity — most notably the meeting of offer and acceptance between the parties, full legal capacity on the part of the signatories, and a lawful subject matter and cause that does not violate public order. A carefully drafted contract is what protects both parties in the event of a later dispute, which is why getting the drafting right from the start matters far more than trying to amend it after signing.',
+        'Whatever its type, any contract should include the following essential elements when being drafted: precisely identifying the parties (full names, legal capacities, contact details), the contract\'s subject matter (a clear, specific description of what\'s being agreed), mutual obligations and their deadlines, the financial value and payment method, and the contract\'s term — when it begins and ends.',
+        'Also: termination or rescission conditions and any pre-agreed penalty clause, a dispute-resolution clause (litigation or arbitration, and which court has jurisdiction), force majeure and exceptional circumstances — what happens if performance becomes impossible or exceptionally burdensome — and finally the date and place of execution and the parties\' signatures.',
+        'Each of these elements needs precise drafting tailored to the specific type of contract — a sale agreement differs from a lease, and a services agreement differs from a partnership agreement, and trying to use a generic off-the-shelf template without adapting it to the specifics of each arrangement can leave gaps that only surface once an actual dispute arises. To have a contract reviewed or drafted to fit your specific needs, you can book a consultation with our team. If you already have a contract presented to you by another party and need it reviewed before signing, see [Key Clauses to Review Before Signing Any Contract](/en/insights/what-to-review-before-signing-contract).',
+      ],
+    },
+  },
+  {
+    slug: 'property-possession-disputes-egypt',
+    category: 'real-estate',
+    title: {
+      ar: 'منازعات حيازة العقارات: كيف تحمي حيازتك قانونيًا دون انتظار إثبات الملكية؟',
+      en: 'Property Possession Disputes: How to Protect Your Possession Legally Without Waiting to Prove Ownership',
+    },
+    excerpt: {
+      ar: 'نظرة عامة على دعاوى الحيازة في القانون المصري — وسيلة قانونية سريعة نسبيًا لحماية وضع يدك الفعلي على عقار، منفصلة تمامًا عن إثبات الملكية.',
+      en: 'An overview of possessory actions under Egyptian law — a relatively quick legal remedy to protect your actual physical possession of property, entirely separate from proving ownership.',
+    },
+    body: {
+      ar: [
+        'كثير من الناس يظنون أن حماية حقهم في عقار تستلزم دائمًا إثبات الملكية أولًا، لكن القانون المصري يوفر حماية منفصلة وأسرع نسبيًا تُسمى "دعاوى الحيازة" — وهي تحمي وضعك الفعلي على العقار، بغض النظر عمّا إذا كنت تملكه فعلاً أم لا.',
+        'يوفر القانون المدني المصري عدة دعاوى لحماية الحيازة، أبرزها: دعوى استرداد الحيازة (إذا انتُزعت حيازتك غصبًا أو بالقوة)، ودعوى منع التعرض (عند تهديد حيازتك دون انتزاعها فعليًا)، ودعوى وقف الأعمال الجديدة (لوقف عمل جديد يهدد حيازتك قبل اكتماله).',
+        'لنجاح أي دعوى حيازة، يُشترط أن تكون حيازتك فعلية ومادية، وأن تتسم بالهدوء والعلانية والاستقرار. ومن أهم القواعد الإجرائية: **لا يجوز الجمع بين دعوى الحيازة ودعوى الملكية في نفس الوقت** — فإذا أقام المدعي دعواه على أساس الملكية أثناء نظر دعوى الحيازة، سقط حقه في دعوى الحيازة ذاتها. كما لا يجوز للمدعى عليه أن يدافع عن نفسه بالاحتجاج بأنه هو المالك الحقيقي.',
+        'هذا الفصل بين الحيازة والملكية موجود لحكمة واضحة: منع الناس من أخذ القانون بأيديهم والاستيلاء على عقار بالقوة حتى لو كانوا يعتقدون أنهم أصحاب الحق فيه. في حالات انتزاع الحيازة بالقوة، قد تتوفر أيضًا حماية جنائية إلى جانب الحماية المدنية. إذا كنتم تواجهون محاولة انتزاع لحيازتكم أو تعرضًا لها، يمكنكم حجز استشارة مع فريقنا. يمكنكم أيضًا مراجعة [قائمة مراجعة قانونية قبل شراء عقار في مصر](/ar/insights/real-estate-buyer-legal-checklist-egypt) إذا كنتم بصدد شراء عقار.',
+      ],
+      en: [
+        'Many people assume that protecting their rights over a property always requires proving ownership first, but Egyptian law offers a separate, relatively faster form of protection called "possessory actions" — these protect your actual physical possession of a property, regardless of whether you actually own it.',
+        'The Egyptian Civil Code provides several possessory actions, most notably: an action for recovery of possession (if your possession was forcibly taken), an action to prevent interference (when your possession is threatened without being seized), and an action to halt new works (to stop a new work threatening your possession before it\'s completed).',
+        'For any possessory action to succeed, your possession generally must be actual and physical, and must be quiet, public, and stable. One of the most important procedural rules: **a possessory claim cannot be combined with an ownership claim at the same time** — if the claimant bases their case on ownership while a possessory action is being heard, their possessory claim is forfeited. Likewise, a defendant cannot defend by arguing they are the true owner.',
+        'This separation between possession and ownership exists for a clear reason: to prevent people from taking the law into their own hands and seizing a property by force, even if they believe they have the right to it. In cases of forcible dispossession, criminal protection may also be available alongside the civil remedy. If you are facing an attempt to seize your possession or interference with it, you can book a consultation with our team. You can also see [Legal Checklist Before Buying Property in Egypt](/en/insights/real-estate-buyer-legal-checklist-egypt) if you are in the process of buying property.',
+      ],
+    },
+  },
+  {
+    slug: 'civil-appeals-process-egypt',
+    category: 'litigation',
+    title: {
+      ar: 'الاستئناف في الأحكام المدنية: الشروط والمواعيد التي يجب معرفتها',
+      en: 'Appealing a Civil Judgment in Egypt: The Conditions and Deadlines You Need to Know',
+    },
+    excerpt: {
+      ar: 'نظرة عامة على شروط قبول الاستئناف ومواعيده في الأحكام المدنية المصرية، ومتى ينتقل الطعن لمرحلة النقض.',
+      en: 'An overview of the conditions and deadlines for appealing a civil judgment in Egypt, and when a case moves to the cassation stage.',
+    },
+    body: {
+      ar: [
+        'يقوم نظام التقاضي في مصر على عدة درجات: محكمة أول درجة، ثم محكمة الاستئناف التي تراجع أحكام الدرجة الأولى، وأخيرًا محكمة النقض التي تراجع تطبيق القانون فقط. فوات ميعاد الاستئناف أو عدم استيفاء شروطه قد يفقدك فرصة الطعن على حكم غير صحيح نهائيًا.',
+        'الشروط الأساسية لقبول الاستئناف: أن يكون الحكم قابلاً للاستئناف أصلًا، وأن يكون المستأنف طرفًا أصيلًا في الدعوى الابتدائية أو خلفًا له وله مصلحة حقيقية في الطعن، وأن يتمتع بالأهلية القانونية اللازمة.',
+        'مواعيد الاستئناف: الميعاد العام للطعن هو **أربعون يومًا**، ما لم ينص القانون على خلاف ذلك، ويبدأ من تاريخ صدور الحكم إذا كان حضوريًا أو من تاريخ إعلانه إذا كان غيابيًا. أما في المسائل المستعجلة، فالميعاد **خمسة أيام فقط**. فوات هذا الميعاد يجعل الحكم باتًا ونهائيًا. يتم رفع الاستئناف بصحيفة تُودَع في قلم كتاب محكمة الاستئناف المختصة، تتضمن أسباب الاستئناف بوضوح، وتُعلَن للمستأنف ضده.',
+        'إذا صدر حكم الاستئناف وظل أحد الطرفين غير راضٍ، قد يكون الطعن بالنقض متاحًا في حالات محددة — لكنه مختلف جوهريًا، لأن محكمة النقض لا تعيد نظر الوقائع، وإنما تراجع فقط صحة تطبيق القانون. فوات مواعيد الطعن من أكثر الأخطاء اللي بتفقد الموكلين حقوقهم نهائيًا، لذلك ننصح بالتواصل مع محامٍ فور صدور أي حكم غير مُرضٍ. لمناقشة حكم صدر في قضيتكم، يمكنكم حجز استشارة مع فريقنا. راجعوا أيضًا [إجراءات رفع دعوى مدنية في مصر](/ar/insights/filing-a-civil-lawsuit-in-egypt).',
+      ],
+      en: [
+        "Egypt's litigation system operates across several tiers: a court of first instance, then a court of appeal, and finally the Court of Cassation, which reviews only the correct application of the law. Missing the appeal deadline, or failing to meet its conditions, can permanently cost you the chance to challenge an incorrect judgment.",
+        'The basic conditions for an appeal: the judgment must actually be appealable, the appellant must have been an original party to the first-instance case (or their legal successor) with a genuine interest in the appeal, and must have the necessary legal capacity.',
+        "Appeal deadlines: the general deadline is **forty days**, unless the law provides otherwise, running from the date the judgment was issued (if in the party's presence) or served (if in absentia). In urgent matters, the deadline is just **five days**. Missing this deadline makes the judgment final. An appeal is filed through a statement deposited with the clerk's office of the competent court of appeal, clearly setting out the grounds, and served on the respondent.",
+        "If the court of appeal issues a judgment and one party remains dissatisfied, a cassation appeal may be available in specific circumstances — but it is fundamentally different, since the Court of Cassation does not re-examine the facts, only whether the law was correctly applied. Missing a filing deadline is among the most common ways clients permanently lose their rights, which is why we recommend contacting a lawyer as soon as an unfavorable judgment is issued. To discuss a judgment in your case, you can book a consultation with our team. See also [How to File a Civil Lawsuit in Egypt](/en/insights/filing-a-civil-lawsuit-in-egypt).",
+      ],
+    },
+  },
+  {
+    slug: 'commercial-disputes-overview-egypt',
+    category: 'corporate',
+    title: {
+      ar: 'المنازعات التجارية في مصر: نظرة عامة على أنواعها والمحاكم المختصة',
+      en: 'Commercial Disputes in Egypt: An Overview of Their Types and the Competent Courts',
+    },
+    excerpt: {
+      ar: 'نظرة عامة على أنواع المنازعات التجارية الشائعة في مصر، ودور المحاكم الاقتصادية المتخصصة في الفصل فيها.',
+      en: 'An overview of common types of commercial disputes in Egypt, and the role of the specialized Economic Courts in resolving them.',
+    },
+    body: {
+      ar: [
+        'أنشأ المشرّع المصري المحاكم الاقتصادية بموجب القانون رقم 120 لسنة 2008 بهدف توفير قضاء متخصص وأسرع نسبيًا للفصل في المنازعات التجارية والاستثمارية المعقدة، بدلًا من إحالتها للمسار العادي الأبطأ في المحاكم المدنية التقليدية.',
+        'أبرز أنواع المنازعات التي تدخل ضمن اختصاص المحاكم الاقتصادية: المنازعات التجارية العامة (البيع بالجملة، التوريد، الوكالة التجارية، العقود التجارية)، ومنازعات الشركات (خلافات الشركاء أو المساهمين، بطلان قرارات الجمعيات العمومية أو مجالس الإدارة، حل الشركات أو تصفيتها أو عزل المديرين)، وقضايا الإفلاس وإعادة الهيكلة، والمنازعات المصرفية والتمويلية والاستثمارية.',
+        'من السمات المميزة للمحاكم الاقتصادية وجود جهة مختصة بالتسوية والصلح يمر عليها النزاع قبل أو أثناء نظر الدعوى، في محاولة للوصول لحل ودي قبل استنفاد مسار التقاضي الكامل.',
+        'ليس كل نزاع تجاري يُحسم بالتقاضي: كثير من العقود التجارية، خاصة بين الشركات، تتضمن شرط تحكيم يوجب اللجوء للتحكيم بدلًا من القضاء. راجعوا [التحكيم أم التقاضي؟](/ar/insights/arbitration-vs-litigation-egypt) لفهم الفرق بين المسارين. تحديد المسار الصحيح لأي نزاع تجاري يعتمد على طبيعة النزاع وبنود العقد محل الخلاف إن وُجد. لمناقشة نزاع تجاري تواجهونه، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'The Egyptian legislature established the Economic Courts under Law No. 120 of 2008, aiming to provide specialized, relatively faster adjudication for complex commercial and investment disputes, rather than routing them through the slower, general track of ordinary civil courts.',
+        "The most notable types of disputes falling within the Economic Courts' jurisdiction: general commercial disputes (wholesale sales, supply, commercial agency, commercial contracts), company disputes (disputes between partners or shareholders, claims to nullify general assembly or board resolutions, dissolving or liquidating a company or removing its managers), bankruptcy and restructuring matters, and banking, financing, and investment disputes.",
+        'One distinguishing feature of the Economic Courts is a dedicated conciliation/settlement body the dispute passes through before or during the case, as an attempt to reach an amicable resolution before the litigation track is fully exhausted.',
+        "Not every commercial dispute is resolved through litigation: many commercial contracts, particularly between companies, include an arbitration clause requiring arbitration rather than court proceedings. See [Arbitration or Litigation?](/en/insights/arbitration-vs-litigation-egypt) to understand the difference between the two paths. Determining the right path for any commercial dispute depends on the nature of the dispute and the terms of the relevant contract, if one exists. To discuss a commercial dispute you're facing, you can book a consultation with our team.",
+      ],
+    },
+  },
 ]
 
 /**
