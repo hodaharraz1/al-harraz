@@ -330,6 +330,43 @@ function richTextFromPlainText(text: string) {
   }
 }
 
+// Matches a minimal Markdown-style internal link: [display text](/path).
+// Used so seed paragraphs can carry real internal links (CIVIL_AUTHORITY_MAP.md's
+// cross-linking plan) without needing a rich-text editor — plain text elsewhere
+// in the paragraph is untouched.
+const LINK_PATTERN = /\[([^\]]+)\]\((\/[^)]+)\)/g
+
+function textNode(text: string) {
+  return { type: 'text', format: 0, style: '', mode: 'normal', detail: 0, text, version: 1 }
+}
+
+function linkNode(text: string, url: string) {
+  return {
+    type: 'link',
+    format: '' as const,
+    indent: 0,
+    version: 1,
+    direction: null,
+    fields: { url, newTab: false, linkType: 'custom' as const },
+    children: [textNode(text)],
+  }
+}
+
+function paragraphChildrenFromText(paragraph: string) {
+  const children: Array<ReturnType<typeof textNode> | ReturnType<typeof linkNode>> = []
+  let lastIndex = 0
+  for (const match of paragraph.matchAll(LINK_PATTERN)) {
+    const [full, label, url] = match
+    if (!label || !url) continue
+    const index = match.index ?? 0
+    if (index > lastIndex) children.push(textNode(paragraph.slice(lastIndex, index)))
+    children.push(linkNode(label, url))
+    lastIndex = index + full.length
+  }
+  if (lastIndex < paragraph.length) children.push(textNode(paragraph.slice(lastIndex)))
+  return children.length > 0 ? children : [textNode(paragraph)]
+}
+
 function richTextFromParagraphs(paragraphs: string[]) {
   return {
     root: {
@@ -344,7 +381,7 @@ function richTextFromParagraphs(paragraphs: string[]) {
         indent: 0,
         version: 1,
         direction: null,
-        children: [{ type: 'text', format: 0, style: '', mode: 'normal', detail: 0, text, version: 1 }],
+        children: paragraphChildrenFromText(text),
       })),
     },
   }
