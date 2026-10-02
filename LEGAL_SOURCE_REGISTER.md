@@ -47,6 +47,12 @@ Verification-status legend (matches internal drafting notes):
 |---|---|---|---|---|
 | ما الذي يجب مراعاته عند صياغة عقد؟ (Contract Drafting — Key Clauses) | Insights / Business (Contracts) | NEEDS_HUMAN_LEGAL_REVIEW | 1. Mondaq (AR) <br>2. Sahal Firm (AR) <br>3. Egyptian Bar Association (AR) <br>4. AlZayat Firm (EN) <br>5. Mondaq (EN) <br>6. Lexology (EN) | Civil Code 131/1948 and the four formation elements (offer/acceptance, capacity, free consent, lawful object) corroborated across independent AR/EN sources. Nine-clause checklist corroborated across 2 independent AR sources + 1 EN source. Deliberately omitted specific article numbers (e.g. hardship doctrine's article number, single-sourced only) and avoided providing an actual contract template. Explicitly scoped as "drafting a new contract" rather than "reviewing one presented to you" to avoid cannibalizing the existing `what-to-review-before-signing-contract` article — see note in the draft file and `CANNIBALIZATION_REPORT.md`. Draft delivered as a file — see `article-contract-drafting-key-clauses.md`. Fourth article of the SEO growth program's kickoff calendar. |
 
+## Drafts — pending lawyer review (2026-10-02, SEO growth program, continued)
+
+| Topic (AR) | Target page | Status | Sources checked | Notes |
+|---|---|---|---|---|
+| منازعات حيازة العقارات (Property Possession Disputes) | Insights / Real Estate | NEEDS_HUMAN_LEGAL_REVIEW | 1. Mohamy Masr (AR) ×2 <br>2. Mena Fayek Lawyer (AR) ×3 <br>3. Legal 500/Lexology-aggregated (EN) | The possession/ownership distinction and the three possessory-action types (recovery, prevention of interference, halting new works) corroborated across 4 independent AR sources. The "cannot combine possessory and ownership claims" procedural rule corroborated via the EN source and consistent with established Egyptian civil-procedure doctrine. Deliberately omitted the specific Civil Code article range (958–975, single-sourced only) and excluded adverse possession entirely (a sensitive, complex topic, single-sourced and non-specialist in this search — real risk of being misread as encouragement to seize others' land). Draft delivered as a file — see `article-property-possession-disputes.md`. Fifth article of the SEO growth program's kickoff calendar. |
+
 ## Method
 
 For every new legal-education topic:
