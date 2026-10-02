@@ -218,6 +218,33 @@ async function run() {
       const existing = await payload.find({ collection: 'articles', where: { slug: { equals: article.slug } }, limit: 1 })
       const existingArticleDoc = existing.docs[0]
       if (existingArticleDoc) {
+        // data.ts is the source of truth for these pre-written, lawyer-reviewed
+        // articles (every edit goes through a draft file + LEGAL_SOURCE_REGISTER.md
+        // review, then data.ts, then a re-seed — not ad-hoc admin-UI edits), so
+        // re-sync title/excerpt/body on every run rather than only touching status.
+        // This is what makes content fixes (e.g. adding an internal link) actually
+        // go live on the next deploy instead of silently no-op'ing forever.
+        await payload.update({
+          collection: 'articles',
+          id: existingArticleDoc.id,
+          locale: 'ar',
+          data: {
+            title: article.title.ar,
+            category: article.category,
+            excerpt: article.excerpt.ar,
+            body: richTextFromParagraphs(article.body.ar),
+          },
+        })
+        await payload.update({
+          collection: 'articles',
+          id: existingArticleDoc.id,
+          locale: 'en',
+          data: {
+            title: article.title.en,
+            excerpt: article.excerpt.en,
+            body: richTextFromParagraphs(article.body.en),
+          },
+        })
         if (existingArticleDoc['status'] !== 'published') {
           await payload.update({
             collection: 'articles',
