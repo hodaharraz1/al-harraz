@@ -1362,6 +1362,61 @@ export const faqs: Array<{ question: Bilingual; answer: Bilingual; relatedPracti
       en: 'Your lawyer can attend most hearings on your behalf, but certain procedures in personal-status cases (such as mandatory reconciliation sessions in some cases) may require your personal attendance. We will let you know in advance which hearings require you to be present.',
     },
   },
+  {
+    relatedPracticeAreaSlug: 'company-formation-investment',
+    question: {
+      ar: 'إيه أنسب شكل قانوني للشركة الجديدة بتاعتي؟',
+      en: "What's the most suitable legal form for my new company?",
+    },
+    answer: {
+      ar: 'الشكل الأنسب يعتمد على عدد الشركاء، ومدى المسؤولية اللي تحب تتحملها، وطبيعة النشاط، وخطط التمويل المستقبلية. راجعوا [أنواع الشركات في مصر](/ar/insights/types-of-companies-in-egypt) لمقارنة عامة، أو احجزوا استشارة لتحديد الشكل الأنسب لمشروعكم تحديدًا.',
+      en: "The most suitable form depends on the number of partners, how much liability you're comfortable taking on, the nature of the business, and future financing plans. See [Types of Companies in Egypt](/en/insights/types-of-companies-in-egypt) for a general comparison, or book a consultation to determine the best fit for your specific venture.",
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'employment-labour-law',
+    question: {
+      ar: 'صاحب العمل بيفكر ينهي عقدي، إيه حقوقي؟',
+      en: "My employer is considering ending my contract — what are my rights?",
+    },
+    answer: {
+      ar: 'تختلف حقوقك حسب نوع العقد (محدد أم غير محدد المدة) وسبب الإنهاء ومدة خدمتك. راجعوا [قانون العمل الجديد رقم 14 لسنة 2025](/ar/insights/new-labor-law-egypt-2025-overview) لنظرة عامة، أو تواصلوا معنا لتقييم موقفكم تحديدًا قبل اتخاذ أي خطوة.',
+      en: "Your rights vary depending on the contract type (fixed-term or indefinite), the reason for termination, and your length of service. See [Egypt's New Labor Law No. 14 of 2025](/en/insights/new-labor-law-egypt-2025-overview) for a general overview, or contact us to assess your specific situation before taking any action.",
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'criminal-law',
+    question: {
+      ar: 'اتسُتدعيت للنيابة، لازم أجيب محامي معايا؟',
+      en: "I've been summoned to the Prosecution — do I need to bring a lawyer?",
+    },
+    answer: {
+      ar: 'نعم، من حقك الاستعانة بمحامٍ في أي تحقيق أمام النيابة العامة، وهذا الحق أساسي لحماية مصالحك منذ اللحظة الأولى. راجعوا [حقوق المتهم في القضايا الجنائية](/ar/insights/rights-of-the-accused-in-criminal-cases) لمزيد من التفاصيل، أو تواصلوا معنا فورًا لو عندكم استدعاء.',
+      en: "Yes — you have the right to legal representation during any Public Prosecution investigation, and this right is fundamental to protecting your interests from the very first moment. See [Rights of the Accused in Criminal Cases](/en/insights/rights-of-the-accused-in-criminal-cases) for more detail, or contact us immediately if you have a summons.",
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'administrative-law',
+    question: {
+      ar: 'جهة إدارية رفضت طلبي أو أصدرت قرار ضدي، إيه المدة المتاحة للطعن؟',
+      en: 'An administrative body rejected my request or issued a decision against me — how much time do I have to challenge it?',
+    },
+    answer: {
+      ar: 'المواعيد في الطعون الإدارية صارمة وقد تُفقِدكم حق الطعن نهائيًا لو فاتت. راجعوا [الطعن على القرار الإداري في مصر](/ar/insights/challenging-administrative-decisions-egypt) لنظرة عامة على الخطوات والمواعيد، وننصح بالتواصل معنا فور صدور أي قرار إداري غير مُرضٍ.',
+      en: 'Deadlines in administrative appeals are strict and can permanently forfeit your right to challenge a decision if missed. See [Challenging an Administrative Decision in Egypt](/en/insights/challenging-administrative-decisions-egypt) for an overview of the steps and deadlines, and we recommend contacting us as soon as any unfavorable administrative decision is issued.',
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'arbitration',
+    question: {
+      ar: 'العقد بتاعي فيه شرط تحكيم، هل ده معناه إني متقدرش أروح المحكمة؟',
+      en: 'My contract has an arbitration clause — does that mean I can\'t go to court at all?',
+    },
+    answer: {
+      ar: 'بشكل عام، شرط التحكيم الصحيح والملزم يوجب اللجوء للتحكيم بدلًا من القضاء العادي بخصوص ما يدخل في نطاقه. راجعوا [التحكيم أم التقاضي؟](/ar/insights/arbitration-vs-litigation-egypt) لفهم الفرق بين المسارين بشكل أوضح، أو تواصلوا معنا لمراجعة شرط التحكيم في عقدكم تحديدًا.',
+      en: 'Generally, a valid and binding arbitration clause requires that disputes within its scope go to arbitration rather than ordinary litigation. See [Arbitration or Litigation?](/en/insights/arbitration-vs-litigation-egypt) to understand the difference between the two paths more clearly, or contact us to review the arbitration clause in your specific contract.',
+    },
+  },
 ]
 
 export const founderYear = 1983
