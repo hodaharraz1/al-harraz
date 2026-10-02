@@ -5,6 +5,7 @@ import { breadcrumbSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Section } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { JusticeMark } from '@/components/ui/JusticeMark'
 import { PracticeAreasGrid } from '@/components/home/PracticeAreasGrid'
 
 // CMS-backed page: revalidate periodically so CMS publishes appear without a redeploy.
@@ -34,11 +35,13 @@ export default async function PracticeAreasIndexPage({ params }: { params: Promi
   return (
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
-      <Section tone="light">
+      <Section tone="light" className="relative overflow-hidden">
+        <JusticeMark className="pointer-events-none absolute -end-16 top-0 hidden h-72 w-auto text-cyan-600/[0.06] lg:block" />
+
         <Breadcrumbs items={breadcrumbs} />
         <h1 className="font-heading mt-4 text-3xl sm:text-4xl">{t.title}</h1>
         <p className="mt-3 max-w-2xl text-navy-900/80">{t.description}</p>
-        <div className="mt-10">
+        <div className="relative mt-10">
           <PracticeAreasGrid locale={locale} heading={t.title} visuallyHiddenHeading />
         </div>
       </Section>

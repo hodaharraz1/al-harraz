@@ -5,6 +5,7 @@ import { breadcrumbSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Section } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { JusticeMark } from '@/components/ui/JusticeMark'
 import { TeamPreview } from '@/components/home/TeamPreview'
 
 // CMS-backed page: revalidate periodically so CMS publishes appear without a redeploy.
@@ -34,7 +35,9 @@ export default async function TeamIndexPage({ params }: { params: Promise<{ loca
   return (
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
-      <Section tone="light">
+      <Section tone="light" className="relative overflow-hidden">
+        <JusticeMark className="pointer-events-none absolute -end-16 top-0 hidden h-72 w-auto text-cyan-600/[0.06] lg:block" />
+
         <Breadcrumbs items={breadcrumbs} />
         <h1 className="mt-4 font-heading text-3xl sm:text-4xl">{t.title}</h1>
         <p className="mt-3 max-w-2xl text-navy-900/80">{t.description}</p>
@@ -43,7 +46,7 @@ export default async function TeamIndexPage({ params }: { params: Promise<{ loca
             ? 'يتم نشر الملفات الشخصية للفريق المكون من 15 محاميًا تباعًا فور توفر بياناتها الموثقة.'
             : 'Profiles for the 15-lawyer team are published progressively as verified data becomes available.'}
         </p>
-        <div className="mt-10">
+        <div className="relative mt-10">
           <TeamPreview locale={locale} heading={t.title} visuallyHiddenHeading limit={100} />
         </div>
       </Section>

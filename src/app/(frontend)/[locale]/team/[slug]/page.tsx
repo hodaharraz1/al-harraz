@@ -10,6 +10,7 @@ import { breadcrumbSchema, personSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Section } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { JusticeMark } from '@/components/ui/JusticeMark'
 import { RichText } from '@/components/ui/RichText'
 
 // CMS-backed page: revalidate periodically so CMS publishes appear without a redeploy.
@@ -69,6 +70,7 @@ export default async function LawyerProfilePage({
   ]
   const practiceAreas = (doc['practiceAreas'] as Array<{ id: number; slug: string; title: string }>) || []
   const education = (doc['education'] as Array<{ item: string }>) || []
+  const monogram = (doc['name'] as string).trim().charAt(0)
 
   return (
     <>
@@ -84,7 +86,13 @@ export default async function LawyerProfilePage({
       <Section tone="light">
         <Breadcrumbs items={breadcrumbs} />
         <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-start">
-          <div className="h-32 w-32 shrink-0 rounded-full bg-navy-900/10" aria-hidden="true" />
+          <div
+            className="relative flex h-32 w-32 shrink-0 items-center justify-center rounded-full border border-cyan-600/20 bg-navy-900/5"
+            aria-hidden="true"
+          >
+            <span className="font-heading text-4xl text-navy-900/35">{monogram}</span>
+            <JusticeMark className="pointer-events-none absolute -bottom-1 -end-1 h-8 w-8 text-cyan-600/60" />
+          </div>
           <div>
             <h1 className="font-heading text-3xl sm:text-4xl">{doc['name'] as string}</h1>
             {doc['role'] ? <p className="mt-1 text-lg text-cyan-600">{doc['role'] as string}</p> : null}

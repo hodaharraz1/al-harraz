@@ -9,6 +9,7 @@ import { breadcrumbSchema, organizationSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Section } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { JusticeMark } from '@/components/ui/JusticeMark'
 import { RichText } from '@/components/ui/RichText'
 import { Card } from '@/components/ui/Card'
 import { LinkButton } from '@/components/ui/Button'
@@ -74,17 +75,19 @@ export default async function PracticeAreaDetailPage({
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
       <JsonLd data={organizationSchema(locale)} />
 
-      <Section tone="light">
+      <Section tone="light" className="relative overflow-hidden">
+        <JusticeMark className="pointer-events-none absolute -end-20 top-0 hidden h-80 w-auto text-cyan-600/[0.05] xl:block" />
+
         <Breadcrumbs items={breadcrumbs} />
-        <h1 className="mt-4 font-heading text-3xl sm:text-4xl">{doc['title'] as string}</h1>
-        {doc['summary'] ? <p className="mt-3 max-w-2xl text-lg text-navy-900/80">{doc['summary'] as string}</p> : null}
+        <h1 className="relative mt-4 font-heading text-3xl sm:text-4xl">{doc['title'] as string}</h1>
+        {doc['summary'] ? <p className="relative mt-3 max-w-2xl text-lg text-navy-900/80">{doc['summary'] as string}</p> : null}
         {doc['lastReviewedDate'] ? (
-          <p className="mt-2 text-xs text-navy-900/70">
+          <p className="relative mt-2 text-xs text-navy-900/70">
             {dict.common.lastReviewed}: {new Date(doc['lastReviewedDate'] as string).toLocaleDateString(locale)}
           </p>
         ) : null}
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-3">
+        <div className="relative mt-10 grid gap-10 lg:grid-cols-3">
           <div className="space-y-10 lg:col-span-2">
             <RichText data={doc['overview'] as never} />
             {doc['whoWeHelp'] ? <RichText data={doc['whoWeHelp'] as never} /> : null}

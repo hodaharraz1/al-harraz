@@ -8,6 +8,7 @@ import { articleSchema, breadcrumbSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Section } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { JusticeMark } from '@/components/ui/JusticeMark'
 import { RichText } from '@/components/ui/RichText'
 import { Badge } from '@/components/ui/Badge'
 import { articleCategoryLabel } from '@/lib/article-categories'
@@ -83,15 +84,17 @@ export default async function ArticlePage({
           imageUrl,
         })}
       />
-      <Section tone="light">
+      <Section tone="light" className="relative overflow-hidden">
+        <JusticeMark className="pointer-events-none absolute -end-20 top-0 hidden h-80 w-auto text-cyan-600/[0.05] xl:block" />
+
         <Breadcrumbs items={breadcrumbs} />
         {doc['category'] ? (
-          <div className="mt-4">
+          <div className="relative mt-4">
             <Badge>{articleCategoryLabel(doc['category'] as string, locale)}</Badge>
           </div>
         ) : null}
-        <h1 className="mt-3 font-heading text-3xl sm:text-4xl">{doc['title'] as string}</h1>
-        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-navy-900/70">
+        <h1 className="relative mt-3 font-heading text-3xl sm:text-4xl">{doc['title'] as string}</h1>
+        <div className="relative mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-navy-900/70">
           {author?.name ? <span>{author.name}</span> : null}
           {publishDate ? <span>{new Date(publishDate).toLocaleDateString(locale)}</span> : null}
           {lastReviewedDate ? (
@@ -101,11 +104,11 @@ export default async function ArticlePage({
           ) : null}
         </div>
 
-        <div className="mt-10 max-w-3xl">
+        <div className="relative mt-10 max-w-3xl">
           <RichText data={doc['body'] as never} />
         </div>
 
-        <p className="mt-10 max-w-3xl border-t border-navy-900/10 pt-6 text-xs text-navy-900/70">{dict.disclaimer}</p>
+        <p className="relative mt-10 max-w-3xl border-t border-navy-900/10 pt-6 text-xs text-navy-900/70">{dict.disclaimer}</p>
       </Section>
     </>
   )

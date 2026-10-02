@@ -6,6 +6,7 @@ import { breadcrumbSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Section } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { JusticeMark } from '@/components/ui/JusticeMark'
 import { OfficeSection } from '@/components/home/OfficeSection'
 import { LinkButton } from '@/components/ui/Button'
 import { buildWhatsAppLink, buildTelLink } from '@/lib/whatsapp'
@@ -35,10 +36,12 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   return (
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
-      <Section tone="light">
+      <Section tone="light" className="relative overflow-hidden">
+        <JusticeMark className="pointer-events-none absolute -end-16 top-0 hidden h-72 w-auto text-cyan-600/[0.06] lg:block" />
+
         <Breadcrumbs items={breadcrumbs} />
         <h1 className="mt-4 font-heading text-3xl sm:text-4xl">{t.title}</h1>
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="relative mt-6 flex flex-wrap gap-3">
           <LinkButton href={buildTelLink()} variant="primary">
             {dict.cta.call}
           </LinkButton>
@@ -49,7 +52,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             {dict.nav.consultation}
           </LinkButton>
         </div>
-        <div className="mt-12">
+        <div className="relative mt-12">
           <OfficeSection locale={locale} />
         </div>
       </Section>

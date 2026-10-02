@@ -6,6 +6,7 @@ import { breadcrumbSchema } from '@/lib/structured-data'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Section } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
+import { JusticeMark } from '@/components/ui/JusticeMark'
 import { LinkButton } from '@/components/ui/Button'
 import { ConsultationForm } from '@/components/forms/ConsultationForm'
 import { getPayloadClient } from '@/lib/payload'
@@ -47,13 +48,15 @@ export default async function ConsultationPage({ params }: { params: Promise<{ l
   return (
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
-      <Section tone="light">
-        <Breadcrumbs items={breadcrumbs} />
-        <h1 className="mt-4 font-heading text-3xl sm:text-4xl">{t.title}</h1>
-        <p className="mt-3 max-w-xl text-navy-900/80">{t.description}</p>
-        <p className="mt-3 max-w-xl text-sm font-medium text-alert-red">{dict.consultationWarning}</p>
+      <Section tone="light" className="relative overflow-hidden">
+        <JusticeMark className="pointer-events-none absolute -end-16 top-0 hidden h-72 w-auto text-cyan-600/[0.05] lg:block" />
 
-        <div className="mt-6 flex flex-wrap gap-3">
+        <Breadcrumbs items={breadcrumbs} />
+        <h1 className="relative mt-4 font-heading text-3xl sm:text-4xl">{t.title}</h1>
+        <p className="relative mt-3 max-w-xl text-navy-900/80">{t.description}</p>
+        <p className="relative mt-3 max-w-xl text-sm font-medium text-alert-red">{dict.consultationWarning}</p>
+
+        <div className="relative mt-6 flex flex-wrap gap-3">
           <LinkButton href={buildTelLink()} variant="ghost">
             {dict.hero.ctaTertiary}
           </LinkButton>
@@ -62,11 +65,11 @@ export default async function ConsultationPage({ params }: { params: Promise<{ l
           </LinkButton>
         </div>
 
-        <div className="mt-8 max-w-xl">
+        <div className="relative mt-8 max-w-xl">
           <ConsultationForm locale={locale} sourcePage={`/${locale}/consultation`} practiceAreaOptions={practiceAreaOptions} />
         </div>
 
-        <p className="mt-10 max-w-xl border-t border-navy-900/10 pt-6 text-xs text-navy-900/70">{dict.disclaimer}</p>
+        <p className="relative mt-10 max-w-xl border-t border-navy-900/10 pt-6 text-xs text-navy-900/70">{dict.disclaimer}</p>
       </Section>
     </>
   )
