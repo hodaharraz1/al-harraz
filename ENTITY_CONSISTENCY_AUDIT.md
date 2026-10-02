@@ -25,7 +25,7 @@ Verifies the business's core identity facts match, character-for-character, acro
 | Google Business Profile | ✅ | ✅ (verified "برج آل حراز – الدور الأول – أمام كوبري عبد المجيد – السنانية – Damietta Governorate 34511") | Not re-checked this pass (correct as of the GBP verification session) | ✅ (updated to alharrazlaw.com, live-confirmed) | PASS |
 | Google Search Console (Domain property) | N/A (no NAP displayed there) | N/A | N/A | ✅ Verified for exactly `alharrazlaw.com` | PASS |
 | Bing Webmaster Tools | N/A | N/A | N/A | ✅ Verified for exactly `alharrazlaw.com` | PASS |
-| Facebook Business Page | ⚠️ Page exists (linked from GBP social profiles) | NOT VERIFIED | NOT VERIFIED | NOT VERIFIED | **NOT VERIFIED** — flagged already in `LOCAL_NAP_AUDIT.md`, unchanged |
+| Facebook Business Page | ❌ "مكتب ال حراز للإستشارات القانونيه وأعمال المحاماه" — does not exactly match canonical (missing آ, reversed word order) | ✅ "Damietta" shown, consistent | NOT VISIBLE in this session's fetch | — | **FAIL — real mismatch found**, see `LOCAL_NAP_AUDIT.md` for the exact diff and fix needed |
 | Bing Places for Business | — | — | — | — | NOT STARTED — separate from Bing Webmaster Tools, see `LOCAL_CITATION_TRACKER.md` |
 
 ## Founding facts consistency (schema-level)
@@ -35,5 +35,5 @@ Verifies the business's core identity facts match, character-for-character, acro
 Searched the codebase and CMS seed data for any second address, branch, or city-specific office page: none found. `practice-areas` and `industries` collections contain service categories, not locations — consistent with the "one office, nationwide service" positioning. No action needed.
 
 ## Outstanding items
-1. Facebook Business Page NAP — still not independently re-verified (same open item as `LOCAL_NAP_AUDIT.md`).
+1. **Facebook Business Page name mismatch — confirmed real, needs fixing.** The Page name does not exactly match the canonical business name; see `LOCAL_NAP_AUDIT.md` for the precise diff. This is the one concrete, actionable finding from this audit.
 2. Bing Places for Business — not yet created (zero-cost, pending firm owner's Microsoft account time).
