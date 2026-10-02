@@ -11,7 +11,7 @@ The primary growth cluster (§8 of the SEO growth program). Maps what's live tod
 | What is a civil lawsuit (definitional) | ✅ Live | `/insights/what-is-civil-lawsuit` |
 | How to file a civil lawsuit in Egypt (procedural) | ✅ Live | `/insights/filing-a-civil-lawsuit-in-egypt` |
 | How civil judgments are enforced | ✅ Live | `/insights/how-civil-judgments-are-enforced` |
-| Evidence in civil cases | ❌ Gap | — |
+| Evidence in civil cases | ✅ Live | `/insights/evidence-in-civil-cases-egypt` |
 | Appeals process (استئناف) in civil cases | ❌ Gap | — |
 | Settlement / out-of-court resolution in civil disputes | ❌ Gap | — |
 | Urgent/interim matters (الأمور المستعجلة) | ⚠️ Practice area exists, no article | `urgent-interim-matters` (practice area only) |
@@ -24,7 +24,7 @@ The primary growth cluster (§8 of the SEO growth program). Maps what's live tod
 |---|---|---|
 | Breach of contract — rights of the aggrieved party | ✅ Live | `/insights/breach-of-contract-rights-egypt` |
 | What to review before signing a contract | ✅ Live | `/insights/what-to-review-before-signing-contract` |
-| Drafting contracts — key clauses to include | ❌ Gap | — |
+| Drafting contracts — key clauses to include | ⏳ Drafted, awaiting lawyer review | `contract-drafting-key-clauses-egypt` |
 | Termination vs. rescission of contracts (fasakh) | ❌ Gap — overlaps partially with the breach article; needs careful scoping to avoid cannibalization (see `CANNIBALIZATION_REPORT.md`) | — |
 | Guarantees and security in contracts | ❌ Gap | — |
 | Contract evidence (إثبات) — what counts, what doesn't | ❌ Gap | — |
@@ -70,7 +70,7 @@ The primary growth cluster (§8 of the SEO growth program). Maps what's live tod
 | Supporting topic | Status | Page |
 |---|---|---|
 | How is an estate divided among heirs? | ✅ Live | `/insights/how-is-an-estate-divided` |
-| Common disputes among heirs | ❌ Gap | — |
+| Common disputes among heirs | ✅ Live | `/insights/common-inheritance-disputes-egypt` |
 | Wills — how drafting works | ⚠️ Practice area exists (`wills-drafting`), no article | — |
 | Inherited real estate + registration (bridges to Real Estate pillar) | ❌ Gap | — |
 
@@ -105,11 +105,11 @@ The primary growth cluster (§8 of the SEO growth program). Maps what's live tod
 
 Ranked by (a) how central the topic is to the civil pillar and (b) how directly it closes a currently-missing link in the internal-linking graph above:
 
-1. Evidence in civil cases (closes the Civil Litigation pillar's biggest gap)
-2. Buyer's legal due-diligence checklist for real estate (digital-PR asset, §77)
-3. Common disputes among heirs (Inheritance)
-4. Drafting contracts — key clauses (Contracts pillar)
-5. Property possession disputes (Real Estate)
+1. ✅ Evidence in civil cases — live
+2. ✅ Buyer's legal due-diligence checklist for real estate (digital-PR asset, §77) — live
+3. ✅ Common disputes among heirs (Inheritance) — live
+4. ⏳ Drafting contracts — key clauses (Contracts pillar) — drafted, awaiting lawyer review
+5. Property possession disputes (Real Estate) — next up
 6. Proving damage and causation (Compensation)
 7. Appeals process in civil cases (Civil Litigation)
 8. Commercial disputes — general overview (Commercial)

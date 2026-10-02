@@ -7,9 +7,9 @@ Derived from the gap priority list in `CIVIL_AUTHORITY_MAP.md`. Cadence target: 
 | # | Topic (AR) | Cluster | Priority | Target week | Status |
 |---|---|---|---|---|---|
 | 1 | إثبات الدعوى المدنية: ما هي وسائل الإثبات المقبولة؟ (Evidence in Civil Cases) | Civil Litigation | P1 | Week 1 | ✅ LIVE — approved, seeded, IndexNow-submitted (164/164). `/ar\|en/insights/evidence-in-civil-cases-egypt` |
-| 2 | قائمة مراجعة قانونية قبل شراء عقار في مصر (Real-Estate Buyer's Legal Checklist) | Real Estate | P1 | Week 1–2 | TODO — also the first digital-PR asset (§77) |
-| 3 | الخلافات الشائعة بين الورثة وكيفية حلها (Common Disputes Among Heirs) | Inheritance | P1 | Week 2 | TODO |
-| 4 | ما الذي يجب مراجعته عند صياغة عقد؟ (Drafting Contracts — Key Clauses) | Contracts | P2 | Week 3 | TODO |
+| 2 | قائمة مراجعة قانونية قبل شراء عقار في مصر (Real-Estate Buyer's Legal Checklist) | Real Estate | P1 | Week 1–2 | ✅ LIVE — approved, seeded, cross-linked, IndexNow-submitted. `/ar\|en/insights/real-estate-buyer-legal-checklist-egypt` — also the first digital-PR asset (§77), now eligible for outreach |
+| 3 | الخلافات الشائعة بين الورثة وكيفية حلها (Common Disputes Among Heirs) | Inheritance | P1 | Week 2 | ✅ LIVE — approved, seeded, cross-linked, IndexNow-submitted. `/ar\|en/insights/common-inheritance-disputes-egypt` |
+| 4 | ما الذي يجب مراجعته عند صياغة عقد؟ (Drafting Contracts — Key Clauses) | Contracts | P2 | Week 3 | Drafted, sourced, sent for lawyer review — `common-inheritance-disputes-egypt` sibling article `contract-drafting-key-clauses-egypt` |
 | 5 | منازعات حيازة العقارات: نظرة عامة (Property Possession Disputes) | Real Estate | P2 | Week 3–4 | TODO |
 
 ## Non-article execution items this cycle

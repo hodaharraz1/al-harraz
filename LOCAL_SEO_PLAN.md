@@ -1,8 +1,13 @@
 # Local SEO Plan
 
-## Positioning note (important — read before acting on anything below)
+## Positioning note (superseded 2026-10-02 — read before acting on anything below)
 
-Earlier in this project, local SEO content leaned on "محامي في دمياط" / Damietta-first framing. The firm has since explicitly directed the opposite: the site now leads with **"serves clients across Egypt"** and Damietta was deliberately de-emphasized in the homepage, footer, about page, and elsewhere (kept only where factually required — the real office address, and the map). **Do not re-introduce heavy Damietta keyword targeting into page copy or headings without asking the firm first** — it would contradict their most recent, explicit instruction. Local SEO here means "make sure the real office is findable and accurately represented," not "optimize copy for city-name keywords."
+**Historical note, no longer current policy:** earlier in this project, local SEO content leaned on "محامي في دمياط" / Damietta-first framing, then the firm explicitly reversed that to a "serves clients across Egypt" framing with Damietta de-emphasized (the note below describes that reversal, and is kept for history).
+
+**Current policy (2026-10-02):** the firm's SEO growth program explicitly directs Damietta local SEO as the **highest local priority**, alongside the existing nationwide-service positioning — not a replacement for it, an addition. When asked directly which instruction governs, the firm confirmed the newer, Damietta-first directive takes precedence. This means:
+- Local citations, GBP optimization, and Damietta-specific service/content build-out (per `SEO_OPPORTUNITY_QUEUE.md` §8 of the governing SEO brief) are now in scope and should proceed.
+- This does **not** license fake branches, multiple-city doorway pages, or dishonest "serving every city" claims — the firm still has one real office, in Damietta, serving clients nationwide; that underlying fact hasn't changed, only how much the site's SEO work actively targets Damietta-specific search terms.
+- Homepage/footer/about headline copy has not been rewritten back to heavy Damietta-first language as part of this reversal — the Damietta-first work so far has been additive (GBP, citations, FAQs, articles that naturally reference the real office) rather than a rewrite of existing approved page copy. Confirm with the firm before rewriting any existing headline/hero copy specifically for Damietta keywords, since that's a different, bigger change than the additive work already done.
 
 ## Google Business Profile (GBP)
 

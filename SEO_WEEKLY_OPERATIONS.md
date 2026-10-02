@@ -28,7 +28,13 @@ Statuses: `TODO` / `IN PROGRESS` / `PASS` / `PARTIAL` / `BLOCKED` / `FAILED`
 | Backlink + outreach pipelines started | ✅ PASS | `BACKLINK_PIPELINE.md`, `OUTREACH_PIPELINE.md` |
 | 30-day content calendar built | ✅ PASS | `CONTENT_CALENDAR_30_DAY.md` |
 | Article #1 (Evidence in civil cases) — drafted, sourced, approved by Mahmoud Harraz, seeded, live, IndexNow-submitted | ✅ PASS | `LEGAL_SOURCE_REGISTER.md`, live at `/ar\|en/insights/evidence-in-civil-cases-egypt`, sitemap 162→164 |
-| Article #2 (Real-estate buyer's legal checklist) — drafted, sourced, sent for lawyer review | BLOCKED — AWAITING LAWYER REVIEW | `LEGAL_SOURCE_REGISTER.md` |
+| Article #2 (Real-estate buyer's legal checklist) — approved, live, cross-linked, IndexNow-submitted | ✅ PASS | Live-verified `/ar\|en/insights/real-estate-buyer-legal-checklist-egypt`, sitemap 162→168 |
+| Article #3 (Common inheritance disputes) — approved, live, cross-linked, IndexNow-submitted | ✅ PASS | Live-verified `/ar\|en/insights/common-inheritance-disputes-egypt` |
+| Article #4 (Contract drafting — key clauses) — drafted, sourced, sent for lawyer review | BLOCKED — AWAITING LAWYER REVIEW | `LEGAL_SOURCE_REGISTER.md` |
+| Internal links between civil-cluster articles | ✅ PASS | Live-verified as real `<a href>` tags on 2 of the 3 cross-linked pairs |
+| Civil-law FAQ section (previously empty) | ✅ PASS | Live-verified 4 FAQs now render on `/ar/practice-areas/civil-law` |
+| GBP optimization plan (Damietta + civil law emphasis) | ✅ PLAN READY — BLOCKED on firm owner's GBP login | `GBP_OPTIMIZATION_PLAN.md` |
+| Damietta local-SEO policy conflict found and resolved | ✅ RESOLVED — firm confirmed newer Damietta-first directive governs | `LOCAL_SEO_PLAN.md` |
 | AI search readiness audit | ✅ PASS | `AI_SEARCH_READINESS.md` |
 | Entity consistency audit | ✅ PASS | `ENTITY_CONSISTENCY_AUDIT.md` |
 | Legal visual identity — site-wide rollout (10 page templates) | ✅ PASS | `LEGAL_VISUAL_IDENTITY_AUDIT.md`, `VISUAL_REGRESSION_REPORT.md` |
