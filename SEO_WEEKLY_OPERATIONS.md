@@ -28,7 +28,13 @@ Statuses: `TODO` / `IN PROGRESS` / `PASS` / `PARTIAL` / `BLOCKED` / `FAILED`
 | Backlink + outreach pipelines started | ✅ PASS | `BACKLINK_PIPELINE.md`, `OUTREACH_PIPELINE.md` |
 | 30-day content calendar built | ✅ PASS | `CONTENT_CALENDAR_30_DAY.md` |
 | Article #1 (Evidence in civil cases) — drafted, sourced, approved by Mahmoud Harraz, seeded, live, IndexNow-submitted | ✅ PASS | `LEGAL_SOURCE_REGISTER.md`, live at `/ar\|en/insights/evidence-in-civil-cases-egypt`, sitemap 162→164 |
-| Article #2 (Real-estate buyer's legal checklist) — next in queue | IN PROGRESS | `CONTENT_CALENDAR_30_DAY.md` |
+| Article #2 (Real-estate buyer's legal checklist) — drafted, sourced, sent for lawyer review | BLOCKED — AWAITING LAWYER REVIEW | `LEGAL_SOURCE_REGISTER.md` |
+| AI search readiness audit | ✅ PASS | `AI_SEARCH_READINESS.md` |
+| Entity consistency audit | ✅ PASS | `ENTITY_CONSISTENCY_AUDIT.md` |
+| Legal visual identity — site-wide rollout (10 page templates) | ✅ PASS | `LEGAL_VISUAL_IDENTITY_AUDIT.md`, `VISUAL_REGRESSION_REPORT.md` |
+| SERP gap / competitor research (Damietta civil-law) | ✅ PASS (research only — our own rankings not verifiable without GSC) | `SERP_GAP_ANALYSIS.md` |
+| Internal-linking pass across civil-cluster articles | BLOCKED — requires extending the seed rich-text helper to support link nodes (plain-text paragraphs only today); scoped as a small follow-up, not done speculatively | `CIVIL_AUTHORITY_MAP.md` |
+| First monthly report | ✅ DONE | `MONTHLY_SEO_REPORT_2026_10.md` |
 
 ### Reviews requested this cycle
 *(empty — log each request here as sent, per `REVIEW_GROWTH_PLAYBOOK.md`)*
