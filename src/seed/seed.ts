@@ -128,6 +128,9 @@ async function run() {
         order: pa.order,
         status: 'published',
         overview: richTextFromPlainText(pa.overview.ar),
+        ...(pa.whoWeHelp ? { whoWeHelp: richTextFromParagraphs(pa.whoWeHelp.ar) } : {}),
+        ...(pa.legalIssuesCovered ? { legalIssuesCovered: richTextFromParagraphs(pa.legalIssuesCovered.ar) } : {}),
+        ...(pa.howWeAssist ? { howWeAssist: richTextFromParagraphs(pa.howWeAssist.ar) } : {}),
       },
     })
     await payload.update({
@@ -138,15 +141,31 @@ async function run() {
         title: pa.title.en,
         summary: pa.summary.en,
         overview: richTextFromPlainText(pa.overview.en),
+        ...(pa.whoWeHelp ? { whoWeHelp: richTextFromParagraphs(pa.whoWeHelp.en) } : {}),
+        ...(pa.legalIssuesCovered ? { legalIssuesCovered: richTextFromParagraphs(pa.legalIssuesCovered.en) } : {}),
+        ...(pa.howWeAssist ? { howWeAssist: richTextFromParagraphs(pa.howWeAssist.en) } : {}),
       },
     })
   }
 
-  // One-off content correction: this slug's summary/overview were rewritten
-  // to drop "given our Damietta location" framing (the firm serves clients
-  // nationwide), so force-sync its content even though the doc already
-  // exists — the loop above intentionally leaves existing content alone.
-  const contentResyncSlugs = ['maritime-shipping-port-law']
+  // One-off content corrections: these slugs' content was rewritten after
+  // the doc already existed (the loop above intentionally leaves existing
+  // content alone otherwise), so force-sync them here.
+  // - maritime-shipping-port-law: dropped "given our Damietta location"
+  //   framing (the firm serves clients nationwide).
+  // - criminal-law, contract-translation: GSC flagged both as "Crawled -
+  //   currently not indexed" for having only a one-sentence overview and
+  //   no distinct legal value of their own — see GSC_INDEXING_RECOVERY.md
+  //   §3. Expanded with whoWeHelp/legalIssuesCovered/howWeAssist.
+  // - contracts-commercial-agreements: added a howWeAssist cross-link to
+  //   contract-translation so that page isn't only reachable from the
+  //   full practice-areas listing (§5 internal-linking fix).
+  const contentResyncSlugs = [
+    'maritime-shipping-port-law',
+    'criminal-law',
+    'contract-translation',
+    'contracts-commercial-agreements',
+  ]
   for (const slug of contentResyncSlugs) {
     const pa = practiceAreas.find((p) => p.slug === slug)
     if (!pa) continue
@@ -157,13 +176,25 @@ async function run() {
       collection: 'practice-areas',
       id: existingDoc.id,
       locale: 'ar',
-      data: { summary: pa.summary.ar, overview: richTextFromPlainText(pa.overview.ar) },
+      data: {
+        summary: pa.summary.ar,
+        overview: richTextFromPlainText(pa.overview.ar),
+        ...(pa.whoWeHelp ? { whoWeHelp: richTextFromParagraphs(pa.whoWeHelp.ar) } : {}),
+        ...(pa.legalIssuesCovered ? { legalIssuesCovered: richTextFromParagraphs(pa.legalIssuesCovered.ar) } : {}),
+        ...(pa.howWeAssist ? { howWeAssist: richTextFromParagraphs(pa.howWeAssist.ar) } : {}),
+      },
     })
     await payload.update({
       collection: 'practice-areas',
       id: existingDoc.id,
       locale: 'en',
-      data: { summary: pa.summary.en, overview: richTextFromPlainText(pa.overview.en) },
+      data: {
+        summary: pa.summary.en,
+        overview: richTextFromPlainText(pa.overview.en),
+        ...(pa.whoWeHelp ? { whoWeHelp: richTextFromParagraphs(pa.whoWeHelp.en) } : {}),
+        ...(pa.legalIssuesCovered ? { legalIssuesCovered: richTextFromParagraphs(pa.legalIssuesCovered.en) } : {}),
+        ...(pa.howWeAssist ? { howWeAssist: richTextFromParagraphs(pa.howWeAssist.en) } : {}),
+      },
     })
   }
 

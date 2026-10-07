@@ -11,11 +11,17 @@
 
 type Bilingual = { ar: string; en: string }
 
+type BilingualParagraphs = { ar: string[]; en: string[] }
+
 export const practiceAreas: Array<{
   slug: string
   title: Bilingual
   summary: Bilingual
   overview: Bilingual
+  /** Optional deeper content (who the service is for, what it covers, how we help) — only written for pages that need more than the one-line overview to stand on their own; see GSC_INDEXING_RECOVERY.md. */
+  whoWeHelp?: BilingualParagraphs
+  legalIssuesCovered?: BilingualParagraphs
+  howWeAssist?: BilingualParagraphs
   featured?: boolean
   order: number
 }> = [
@@ -78,6 +84,14 @@ export const practiceAreas: Array<{
       ar: 'نتولى صياغة ومراجعة والتفاوض بشأن مختلف أنواع العقود التجارية والمدنية، بما يضمن وضوح الالتزامات وحماية حقوق موكلينا.',
       en: 'We draft, review and negotiate a wide range of commercial and civil contracts, ensuring clear obligations and protecting our clients’ rights.',
     },
+    howWeAssist: {
+      ar: [
+        'عند التعامل مع طرف أجنبي أو تقديم العقد لجهة أجنبية، نقدم أيضًا خدمة [ترجمة العقود القانونية](/ar/practice-areas/contract-translation) لضمان نقل الالتزامات التعاقدية بدقة بين اللغتين.',
+      ],
+      en: [
+        'When a contract involves a foreign party or needs to be submitted abroad, we also offer [legal contract translation](/en/practice-areas/contract-translation) to ensure the contractual obligations carry over accurately between languages.',
+      ],
+    },
   },
   {
     slug: 'contract-translation',
@@ -90,6 +104,36 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نقدم خدمة ترجمة العقود والمستندات القانونية بمختلف أنواعها من وإلى اللغتين العربية والإنجليزية، مع مراعاة الدقة القانونية والمصطلحات الفنية الخاصة بكل عقد، بما يضمن توافق الترجمة مع المعنى والالتزامات الواردة في النص الأصلي.',
       en: 'We translate contracts and legal documents of all kinds, to and from Arabic and English, with close attention to legal accuracy and the technical terminology specific to each contract — ensuring the translation faithfully reflects the meaning and obligations of the original text.',
+    },
+    whoWeHelp: {
+      ar: [
+        'تحتاج الأفراد والشركات لترجمة قانونية دقيقة في مواقف متعددة: عند التعاقد مع طرف أجنبي، أو عند تقديم مستندات عقدية لجهة حكومية أو بنك أو سفارة، أو عند مراجعة عقد صادر بلغة أجنبية قبل التوقيع عليه.',
+        'نساعد الشركات المصرية في ترجمة عقودها ومستنداتها التعاقدية للتعامل مع شركاء أو عملاء أو ممولين أجانب، كما نساعد الأفراد والشركات الأجنبية في ترجمة العقود والمستندات القانونية المصرية للتعامل معها بثقة.',
+      ],
+      en: [
+        'Individuals and companies need accurate legal translation in a range of situations: entering into a contract with a foreign party, submitting contractual documents to a government body, bank, or embassy, or reviewing a foreign-language contract before signing it.',
+        'We help Egyptian companies translate their contracts and contractual documents for dealings with foreign partners, clients, or financiers, and help foreign individuals and companies translate Egyptian legal documents so they can deal with them with confidence.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'نترجم أنواعًا متعددة من المستندات القانونية والتعاقدية، منها عقود البيع والشراء، عقود العمل، التوكيلات، عقود الشركات ومحاضر الاجتماعات، والمستندات القضائية.',
+        'الترجمة القانونية تختلف عن الترجمة العامة في أن أي عدم دقة في نقل مصطلح قانوني أو بند تعاقدي قد يغيّر المعنى القانوني أو الالتزام المقصود — لذلك تُولى عناية خاصة لثبات المصطلحات القانونية ودقة نقل الشروط الجوهرية كشرطي القانون الواجب التطبيق والاختصاص القضائي.',
+      ],
+      en: [
+        'We translate a wide range of legal and contractual documents, including sale and purchase contracts, employment contracts, powers of attorney, corporate documents and meeting minutes, and court documents.',
+        'Legal translation differs from general translation in that any inaccuracy in rendering a legal term or contractual clause can change the intended legal meaning or obligation — so particular care goes into consistent legal terminology and the accurate rendering of material terms such as governing-law and jurisdiction clauses.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'قبل الترجمة، نراجع المحتوى القانوني للمستند نفسه، وليس فقط صياغته اللغوية، لضمان أن تنقل الترجمة المعنى والالتزامات الواردة في النص الأصلي بدقة.',
+        'نقدم الترجمة بصيغة مناسبة للتقديم للجهات الرسمية أو التوثيق عند الحاجة. لمناقشة مستند محدد تحتاجون ترجمته، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        "Before translating, we review the document's legal content itself, not just its wording, to make sure the translation accurately carries over the meaning and obligations of the original text.",
+        'We can prepare the translation in a form suitable for submission to official bodies or notarization where needed. To discuss a specific document you need translated, you can book a consultation with our team.',
+      ],
     },
   },
   {
@@ -183,6 +227,36 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نقدم الدفاع القانوني والتمثيل في القضايا الجنائية أمام النيابة العامة ومختلف درجات المحاكم الجنائية.',
       en: 'We provide legal defense and representation in criminal matters before the Public Prosecution and the criminal courts.',
+    },
+    whoWeHelp: {
+      ar: [
+        'نساعد الأفراد الذين يواجهون اتهامًا جنائيًا أو استدعاءً للتحقيق، سواء في مرحلة التحقيقات الأولية أمام النيابة العامة أو أثناء نظر القضية أمام المحكمة المختصة.',
+        'كما نساعد من يحتاج لتقديم بلاغ أو شكوى جنائية، أو من يمثل طرفًا متضررًا في قضية جنائية ويحتاج لتمثيل قانوني لمتابعة حقوقه.',
+      ],
+      en: [
+        'We help individuals facing a criminal accusation or a summons for investigation, whether at the initial investigation stage before the Public Prosecution or while the case is being heard before the competent court.',
+        'We also help clients who need to file a criminal complaint, or who are the aggrieved party in a criminal case and need legal representation to pursue their rights.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'نغطي مختلف درجات الجرائم التي يقسمها القانون المصري إلى مخالفات وجنح وجنايات، وتختلف كل درجة في العقوبة المقررة والمحكمة المختصة بنظرها — ولهذا التصنيف أثر مباشر على استراتيجية الدفاع منذ البداية. لمزيد من التفاصيل، راجع [ما الفرق بين الجنحة والجناية؟](/ar/insights/difference-between-misdemeanor-and-felony).',
+        'نولي اهتمامًا خاصًا بضمان حقوق المتهم الأساسية في كل مراحل القضية: افتراض البراءة، حق الاستعانة بمحامٍ، عدم الإجبار على الإدلاء بأقوال مجرّمة، والعلم الواضح بالتهمة الموجهة. لمزيد من التفاصيل، راجع [حقوق المتهم في القضايا الجنائية](/ar/insights/rights-of-the-accused-in-criminal-cases).',
+      ],
+      en: [
+        "We cover matters across the severity levels Egyptian law divides crimes into — infractions, misdemeanors, and felonies — each carrying different penalties and falling under a different court's jurisdiction; this classification directly shapes defense strategy from the outset. See [What's the Difference Between a Misdemeanor and a Felony?](/en/insights/difference-between-misdemeanor-and-felony) for more detail.",
+        "We pay particular attention to safeguarding a defendant's fundamental rights at every stage: the presumption of innocence, the right to legal representation, the right not to be compelled to make self-incriminating statements, and the right to be clearly informed of the charge. See [Rights of the Accused in Criminal Cases](/en/insights/rights-of-the-accused-in-criminal-cases) for more detail.",
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نرافق الموكل منذ مرحلة التحقيق الأولى، حيث يكون حضور محامٍ في بعض الحالات إلزاميًا بموجب القانون، وحتى صدور الحكم النهائي وما قد يتبعه من طعن.',
+        'نساعد الموكل على فهم موقفه القانوني بوضوح، وبناء دفاع مبني على ظروف قضيته تحديدًا. لمناقشة تفاصيل قضيتك، يمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        "We accompany clients from the initial investigation stage — where a lawyer's presence is mandatory by law in certain cases — through to a final judgment and any subsequent appeal.",
+        'We help clients understand their legal position clearly and build a defense grounded in the specific facts of their case. To discuss the details of your case, you can book a consultation with our team.',
+      ],
     },
     featured: true,
   },
@@ -762,14 +836,14 @@ export const articles: Array<{
       ar: [
         'قبل التوقيع على أي عقد بيع عقاري، من الضروري التحقق من سند ملكية البائع للعقار وخلوّه من أي نزاعات أو حقوق للغير عليه (كرهن أو حجز)، لأن شراء عقار من غير مالكه الحقيقي أو عقار مثقل بحقوق للغير قد يعرضك لخسارة كبيرة لاحقًا.',
         'يجب أن يتضمن العقد وصفًا دقيقًا للعقار (المساحة، الحدود، رقم القطعة إن وجد)، والثمن وطريقة وموعد سداده، وتاريخ التسليم الفعلي، والتزامات كل طرف بشأن المصروفات المرتبطة بالتسجيل والضرائب إن وجدت.',
-        'تسجيل العقد بالشكل القانوني الصحيح أمر بالغ الأهمية لحماية حق الملكية بشكل كامل، ذلك أن العقد غير المسجَّل قد لا يمنح المشتري كافة الحقوق المقررة قانونًا في مواجهة الغير.',
-        'كل صفقة عقارية لها ظروفها الخاصة، سواء كانت شراء وحدة سكنية أو أرض أو عقار تجاري. قبل توقيع أي عقد عقاري، تواصل معنا لمراجعته والتأكد من حماية حقوقك.',
+        'تسجيل العقد بالشكل القانوني الصحيح أمر بالغ الأهمية لحماية حق الملكية بشكل كامل، ذلك أن العقد غير المسجَّل قد لا يمنح المشتري كافة الحقوق المقررة قانونًا في مواجهة الغير. للتفاصيل الكاملة عن أهمية هذه الخطوة وإجراءاتها، راجع [لماذا تسجيل عقارك في الشهر العقاري ضروري؟](/ar/insights/real-estate-registration-egypt).',
+        'كل صفقة عقارية لها ظروفها الخاصة، سواء كانت شراء وحدة سكنية أو أرض أو عقار تجاري. للاطلاع على قائمة عملية بأهم النقاط الواجب التحقق منها قبل التوقيع، راجع [قائمة مراجعة قانونية قبل شراء عقار في مصر](/ar/insights/real-estate-buyer-legal-checklist-egypt). قبل توقيع أي عقد عقاري، تواصل معنا لمراجعته والتأكد من حماية حقوقك.',
       ],
       en: [
         'Before signing any real estate purchase contract, it is essential to verify the seller\'s title to the property and confirm it is free of disputes or third-party rights (such as a mortgage or attachment), since buying a property from someone who is not its true owner, or one encumbered by third-party rights, can expose you to significant loss later.',
         'The contract should include an accurate description of the property (area, boundaries, plot number if applicable), the price and how and when it will be paid, the actual delivery date, and each party\'s obligations regarding registration expenses and any applicable taxes.',
-        'Properly registering the contract is critical to fully protecting ownership rights, since an unregistered contract may not grant the buyer the full rights the law provides against third parties.',
-        'Every real estate transaction has its own particulars, whether it is the purchase of a residential unit, land, or a commercial property. Before signing any real estate contract, get in touch with us to have it reviewed and ensure your rights are protected.',
+        'Properly registering the contract is critical to fully protecting ownership rights, since an unregistered contract may not grant the buyer the full rights the law provides against third parties. For the full picture on why this step matters and how it works, see [Why Registering Your Property at the Real Estate Registry Matters](/en/insights/real-estate-registration-egypt).',
+        'Every real estate transaction has its own particulars, whether it is the purchase of a residential unit, land, or a commercial property. For a practical rundown of the key points to verify before signing, see [Legal Checklist Before Buying Property in Egypt](/en/insights/real-estate-buyer-legal-checklist-egypt). Before signing any real estate contract, get in touch with us to have it reviewed and ensure your rights are protected.',
       ],
     },
   },
@@ -786,13 +860,13 @@ export const articles: Array<{
         'يكفل الدستور المصري والقانون للمتهم في أي قضية جنائية مجموعة من الحقوق الأساسية، تهدف إلى ضمان محاكمة عادلة منذ لحظة الاتهام وحتى صدور الحكم النهائي. أول هذه الحقوق هو افتراض البراءة، فالمتهم بريء حتى تثبت إدانته بحكم قضائي نهائي، ولا يجوز معاملته كمذنب قبل ذلك.',
         'يكفل القانون للمتهم أيضًا حق الاستعانة بمحامٍ في جميع مراحل التحقيق والمحاكمة، وفي بعض الحالات يكون حضور المحامي وجوبيًا ولا يصح إجراء التحقيق بدونه. ومن الحقوق المهمة كذلك حق المتهم في عدم إجباره على الإدلاء بأقوال تجرّمه، وحقه في العلم بالتهمة الموجهة إليه بوضوح حتى يتمكن من إعداد دفاعه.',
         'يخضع القبض والحبس الاحتياطي لضوابط وحدود زمنية ينظمها القانون، ولا يجوز حبس أي شخص إلا بأمر من جهة مختصة ووفق الإجراءات المقررة. معرفة هذه الحقوق منذ بداية أي إجراء جنائي أمر بالغ الأهمية، لأن أي إخلال بها قد يكون له أثر مباشر على سير القضية.',
-        'إذا كنت طرفًا في قضية جنائية أو تحقيق، يُفضَّل دائمًا الاستعانة بمحامٍ في أقرب وقت ممكن. يمكنك حجز استشارة مع فريقنا لمناقشة موقفك تحديدًا.',
+        'إذا كنت طرفًا في قضية جنائية أو تحقيق، يُفضَّل دائمًا الاستعانة بمحامٍ في أقرب وقت ممكن. تعرّف على [خدمات الدفاع الجنائي لدينا](/ar/practice-areas/criminal-law)، أو احجز استشارة مع فريقنا لمناقشة موقفك تحديدًا.',
       ],
       en: [
         'The Egyptian Constitution and criminal law guarantee anyone accused in a criminal case a set of fundamental rights, intended to ensure a fair trial from the moment of accusation through to a final judgment. The first of these is the presumption of innocence — an accused person is innocent until proven guilty by a final court judgment, and may not be treated as guilty before that.',
         'The law also guarantees the right to legal representation throughout investigation and trial; in some cases, a lawyer\'s presence during investigation is mandatory and the investigation cannot proceed validly without it. Other important rights include the right not to be compelled to make self-incriminating statements, and the right to be clearly informed of the charge so the accused can prepare a defense.',
         'Arrest and pre-trial detention are also subject to legal limits and time restrictions, and no one may be detained except by order of a competent authority and in accordance with the procedures the law sets out. Understanding these rights from the outset of any criminal proceeding matters a great deal, since any breach of them can directly affect the outcome of a case.',
-        'If you are involved in a criminal case or investigation, it is always advisable to engage a lawyer as early as possible. You can book a consultation with our team to discuss your specific situation.',
+        'If you are involved in a criminal case or investigation, it is always advisable to engage a lawyer as early as possible. Learn more about [our criminal defense services](/en/practice-areas/criminal-law), or book a consultation with our team to discuss your specific situation.',
       ],
     },
   },
@@ -809,13 +883,13 @@ export const articles: Array<{
         'يقسّم القانون المصري الجرائم إلى ثلاثة أنواع رئيسية من حيث الجسامة: المخالفات، والجنح، والجنايات، ويختلف كل نوع عن الآخر في العقوبة المقررة له والمحكمة المختصة بنظره. الجنحة هي الجريمة الأقل جسامة نسبيًا، وعقوبتها عادة الحبس لمدة محددة أو الغرامة، وتنظر فيها محكمة الجنح.',
         'أما الجناية فهي الجريمة الأشد خطورة، وعقوبتها قد تصل إلى السجن المشدد أو السجن أو الإعدام في الحالات التي ينص عليها القانون، وتنظرها محكمة الجنايات وفق إجراءات مختلفة عن إجراءات الجنح.',
         'هذا التصنيف ليس مجرد تفصيل شكلي، بل يترتب عليه فروق جوهرية تشمل مدة التقادم، وإجراءات المحاكمة، والجهة القضائية المختصة، وحتى إمكانية الطعن على الحكم. لذلك فإن تحديد التكييف القانوني الصحيح للواقعة منذ البداية له أثر مباشر على استراتيجية الدفاع بالكامل.',
-        'إذا كنت تواجه اتهامًا جنائيًا ولا تعرف تصنيفه أو ما يترتب عليه، من الأفضل دائمًا استشارة محامٍ متخصص لفهم موقفك بدقة. يمكنك حجز استشارة مع فريقنا لمناقشة تفاصيل قضيتك.',
+        'إذا كنت تواجه اتهامًا جنائيًا ولا تعرف تصنيفه أو ما يترتب عليه، من الأفضل دائمًا استشارة محامٍ متخصص لفهم موقفك بدقة. تعرّف على [خدمات الدفاع الجنائي لدينا](/ar/practice-areas/criminal-law)، أو احجز استشارة مع فريقنا لمناقشة تفاصيل قضيتك.',
       ],
       en: [
         'Egyptian law divides crimes into three main categories by severity: infractions, misdemeanors, and felonies, each carrying a different range of penalties and falling under a different court\'s jurisdiction. A misdemeanor is a relatively less severe offense, typically punishable by a defined prison term or a fine, and is heard by the Misdemeanors Court.',
         'A felony, by contrast, is a more serious offense, with penalties that can reach aggravated imprisonment, imprisonment, or, in cases the law specifically provides for, the death penalty; felonies are heard by the Felonies (Criminal) Court under procedures that differ from misdemeanor proceedings.',
         'This classification is not a mere formality — it carries real consequences for limitation periods, trial procedure, which court has jurisdiction, and even the available avenues for appeal. Getting the legal characterization of an incident right from the start can directly shape an entire defense strategy.',
-        'If you are facing a criminal accusation and are unsure how it is classified or what that means for you, it is always best to consult a specialized lawyer to understand your situation precisely. You can book a consultation with our team to discuss the details of your case.',
+        'If you are facing a criminal accusation and are unsure how it is classified or what that means for you, it is always best to consult a specialized lawyer to understand your situation precisely. Learn more about [our criminal defense services](/en/practice-areas/criminal-law), or book a consultation with our team to discuss the details of your case.',
       ],
     },
   },
@@ -878,13 +952,13 @@ export const articles: Array<{
         'من أكثر الأخطاء شيوعًا في مصر أن يكتفي المشتري بعقد بيع ابتدائي أو حتى عقد موثّق دون أن يسجّل ملكيته رسميًا في الشهر العقاري. هناك مساران للتعامل مع العقار في مصر: التسجيل الرسمي (الشهر العقاري)، الذي يمنح ملكية قانونية كاملة، والتوثيق (التصديق على التوقيع)، وهو إجراء أبسط لكنه لا يمنح ملكية كاملة، ويوفر حماية قانونية أضعف، وعادة لا يكون كافيًا للحصول على قروض بنكية أو عند إعادة البيع لاحقًا.',
         'يقوم نظام الشهر العقاري في مصر على قانون تنظيم الشهر العقاري رقم 114 لسنة 1946، إلى جانب أحكام القانون المدني رقم 131 لسنة 1948. وقد شهدت الإجراءات تبسيطًا كبيرًا بموجب القانون رقم 9 لسنة 2022، بعد التعديلات الأخيرة، تلتزم مأمورية الشهر العقاري بالانتهاء من فحص الطلب خلال مدة لا تتجاوز 37 يومًا من تاريخ استكمال المستندات — بعد أن كانت الإجراءات قديمًا تستغرق مددًا أطول بكثير.',
         'تختلف تفاصيل المستندات المطلوبة بحسب نوع العقار وطبيعة التصرف، لكنها تشمل عادة شهادة تصرفات عقارية حديثة، وإيصال مرافق حديث لتحديد موقع العقار، وبيان الرفع المساحي الرقمي الخاص بالعقار.',
-        'التسجيل الرسمي هو الضمانة القانونية الحقيقية لملكيتك — فبدونه، قد تواجه صعوبة في إثبات ملكيتك أمام الغير أو الحصول على تمويل بنكي أو إعادة بيع العقار لاحقًا بسهولة. لمناقشة حالتك العقارية، يمكنك حجز استشارة مع فريقنا.',
+        'التسجيل الرسمي هو الضمانة القانونية الحقيقية لملكيتك — فبدونه، قد تواجه صعوبة في إثبات ملكيتك أمام الغير أو الحصول على تمويل بنكي أو إعادة بيع العقار لاحقًا بسهولة. وقبل الوصول لمرحلة التسجيل أصلًا، من المهم مراجعة عقد البيع نفسه جيدًا — راجع [أهم الاعتبارات القانونية في عقود بيع العقارات](/ar/insights/legal-considerations-real-estate-purchase-contracts) للتفاصيل. لمناقشة حالتك العقارية، يمكنك حجز استشارة مع فريقنا.',
       ],
       en: [
         'One of the most common mistakes in Egypt is for a buyer to rely on a preliminary sale contract, or even a notarized one, without formally registering ownership. There are two paths for dealing with real estate in Egypt: official registration, which grants full legal ownership, and notarization, a simpler procedure that does not confer full ownership, offers weaker legal protection, and is typically not sufficient for bank financing or a later resale.',
         "Egypt's real estate registration system is based on the Real Estate Registration Law No. 114 of 1946, alongside the Civil Code No. 131 of 1948. The process was significantly simplified by Law No. 9 of 2022 — following the recent amendments, the registration office must complete its review within a maximum of 37 days from the date the required documents are complete, a major reduction from the much longer timelines under the older procedure.",
         'The exact documents vary by property type and the nature of the transaction, but typically include a recent real-estate transactions certificate, a recent utility bill to precisely establish the property\'s location, and a digital cadastral survey statement.',
-        "Official registration is the real legal guarantee of your ownership — without it, you may face difficulty conclusively proving ownership against third parties, obtaining bank financing, or easily reselling the property later. To discuss your property situation, you can book a consultation with our team.",
+        "Official registration is the real legal guarantee of your ownership — without it, you may face difficulty conclusively proving ownership against third parties, obtaining bank financing, or easily reselling the property later. Before you even get to registration, it's worth reviewing the sale contract itself closely — see [Key Legal Considerations in Real Estate Purchase Contracts](/en/insights/legal-considerations-real-estate-purchase-contracts) for details. To discuss your property situation, you can book a consultation with our team.",
       ],
     },
   },
@@ -1097,7 +1171,7 @@ export const articles: Array<{
         'راجع رخصة البناء وموقف العقار من مخالفات البناء إن وُجدت. التأكد من الجهة الإدارية المختصة بخصوص سلامة الترخيص وأي مخالفات قائمة يحتاج تصالحًا، لأن ذلك قد يؤثر على قيمة العقار أو حتى إمكانية التصرف فيه مستقبلًا.',
         'تأكد من سداد آخر مستحقات الضرائب العقارية ورسوم المرافق. أي متأخرات ضريبية أو متأخرات كهرباء/مياه/غاز قد تنتقل كعبء إداري يواجهه المالك الجديد عند نقل العدادات باسمه.',
         'إذا كان البيع يتم من خلال وكيل، تأكد من صحة وسريان التوكيل. التوكيل غير الساري أو غير الصحيح من أبرز أسباب النزاعات في صفقات العقارات — يجب التحقق من تاريخه ونطاق الصلاحيات الممنوحة فيه بدقة.',
-        'هذه القائمة تغطي النقاط الأساسية، لكن كل عقار له ظروفه الخاصة، ومراجعة محامٍ متخصص قبل التوقيع على أي عقد أو دفع أي مبلغ يبقى الخطوة الأهم لحماية حقوقك. يمكنكم حجز استشارة مع فريقنا لمراجعة عقاركم المحدد.',
+        'هذه القائمة تغطي النقاط الأساسية، لكن كل عقار له ظروفه الخاصة. للتعمق أكثر في نقاط عقد البيع نفسه، راجع [أهم الاعتبارات القانونية في عقود بيع العقارات](/ar/insights/legal-considerations-real-estate-purchase-contracts) — ومراجعة محامٍ متخصص قبل التوقيع على أي عقد أو دفع أي مبلغ يبقى الخطوة الأهم لحماية حقوقك. يمكنكم حجز استشارة مع فريقنا لمراجعة عقاركم المحدد.',
       ],
       en: [
         "Buying property is a major decision, and the legal risks are real without adequate review. These six points aren't a substitute for consulting a specialized lawyer before signing — they're a starting point for anyone considering a property purchase in Egypt.",
@@ -1107,7 +1181,7 @@ export const articles: Array<{
         "Review the building permit and the property's building-code compliance status, if applicable. Confirming the license's validity and any outstanding violations with the relevant administrative authority matters, since this can affect the property's value or even the ability to deal with it in the future.",
         'Confirm the latest property tax and utility payments are settled. Any outstanding tax or electricity/water/gas arrears can become an administrative burden for the new owner when transferring meters into their name.',
         "If the sale is being made through an agent, verify the power of attorney is valid and current. An expired or invalid power of attorney is among the most common sources of disputes in property transactions — check its date and the exact scope of authority it grants.",
-        'This checklist covers the essentials, but every property has its own circumstances, and consulting a specialized lawyer before signing any contract or making any payment remains the most important step to protect your rights. You can book a consultation with our team to review your specific property.',
+        'This checklist covers the essentials, but every property has its own circumstances. For a closer look at the purchase contract itself, see [Key Legal Considerations in Real Estate Purchase Contracts](/en/insights/legal-considerations-real-estate-purchase-contracts) — and consulting a specialized lawyer before signing any contract or making any payment remains the most important step to protect your rights. You can book a consultation with our team to review your specific property.',
       ],
     },
   },
