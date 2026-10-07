@@ -14,7 +14,7 @@ internal links added.**
 | 1 | Law No. 164 of 2025 | 2 | Old-rent residential contracts end within 7 years of the law's effective date; non-residential within 5 years | Eastlaws.com (official legislation DB); Ahmed Azim Elgamel; Egyptian Bar Association (egyls.com) | High (3 independent sources, consistent) | 2026-10-07 |
 | 2 | Law No. 164 of 2025 | 4 | Residential rent increases to: 20x old rent (min. 1,000 EGP) in premium zones; 10x (min. 400 EGP) in medium zones; 10x (min. 250 EGP) in economic zones | Same 3 sources as #1, matching figures | High | 2026-10-07 |
 | 3 | Law No. 164 of 2025 | 5 | Non-residential units rented to natural persons: rent increases to 5x the old rent | Same 3 sources as #1 | High | 2026-10-07 |
-| 4 | Law No. 164 of 2025 | Not consistently attributed to one article number | 15% periodic annual rent increase during the transitional period | Eastlaws.com-derived summary; Ahmed Azim Elgamel (fact corroborated; article number diverges between sources — one folds it into Arts. 4/5, another cites a separate Art. 6) | Medium (fact solid, article number not) | 2026-10-07 — **no specific article number used in the draft for this figure** |
+| 4 | Law No. 164 of 2025 | Not consistently attributed to one article number | 15% periodic annual rent increase during the transitional period | Eastlaws.com-derived summary; Ahmed Azim Elgamel (fact corroborated; article number diverges between sources — one folds it into Arts. 4/5, another cites a separate Art. 6) | Medium (fact solid, article number not) | 2026-10-07 — **no specific article number used in the draft for this figure**; final body text reads "the law also provides for a periodic annual increase of 15%" with no article attributed, per explicit instruction not to imply Articles 4/5 are the source until confirmed |
 | 5 | Law No. 164 of 2025 | 8 | Original tenant (or spouse to whom contract was extended) entitled to an alternative unit (rental or ownership) from the state before the transitional period ends, conditioned on vacating the current unit, matching purpose and governorate, with priority for the original tenant | Ahmed Azim Elgamel; Egypt Telegraph (via search aggregation, re: Cabinet implementation decision) | Medium-high (2 independent sources) | 2026-10-07 |
 | 6 | Law No. 164 of 2025 | 7 | A tenant's ownership of another suitable unit can itself be grounds for the landlord to seek earlier termination | Egyptian Bar Association (egyls.com) | Medium (single-sourced this pass; logically consistent with Art. 8 as a separate, complementary provision, not a contradiction) | 2026-10-07 |
 | 7 | Law No. 4 of 1996 | (by law number only) | Post-1996 contracts are freely negotiated as to term and rent; tenancy ends automatically at the agreed term unless renewed | Lawyer Egypt; general search corroboration | Medium-high | 2026-10-07 |
@@ -40,6 +40,17 @@ internal links added.**
 **Correction from the prior draft**: judicial partition, the division mechanics, and the sale-when-indivisible rule were previously all loosely attributed to "Article 836." They are now correctly distributed across **Article 836** (procedure/court jurisdiction), **Article 837** (division/demarcation mechanics), and **Article 841** (sale when division isn't feasible).
 
 ## Article 3 — Civil vs. Criminal Cases in Egypt (`civil-vs-criminal-cases-egypt`)
+
+**⚠ See the INTERNAL LEGAL MAINTENANCE NOTE in `LEGAL_SOURCE_REGISTER.md`** —
+this article's statutory basis (Code of Criminal Procedure, Law 150/1950)
+has a known future expiry. The new Code of Criminal Procedure, Law No.
+174 of 2025, is currently expected to take effect around 1 October 2027
+(a date that has itself moved once already as of very recent legislative
+action). This article's analysis was deliberately **not** rewritten
+against the new code — it remains correct against current (1950-code) law
+as of this verification date, but requires a full re-verification before
+the new code takes effect, not an automatic carry-over of its article
+numbers.
 
 | # | Statute | Article | Exact legal proposition | Source | Confidence | Verification date |
 |---|---|---|---|---|---|---|
