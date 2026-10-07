@@ -3,9 +3,20 @@
 Date: 2026-10-07. Supersedes the first version of this file. Per-claim
 detail for all three drafts, following a dedicated final verification pass
 specifically requested to re-check the figures and article attributions
-in the first draft round. All three remain **NEEDS_HUMAN_LEGAL_REVIEW —
-not published, not in the CMS, not live, no `legalReviewer` set, no
-internal links added.**
+in the first draft round.
+
+**Update (2026-10-07, same day):** the firm owner, Mahmoud Harraz, issued a
+FINAL PUBLICATION AUTHORIZATION approving all three FINAL corrected drafts
+below (reflecting both this verification pass and the subsequent FINAL
+PRE-SIGN-OFF CORRECTIONS — see `LEGAL_SOURCE_REGISTER.md` for the exact
+approval record). All three are now **LAWYER APPROVED — Mahmoud Harraz,
+2026-10-07**, and their approved text has been added verbatim to
+`src/seed/data.ts`. **Not yet live in production** — this sandbox has no
+path to the production Postgres database, so `npm run seed` must still be
+run against production (by someone with those credentials) before the
+articles and their internal links actually appear on the site. See
+`LEGAL_SOURCE_REGISTER.md` and `CIVIL_PHASE_2_PRODUCTION_EVIDENCE.md` for
+the current status.
 
 ## Article 1 — Rental Disputes in Egypt (`rental-tenancy-disputes-egypt`)
 
@@ -62,6 +73,14 @@ numbers.
 
 **Correction from the prior draft**: the original draft stated as a flat rule that criminal cases are "brought by the Public Prosecution ... not by private individuals." This pass added the two named, legally-recognized exceptions (complaint-required crimes under Article 3; direct accusation under Article 232) so the article no longer states an absolute that the law itself qualifies.
 
-## Why none of these are published
+## Publication status (updated 2026-10-07)
 
-Unchanged from the first version of this register: per `LEGAL_SOURCE_REGISTER.md`'s own method, new legal content is delivered as a draft file for a named firm lawyer's review, never added directly to `src/seed/data.ts`. All three drafts are attached as files and logged in `LEGAL_SOURCE_REGISTER.md` under `NEEDS_HUMAN_LEGAL_REVIEW`.
+All three drafts are now **LAWYER APPROVED — Mahmoud Harraz, 2026-10-07**
+(see the approval record in `LEGAL_SOURCE_REGISTER.md`) and their approved
+text has been added verbatim to `src/seed/data.ts`, with the internal
+links specified in `CIVIL_INTERNAL_LINK_GRAPH_PHASE_2.md`. They are **not
+yet live**: this sandbox cannot reach the production Postgres database, so
+someone with production DB access must run `npm run seed` (e.g. with
+credentials from `vercel env pull`) before these records actually exist in
+the CMS. See `CIVIL_PHASE_2_PRODUCTION_EVIDENCE.md` for the live
+verification status once that seed run has happened.
