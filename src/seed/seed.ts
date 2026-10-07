@@ -164,6 +164,10 @@ async function run() {
   //   tax-law, commercial-agency-distribution) so those pages aren't
   //   reachable only from the full practice-areas listing — see
   //   GSC_DISCOVERED_NOT_INDEXED_35_AUDIT.md.
+  // - civil-law, real-estate-property-registration, debt-recovery-
+  //   enforcement: strengthened as the site's Civil Law pillar + its two
+  //   strongest practice-area hubs, each now linking out to the civil
+  //   cluster's articles — see CIVIL_SEO_AUTHORITY_PHASE_1_REPORT.md.
   const contentResyncSlugs = [
     'maritime-shipping-port-law',
     'criminal-law',
@@ -171,6 +175,9 @@ async function run() {
     'contracts-commercial-agreements',
     'commercial-activity-business-licensing',
     'corporate-commercial-law',
+    'civil-law',
+    'real-estate-property-registration',
+    'debt-recovery-enforcement',
   ]
   for (const slug of contentResyncSlugs) {
     const pa = practiceAreas.find((p) => p.slug === slug)

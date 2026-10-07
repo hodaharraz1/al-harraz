@@ -37,6 +37,36 @@ export const practiceAreas: Array<{
       ar: 'يقدم مكتب آل حراز خدمات قانونية شاملة في القانون المدني، وتشمل منازعات العقود والالتزامات والملكية والتعويضات، مع تمثيل موكلينا أمام المحاكم المدنية بمختلف درجاتها من أجل الوصول إلى أفضل نتيجة ممكنة.',
       en: 'Al Harraz Law Firm provides comprehensive civil law services, including contract and obligations disputes, property matters, and compensation claims, representing clients before the civil courts at all levels to achieve the best possible outcome.',
     },
+    whoWeHelp: {
+      ar: [
+        'نساعد الأفراد الذين يواجهون نزاعًا مدنيًا — سواء مع طرف تعاقدي، أو جار بخصوص عقار، أو مدين يرفض السداد — في فهم موقفهم القانوني واختيار المسار الأنسب، بالتسوية الودية أو باللجوء للقضاء عند الحاجة.',
+        'كما نساعد الشركات وأصحاب الأعمال في صياغة ومراجعة عقودهم، وتمثيلهم في المنازعات المدنية والتجارية التي قد تنشأ أثناء ممارسة نشاطهم. المكتب مقره الرئيسي في دمياط، ويقدم خدماته للعملاء في مختلف أنحاء جمهورية مصر العربية.',
+      ],
+      en: [
+        'We help individuals facing a civil dispute — whether with a contracting party, a neighbor over property, or a debtor refusing to pay — understand their legal position and choose the right path, whether an amicable settlement or litigation when necessary.',
+        'We also help companies and business owners draft and review their contracts, and represent them in the civil and commercial disputes that can arise in the course of business. The firm is based in Damietta and serves clients across Egypt.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'تغطي ممارستنا في القانون المدني نطاقًا واسعًا من المسائل، من مراجعة عقد قبل التوقيع عليه أو صياغته من الأساس، إلى المطالبة بالتعويض عند وقوع ضرر. راجع [أهم البنود التي يجب مراجعتها قبل توقيع أي عقد](/ar/insights/what-to-review-before-signing-contract) و[متى يحق لك المطالبة بالتعويض؟](/ar/insights/when-can-you-claim-compensation) لمزيد من التفاصيل، أو [العقود والاتفاقيات التجارية](/ar/practice-areas/contracts-commercial-agreements) لخدماتنا في هذا المجال.',
+        'نتعامل أيضًا مع منازعات الملكية والحيازة العقارية، وقضايا تحصيل الديون وتنفيذ الأحكام. راجع [منازعات حيازة العقارات](/ar/insights/property-possession-disputes-egypt)، و[العقارات وتسجيل الملكية](/ar/practice-areas/real-estate-property-registration)، و[تحصيل الديون والتنفيذ](/ar/practice-areas/debt-recovery-enforcement) لتفاصيل كل مجال.',
+      ],
+      en: [
+        "Our civil law practice covers a wide range of matters, from reviewing a contract before signing it or drafting one from scratch, to claiming compensation when harm occurs. See [Key Clauses to Review Before Signing Any Contract](/en/insights/what-to-review-before-signing-contract) and [When Are You Entitled to Claim Compensation?](/en/insights/when-can-you-claim-compensation) for more detail, or [Contracts & Commercial Agreements](/en/practice-areas/contracts-commercial-agreements) for our services in this area.",
+        'We also handle property and possession disputes, and debt recovery and judgment enforcement matters. See [Property Possession Disputes](/en/insights/property-possession-disputes-egypt), [Real Estate & Property Registration](/en/practice-areas/real-estate-property-registration), and [Debt Recovery & Enforcement](/en/practice-areas/debt-recovery-enforcement) for details on each.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نمثل موكلينا أمام المحاكم المدنية بمختلف درجاتها (راجع [التقاضي وتسوية المنازعات](/ar/practice-areas/litigation-dispute-resolution))، بدءًا من تقييم الموقف القانوني، مرورًا بإجراءات رفع الدعوى وتقديم الأدلة، وحتى صدور الحكم وتنفيذه الفعلي، وفي حال الحاجة الاستئناف. راجع [إجراءات رفع دعوى مدنية في مصر](/ar/insights/filing-a-civil-lawsuit-in-egypt)، و[إثبات الدعوى المدنية](/ar/insights/evidence-in-civil-cases-egypt)، و[كيف يتم تنفيذ الأحكام المدنية؟](/ar/insights/how-civil-judgments-are-enforced)، و[الاستئناف في الأحكام المدنية](/ar/insights/civil-appeals-process-egypt) لنظرة أوسع على كل مرحلة.',
+        'إذا لم تكن متأكدًا أصلًا ما هي الدعوى المدنية أو متى تحتاج للجوء إليها، ابدأ بـ[ما هي الدعوى المدنية؟](/ar/insights/what-is-civil-lawsuit). لمناقشة قضيتك تحديدًا، يمكنك حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We represent clients before the civil courts at every level (see [Litigation & Dispute Resolution](/en/practice-areas/litigation-dispute-resolution)), from assessing the legal position, through filing suit and presenting evidence, to a judgment and its actual enforcement, and an appeal where needed. See [How to File a Civil Lawsuit in Egypt](/en/insights/filing-a-civil-lawsuit-in-egypt), [Evidence in Civil Cases](/en/insights/evidence-in-civil-cases-egypt), [How Are Civil Judgments Enforced?](/en/insights/how-civil-judgments-are-enforced), and [Appealing a Civil Judgment in Egypt](/en/insights/civil-appeals-process-egypt) for a fuller look at each stage.',
+        "If you're not yet sure what a civil lawsuit actually is or when you'd need one, start with [What Is a Civil Lawsuit?](/en/insights/what-is-civil-lawsuit). To discuss your specific situation, you can book a consultation with our team.",
+      ],
+    },
     featured: true,
   },
   {
@@ -204,6 +234,14 @@ export const practiceAreas: Array<{
       ar: 'نساعد الأفراد والشركات في إجراءات المعاملات العقارية وتسجيل الملكية وفقًا للقانون المصري.',
       en: 'We assist individuals and businesses with real estate transaction procedures and property registration under Egyptian law.',
     },
+    legalIssuesCovered: {
+      ar: [
+        'من أكثر الأخطاء شيوعًا الاكتفاء بعقد بيع دون تسجيله رسميًا — راجع [لماذا تسجيل عقارك في الشهر العقاري ضروري؟](/ar/insights/real-estate-registration-egypt) و[أهم الاعتبارات القانونية في عقود بيع العقارات](/ar/insights/legal-considerations-real-estate-purchase-contracts) لمزيد من التفاصيل. إذا كنت تواجه نزاعًا على حيازة عقار دون انتظار إثبات الملكية، راجع [منازعات حيازة العقارات](/ar/insights/property-possession-disputes-egypt).',
+      ],
+      en: [
+        'One of the most common mistakes is relying on a sale contract without formally registering it — see [Why Registering Your Property at the Real Estate Registry Matters](/en/insights/real-estate-registration-egypt) and [Key Legal Considerations in Real Estate Purchase Contracts](/en/insights/legal-considerations-real-estate-purchase-contracts) for more detail. If you are facing a possession dispute without waiting to prove ownership, see [Property Possession Disputes](/en/insights/property-possession-disputes-egypt).',
+      ],
+    },
   },
   {
     slug: 'family-law-personal-status',
@@ -233,6 +271,14 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نساعد موكلينا في إجراءات تحصيل الديون وتنفيذ الأحكام القضائية بكفاءة.',
       en: 'We assist clients with efficient debt recovery procedures and enforcement of court judgments.',
+    },
+    legalIssuesCovered: {
+      ar: [
+        'نساعدك في اختيار المسار الأنسب لتحصيل دين مستحق، من الإنذار الودي وحتى التنفيذ الفعلي — راجع [تحصيل الديون في مصر](/ar/insights/debt-recovery-legal-steps-egypt) و[كيف يتم تنفيذ الأحكام المدنية؟](/ar/insights/how-civil-judgments-are-enforced) لمزيد من التفاصيل.',
+      ],
+      en: [
+        'We help you choose the right path for recovering an outstanding debt, from an amicable demand notice through actual enforcement — see [Debt Recovery in Egypt](/en/insights/debt-recovery-legal-steps-egypt) and [How Are Civil Judgments Enforced?](/en/insights/how-civil-judgments-are-enforced) for more detail.',
+      ],
     },
   },
   {
