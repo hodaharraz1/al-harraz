@@ -64,6 +64,14 @@ export const practiceAreas: Array<{
       ar: 'نقدم الاستشارات القانونية للشركات في مراحل التأسيس والحوكمة والامتثال، بالإضافة إلى صياغة ومراجعة العقود التجارية بما يحمي مصالح موكلينا.',
       en: 'We advise businesses on formation, governance and compliance, and draft and review commercial contracts to protect our clients’ interests.',
     },
+    legalIssuesCovered: {
+      ar: [
+        'من بين العقود التجارية التي نتعامل معها بانتظام عقود الوكالة التجارية والتوزيع، والتي لها اعتبارات قانونية خاصة بها — راجع [الوكالة التجارية والتوزيع](/ar/practice-areas/commercial-agency-distribution) لمزيد من التفاصيل.',
+      ],
+      en: [
+        'Among the commercial contracts we regularly handle are commercial agency and distribution agreements, which carry their own specific legal considerations — see [Commercial Agency & Distribution](/en/practice-areas/commercial-agency-distribution) for more detail.',
+      ],
+    },
   },
   {
     slug: 'company-formation-investment',
@@ -90,6 +98,14 @@ export const practiceAreas: Array<{
       ],
       en: [
         'When a contract involves a foreign party or needs to be submitted abroad, we also offer [legal contract translation](/en/practice-areas/contract-translation) to ensure the contractual obligations carry over accurately between languages.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'عندما لا يلتزم أحد الطرفين بتنفيذ ما عليه بموجب عقد قائم، نساعد الطرف المتضرر في تقييم خياراته القانونية — راجع [الإخلال بالعقد في القانون المصري](/ar/insights/breach-of-contract-rights-egypt) لنظرة عامة على هذه الخيارات.',
+      ],
+      en: [
+        'When one party fails to perform under an existing contract, we help the aggrieved party assess its legal options — see [Breach of Contract Under Egyptian Law](/en/insights/breach-of-contract-rights-egypt) for an overview.',
       ],
     },
   },
@@ -512,6 +528,14 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نساعد أصحاب الأعمال في متابعة إجراءات استخراج السجل التجاري والبطاقة الضريبية وترخيص المحال التجارية أمام الجهات المختصة، بما يضمن مزاولة النشاط بشكل قانوني سليم.',
       en: 'We help business owners with the procedures for obtaining commercial registration, a tax card, and business-premises licensing before the relevant authorities, ensuring the activity is carried out on a sound legal footing.',
+    },
+    legalIssuesCovered: {
+      ar: [
+        'بعد استخراج البطاقة الضريبية، تبقى الالتزامات الضريبية المستمرة للنشاط التجاري مسألة منفصلة تحتاج متابعة دورية واستشارة متخصصة — راجع [القانون الضريبي](/ar/practice-areas/tax-law) لمزيد من التفاصيل.',
+      ],
+      en: [
+        "Once the tax card is obtained, a business's ongoing tax obligations are a separate matter that need regular attention and specialized advice — see [Tax Law](/en/practice-areas/tax-law) for more detail.",
+      ],
     },
   },
   {
@@ -949,13 +973,13 @@ export const articles: Array<{
     },
     body: {
       ar: [
-        'من أكثر الأخطاء شيوعًا في مصر أن يكتفي المشتري بعقد بيع ابتدائي أو حتى عقد موثّق دون أن يسجّل ملكيته رسميًا في الشهر العقاري. هناك مساران للتعامل مع العقار في مصر: التسجيل الرسمي (الشهر العقاري)، الذي يمنح ملكية قانونية كاملة، والتوثيق (التصديق على التوقيع)، وهو إجراء أبسط لكنه لا يمنح ملكية كاملة، ويوفر حماية قانونية أضعف، وعادة لا يكون كافيًا للحصول على قروض بنكية أو عند إعادة البيع لاحقًا.',
+        'من أكثر الأخطاء شيوعًا في مصر أن يكتفي المشتري بعقد بيع ابتدائي أو حتى عقد موثّق دون أن يسجّل ملكيته رسميًا في الشهر العقاري. هناك مساران للتعامل مع العقار في مصر: التسجيل الرسمي (الشهر العقاري)، الذي يمنح ملكية قانونية كاملة، والتوثيق (التصديق على التوقيع)، وهو إجراء أبسط لكنه لا يمنح ملكية كاملة، ويوفر حماية قانونية أضعف، وعادة لا يكون كافيًا للحصول على قروض بنكية أو عند إعادة البيع لاحقًا. لمزيد من التفاصيل عن خدمات التوثيق بشكل عام، راجع [توثيق واعتماد المستندات](/ar/practice-areas/document-notarization-authentication).',
         'يقوم نظام الشهر العقاري في مصر على قانون تنظيم الشهر العقاري رقم 114 لسنة 1946، إلى جانب أحكام القانون المدني رقم 131 لسنة 1948. وقد شهدت الإجراءات تبسيطًا كبيرًا بموجب القانون رقم 9 لسنة 2022، بعد التعديلات الأخيرة، تلتزم مأمورية الشهر العقاري بالانتهاء من فحص الطلب خلال مدة لا تتجاوز 37 يومًا من تاريخ استكمال المستندات — بعد أن كانت الإجراءات قديمًا تستغرق مددًا أطول بكثير.',
         'تختلف تفاصيل المستندات المطلوبة بحسب نوع العقار وطبيعة التصرف، لكنها تشمل عادة شهادة تصرفات عقارية حديثة، وإيصال مرافق حديث لتحديد موقع العقار، وبيان الرفع المساحي الرقمي الخاص بالعقار.',
         'التسجيل الرسمي هو الضمانة القانونية الحقيقية لملكيتك — فبدونه، قد تواجه صعوبة في إثبات ملكيتك أمام الغير أو الحصول على تمويل بنكي أو إعادة بيع العقار لاحقًا بسهولة. وقبل الوصول لمرحلة التسجيل أصلًا، من المهم مراجعة عقد البيع نفسه جيدًا — راجع [أهم الاعتبارات القانونية في عقود بيع العقارات](/ar/insights/legal-considerations-real-estate-purchase-contracts) للتفاصيل. لمناقشة حالتك العقارية، يمكنك حجز استشارة مع فريقنا.',
       ],
       en: [
-        'One of the most common mistakes in Egypt is for a buyer to rely on a preliminary sale contract, or even a notarized one, without formally registering ownership. There are two paths for dealing with real estate in Egypt: official registration, which grants full legal ownership, and notarization, a simpler procedure that does not confer full ownership, offers weaker legal protection, and is typically not sufficient for bank financing or a later resale.',
+        'One of the most common mistakes in Egypt is for a buyer to rely on a preliminary sale contract, or even a notarized one, without formally registering ownership. There are two paths for dealing with real estate in Egypt: official registration, which grants full legal ownership, and notarization, a simpler procedure that does not confer full ownership, offers weaker legal protection, and is typically not sufficient for bank financing or a later resale. For more on notarization services generally, see [Document Notarization & Authentication](/en/practice-areas/document-notarization-authentication).',
         "Egypt's real estate registration system is based on the Real Estate Registration Law No. 114 of 1946, alongside the Civil Code No. 131 of 1948. The process was significantly simplified by Law No. 9 of 2022 — following the recent amendments, the registration office must complete its review within a maximum of 37 days from the date the required documents are complete, a major reduction from the much longer timelines under the older procedure.",
         'The exact documents vary by property type and the nature of the transaction, but typically include a recent real-estate transactions certificate, a recent utility bill to precisely establish the property\'s location, and a digital cadastral survey statement.',
         "Official registration is the real legal guarantee of your ownership — without it, you may face difficulty conclusively proving ownership against third parties, obtaining bank financing, or easily reselling the property later. Before you even get to registration, it's worth reviewing the sale contract itself closely — see [Key Legal Considerations in Real Estate Purchase Contracts](/en/insights/legal-considerations-real-estate-purchase-contracts) for details. To discuss your property situation, you can book a consultation with our team.",
@@ -973,13 +997,13 @@ export const articles: Array<{
     body: {
       ar: [
         'قبل اللجوء للقضاء، غالبًا ما يكون التواصل المباشر أو الإنذار الرسمي بالسداد هو الخطوة الأولى الأكثر فعالية من حيث الوقت والتكلفة. إنذار مكتوب وواضح يوضح قيمة الدين وأساسه القانوني وموعد السداد المطلوب، قد يؤدي في كثير من الأحيان إلى تسوية سريعة دون الحاجة لإجراءات قضائية طويلة.',
-        'إذا كان الدين موثقًا بمستندات واضحة (فواتير أو شيكات أو إيصالات تسليم) وغير محل نزاع جوهري، يمكن للدائن أن يلجأ إلى إجراء "أمر الأداء"، وهو مسار مبسّط وأسرع نسبيًا من الدعوى العادية. أما إذا كان الدين محل نزاع، فيصبح رفع دعوى قضائية عادية هو المسار المناسب، وبالنسبة للمنازعات التجارية المعقدة، قد تكون المحاكم الاقتصادية (المنشأة بموجب القانون رقم 120 لسنة 2008) هي الجهة المختصة.',
+        'إذا كان الدين موثقًا بمستندات واضحة (فواتير أو شيكات أو إيصالات تسليم) وغير محل نزاع جوهري، يمكن للدائن أن يلجأ إلى إجراء "أمر الأداء"، وهو مسار مبسّط وأسرع نسبيًا من الدعوى العادية. أما إذا كان الدين محل نزاع، فيصبح رفع دعوى قضائية عادية هو المسار المناسب، وبالنسبة للمنازعات التجارية المعقدة، قد تكون المحاكم الاقتصادية (المنشأة بموجب القانون رقم 120 لسنة 2008) هي الجهة المختصة. وإذا كان الدين موثقًا بشيك تحديدًا، فهناك اعتبارات قانونية خاصة بالشيكات والأوراق التجارية — راجع [الشيكات والأوراق التجارية](/ar/practice-areas/bounced-checks-negotiable-instruments) للتفاصيل.',
         'بعد الحصول على حكم أو أمر أداء نهائي، تأتي مرحلة التنفيذ الفعلي عبر إدارات التنفيذ، والتي قد تشمل الحجز على الحسابات البنكية أو الرواتب، أو الحجز على الأموال المنقولة وبيعها بالمزاد لاستيفاء الدين. لتفاصيل أوسع عن مرحلة التنفيذ نفسها بعد صدور الحكم، راجع [كيف يتم تنفيذ الأحكام المدنية؟](/ar/insights/how-civil-judgments-are-enforced).',
         'اختيار المسار الأنسب يعتمد على مدى توثيق الدين ومدى النزاع حوله وقيمته وطبيعته. لمناقشة حالتك تحديدًا، يمكنك حجز استشارة مع فريقنا.',
       ],
       en: [
         'Before turning to the courts, direct communication or a formal demand notice is often the most time- and cost-effective first step. A clear, well-drafted demand letter stating the amount owed, its legal basis, and the required payment date can frequently lead to a quick settlement without the need for lengthy court proceedings.',
-        'If the debt is supported by clear documentation (invoices, checks, or delivery receipts) and its underlying basis is not seriously disputed, a creditor may pursue a "payment order" procedure — a simplified, comparatively faster track than ordinary litigation. If the debt is genuinely disputed, filing an ordinary lawsuit becomes the appropriate path, and for complex commercial disputes, Egypt\'s specialized Economic Courts (established under Law No. 120 of 2008) may be the competent forum.',
+        'If the debt is supported by clear documentation (invoices, checks, or delivery receipts) and its underlying basis is not seriously disputed, a creditor may pursue a "payment order" procedure — a simplified, comparatively faster track than ordinary litigation. If the debt is genuinely disputed, filing an ordinary lawsuit becomes the appropriate path, and for complex commercial disputes, Egypt\'s specialized Economic Courts (established under Law No. 120 of 2008) may be the competent forum. Where the debt is specifically documented by a check, there are particular legal considerations around checks and negotiable instruments — see [Checks & Negotiable Instruments](/en/practice-areas/bounced-checks-negotiable-instruments) for details.',
         'After obtaining a final judgment or payment order, the actual enforcement stage follows through the enforcement departments, which may include garnishing bank accounts or salaries, or seizing movable assets and selling them at auction to satisfy the debt. For a fuller look at the enforcement stage itself once a judgment exists, see [How Are Civil Judgments Enforced?](/en/insights/how-civil-judgments-are-enforced).',
         'Choosing the right path depends on how well-documented the debt is, whether it is disputed, and its value and nature. To discuss your specific situation, you can book a consultation with our team.',
       ],
@@ -1205,7 +1229,7 @@ export const articles: Array<{
         'حرمان بعض الورثة من نصيبهم الشرعي: للأسف لا تزال هذه مشكلة موثّقة في الممارسة العملية، وتحدث غالبًا بحرمان الإناث من الورثة تحديدًا من نصيبهن، سواء بالامتناع عن تسجيل نصيبهن أو بالضغط عليهن للتنازل عنه. القانون المصري يكفل للورثة الإناث نفس الحماية القانونية للمطالبة بحقهن قضائيًا.',
         'تصرفات مشبوهة قبل الوفاة: في بعض الحالات، يلجأ المورِّث أو بعض الورثة إلى تحرير عقود بيع أو تصرفات صورية قبل الوفاة بهدف استبعاد وريث معين من التركة، وهو ما يمكن الطعن عليه قضائيًا إذا ثبتت الصورية.',
         'وجود قُصَّر أو غائبين بين الورثة: وجود ورثة قاصرين أو غائبين يزيد من تعقيد إجراءات القسمة، لأن هؤلاء لا يملكون الأهلية القانونية الكاملة لاتخاذ قرارات التصرف أو التنازل بأنفسهم.',
-        'قبل الدخول في أي قسمة، من المهم التأكد من حصر كامل لأصول وديون التركة أولًا — فالديون المستحقة على المتوفى تُسدَّد عادة من التركة قبل تقسيمها بين الورثة. لمناقشة حالة تركة محددة، يمكنكم حجز استشارة مع فريقنا. يمكنكم أيضًا مراجعة [كيف تُقسَّم التركة بين الورثة؟](/ar/insights/how-is-an-estate-divided) لنظرة عامة على خطوات القسمة نفسها.',
+        'قبل الدخول في أي قسمة، من المهم التأكد من حصر كامل لأصول وديون التركة أولًا — فالديون المستحقة على المتوفى تُسدَّد عادة من التركة قبل تقسيمها بين الورثة. كثير من هذه الخلافات يمكن تجنبها بوصية مُعدة بشكل سليم — راجع [صياغة الوصايا](/ar/practice-areas/wills-drafting) لمزيد من التفاصيل. لمناقشة حالة تركة محددة، يمكنكم حجز استشارة مع فريقنا. يمكنكم أيضًا مراجعة [كيف تُقسَّم التركة بين الورثة؟](/ar/insights/how-is-an-estate-divided) لنظرة عامة على خطوات القسمة نفسها.',
       ],
       en: [
         'Inheritance in Egypt is primarily governed by Law No. 77 of 1943, which applies Islamic Sharia principles to determine heirs and each one\'s share. Despite these rules being legally clear, real and common disputes arise in the practical process of dividing an estate. Below are the most notable types.',
@@ -1215,7 +1239,7 @@ export const articles: Array<{
         'Denial of some heirs\' rightful share: This unfortunately remains a documented problem in practice, most often affecting female heirs specifically — through refusing to register their share or pressuring them to waive it. Egyptian law affords female heirs the same legal protection to pursue their rights through the courts.',
         'Suspicious transactions before death: In some cases, the deceased or certain heirs execute sham sale contracts or transfers before death intended to exclude a particular heir from the estate — something that can be legally challenged if the sham nature of the transaction is proven.',
         'Minor or absent heirs: The presence of minor or absent (missing) heirs adds complexity to the division process, since they lack full legal capacity to make disposal or waiver decisions on their own.',
-        'Before any division, it is important to first take complete stock of the estate\'s assets and debts — debts owed by the deceased are typically settled from the estate before it is divided among heirs. To discuss a specific estate situation, you can book a consultation with our team. You can also see [How Is an Estate Divided Among Heirs?](/en/insights/how-is-an-estate-divided) for an overview of the division process itself.',
+        "Before any division, it is important to first take complete stock of the estate's assets and debts — debts owed by the deceased are typically settled from the estate before it is divided among heirs. Many of these disputes can be avoided with a properly prepared will — see [Wills Drafting](/en/practice-areas/wills-drafting) for more detail. To discuss a specific estate situation, you can book a consultation with our team. You can also see [How Is an Estate Divided Among Heirs?](/en/insights/how-is-an-estate-divided) for an overview of the division process itself.",
       ],
     },
   },

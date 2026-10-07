@@ -157,14 +157,20 @@ async function run() {
   //   currently not indexed" for having only a one-sentence overview and
   //   no distinct legal value of their own — see GSC_INDEXING_RECOVERY.md
   //   §3. Expanded with whoWeHelp/legalIssuesCovered/howWeAssist.
-  // - contracts-commercial-agreements: added a howWeAssist cross-link to
-  //   contract-translation so that page isn't only reachable from the
-  //   full practice-areas listing (§5 internal-linking fix).
+  // - contracts-commercial-agreements, commercial-activity-business-
+  //   licensing, corporate-commercial-law: added contextual
+  //   legalIssuesCovered/howWeAssist cross-links to other GSC-flagged
+  //   "Discovered - currently not indexed" pages (contract-translation,
+  //   tax-law, commercial-agency-distribution) so those pages aren't
+  //   reachable only from the full practice-areas listing — see
+  //   GSC_DISCOVERED_NOT_INDEXED_35_AUDIT.md.
   const contentResyncSlugs = [
     'maritime-shipping-port-law',
     'criminal-law',
     'contract-translation',
     'contracts-commercial-agreements',
+    'commercial-activity-business-licensing',
+    'corporate-commercial-law',
   ]
   for (const slug of contentResyncSlugs) {
     const pa = practiceAreas.find((p) => p.slug === slug)
