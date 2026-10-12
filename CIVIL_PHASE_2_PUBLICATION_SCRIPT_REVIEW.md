@@ -330,3 +330,191 @@ planned operations matching §P exactly, no content drift reported), the
 script would be ready for a separate, explicit `--execute` authorization
 — which this instruction does not grant and I have not acted as though
 it did.
+
+---
+
+## REAL PRODUCTION DRY-RUN — 2026-10-12T09:05:42Z
+
+Scope of this round: implementation-verified, dry-run-only, against this
+sandbox's real environment. `--execute` was never passed. `npm run seed`
+was never run. No code, environment variable, or production data was
+modified. No secret was printed, obtained, reconstructed, or worked
+around — the result below is the actual, unmodified output of the
+command this authorization specified.
+
+### Pre-check: credential availability (before attempting anything)
+
+Checked, did not attempt to obtain or create: `PAYLOAD_SECRET` — not set.
+`DATABASE_URI` — not set. No `.env.production`/`.env.production.local`
+file in the repo. No `vercel` CLI installed, no `.vercel/` project link,
+no `VERCEL_*`/`POSTGRES_*` environment variables present. This sandbox
+has never had production database access at any point in this
+engagement (same finding reported in `PRODUCTION_SEED_SAFETY_AUDIT.md`
+and the original script review above).
+
+### Command actually run
+
+```
+NODE_ENV=production npx tsx src/seed/publish-civil-phase-2.ts
+```
+(equivalent to the specified `NODE_ENV=production tsx src/seed/publish-civil-phase-2.ts`, no `--execute`)
+
+### Actual output
+
+```
+==============================================================================
+Civil Law Phase 2 — dedicated publication script
+Mode requested: dry-run (default)
+NODE_ENV: production
+==============================================================================
+DRY-RUN BLOCKED — PRODUCTION CONNECTION UNAVAILABLE
+Could not initialize Payload / connect to the configured database: Error: missing secret key. A secret key is needed to secure Payload.
+(No connection string or secret is printed here, by design.)
+```
+
+Exit code 1. The script failed at `getPayload({ config })` — before any
+`find`, before reviewer resolution, before any preflight check, before
+any possibility of a write. No secret, connection string, or credential
+of any kind appears in the output above, by the script's own design
+(confirmed again: it prints nothing from `process.env` except `NODE_ENV`).
+
+### A. Production connection
+
+**FAIL.** No production database or Payload instance was reachable from
+this environment. Nothing was worked around.
+
+### B. NODE_ENV
+
+Confirmed set to `production` for this invocation (shown in the script's
+own log line above: `NODE_ENV: production`) — the environment-guard
+condition on the `NODE_ENV` side was satisfied; the failure was purely
+the missing `PAYLOAD_SECRET`/database connection, not the guard logic.
+
+### C. Script integrity
+
+**PASS.** Verified before running anything:
+- `git log --oneline -- src/seed/publish-civil-phase-2.ts` shows exactly
+  one commit (`3877008`, the reviewed implementation) — zero commits
+  since.
+- `git status --short` — clean, no uncommitted changes to this file or
+  any other.
+- `md5sum` of the working-tree file matches `git show 3877008:src/seed/publish-civil-phase-2.ts` byte-for-byte.
+- `grep -n "payload\.delete\|truncate\|DROP"` — no matches (zero delete
+  operations, unchanged from the original review).
+- Dry-run-by-default and the `--execute` + `NODE_ENV=production` write
+  guard are both present and unchanged (`executeRequested`, `isProduction`,
+  `willExecute` at lines 500/501/515, same logic as reviewed).
+- No changes were made to the script to force the dry-run to pass — it
+  was run exactly as committed, and failed exactly as it should given no
+  production connection exists here.
+
+### D. Reviewer
+
+**FAIL (not reached).** `resolveReviewer()` requires a live `payload.find`
+call, which never executed because `getPayload()` itself failed first.
+No read, write, or any access to the `hodaharraz1@gmail.com` account or
+any user record occurred.
+
+### E. rental-tenancy-disputes-egypt
+
+**Not checked — blocked by §A.** No query against the real `articles`
+collection was possible.
+
+### F. co-ownership-partition-egypt
+
+**Not checked — blocked by §A.**
+
+### G. civil-vs-criminal-cases-egypt
+
+**Not checked — blocked by §A.**
+
+### H. civil-law
+
+**Not checked — blocked by §A.** No live content was read; no
+baseline/proposed comparison was possible.
+
+### I. real-estate-property-registration
+
+**Not checked — blocked by §A.**
+
+### J. property-possession-disputes-egypt
+
+**Not checked — blocked by §A.**
+
+### K. common-inheritance-disputes-egypt
+
+**Not checked — blocked by §A.**
+
+### L. what-is-civil-lawsuit
+
+**Not checked — blocked by §A.**
+
+### M. Transaction support
+
+**Not exercised this round (unreachable — blocked by §A).** The static
+finding from the original review stands unchanged: `payload.db.beginTransaction`/
+`commitTransaction`/`rollbackTransaction` are genuinely present in the
+installed `payload`/`@payloadcms/db-postgres` packages' type definitions
+(cited with file/line in the original review above), and this script
+calls them correctly per their documented signature. Whether
+`beginTransaction()` actually returns a usable transaction id against the
+*real* production Postgres instance remains unproven — it was unproven
+before this round too, and this round could not change that, since the
+database was never reached.
+
+### N. Total preflight
+
+**0 of 8 target-level checks could run** (3 new-article checks + 5
+existing-document checks). The only checks that *could* run before the
+connection attempt — script integrity (§C) and the `NODE_ENV` guard
+condition (§B) — both passed. Everything downstream of `getPayload()` is
+unevaluated, not failed-on-its-own-merits; it simply never got a chance
+to run.
+
+### O. Planned production writes IF separately authorized later
+
+Unchanged from the original review (nothing new to add — the plan itself
+doesn't depend on this round's connection attempt): if a future real
+dry-run against a reachable production database passes all 8 preflight
+checks, `--execute` would issue exactly 8 writes inside one transaction —
+3 article creates (AR+EN each) for the 3 new slugs, and 5 additive field
+updates (AR+EN each) to `civil-law` and `real-estate-property-registration`'s
+`legalIssuesCovered`, and to `property-possession-disputes-egypt`,
+`common-inheritance-disputes-egypt`, and `what-is-civil-lawsuit`'s `body`.
+Nothing else.
+
+### P. Actual writes during this task
+
+**ZERO.** No `create`, `update`, or `delete` call was ever issued — the
+script never got past its own connection step. No code was modified (the
+one-line integrity checks above were read-only `git`/`md5sum` commands,
+not edits). No environment variable was set outside this single command
+invocation's own shell. No secret was printed.
+
+### Q. Explicit final line
+
+**DRY RUN — ZERO WRITES PERFORMED**
+
+---
+
+## FINAL STATUS (this round)
+
+**BLOCKED — DRY-RUN BLOCKED — PRODUCTION CONNECTION UNAVAILABLE.** This
+sandbox has no `PAYLOAD_SECRET`, no `DATABASE_URI` pointing at production,
+and no other means of reaching the real Payload/Postgres instance. Per
+the explicit instruction for this round, I did not attempt to obtain,
+reconstruct, or work around that. The script itself is unchanged,
+integrity-verified, and exited safely and informatively the moment it
+could not connect — it did not hang, did not guess, and did not fall
+back to any other data source.
+
+This is not a new finding — it is the same constraint already recorded
+in `PRODUCTION_SEED_SAFETY_AUDIT.md` and the original review above. A
+real dry-run that actually exercises reviewer resolution, the 3
+new-article checks, and the 5 content-drift checks against live
+production data still requires running this exact command from an
+environment that has real production credentials (e.g. the firm owner's
+own machine, with `vercel env pull` for the production environment, the
+same mechanism used for the 2026-09-28 publication). I have not fabricated
+a result for any of the 8 target checks above, and none of them should be
+read as having passed.
