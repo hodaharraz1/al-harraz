@@ -48,12 +48,12 @@ export function proxy(request: NextRequest) {
     return new NextResponse(null, { status: 404 })
   }
 
-  if (
-    pathname.startsWith('/admin') ||
-    pathname.startsWith('/api') ||
-    pathname.startsWith('/_next') ||
-    PUBLIC_FILE.test(pathname)
-  ) {
+  // /admin, /api, and /_next are never subject to the canonical-host
+  // redirect below, on any host — unchanged by the reordering further
+  // down this function (see VERCEL_CANONICAL_ROOT_CAUSE_INVESTIGATION.md,
+  // which scoped that fix to public files only, explicitly leaving these
+  // three untouched).
+  if (pathname.startsWith('/admin') || pathname.startsWith('/api') || pathname.startsWith('/_next')) {
     return NextResponse.next()
   }
 
@@ -64,6 +64,19 @@ export function proxy(request: NextRequest) {
     canonicalUrl.host = CANONICAL_HOST
     canonicalUrl.port = ''
     return NextResponse.redirect(canonicalUrl, 308)
+  }
+
+  // Public files (robots.txt, sitemap.xml, llms.txt, images, ...) are
+  // served as-is on the canonical host — this check runs AFTER the host
+  // redirect above specifically so the same paths on a non-canonical host
+  // (the old al-harraz.vercel.app alias, a www. alias) redirect instead of
+  // being served directly as duplicate, un-redirected content. Previously
+  // this check ran first and these paths never reached the host check at
+  // all — see VERCEL_CANONICAL_ROOT_CAUSE_INVESTIGATION.md for the
+  // evidence (al-harraz.vercel.app/robots.txt was returning 200 with
+  // "Allow: /" for that host instead of redirecting).
+  if (PUBLIC_FILE.test(pathname)) {
+    return NextResponse.next()
   }
 
   const segments = pathname.split('/').filter(Boolean)
