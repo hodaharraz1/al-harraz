@@ -198,6 +198,8 @@ async function run() {
     'bounced-checks-negotiable-instruments',
     'wills-drafting',
     'litigation-dispute-resolution',
+    'family-law-personal-status',
+    'inheritance-estates',
   ]
   for (const slug of contentResyncSlugs) {
     const pa = practiceAreas.find((p) => p.slug === slug)

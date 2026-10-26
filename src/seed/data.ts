@@ -304,6 +304,16 @@ export const practiceAreas: Array<{
       ar: 'نساعد الأفراد والشركات في إجراءات المعاملات العقارية وتسجيل الملكية وفقًا للقانون المصري.',
       en: 'We assist individuals and businesses with real estate transaction procedures and property registration under Egyptian law.',
     },
+    whoWeHelp: {
+      ar: [
+        'نساعد الأفراد الراغبين في شراء أو بيع عقار على التحقق من سلامة المستندات قبل التعاقد، ومن اشترى عقارًا بعقد غير مسجَّل ويحتاج لاستكمال إجراءات التسجيل.',
+        'كما نساعد الشركاء على الشيوع في عقار واحد في إجراءات قسمته، والملاك والمستأجرين في المنازعات الناشئة عن عقود الإيجار.',
+      ],
+      en: [
+        'We help individuals buying or selling a property verify the soundness of the documents before contracting, and those who purchased a property under an unregistered contract and need to complete the registration procedure.',
+        'We also help co-owners of a single property with partitioning it, and landlords and tenants in disputes arising from lease contracts.',
+      ],
+    },
     legalIssuesCovered: {
       ar: [
         'من أكثر الأخطاء شيوعًا الاكتفاء بعقد بيع دون تسجيله رسميًا — راجع [لماذا تسجيل عقارك في الشهر العقاري ضروري؟](/ar/insights/real-estate-registration-egypt) و[أهم الاعتبارات القانونية في عقود بيع العقارات](/ar/insights/legal-considerations-real-estate-purchase-contracts) لمزيد من التفاصيل. إذا كنت تواجه نزاعًا على حيازة عقار دون انتظار إثبات الملكية، راجع [منازعات حيازة العقارات](/ar/insights/property-possession-disputes-egypt).',
@@ -312,6 +322,16 @@ export const practiceAreas: Array<{
       en: [
         'One of the most common mistakes is relying on a sale contract without formally registering it — see [Why Registering Your Property at the Real Estate Registry Matters](/en/insights/real-estate-registration-egypt) and [Key Legal Considerations in Real Estate Purchase Contracts](/en/insights/legal-considerations-real-estate-purchase-contracts) for more detail. If you are facing a possession dispute without waiting to prove ownership, see [Property Possession Disputes](/en/insights/property-possession-disputes-egypt).',
         'We also handle rental and tenancy disputes of various kinds, and partitioning real estate co-owned by several parties. See [Rental Disputes in Egypt](/en/insights/rental-tenancy-disputes-egypt) and [Partition of Co-Owned Property](/en/insights/co-ownership-partition-egypt) for more detail.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نراجع عقد البيع أو الإيجار ومستندات الملكية أولًا، ثم نوضح لكم الإجراء المناسب لوضعكم — سواء كان استكمال تسجيل العقد، أو رفع دعوى صحة ونفاذ عند امتناع البائع عن استكمال إجراءات التسجيل رغم استيفاء العقد لشروطه.',
+        'المكتب مقره الرئيسي في دمياط، ويقدّم هذه الخدمات لعملائه في دمياط وباقي محافظات جمهورية مصر العربية. لمناقشة حالتكم العقارية، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We first review the sale or lease contract and the ownership documents, then advise on the right procedure for your situation — whether completing the contract\'s registration, or filing a "sihha wa nafaz" (validity and enforceability) claim where the seller refuses to complete registration despite the contract otherwise meeting its conditions.',
+        'The firm is based in Damietta and serves clients there and across Egypt. To discuss your real estate matter, you can book a consultation with our team.',
       ],
     },
   },
@@ -323,6 +343,38 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نقدم التمثيل القانوني والاستشارات في قضايا الأحوال الشخصية، بما في ذلك الزواج والطلاق والحضانة والنفقة.',
       en: 'We provide legal representation and advisory in personal status matters, including marriage, divorce, custody, and alimony.',
+    },
+    whoWeHelp: {
+      ar: [
+        'نساعد الأفراد الذين يمرون بإجراءات الطلاق أو الخلع، وأولياء الأمر في مسائل الحضانة والرؤية والنفقة، سواء كانوا يسعون لإثبات حقوقهم أو للرد على دعوى مرفوعة ضدهم.',
+        'كما نساعد من يحتاج لتوثيق عقد زواج أو طلاق، أو من يواجه نزاعًا حول بيت الزوجية أو منقولاته.',
+      ],
+      en: [
+        'We help individuals going through divorce or khula proceedings, and parents/guardians in custody, visitation, and alimony matters — whether they are asserting their own rights or responding to a claim filed against them.',
+        'We also help those who need to formally document a marriage or divorce, or who face a dispute over the marital home or its contents.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'الطلاق والخلع: نمثل موكلينا في دعاوى الطلاق للضرر وفي إجراءات الخلع، ونوضح لهم الفرق بين الإجراءين من حيث الحقوق المالية المرتبطة بكل منهما — راجع [أنواع الطلاق في القانون المصري: نظرة عامة](/ar/insights/types-of-divorce-egyptian-law) لمزيد من التفاصيل.',
+        'النفقة: نساعد في دعاوى نفقة الزوجة والأبناء، وفي طلبات تعديل قيمتها زيادة أو تخفيضًا عند تغيّر الظروف المالية لأي من الطرفين.',
+        'الحضانة والرؤية: نمثل الحاضنة أو غير الحاضن في دعاوى الحضانة وتنظيم الرؤية، مع مراعاة أن مصلحة الصغير هي المعيار الذي يحكم هذه المسائل في القانون المصري.',
+      ],
+      en: [
+        'Divorce and khula: we represent clients in fault-based divorce claims and khula proceedings, and explain the difference between the two in terms of the financial rights attached to each — see [Types of Divorce Under Egyptian Law: An Overview](/en/insights/types-of-divorce-egyptian-law) for more detail.',
+        'Alimony: we help with spousal and child alimony claims, and with requests to adjust the amount upward or downward as either party\'s financial circumstances change.',
+        'Custody and visitation: we represent either the custodial or non-custodial parent in custody claims and visitation arrangements, bearing in mind that the child\'s best interest is the governing standard under Egyptian law.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نبدأ بمراجعة مستنداتكم (عقد الزواج، إشهار الطلاق إن وجد، أي أحكام سابقة) لتحديد وضعكم القانوني بدقة قبل اتخاذ أي خطوة.',
+        'المكتب مقره الرئيسي في دمياط، ويمثل موكليه في قضايا الأحوال الشخصية أمام محاكم الأسرة. لمناقشة حالتكم، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        "We start by reviewing your documents (marriage contract, divorce certificate if any, prior rulings) to establish your exact legal position before any step is taken.",
+        'The firm is based in Damietta and represents clients in personal status matters before the family courts. To discuss your situation, you can book a consultation with our team.',
+      ],
     },
   },
   {
@@ -455,6 +507,38 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نقدم الاستشارات القانونية والتمثيل في مسائل الميراث، بما في ذلك حصر التركة وقسمتها ومنازعات الورثة، وفقًا لأحكام الشريعة الإسلامية والقانون المصري.',
       en: 'We provide legal advisory and representation in inheritance matters, including estate inventory, division among heirs, and inheritance disputes, in accordance with Islamic Sharia principles and Egyptian law.',
+    },
+    whoWeHelp: {
+      ar: [
+        'نساعد الورثة الذين يسعون لحصر التركة وقسمتها وديًا أو قضائيًا، ومن يواجه امتناع أحد الورثة عن التعاون في القسمة.',
+        'كما نساعد من يحتاج لإثبات نصيبه الشرعي في تركة، أو الطعن في قسمة تمت دون علمه أو موافقته.',
+      ],
+      en: [
+        'We help heirs seeking to inventory and divide an estate, whether amicably or through the courts, and those facing an heir who refuses to cooperate with the division.',
+        'We also help those who need to establish their lawful share in an estate, or to challenge a division that took place without their knowledge or consent.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'حصر التركة: نساعد في تحديد عناصر التركة من منقولات وعقارات، والديون المترتبة عليها، كخطوة أولى لازمة قبل أي قسمة.',
+        'قسمة التركة: نتولى إجراءات القسمة الودية بين الورثة، أو رفع دعوى قسمة قضائية عند امتناع أحدهم عن التعاون — راجع [كيف تُقسَّم التركة بين الورثة؟](/ar/insights/how-is-an-estate-divided) لمزيد من التفاصيل حول الخطوات والمواعيد.',
+        'منازعات الورثة: نمثل موكلينا في المنازعات الناشئة بين الورثة حول نصيب كل منهم أو صحة تصرفات تمت على أموال التركة.',
+      ],
+      en: [
+        'Estate inventory: we help identify the estate\'s assets — movable and real property — and the debts owed against it, as the necessary first step before any division.',
+        'Estate division: we handle amicable division procedures among heirs, or file a judicial partition claim where an heir refuses to cooperate — see [How Is an Estate Divided Among Heirs?](/en/insights/how-is-an-estate-divided) for more detail on the steps and timelines.',
+        'Heir disputes: we represent clients in disputes between heirs over their respective shares or the validity of dealings carried out with estate assets.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نراجع معكم المستندات المتاحة (إعلام الوراثة، سندات الملكية، أي عقود سابقة) لتحديد موقفكم القانوني بدقة قبل اتخاذ أي خطوة.',
+        'نعمل وفقًا لأحكام الشريعة الإسلامية والقانون المصري المنظم للمواريث، مع تمثيل موكلينا أمام المحاكم المختصة عند تعذر التسوية الودية. لمناقشة حالتكم، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We review the available documents with you (the heirship certificate, title deeds, any prior contracts) to establish your legal position precisely before any step is taken.',
+        'We work in accordance with Islamic Sharia principles and the Egyptian law governing inheritance, representing clients before the competent courts where an amicable settlement cannot be reached. To discuss your situation, you can book a consultation with our team.',
+      ],
     },
   },
   {

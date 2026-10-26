@@ -22,6 +22,19 @@ import { OfficeSection } from '@/components/home/OfficeSection'
 // CMS-backed page: revalidate periodically so CMS publishes appear without a redeploy.
 export const revalidate = 60
 
+// Homepage-only SEO title/description, local to this file — deliberately NOT
+// read from dict.hero.headline/valueProp, which are shared with the <h1>
+// here, the sitewide <title> template in layout.tsx, and the firm-intro
+// card rendered on every practice-area page. Changing those shared keys
+// would ripple into pages outside this change's scope (including frozen
+// GSC-validation URLs); this local override keeps the homepage's search
+// snippet independent of all of that.
+const homeSeoAr = {
+  title: 'مكتب آل حراز للمحاماة والاستشارات القانونية – دمياط',
+  description:
+    'مكتب محاماة واستشارات قانونية في دمياط، يقدم خدماته للأفراد والشركات في دمياط وجميع محافظات جمهورية مصر العربية منذ عام 1983.',
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -33,8 +46,8 @@ export async function generateMetadata({
   return buildMetadata({
     locale,
     path: '',
-    title: dict.hero.headline,
-    description: dict.hero.valueProp,
+    title: locale === 'ar' ? homeSeoAr.title : dict.hero.headline,
+    description: locale === 'ar' ? homeSeoAr.description : dict.hero.valueProp,
   })
 }
 
