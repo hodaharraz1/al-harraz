@@ -40,11 +40,11 @@ export const practiceAreas: Array<{
     whoWeHelp: {
       ar: [
         'نساعد الأفراد الذين يواجهون نزاعًا مدنيًا — سواء مع طرف تعاقدي، أو جار بخصوص عقار، أو مدين يرفض السداد — في فهم موقفهم القانوني واختيار المسار الأنسب، بالتسوية الودية أو باللجوء للقضاء عند الحاجة.',
-        'كما نساعد الشركات وأصحاب الأعمال في صياغة ومراجعة عقودهم، وتمثيلهم في المنازعات المدنية والتجارية التي قد تنشأ أثناء ممارسة نشاطهم. المكتب مقره الرئيسي في دمياط، ويقدم خدماته للعملاء في مختلف أنحاء جمهورية مصر العربية.',
+        'كما نساعد الشركات وأصحاب الأعمال في صياغة ومراجعة عقودهم، وتمثيلهم في المنازعات المدنية والتجارية التي قد تنشأ أثناء ممارسة نشاطهم. المكتب مقره الرئيسي في دمياط، ويقدم خدماته للعملاء في مختلف أنحاء جمهورية مصر العربية منذ تأسيسه عام 1983 — راجع [تاريخ المكتب](/ar/about/history) لمزيد من التفاصيل.',
       ],
       en: [
         'We help individuals facing a civil dispute — whether with a contracting party, a neighbor over property, or a debtor refusing to pay — understand their legal position and choose the right path, whether an amicable settlement or litigation when necessary.',
-        'We also help companies and business owners draft and review their contracts, and represent them in the civil and commercial disputes that can arise in the course of business. The firm is based in Damietta and serves clients across Egypt.',
+        'We also help companies and business owners draft and review their contracts, and represent them in the civil and commercial disputes that can arise in the course of business. The firm is based in Damietta and has served clients across Egypt since its founding in 1983 — see [the firm\'s history](/en/about/history) for more detail.',
       ],
     },
     legalIssuesCovered: {
@@ -83,6 +83,14 @@ export const practiceAreas: Array<{
       ar: 'يمثل مكتب آل حراز الأفراد والشركات في المنازعات المدنية والتجارية أمام المحاكم المصرية، من مرحلة التقاضي الابتدائي وحتى الاستئناف، بهدف الوصول إلى أفضل نتيجة ممكنة لموكلينا.',
       en: 'Al Harraz Law Firm represents individuals and businesses in civil and commercial disputes before the Egyptian courts, from first-instance litigation through appeal, working toward the best achievable outcome for our clients.',
     },
+    legalIssuesCovered: {
+      ar: [
+        'تشمل خبرتنا المنازعات التجارية بمختلف أنواعها، والتي يختص بنظرها في أغلب الأحوال المحاكم الاقتصادية المتخصصة — راجع [المنازعات التجارية في مصر: نظرة عامة على أنواعها والمحاكم المختصة](/ar/insights/commercial-disputes-overview-egypt) لمزيد من التفاصيل.',
+      ],
+      en: [
+        'Our experience covers commercial disputes of various kinds, which in most cases fall within the jurisdiction of the specialized Economic Courts — see [Commercial Disputes in Egypt: An Overview of Their Types and the Competent Courts](/en/insights/commercial-disputes-overview-egypt) for more detail.',
+      ],
+    },
   },
   {
     slug: 'corporate-commercial-law',
@@ -96,12 +104,32 @@ export const practiceAreas: Array<{
       ar: 'نقدم الاستشارات القانونية للشركات في مراحل التأسيس والحوكمة والامتثال، بالإضافة إلى صياغة ومراجعة العقود التجارية بما يحمي مصالح موكلينا.',
       en: 'We advise businesses on formation, governance and compliance, and draft and review commercial contracts to protect our clients’ interests.',
     },
+    whoWeHelp: {
+      ar: [
+        'نساعد رواد الأعمال في مرحلة تأسيس الشركة من اختيار الشكل القانوني المناسب وصياغة عقد التأسيس والنظام الأساسي، بالتنسيق مع خدماتنا في [تأسيس الشركات والاستثمار](/ar/practice-areas/company-formation-investment). راجع أيضًا [أنواع الشركات في مصر](/ar/insights/types-of-companies-in-egypt) لمقارنة عامة بين الأشكال القانونية المتاحة.',
+        'كما نساعد الشركات القائمة في مسائل الحوكمة اليومية — من قرارات الجمعية العمومية ومجلس الإدارة، إلى العلاقات بين الشركاء أو المساهمين عند نشوء خلاف بينهم.',
+      ],
+      en: [
+        'We help entrepreneurs at the company-formation stage choose the right legal form and draft the articles of association and bylaws, working alongside our [Company Formation & Investment](/en/practice-areas/company-formation-investment) services. See also [Types of Companies in Egypt](/en/insights/types-of-companies-in-egypt) for a general comparison of the available legal forms.',
+        'We also help established companies with day-to-day governance matters — from general assembly and board resolutions, to relationships between partners or shareholders when a disagreement arises between them.',
+      ],
+    },
     legalIssuesCovered: {
       ar: [
         'من بين العقود التجارية التي نتعامل معها بانتظام عقود الوكالة التجارية والتوزيع، والتي لها اعتبارات قانونية خاصة بها — راجع [الوكالة التجارية والتوزيع](/ar/practice-areas/commercial-agency-distribution) لمزيد من التفاصيل.',
       ],
       en: [
         'Among the commercial contracts we regularly handle are commercial agency and distribution agreements, which carry their own specific legal considerations — see [Commercial Agency & Distribution](/en/practice-areas/commercial-agency-distribution) for more detail.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نراجع ونصيغ العقود التجارية التي تحتاجها الشركة في نشاطها اليومي — من عقود التوريد والتوزيع إلى اتفاقيات الشراكة — مع الحرص على وضوح الالتزامات وتوزيع المخاطر بشكل عادل بين الأطراف.',
+        'لمناقشة مسألة محددة تخص شركتكم، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        "We review and draft the commercial contracts a company needs in its daily activity — from supply and distribution agreements to partnership arrangements — with close attention to clear obligations and a fair allocation of risk between the parties.",
+        'To discuss a specific matter affecting your company, you can book a consultation with our team.',
       ],
     },
   },
@@ -206,6 +234,16 @@ export const practiceAreas: Array<{
       ar: 'يقدم مكتب آل حراز خدمات قانونية متخصصة في المسائل البحرية والشحن، وتشمل منازعات الشحن، مطالبات البضائع، سندات الشحن، مسؤولية الناقل البحري، التخليص الجمركي، والتجارة الدولية.',
       en: 'Al Harraz Law Firm provides specialized legal services in maritime and shipping matters, including shipping disputes, cargo claims, bills of lading, carrier liability, customs clearance, and international trade.',
     },
+    legalIssuesCovered: {
+      ar: [
+        'سند الشحن من أهم المستندات التي نتعامل معها بانتظام في هذا المجال، نظرًا لوظائفه القانونية الثلاث كإثبات لاستلام البضاعة وعقد النقل وسند ملكية قابل للتداول — راجع [سند الشحن البحري: ما هو ولماذا يهم؟](/ar/insights/bill-of-lading-explained-egypt) لنظرة عامة عليه.',
+        'كما نقدم خدماتنا لشركات الموانئ والخدمات اللوجستية بشكل خاص — راجع [الموانئ والخدمات اللوجستية](/ar/industries/ports-logistics) لمزيد من التفاصيل حول هذا القطاع تحديدًا.',
+      ],
+      en: [
+        "The bill of lading is one of the most important documents we handle regularly in this area, given its three legal functions as evidence of receipt of goods, evidence of the carriage contract, and a negotiable document of title — see [The Bill of Lading Explained: What It Is and Why It Matters](/en/insights/bill-of-lading-explained-egypt) for an overview.",
+        'We also serve port and logistics companies specifically — see [Ports & Logistics](/en/industries/ports-logistics) for more detail on this sector in particular.',
+      ],
+    },
   },
   {
     slug: 'customs-import-export',
@@ -225,6 +263,36 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نقدم الاستشارات القانونية في علاقات العمل، عقود التوظيف، ومنازعات العمل الفردية والجماعية.',
       en: 'We provide legal advisory on employment relationships, employment contracts, and individual and collective labour disputes.',
+    },
+    whoWeHelp: {
+      ar: [
+        'نساعد أصحاب العمل في صياغة عقود العمل ولوائح الجزاءات والسياسات الداخلية بما يتوافق مع القانون، وفي التعامل مع المسائل التأديبية ومنازعات إنهاء الخدمة بشكل سليم قانونيًا.',
+        'كما نساعد العاملين الذين يواجهون إنهاءً غير مبرر لعقدهم، أو خلافًا حول مستحقاتهم عند انتهاء العلاقة الوظيفية، أو أي نزاع آخر مع جهة عملهم.',
+      ],
+      en: [
+        "We help employers draft employment contracts, disciplinary regulations, and internal policies that comply with the law, and handle disciplinary matters and termination disputes correctly from a legal standpoint.",
+        'We also help employees facing an unjustified termination, a dispute over what they\'re owed at the end of the employment relationship, or any other disagreement with their employer.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'دخل قانون العمل الجديد رقم 14 لسنة 2025 حيز التنفيذ اعتبارًا من سبتمبر 2025، وغيّر عددًا من القواعد المتعلقة بإنهاء عقد العمل مقارنة بالقانون السابق، بما في ذلك مدة الإخطار المطلوبة وطريقة حساب مكافأة أو تعويض نهاية الخدمة. راجع [قانون العمل الجديد رقم 14 لسنة 2025: ماذا تغيّر بخصوص إنهاء عقد العمل؟](/ar/insights/new-labor-law-egypt-2025-overview) لنظرة عامة مبدئية.',
+        'نظرًا لحداثة القانون ودقة تفاصيل الحساب التي تختلف حسب نوع العقد وسبب الإنهاء ومدة الخدمة، لا يمكن تقديم رقم أو نسبة ثابتة تصلح لكل الحالات دون مراجعة تفاصيل كل حالة على حدة.',
+      ],
+      en: [
+        "Egypt's new Labor Law No. 14 of 2025 came into force in September 2025 and changed a number of rules on ending an employment contract compared to the previous law, including the required notice period and how end-of-service gratuity or compensation is calculated. See [Egypt's New Labor Law No. 14 of 2025: What Changed for Ending an Employment Contract?](/en/insights/new-labor-law-egypt-2025-overview) for a preliminary overview.",
+        "Because the law is recent and the calculation details are precise — varying by contract type, reason for termination, and length of service — no single figure or percentage fits every case without reviewing the specifics.",
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نراجع موقفكم تحديدًا في ضوء القانون الجديد قبل اتخاذ أي خطوة، سواء كنتم صاحب عمل يخطط لإنهاء عقد عامل أو عاملًا يواجه إنهاءً أو نزاعًا حول مستحقاته.',
+        'لمناقشة حالتكم، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We review your specific situation in light of the new law before any step is taken — whether you are an employer planning to end an employee\'s contract or an employee facing termination or a dispute over what you\'re owed.',
+        'To discuss your situation, you can book a consultation with our team.',
+      ],
     },
   },
   {
@@ -265,6 +333,36 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نمثل موكلينا في المنازعات الإدارية أمام مجلس الدولة، بما في ذلك الطعون على القرارات الإدارية.',
       en: 'We represent clients in administrative disputes before the State Council, including challenges to administrative decisions.',
+    },
+    whoWeHelp: {
+      ar: [
+        'نساعد الأفراد والشركات الذين صدر بحقهم قرار إداري يرون أنه غير قانوني — كرفض طلب ترخيص، أو قرار فصل من وظيفة حكومية، أو إجراء إداري آخر — في تقييم فرص الطعن عليه ومواعيده.',
+        'كما نساعد موظفي الجهات الحكومية في المنازعات الوظيفية المتعلقة بالتعيين أو الترقية أو الجزاءات التأديبية.',
+      ],
+      en: [
+        'We help individuals and companies against whom an administrative decision has been issued that they believe is unlawful — a rejected license application, a dismissal from a government position, or another administrative action — assess their chances of challenging it and the applicable deadlines.',
+        'We also help government employees in employment-related disputes concerning appointment, promotion, or disciplinary penalties.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'يختص مجلس الدولة، المنظم بموجب القانون رقم 47 لسنة 1972، دون غيره بالفصل في طلبات إلغاء القرارات الإدارية النهائية وسائر المنازعات الإدارية. راجع [الطعن على القرار الإداري في مصر: نظرة عامة](/ar/insights/challenging-administrative-decisions-egypt) لتفاصيل أوسع حول ميعاد الطعن ودور التظلم الإداري.',
+        'من أكثر الأخطاء شيوعًا في هذا المجال فوات ميعاد الطعن (ستون يومًا كقاعدة عامة) قبل التشاور مع محامٍ، مما قد يفقد صاحب الشأن حقه في الطعن نهائيًا مهما كانت وجاهة اعتراضه الموضوعي.',
+      ],
+      en: [
+        "Egypt's State Council, governed by Law No. 47 of 1972, has exclusive jurisdiction to rule on requests to annul final administrative decisions and other administrative disputes. See [Challenging an Administrative Decision in Egypt: An Overview](/en/insights/challenging-administrative-decisions-egypt) for more detail on the appeal deadline and the role of the administrative grievance.",
+        "One of the most common mistakes in this area is letting the appeal deadline (sixty days, as a general rule) pass before consulting a lawyer, which can permanently forfeit the right to challenge the decision regardless of how valid the underlying objection is on the merits.",
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نراجع القرار الإداري الصادر بحقكم ونقيّم أسس الطعن المتاحة والمواعيد المرتبطة بها، ونمثلكم أمام مجلس الدولة بمختلف درجاته عند الحاجة.',
+        'لمناقشة قرار إداري صدر بحقكم، يمكنكم حجز استشارة مع فريقنا في أقرب وقت — فالمواعيد في هذا المجال لا تحتمل التأخير.',
+      ],
+      en: [
+        'We review the administrative decision issued against you, assess the available grounds for appeal and the deadlines attached to them, and represent you before the State Council at every level where needed.',
+        "To discuss an administrative decision issued against you, you can book a consultation with our team as soon as possible — deadlines in this area leave no room for delay.",
+      ],
     },
   },
   {
@@ -371,6 +469,36 @@ export const practiceAreas: Array<{
       ar: 'نقدم الاستشارات القانونية في المسائل الضريبية للأفراد والشركات، ونمثل موكلينا في المنازعات الضريبية أمام الجهات المختصة.',
       en: 'We provide legal advisory on tax matters for individuals and businesses, and represent clients in tax disputes before the relevant authorities.',
     },
+    whoWeHelp: {
+      ar: [
+        'نساعد أصحاب الأعمال والشركات في فهم التزاماتهم الضريبية المستمرة بعد بدء النشاط — راجع [تراخيص الأنشطة التجارية والمحال](/ar/practice-areas/commercial-activity-business-licensing) لمرحلة استخراج البطاقة الضريبية نفسها، فالالتزامات الدورية بعدها مسألة منفصلة تحتاج متابعة.',
+        'كما نساعد الأفراد والشركات الذين يواجهون خلافًا مع مصلحة الضرائب، سواء بخصوص ربط ضريبي يعتبرونه غير صحيح، أو إجراءات فحص ومراجعة، أو غرامات تأخير يرون أنها غير مستحقة.',
+      ],
+      en: [
+        'We help business owners and companies understand their ongoing tax obligations after starting operations — see [Commercial Activity & Business Premises Licensing](/en/practice-areas/commercial-activity-business-licensing) for the initial tax-card process itself, since the recurring obligations that follow are a separate matter requiring regular attention.',
+        'We also help individuals and companies facing a dispute with the Egyptian Tax Authority, whether over an assessment they believe is incorrect, an audit or examination process, or late-payment penalties they consider unwarranted.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'يخضع فرض ضريبة الدخل على الأفراد والأشخاص الاعتبارية في مصر بشكل أساسي لقانون الضريبة على الدخل رقم 91 لسنة 2005 ولوائحه التنفيذية. تختلف القواعد التفصيلية (كالإقرارات المطلوبة والمواعيد والنسب) بحسب طبيعة النشاط وحجمه، ولا تصلح الأرقام العامة للتطبيق دون مراجعة وضعكم الضريبي تحديدًا.',
+        'من المسائل التي نتعامل معها بانتظام: الطعن على الربط الضريبي أمام لجان الطعن الداخلية ثم القضاء عند الحاجة، ومراجعة الموقف الضريبي قبل إتمام صفقات أو معاملات كبيرة لتفادي مفاجآت لاحقة.',
+      ],
+      en: [
+        'Income tax on individuals and corporate entities in Egypt is primarily governed by Income Tax Law No. 91 of 2005 and its executive regulations. The detailed rules — required filings, deadlines, and rates — vary by the nature and scale of the activity, and general figures should not be relied on without reviewing your specific tax position.',
+        'Matters we regularly handle include challenging a tax assessment before the internal appeal committees and, where necessary, before the courts, and reviewing a tax position before completing a major transaction to avoid later surprises.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نراجع الإخطارات أو قرارات الربط الضريبي الصادرة لكم، ونساعدكم في تقييم أسس الطعن المتاحة والمواعيد المرتبطة بها قبل فوات الأوان.',
+        'لمناقشة مسألة ضريبية محددة، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We review the notices or assessment decisions issued to you, and help you evaluate the available grounds for appeal and the deadlines attached to them before it is too late.',
+        'To discuss a specific tax matter, you can book a consultation with our team.',
+      ],
+    },
   },
   {
     slug: 'banking-finance-law',
@@ -410,6 +538,36 @@ export const practiceAreas: Array<{
       ar: 'نقدم الاستشارات القانونية والتمثيل في منازعات حماية المستهلك، بما يشمل عيوب المنتجات والخدمات وشروط التعاقد غير العادلة.',
       en: 'We provide legal advisory and representation in consumer protection disputes, including defective products and services and unfair contract terms.',
     },
+    whoWeHelp: {
+      ar: [
+        'نساعد المستهلكين الذين واجهوا منتجًا معيبًا، أو خدمة لم تُقدَّم كما تم الاتفاق عليها، أو شروطًا تعاقدية يرون أنها غير عادلة أو مضللة، في فهم حقوقهم والمسار المتاح للمطالبة بها.',
+        'كما نساعد أصحاب الأعمال والموردين في مراجعة شروط التعاقد والممارسات التجارية بما يتوافق مع قانون حماية المستهلك، لتقليل مخاطر النزاعات مع العملاء.',
+      ],
+      en: [
+        'We help consumers who have encountered a defective product, a service that was not delivered as agreed, or contract terms they consider unfair or misleading, understand their rights and the available path to pursue them.',
+        'We also help business owners and suppliers review their contract terms and commercial practices for compliance with the Consumer Protection Law, to reduce the risk of disputes with customers.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'يُنظَّم حماية المستهلك في مصر بشكل أساسي بموجب القانون رقم 181 لسنة 2018، الذي حل محل القانون السابق رقم 67 لسنة 2006. يكفل القانون للمستهلك عددًا من الحقوق الأساسية، منها الحق في الحصول على معلومات واضحة عن السلعة أو الخدمة، والحق في سلامة المنتج، والحق في التعويض عن الضرر الناتج عن عيب فيه.',
+        'تختص المحاكم الاقتصادية بنظر منازعات حماية المستهلك ذات الطابع التجاري، بينما تختص جهة إدارية متخصصة بالرقابة على الالتزام بأحكام القانون ومتابعة الشكاوى. تفاصيل الإجراء المحدد (كمدد الاسترجاع أو الاستبدال) تختلف بحسب طبيعة السلعة أو الخدمة ويُنصح بمراجعتها في ضوء ظروف كل حالة.',
+      ],
+      en: [
+        'Consumer protection in Egypt is primarily governed by Law No. 181 of 2018, which replaced the earlier Law No. 67 of 2006. The law guarantees consumers a number of core rights, including the right to clear information about a product or service, the right to product safety, and the right to compensation for harm caused by a defect.',
+        'Commercial consumer-protection disputes fall within the jurisdiction of the Economic Courts, while a dedicated administrative body oversees compliance with the law and handles complaints. The specific procedural details — such as return or exchange windows — vary by the nature of the product or service and should be reviewed in light of each case\'s circumstances.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نقيّم موقفكم كمستهلك أو كصاحب نشاط تجاري في ضوء وقائع الحالة المحددة، ونوضح لكم الخيارات المتاحة سواء بالتسوية الودية أو التقدم بشكوى أو اللجوء للقضاء عند الحاجة.',
+        'للمستهلكين: من المهم الاحتفاظ بفاتورة الشراء وأي مراسلات مع المورد، فهي الأساس الذي تُبنى عليه أي مطالبة لاحقة. لمناقشة حالتكم، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We assess your position as a consumer or business in light of the specific facts of the case, and explain the options available — an amicable resolution, a formal complaint, or litigation where necessary.',
+        "For consumers: it's important to keep your purchase invoice and any correspondence with the supplier, as these form the basis for any later claim. To discuss your situation, you can book a consultation with our team.",
+      ],
+    },
   },
   {
     slug: 'mediation',
@@ -436,6 +594,36 @@ export const practiceAreas: Array<{
       ar: 'نقدم الاستشارات القانونية وصياغة ومراجعة عقود المقاولات والإنشاءات بين المالكين والمقاولين والموردين، ونمثل موكلينا في المنازعات الناشئة عن التأخير في التنفيذ أو عيوب الأعمال أو المطالبات المالية المرتبطة بهذه العقود.',
       en: 'We provide legal advisory and draft and review construction and contracting agreements between owners, contractors, and suppliers, and represent clients in disputes arising from execution delays, defective work, or financial claims connected to these contracts.',
     },
+    whoWeHelp: {
+      ar: [
+        'نساعد المالكين (أفرادًا أو شركات) الذين يتعاقدون مع مقاول لتنفيذ أعمال بناء أو تشطيب أو توريد، في صياغة عقد يحدد نطاق الأعمال ومواعيدها وقيمتها بوضوح قبل البدء — راجع [أهم البنود التي يجب مراجعتها قبل توقيع أي عقد](/ar/insights/what-to-review-before-signing-contract) لنظرة عامة على عناصر العقد الأساسية.',
+        'كما نساعد المقاولين والموردين في مراجعة العقود المعروضة عليهم من جهة التعاقد، وفي المطالبة بمستحقاتهم عند التأخر في السداد أو عند نشوء خلاف حول تنفيذ الأعمال.',
+      ],
+      en: [
+        'We help owners (individuals or companies) contracting with a builder for construction, finishing, or supply work, draft a contract that clearly defines the scope of work, timeline, and value before work begins — see [Key Clauses to Review Before Signing Any Contract](/en/insights/what-to-review-before-signing-contract) for an overview of a contract\'s essential elements.',
+        'We also help contractors and suppliers review contracts presented to them by the contracting party, and pursue what they are owed when payment is delayed or a dispute arises over the execution of the works.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'تخضع عقود المقاولة في مصر بشكل أساسي لأحكام القانون المدني المصري الخاصة بعقد المقاولة، إلى جانب ما يتفق عليه الطرفان صراحة في العقد نفسه من شروط خاصة بطبيعة المشروع.',
+        'أكثر المنازعات شيوعًا في هذا المجال: التأخر في تسليم الأعمال عن الموعد المتفق عليه، ووجود عيوب أو عدم مطابقة للمواصفات المتفق عليها، والخلاف حول استحقاق دفعات معينة أو أعمال إضافية لم تكن ضمن النطاق الأصلي للعقد.',
+      ],
+      en: [
+        "Construction contracts in Egypt are primarily governed by the Egyptian Civil Code's provisions on contracting (muqawala) agreements, alongside whatever specific terms the parties expressly agree to in the contract itself for the project's particular nature.",
+        'The most common disputes in this area: delayed delivery of the works beyond the agreed schedule, defects or non-conformity with the agreed specifications, and disagreement over entitlement to specific payments or additional work that fell outside the contract\'s original scope.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نراجع عقود المقاولة قبل التوقيع لضمان وضوح نطاق الأعمال وجدول الدفعات وآلية التعامل مع التأخير أو الأعمال الإضافية، كما نمثل موكلينا في المنازعات التي تنشأ أثناء التنفيذ أو بعده.',
+        'التوثيق الجيد أثناء التنفيذ (كمحاضر الاستلام والمراسلات الخاصة بأي تأخير أو خلاف) يسهّل كثيرًا إثبات الحق لاحقًا. لمناقشة مشروع محدد، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We review construction contracts before signing to ensure the scope of work, payment schedule, and the mechanism for handling delays or additional work are clear, and represent clients in disputes that arise during or after execution.',
+        'Good documentation during execution (handover records and correspondence about any delay or disagreement) makes it considerably easier to establish your position later. To discuss a specific project, you can book a consultation with our team.',
+      ],
+    },
   },
   {
     slug: 'document-notarization-authentication',
@@ -448,6 +636,36 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نتولى متابعة إجراءات توثيق وتصديق العقود والتوكيلات والمستندات القانونية أمام الجهات المختصة، بما يضمن سلامة الإجراءات من الناحية القانونية والشكلية.',
       en: 'We handle the procedures for notarizing and authenticating contracts, powers of attorney, and legal documents before the relevant authorities, ensuring the process is legally and procedurally sound.',
+    },
+    whoWeHelp: {
+      ar: [
+        'نساعد الأفراد والشركات الذين يحتاجون لتوثيق عقد بيع، أو تصديق توكيل عام أو خاص — راجع [صياغة التوكيلات](/ar/practice-areas/power-of-attorney-drafting) إذا كنتم بحاجة لصياغة التوكيل نفسه أولًا — أو توثيق أي مستند آخر يتطلب القانون توثيقه ليكون حجة في مواجهة الغير.',
+        'كما نساعد من يحتاج لتوثيق مستندات صادرة من الخارج لاستخدامها في مصر، أو مستندات مصرية لاستخدامها خارج البلاد، حيث تتطلب هذه الحالات غالبًا خطوات تصديق إضافية.',
+      ],
+      en: [
+        'We help individuals and companies who need to notarize a sale contract, or authenticate a general or special power of attorney — see [Power of Attorney Drafting](/en/practice-areas/power-of-attorney-drafting) if you need the power of attorney itself drafted first — or notarize any other document the law requires to be notarized to be valid against third parties.',
+        'We also help clients who need to authenticate documents issued abroad for use in Egypt, or Egyptian documents for use abroad, as these situations typically require additional authentication steps.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'تتولى مكاتب الشهر العقاري والتوثيق إجراءات التوثيق والتصديق، وتشمل مهامها التصديق على توقيع وتنفيذ المستندات، وتوثيق مضمون المحررات، وإصدار التوكيلات الخاصة بالتصرف في الملكية أو تأجيرها. راجع [لماذا تسجيل عقارك في الشهر العقاري ضروري؟](/ar/insights/real-estate-registration-egypt) لنظرة عامة على دور هذه المكاتب في مجال التسجيل العقاري تحديدًا.',
+        'لكل مكتب شهر عقاري اختصاص مكاني محدد — فإذا كان العقار الواحد يقع ضمن اختصاص أكثر من مكتب، وجب إتمام إجراءات التسجيل في كل مكتب على حدة. أما المستندات الصادرة من الخارج، فتحتاج عادة تصديقًا من السفارة المصرية في بلد الإصدار، ثم تصديقًا إضافيًا من وزارة الخارجية المصرية داخل مصر.',
+      ],
+      en: [
+        "Notary (Real Estate Registry) offices handle notarization and authentication procedures, including attesting the signature and execution of documents, authenticating the content of instruments, and issuing powers of attorney for disposing of or leasing property. See [Why Registering Your Property at the Real Estate Registry Matters](/en/insights/real-estate-registration-egypt) for an overview of these offices' role specifically in property registration.",
+        'Each notary office has a defined territorial jurisdiction — if a single property falls within the jurisdiction of more than one office, registration must be completed separately at each one. Documents issued abroad typically need authentication by the Egyptian embassy in the country of issuance, followed by a further authentication from the Egyptian Ministry of Foreign Affairs inside Egypt.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نتابع إجراءات التوثيق أو التصديق نيابة عنكم أمام المكتب المختص، ونتأكد من استيفاء المستندات المطلوبة مسبقًا لتجنب أي تأخير أو رفض إجرائي.',
+        'لمناقشة مستند محدد تحتاجون توثيقه أو تصديقه، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We follow up on the notarization or authentication procedures on your behalf before the competent office, and make sure the required documents are in order beforehand to avoid any delay or procedural rejection.',
+        'To discuss a specific document you need notarized or authenticated, you can book a consultation with our team.',
+      ],
     },
   },
   {
@@ -487,6 +705,36 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نساعد الشركات والأفراد في صياغة ومراجعة عقود الوكالة التجارية والتوزيع، وتوضيح الحقوق والالتزامات القانونية لكل طرف وفقًا للقانون المصري المنظم لهذا النشاط.',
       en: 'We help companies and individuals draft and review commercial agency and distribution agreements, clarifying each party’s legal rights and obligations under the Egyptian law governing this activity.',
+    },
+    whoWeHelp: {
+      ar: [
+        'نساعد الشركات الأجنبية الراغبة في دخول السوق المصري عبر وكيل أو موزع محلي، في صياغة عقد يحدد نطاق الوكالة أو التوزيع ومدى حصريتها والمنطقة الجغرافية المشمولة بوضوح.',
+        'كما نساعد الوكلاء والموزعين المصريين في مراجعة العقود المعروضة عليهم من الجهة الأجنبية، وفي تقييم موقفهم عند إنهاء العلاقة التعاقدية أو عدم تجديدها — راجع [قانون الشركات والقانون التجاري](/ar/practice-areas/corporate-commercial-law) لخدماتنا الأوسع في المسائل التجارية.',
+      ],
+      en: [
+        'We help foreign companies looking to enter the Egyptian market through a local agent or distributor draft an agreement that clearly defines the scope of the agency or distribution arrangement, its exclusivity, and the geographic territory covered.',
+        'We also help Egyptian agents and distributors review agreements presented to them by the foreign party, and assess their position when the contractual relationship is terminated or not renewed — see [Corporate & Commercial Law](/en/practice-areas/corporate-commercial-law) for our broader commercial-law services.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'ينظم عقود الوكالة التجارية والتوزيع في مصر بشكل أساسي القانون رقم 120 لسنة 1982 بشأن سجل الوكلاء التجاريين وتعديلاته، إلى جانب الأحكام العامة لعقد الوكالة التجارية في قانون التجارة رقم 17 لسنة 1999.',
+        'من أكثر المسائل حساسية في هذا النوع من العقود: شروط الإنهاء أو عدم التجديد، وأي حق في التعويض قد يستحقه الوكيل أو الموزع عند إنهاء العلاقة، إذ تتوقف هذه المسائل على نص العقد نفسه وظروف كل حالة، ولا تصلح لها قاعدة عامة واحدة.',
+      ],
+      en: [
+        'Commercial agency and distribution agreements in Egypt are primarily governed by Law No. 120 of 1982 on the Commercial Agents Register and its amendments, alongside the general provisions on commercial agency contracts in the Commercial Code No. 17 of 1999.',
+        'Among the most sensitive issues in this type of agreement: the termination or non-renewal conditions, and any compensation the agent or distributor may be entitled to when the relationship ends — these depend on the contract\'s own wording and each case\'s circumstances, and no single general rule fits every situation.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نراجع أو نصيغ عقد الوكالة أو التوزيع بما يحمي مصالحكم منذ البداية، ونمثلكم عند نشوء خلاف حول تنفيذ العقد أو إنهائه.',
+        'لمناقشة عقد وكالة أو توزيع محدد، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We review or draft the agency or distribution agreement to protect your interests from the outset, and represent you when a dispute arises over the contract\'s performance or termination.',
+        'To discuss a specific agency or distribution agreement, you can book a consultation with our team.',
+      ],
     },
   },
   {
@@ -566,6 +814,36 @@ export const practiceAreas: Array<{
       ar: 'نساعد أصحاب المواقع الإلكترونية والتطبيقات في صياغة شروط الاستخدام وسياسات الخصوصية بما يتوافق مع القانون المصري، بما يوضح حقوق والتزامات المستخدمين وأصحاب المنصة على حد سواء.',
       en: 'We help website and app owners draft terms of use and privacy policies that comply with Egyptian law, clarifying the rights and obligations of both users and the platform owner.',
     },
+    whoWeHelp: {
+      ar: [
+        'نساعد أصحاب المواقع الإلكترونية والمتاجر الإلكترونية والتطبيقات الذين يحتاجون شروط استخدام واضحة تنظم علاقتهم بالمستخدمين، وسياسة خصوصية توضح كيفية جمع البيانات الشخصية واستخدامها — راجع [تراخيص وامتثال الأنشطة التقنية](/ar/practice-areas/tech-activity-licensing-compliance) إذا كنتم بصدد تأسيس نشاط تقني من الأساس.',
+        'كما نساعد الشركات القائمة التي تحتاج لمراجعة أو تحديث سياساتها الحالية لتتوافق مع المتطلبات القانونية، خاصة عند تغيير طريقة جمع البيانات أو إضافة خدمات جديدة.',
+      ],
+      en: [
+        'We help website, e-commerce, and app owners who need clear terms of use governing their relationship with users, and a privacy policy explaining how personal data is collected and used — see [Tech Activity Licensing & Compliance](/en/practice-areas/tech-activity-licensing-compliance) if you are setting up a tech business from scratch.',
+        'We also help established companies that need to review or update their existing policies to meet legal requirements, particularly when data-collection practices change or new services are added.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'تخضع معالجة البيانات الشخصية إلكترونيًا في مصر لقانون حماية البيانات الشخصية رقم 151 لسنة 2020، الذي يفرض التزامات على أي جهة تتولى جمع أو معالجة أو تخزين بيانات شخصية، ومن أبرز هذه الالتزامات ضرورة توفير إشعار خصوصية واضح يصل للمستخدم.',
+        'أما شروط الاستخدام فتخضع للقواعد العامة لحرية التعاقد في القانون المدني، وتُستخدم لتحديد حقوق والتزامات الطرفين، وشروط إنهاء الحساب، وحدود مسؤولية صاحب المنصة.',
+      ],
+      en: [
+        'Electronic processing of personal data in Egypt falls under Personal Data Protection Law No. 151 of 2020, which imposes obligations on any entity that collects, processes, or stores personal data — among the most notable of these is the duty to provide a clear privacy notice that reaches the user.',
+        "Terms of use, by contrast, are governed by the Civil Code's general rules on freedom of contract, and are used to set out the parties' rights and obligations, account-termination conditions, and the limits of the platform owner's liability.",
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نصيغ لكم شروط استخدام وسياسة خصوصية مخصصة لطبيعة نشاطكم الفعلية، وليست نموذجًا عامًا منسوخًا من موقع آخر قد لا يعكس ممارساتكم الحقيقية في جمع البيانات.',
+        'لمناقشة احتياجاتكم تحديدًا، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        "We draft terms of use and a privacy policy tailored to the actual nature of your business, not a generic template copied from another site that may not reflect your real data-collection practices.",
+        'To discuss your specific needs, you can book a consultation with our team.',
+      ],
+    },
   },
   {
     slug: 'commercial-activity-business-licensing',
@@ -626,6 +904,36 @@ export const practiceAreas: Array<{
       ar: 'نمثل موكلينا في قضايا الشيكات بدون رصيد وغيرها من الأوراق التجارية كالكمبيالة والسند الإذني، سواء بصفتهم مستفيدين يطالبون باستيفاء حقهم أو ساحبين يحتاجون الدفاع عن موقفهم.',
       en: 'We represent clients in bounced check cases and disputes over other negotiable instruments such as bills of exchange and promissory notes, whether as a beneficiary seeking to collect what is owed or a drawer needing to defend their position.',
     },
+    whoWeHelp: {
+      ar: [
+        'نساعد المستفيدين من شيك ارتد لعدم وجود رصيد كافٍ، في تقييم المسار الأنسب لتحصيل قيمته — راجع [تحصيل الديون والتنفيذ](/ar/practice-areas/debt-recovery-enforcement) لخدماتنا الأوسع في تحصيل الديون بشكل عام.',
+        'كما نساعد من صدر الشيك منه ويواجه مطالبة أو بلاغًا بخصوصه، في فهم موقفه القانوني ودفاعه المتاح.',
+      ],
+      en: [
+        'We help beneficiaries of a check that bounced due to insufficient funds assess the most suitable path to collect its value — see [Debt Recovery & Enforcement](/en/practice-areas/debt-recovery-enforcement) for our broader debt-collection services generally.',
+        'We also help the person who issued the check and is facing a claim or a report filed against them understand their legal position and available defense.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'الشيك من الأوراق التجارية التي ينظمها قانون التجارة المصري، ويختلف عن أدوات الدفع الأخرى بأنه يُفترض فيه أن يكون واجب الدفع فور الاطلاع عليه، لا أداة ائتمان مؤجلة السداد.',
+        'قد تترتب على إصدار شيك بدون رصيد كافٍ مسؤولية مدنية (المطالبة بقيمة الشيك والتعويض) ومسؤولية جنائية محتملة بحسب ظروف الواقعة — راجع [الفرق بين الدعوى المدنية والدعوى الجنائية](/ar/insights/civil-vs-criminal-cases-egypt) لفهم الفرق بين المسارين بشكل عام.',
+      ],
+      en: [
+        "A check is a negotiable instrument governed by Egypt's Commercial Code, and differs from other payment instruments in that it is presumed payable on presentation, not a deferred-payment credit tool.",
+        "Issuing a check without sufficient funds can give rise to civil liability (a claim for the check's value and compensation) and, depending on the circumstances, potential criminal liability as well — see [Civil vs. Criminal Cases in Egypt](/en/insights/civil-vs-criminal-cases-egypt) to understand the general difference between the two tracks.",
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نقيّم وقائع الشيك أو الورقة التجارية محل النزاع، ونوضح لكم المسار الأنسب — سواء كنتم طرفًا مطالبًا أو طرفًا يواجه مطالبة.',
+        'لمناقشة حالة محددة، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We assess the facts of the check or negotiable instrument in dispute, and explain the most suitable path forward — whether you are the claiming party or the party facing a claim.',
+        'To discuss a specific situation, you can book a consultation with our team.',
+      ],
+    },
   },
   {
     slug: 'power-of-attorney-drafting',
@@ -664,6 +972,36 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نساعدك في صياغة وصيتك بما يتوافق مع أحكام الشريعة الإسلامية والقانون المصري، بما يضمن وضوح رغباتك وتنفيذها بالشكل القانوني الصحيح.',
       en: 'We help you draft your will in a way that complies with Islamic Sharia principles and Egyptian law, ensuring your wishes are clear and can be properly carried out.',
+    },
+    whoWeHelp: {
+      ar: [
+        'نساعد من يرغب في توثيق رغباته بشأن جزء من تركته بوصية — سواء للوصية لجهة خيرية، أو لشخص لا يرث بحكم القانون (كحفيد فقد والده قبل وفاة جده)، أو لتنظيم أمر معين كالوصاية على القاصرين.',
+        'كما نساعد من لديه وصية محررة بالفعل ويحتاج مراجعتها أو تحديثها بعد تغيّر ظروفه الشخصية أو المالية.',
+      ],
+      en: [
+        "We help those who wish to document their wishes for part of their estate through a will — whether leaving a bequest to a charity, to a person who would not otherwise inherit under the law (such as a grandchild whose parent predeceased the grandparent), or to arrange a specific matter such as guardianship of minor children.",
+        'We also help those who already have a will drafted and need to review or update it after a change in their personal or financial circumstances.',
+      ],
+    },
+    legalIssuesCovered: {
+      ar: [
+        'تنظم الوصية في مصر بشكل أساسي أحكام قانون الوصية رقم 71 لسنة 1946. من أهم القواعد الراسخة في هذا القانون أن الوصية لا تصح إلا في حدود ثلث التركة كحد أقصى لمن لا يرث قانونًا، وما زاد عن الثلث يحتاج موافقة باقي الورثة بعد الوفاة ليكون نافذًا.',
+        'لا يجوز بالوصية حرمان أحد الورثة الشرعيين من نصيبه المقرر قانونًا، ذلك أن الوصية أداة للتصرف فيما هو خارج نصيب الورثة، لا لإعادة توزيع الميراث نفسه. راجع [كيف تُقسَّم التركة بين الورثة؟](/ar/insights/how-is-an-estate-divided) لنظرة عامة على قواعد الميراث ذاتها.',
+      ],
+      en: [
+        'Wills in Egypt are primarily governed by the Wills Law No. 71 of 1946. One of its most firmly established rules is that a will is only valid up to one-third of the estate as a maximum for someone who would not otherwise inherit by law — anything beyond that third requires the other heirs\' consent after death to take effect.',
+        "A will cannot be used to deprive a legal heir of their legally mandated share — a will is a tool for disposing of what falls outside the heirs' shares, not for redistributing the inheritance itself. See [How Is an Estate Divided Among Heirs?](/en/insights/how-is-an-estate-divided) for an overview of the inheritance rules themselves.",
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نساعدكم في صياغة وصية واضحة تعكس رغباتكم فعلًا وتراعي الحدود القانونية المقررة، لتقليل احتمالية الطعن عليها أو حدوث خلاف بين الورثة لاحقًا.',
+        'لمناقشة وضعكم ورغباتكم تحديدًا، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We help you draft a clear will that genuinely reflects your wishes while respecting the legal limits, to reduce the likelihood of it being challenged or of a dispute arising among heirs later.',
+        'To discuss your specific situation and wishes, you can book a consultation with our team.',
+      ],
     },
   },
   {
@@ -1757,6 +2095,105 @@ export const faqs: Array<{ question: Bilingual; answer: Bilingual; relatedPracti
     answer: {
       ar: 'بشكل عام، شرط التحكيم الصحيح والملزم يوجب اللجوء للتحكيم بدلًا من القضاء العادي بخصوص ما يدخل في نطاقه. راجعوا [التحكيم أم التقاضي؟](/ar/insights/arbitration-vs-litigation-egypt) لفهم الفرق بين المسارين بشكل أوضح، أو تواصلوا معنا لمراجعة شرط التحكيم في عقدكم تحديدًا.',
       en: 'Generally, a valid and binding arbitration clause requires that disputes within its scope go to arbitration rather than ordinary litigation. See [Arbitration or Litigation?](/en/insights/arbitration-vs-litigation-egypt) to understand the difference between the two paths more clearly, or contact us to review the arbitration clause in your specific contract.',
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'tax-law',
+    question: {
+      ar: 'استلمت إخطار ربط ضريبي مش متفق معاه، لي كام يوم أعترض؟',
+      en: "I received a tax assessment notice I don't agree with — how long do I have to object?",
+    },
+    answer: {
+      ar: 'يختلف ميعاد التظلم أو الطعن بحسب نوع الإخطار والإجراء المتبع، ولا يصح الاعتماد على مدة عامة دون مراجعة الإخطار نفسه. المهم ألا تتأخروا في التواصل معنا فور استلام أي إخطار ضريبي لتقييم موقفكم والمواعيد المرتبطة به بدقة.',
+      en: "The objection or appeal deadline varies by the type of notice and procedure involved, so a general figure shouldn't be relied on without reviewing the notice itself. The important thing is not to delay contacting us as soon as you receive any tax notice, so we can assess your position and the exact deadlines involved.",
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'consumer-protection',
+    question: {
+      ar: 'اشتريت منتج واتضح إنه معيب، إيه حقوقي؟',
+      en: 'I bought a product that turned out to be defective — what are my rights?',
+    },
+    answer: {
+      ar: 'يكفل قانون حماية المستهلك للمستهلك حقوقًا أساسية منها التعويض عن الضرر الناتج عن عيب في المنتج، لكن التفاصيل الإجرائية (كالاستبدال أو الاسترجاع) تختلف حسب طبيعة السلعة والظروف. احتفظوا بفاتورة الشراء وتواصلوا معنا لمناقشة حالتكم تحديدًا.',
+      en: "The Consumer Protection Law guarantees consumers core rights including compensation for harm caused by a product defect, but the procedural details (such as exchange or return) vary by the nature of the product and the circumstances. Keep your purchase invoice and contact us to discuss your specific situation.",
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'construction-contracting-law',
+    question: {
+      ar: 'المقاول بتاعي متأخر في التسليم عن الموعد المتفق عليه، أعمل إيه؟',
+      en: "My contractor is late delivering the work past the agreed deadline — what can I do?",
+    },
+    answer: {
+      ar: 'يعتمد الحل المتاح على ما نص عليه العقد نفسه بخصوص التأخير (كشرط جزائي أو إنذار قبل الفسخ)، وعلى القواعد العامة لعقد المقاولة إذا كان العقد صامتًا عن هذه المسألة. راجعوا المستندات والمراسلات المتعلقة بالمشروع وتواصلوا معنا لتقييم موقفكم.',
+      en: "The available remedy depends on what the contract itself provides for delay (such as a penalty clause or a notice before rescission), and on the general rules governing contracting agreements if the contract is silent on the issue. Gather the project's documentation and correspondence and contact us to assess your position.",
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'document-notarization-authentication',
+    question: {
+      ar: 'عايز أوكل حد ياخد إجراء معين عني وأنا مش موجود في مصر، أعمل إيه؟',
+      en: "I want to authorize someone to handle a matter for me while I'm outside Egypt — what should I do?",
+    },
+    answer: {
+      ar: 'يمكن تحرير توكيل خاص يحدد صلاحيات الوكيل بوضوح، ثم تصديقه من القنصلية المصرية في بلد إقامتكم، وغالبًا ما يحتاج بعد ذلك تصديقًا إضافيًا من وزارة الخارجية المصرية داخل مصر قبل استخدامه. تواصلوا معنا لصياغة التوكيل المناسب لغرضكم ومتابعة إجراءات تصديقه.',
+      en: 'A special power of attorney can be drafted clearly defining the agent\'s authority, then authenticated by the Egyptian consulate in your country of residence — this typically then needs a further authentication from the Egyptian Ministry of Foreign Affairs inside Egypt before it can be used. Contact us to draft the right power of attorney for your purpose and follow up on its authentication.',
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'commercial-agency-distribution',
+    question: {
+      ar: 'الشركة الأجنبية اللي بتعاقدت معاها عايزة تنهي الوكالة، هل ليا حق في تعويض؟',
+      en: "The foreign company I contracted with wants to end the agency — am I entitled to compensation?",
+    },
+    answer: {
+      ar: 'يتوقف استحقاق التعويض عند إنهاء عقد الوكالة أو التوزيع على نص العقد نفسه وظروف الإنهاء، ولا توجد نسبة أو قاعدة عامة تصلح لكل الحالات. راجعوا عقدكم معنا لتقييم موقفكم تحديدًا.',
+      en: "Whether compensation is owed when an agency or distribution agreement ends depends on the contract's own terms and the circumstances of the termination — there is no general percentage or rule that fits every case. Review your agreement with us to assess your specific position.",
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'terms-privacy-policy-drafting',
+    question: {
+      ar: 'موقعي بيجمع بيانات المستخدمين، هل سياسة الخصوصية إلزامية؟',
+      en: 'My website collects user data — is a privacy policy legally required?',
+    },
+    answer: {
+      ar: 'يفرض قانون حماية البيانات الشخصية رقم 151 لسنة 2020 التزامات على أي جهة تعالج بيانات شخصية إلكترونيًا، ومن أبرزها توفير إشعار خصوصية واضح للمستخدم. تواصلوا معنا لصياغة سياسة تعكس ممارساتكم الفعلية في جمع البيانات.',
+      en: 'Personal Data Protection Law No. 151 of 2020 imposes obligations on any entity that processes personal data electronically, most notably providing a clear privacy notice to users. Contact us to draft a policy that reflects your actual data-collection practices.',
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'bounced-checks-negotiable-instruments',
+    question: {
+      ar: 'معايا شيك ارتد لعدم وجود رصيد كافٍ، إيه أول خطوة؟',
+      en: "I have a check that bounced due to insufficient funds — what's the first step?",
+    },
+    answer: {
+      ar: 'أول خطوة عادةً هي توثيق واقعة الارتداد رسميًا من البنك، ثم تقييم المسار الأنسب لتحصيل القيمة في ضوء ظروف الواقعة. تواصلوا معنا لمراجعة الشيك ووضع خطة للتحصيل.',
+      en: "The first step is typically to formally document the bounce with the bank, then assess the most suitable path to collect the amount owed in light of the circumstances. Contact us to review the check and put together a collection plan.",
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'wills-drafting',
+    question: {
+      ar: 'ممكن أوصي بكل تركتي لجمعية خيرية؟',
+      en: 'Can I will my entire estate to a charity?',
+    },
+    answer: {
+      ar: 'لا، الوصية لمن لا يرث قانونًا (كجمعية خيرية) صحيحة فقط في حدود ثلث التركة كحد أقصى، وما زاد عن الثلث يحتاج موافقة الورثة بعد الوفاة ليكون نافذًا. تواصلوا معنا لصياغة وصية تعكس رغبتكم ضمن الحدود القانونية.',
+      en: "No — a bequest to someone who wouldn't otherwise inherit by law (such as a charity) is only valid up to one-third of the estate as a maximum; anything beyond that third requires the heirs' consent after death to take effect. Contact us to draft a will that reflects your wishes within the legal limits.",
+    },
+  },
+  {
+    relatedPracticeAreaSlug: 'corporate-commercial-law',
+    question: {
+      ar: 'شركاء الشركة مش متفقين على قرار مهم، إيه الحل؟',
+      en: "The company's partners can't agree on an important decision — what's the solution?",
+    },
+    answer: {
+      ar: 'يعتمد الحل على ما ينص عليه عقد التأسيس والنظام الأساسي بخصوص نصاب القرارات والتصويت، وعلى طبيعة الخلاف نفسه. تواصلوا معنا لمراجعة مستندات الشركة وتقييم الخيارات المتاحة.',
+      en: "The solution depends on what the articles of association and bylaws provide regarding decision and voting quorums, and on the nature of the disagreement itself. Contact us to review the company's documents and assess the options available.",
     },
   },
 ]

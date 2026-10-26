@@ -168,6 +168,15 @@ async function run() {
   //   enforcement: strengthened as the site's Civil Law pillar + its two
   //   strongest practice-area hubs, each now linking out to the civil
   //   cluster's articles — see CIVIL_SEO_AUTHORITY_PHASE_1_REPORT.md.
+  // - administrative-law, tax-law, consumer-protection, construction-
+  //   contracting-law, document-notarization-authentication, commercial-
+  //   agency-distribution, terms-privacy-policy-drafting, employment-
+  //   labour-law, bounced-checks-negotiable-instruments, wills-drafting,
+  //   litigation-dispute-resolution: full whoWeHelp/legalIssuesCovered/
+  //   howWeAssist content added to address GSC's "Discovered - currently
+  //   not indexed" 31-URL round — see
+  //   GSC_DISCOVERED_NOT_INDEXED_31_VERIFIED_AUDIT.md and
+  //   GSC_PHASE3_CONTENT_EXPANSION_REPORT.md.
   const contentResyncSlugs = [
     'maritime-shipping-port-law',
     'criminal-law',
@@ -178,6 +187,17 @@ async function run() {
     'civil-law',
     'real-estate-property-registration',
     'debt-recovery-enforcement',
+    'administrative-law',
+    'tax-law',
+    'consumer-protection',
+    'construction-contracting-law',
+    'document-notarization-authentication',
+    'commercial-agency-distribution',
+    'terms-privacy-policy-drafting',
+    'employment-labour-law',
+    'bounced-checks-negotiable-instruments',
+    'wills-drafting',
+    'litigation-dispute-resolution',
   ]
   for (const slug of contentResyncSlugs) {
     const pa = practiceAreas.find((p) => p.slug === slug)
