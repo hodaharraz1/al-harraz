@@ -398,3 +398,160 @@ it means the CMS login screen is reachable from either hostname today.
 other system during this investigation.** Waiting for your explicit
 approval before implementing the §"RECOMMENDED FIX" §2 change to
 `src/proxy.ts`.
+
+---
+
+## IMPLEMENTATION + DEPLOY + VERIFICATION — 2026-10-26T12:25:05Z
+
+Approved and implemented per owner authorization (2026-10-26). Scope
+strictly limited to §"RECOMMENDED FIX" §2 above — nothing else.
+
+### 1. Commit hash
+
+`540113a` — `fix(seo): redirect public-file paths on non-canonical hosts too`
+on `claude/al-harraz-law-platform-oiq2y3`, pushed to origin.
+
+### 2. Files changed
+
+`src/proxy.ts` only. No other file touched — no content, CMS data,
+slugs, routing config, Civil Phase 2 files, or publication script.
+
+### 3. Diff (full — it's small)
+
+```diff
+-  if (
+-    pathname.startsWith('/admin') ||
+-    pathname.startsWith('/api') ||
+-    pathname.startsWith('/_next') ||
+-    PUBLIC_FILE.test(pathname)
+-  ) {
++  // /admin, /api, and /_next are never subject to the canonical-host
++  // redirect below, on any host — unchanged by the reordering further
++  // down this function (see VERCEL_CANONICAL_ROOT_CAUSE_INVESTIGATION.md,
++  // which scoped that fix to public files only, explicitly leaving these
++  // three untouched).
++  if (pathname.startsWith('/admin') || pathname.startsWith('/api') || pathname.startsWith('/_next')) {
+     return NextResponse.next()
+   }
+
+   const requestHost = request.headers.get('host')
+@@ -66,6 +66,19 @@
+     return NextResponse.redirect(canonicalUrl, 308)
+   }
+
++  // Public files (robots.txt, sitemap.xml, llms.txt, images, ...) are
++  // served as-is on the canonical host — this check runs AFTER the host
++  // redirect above specifically so the same paths on a non-canonical host
++  // (the old al-harraz.vercel.app alias, a www. alias) redirect instead of
++  // being served directly as duplicate, un-redirected content. [...]
++  if (PUBLIC_FILE.test(pathname)) {
++    return NextResponse.next()
++  }
++
+   const segments = pathname.split('/').filter(Boolean)
+```
+
+Net effect: `/admin`, `/api`, `/_next` still bypass the redirect
+unconditionally, exactly as before — only their position relative to the
+host-redirect check (still first) is unchanged; what moved is the
+`PUBLIC_FILE` check, from before the host-redirect to after it.
+
+### 4. Build / test results
+
+- Fresh sandbox this session required `npm ci` first (`node_modules` was
+  empty — unrelated to this change, just this container's starting
+  state); 753 packages installed cleanly.
+- `npx tsc --noEmit -p .`: clean, zero errors.
+- `npx eslint src/proxy.ts`: clean, zero warnings/errors.
+- `npx vitest run`: **48/48 tests passed** (7 files) — no regression in
+  the existing unit suite (none target `proxy.ts` directly, but this
+  confirms nothing else in the app broke).
+- Full `npm run build` (which per `DEPLOYMENT.md` runs
+  `npx payload migrate && npm run seed && next build`) was not run
+  locally — this sandbox has no production database, consistent with
+  every prior phase of this engagement. Vercel's own build (which does
+  have database access) is what actually ran for the deploy below.
+
+### 5. Deployment URL/status
+
+Pushed to `claude/al-harraz-law-platform-oiq2y3`, which auto-deploys to
+production (`https://alharrazlaw.com`) on this project. Waited ~3.5
+minutes for the deploy, then verified live (see below) — the fix is
+confirmed live in production, not just pushed to git.
+
+### 6. 12 GSC-flagged URLs — full results table
+
+| Path | Old host (`al-harraz.vercel.app`) | Old host, Googlebot UA | Production (`alharrazlaw.com`) | Canonical | Hreflang | `vercel` refs in page |
+|---|---|---|---|---|---|---|
+| `/ar/contact` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 (ar/en/x-default) | 0 |
+| `/ar/about` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 | 0 |
+| `/ar/insights/how-civil-judgments-are-enforced` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 | 0 |
+| `/en/industries/import-export` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 | 0 |
+| `/en/practice-areas/employment-labour-law` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 | 0 |
+| `/en/about` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 | 0 |
+| `/en/practice-areas/ngo-foundation-registration` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 | 0 |
+| `/en/practice-areas/arbitration` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 | 0 |
+| `/en/practice-areas/commercial-activity-business-licensing` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 | 0 |
+| `/ar/practice-areas/competition-law` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 | 0 |
+| `/en/insights` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 | 0 |
+| `/en/practice-areas/banking-finance-law` | 308 → correct path | 308 → correct path (identical) | 200 | self | 3 | 0 |
+
+12/12 — no exceptions, no redirect chains (single 308 hop every time,
+landing directly on a 200), identical behavior under a spoofed Googlebot
+User-Agent.
+
+### 7. robots.txt / sitemap.xml / llms.txt results
+
+| Old URL | HTTP status | Location header | Final URL | Final status |
+|---|---|---|---|---|
+| `https://al-harraz.vercel.app/robots.txt` | 308 | `https://alharrazlaw.com/robots.txt` | same | 200 |
+| `https://al-harraz.vercel.app/sitemap.xml` | 308 | `https://alharrazlaw.com/sitemap.xml` | same | 200 |
+| `https://al-harraz.vercel.app/llms.txt` | 308 | `https://alharrazlaw.com/llms.txt` | same | 200 |
+
+Identical under the Googlebot UA for all three. Production
+`robots.txt` unchanged (`Allow: /`, `Disallow: /admin`, `Disallow: /api`,
+correct sitemap pointer). Production `sitemap.xml`: **182 `<loc>`
+entries, zero non-`alharrazlaw.com` locs, zero `vercel` string matches**
+in the full file body.
+
+### Regression tests — `/admin`, `/api`, `/_next`
+
+| Path | Production | Old host | Redirect introduced? |
+|---|---|---|---|
+| `/admin` | 200 | 200 (unchanged) | No |
+| `/api/consultation` (GET, a real POST-only route) | 405 | 405 (identical) | No |
+| `/_next/static/...` | 404 (guessed filename) | 404 (identical) | No |
+
+All three categories behave identically on both hosts, exactly as before
+this change — confirming the fix did not widen scope beyond the public
+files it targeted.
+
+### 8. Remaining issues
+
+- **Google-side reprocessing is still pending** — this was never
+  something a code fix could resolve directly (see the investigation's
+  root-cause section). Nothing observed this round changes that
+  assessment.
+- **Unverified from this sandbox**: whether any other `*.vercel.app`
+  alias or old immutable deployment URL exists outside
+  `al-harraz.vercel.app` itself (§5/§6 of the investigation, still open,
+  requires your read-only check of the Vercel dashboard).
+- No new issues surfaced by this round's testing. Zero exceptions across
+  all 12 URLs, the 3 metadata files, and the 3 regression-test
+  categories.
+
+### 9. Final verdict
+
+**TECHNICAL FIX VERIFIED.**
+
+This refers strictly to the code-level fix implemented and deployed this
+round (the `robots.txt`/`sitemap.xml`/`llms.txt` redirect gap) — it does
+not mean the GSC "Duplicate, Google chose different canonical" issue is
+resolved; that remains **GOOGLE REPROCESSING PENDING**, unchanged from
+the prior round's conclusion, and is not something any deploy can
+directly resolve.
+
+**Per your explicit instruction: no Search Console action was taken or
+requested — no Validate Fix, no Request Indexing, no other GSC change.**
+That remains entirely yours to initiate, after you've reviewed this
+evidence, starting with your own Live URL Inspection.
