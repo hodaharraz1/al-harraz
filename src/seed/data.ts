@@ -83,12 +83,32 @@ export const practiceAreas: Array<{
       ar: 'يمثل مكتب آل حراز الأفراد والشركات في المنازعات المدنية والتجارية أمام المحاكم المصرية، من مرحلة التقاضي الابتدائي وحتى الاستئناف، بهدف الوصول إلى أفضل نتيجة ممكنة لموكلينا.',
       en: 'Al Harraz Law Firm represents individuals and businesses in civil and commercial disputes before the Egyptian courts, from first-instance litigation through appeal, working toward the best achievable outcome for our clients.',
     },
+    whoWeHelp: {
+      ar: [
+        'نساعد الأفراد والشركات الذين يحتاجون إلى تمثيل قانوني أمام المحاكم المصرية، في أي نزاع مدني أو تجاري، بدءًا من تقييم الموقف القانوني وحتى صدور الحكم وتنفيذه.',
+        'نساعد أيضًا من يحتاج لتقييم الجدوى الفعلية من رفع دعوى قضائية مقارنة بخيارات أخرى كالتسوية الودية، قبل اتخاذ أي قرار.',
+      ],
+      en: [
+        'We help individuals and businesses who need legal representation before the Egyptian courts, in any civil or commercial dispute, from assessing the legal position through to a judgment and its enforcement.',
+        'We also help those who need to weigh the actual merits of filing a lawsuit against other options such as an amicable settlement, before any decision is made.',
+      ],
+    },
     legalIssuesCovered: {
       ar: [
         'تشمل خبرتنا المنازعات التجارية بمختلف أنواعها، والتي يختص بنظرها في أغلب الأحوال المحاكم الاقتصادية المتخصصة — راجع [المنازعات التجارية في مصر: نظرة عامة على أنواعها والمحاكم المختصة](/ar/insights/commercial-disputes-overview-egypt) لمزيد من التفاصيل.',
       ],
       en: [
         'Our experience covers commercial disputes of various kinds, which in most cases fall within the jurisdiction of the specialized Economic Courts — see [Commercial Disputes in Egypt: An Overview of Their Types and the Competent Courts](/en/insights/commercial-disputes-overview-egypt) for more detail.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نرافقكم في كل مراحل التقاضي: صياغة صحيفة الدعوى أو الرد عليها، تقديم الأدلة والمذكرات، ثم تنفيذ الحكم أو استئنافه عند الحاجة.',
+        'لمناقشة نزاع محدد يخصّكم، يمكنكم حجز استشارة مع فريقنا لتحديد الإجراء الأنسب لحالتكم.',
+      ],
+      en: [
+        'We accompany you through every stage of litigation: drafting the statement of claim or responding to one, presenting evidence and memoranda, and then enforcing the judgment or appealing it where needed.',
+        'To discuss a specific dispute of yours, you can book a consultation with our team to identify the right course of action for your situation.',
       ],
     },
   },
@@ -151,6 +171,16 @@ export const practiceAreas: Array<{
     overview: {
       ar: 'نتولى صياغة ومراجعة والتفاوض بشأن مختلف أنواع العقود التجارية والمدنية، بما يضمن وضوح الالتزامات وحماية حقوق موكلينا.',
       en: 'We draft, review and negotiate a wide range of commercial and civil contracts, ensuring clear obligations and protecting our clients’ rights.',
+    },
+    whoWeHelp: {
+      ar: [
+        'نساعد من يحتاج لصياغة عقد من الأساس قبل البدء في تعامل جديد — راجع [ما الذي يجب مراعاته عند صياغة عقد؟](/ar/insights/contract-drafting-key-clauses-egypt) لنظرة عامة على البنود الأساسية التي يجب تضمينها.',
+        'كما نساعد من قُدِّم له عقد جاهز من طرف آخر ويحتاج لمراجعته بعناية قبل التوقيع — راجع [أهم البنود التي يجب مراجعتها قبل توقيع أي عقد](/ar/insights/what-to-review-before-signing-contract) لمزيد من التفاصيل.',
+      ],
+      en: [
+        'We help those who need a contract drafted from the ground up before entering a new arrangement — see [What Should You Consider When Drafting a Contract?](/en/insights/contract-drafting-key-clauses-egypt) for an overview of the essential clauses to include.',
+        'We also help those who have been presented with a ready-made contract by another party and need it carefully reviewed before signing — see [Key Clauses to Review Before Signing Any Contract](/en/insights/what-to-review-before-signing-contract) for more detail.',
+      ],
     },
     howWeAssist: {
       ar: [
@@ -234,6 +264,16 @@ export const practiceAreas: Array<{
       ar: 'يقدم مكتب آل حراز خدمات قانونية متخصصة في المسائل البحرية والشحن، وتشمل منازعات الشحن، مطالبات البضائع، سندات الشحن، مسؤولية الناقل البحري، التخليص الجمركي، والتجارة الدولية.',
       en: 'Al Harraz Law Firm provides specialized legal services in maritime and shipping matters, including shipping disputes, cargo claims, bills of lading, carrier liability, customs clearance, and international trade.',
     },
+    whoWeHelp: {
+      ar: [
+        'نساعد شركات الشحن والملاحة في المسائل القانونية المرتبطة بعقود النقل البحري ومطالبات البضائع ومسؤولية الناقل، كما نساعد المستوردين والمصدرين وأصحاب البضائع في المسائل القانونية المرتبطة بشحنات محددة.',
+        'نساعد أيضًا الشركات العاملة في الخدمات اللوجستية والموانئ، وأطراف عقود النقل البحري بشكل عام، في فهم موقفهم القانوني عند نشوء خلاف.',
+      ],
+      en: [
+        'We help shipping and carrier companies with legal matters related to carriage contracts, cargo claims, and carrier liability, and we help importers, exporters, and cargo owners with legal matters tied to specific shipments.',
+        'We also help companies operating in logistics and ports, and parties to maritime carriage contracts generally, understand their legal position when a dispute arises.',
+      ],
+    },
     legalIssuesCovered: {
       ar: [
         'سند الشحن من أهم المستندات التي نتعامل معها بانتظام في هذا المجال، نظرًا لوظائفه القانونية الثلاث كإثبات لاستلام البضاعة وعقد النقل وسند ملكية قابل للتداول — راجع [سند الشحن البحري: ما هو ولماذا يهم؟](/ar/insights/bill-of-lading-explained-egypt) لنظرة عامة عليه.',
@@ -242,6 +282,16 @@ export const practiceAreas: Array<{
       en: [
         "The bill of lading is one of the most important documents we handle regularly in this area, given its three legal functions as evidence of receipt of goods, evidence of the carriage contract, and a negotiable document of title — see [The Bill of Lading Explained: What It Is and Why It Matters](/en/insights/bill-of-lading-explained-egypt) for an overview.",
         'We also serve port and logistics companies specifically — see [Ports & Logistics](/en/industries/ports-logistics) for more detail on this sector in particular.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نراجع عقود النقل البحري ومستندات الشحن قبل التعامل أو أثناء نشوء خلاف، ونساعد في تقييم المطالبات المتعلقة بتلف البضائع أو التأخير في التسليم أو تحديد الجهة المسؤولة عنها.',
+        'المكتب مقره الرئيسي في دمياط، إحدى أهم مدن مصر الساحلية والموانئ، ويقدّم هذه الخدمات لعملائه في دمياط وباقي محافظات جمهورية مصر العربية. لمناقشة مسألة بحرية أو جمركية محددة، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We review maritime carriage contracts and shipping documents, both before dealing with a counterparty and once a dispute has arisen, and help assess claims related to cargo damage, delayed delivery, or identifying the responsible party.',
+        'The firm is based in Damietta, one of Egypt\'s key coastal and port cities, and serves clients there and across Egypt. To discuss a specific maritime or customs matter, you can book a consultation with our team.',
       ],
     },
   },
@@ -426,12 +476,32 @@ export const practiceAreas: Array<{
       ar: 'نساعد موكلينا في إجراءات تحصيل الديون وتنفيذ الأحكام القضائية بكفاءة.',
       en: 'We assist clients with efficient debt recovery procedures and enforcement of court judgments.',
     },
+    whoWeHelp: {
+      ar: [
+        'نساعد الأفراد الذين لهم مستحقات مالية على آخرين، والشركات التي تحتاج لتحصيل فواتير أو مديونيات متأخرة من عملائها أو ممن تعاملت معهم.',
+        'نساعد أيضًا من حصل على حكم قضائي لصالحه ولم يُنفَّذ بعد، في اتخاذ إجراءات التنفيذ الجبري اللازمة لاستيفاء الحق المحكوم به.',
+      ],
+      en: [
+        'We help individuals who are owed money by others, and companies that need to collect overdue invoices or debts from their clients or counterparties.',
+        'We also help those who have obtained a court judgment in their favor that has not yet been enforced, in taking the compulsory enforcement steps needed to satisfy the adjudicated right.',
+      ],
+    },
     legalIssuesCovered: {
       ar: [
         'نساعدك في اختيار المسار الأنسب لتحصيل دين مستحق، من الإنذار الودي وحتى التنفيذ الفعلي — راجع [تحصيل الديون في مصر](/ar/insights/debt-recovery-legal-steps-egypt) و[كيف يتم تنفيذ الأحكام المدنية؟](/ar/insights/how-civil-judgments-are-enforced) لمزيد من التفاصيل.',
       ],
       en: [
         'We help you choose the right path for recovering an outstanding debt, from an amicable demand notice through actual enforcement — see [Debt Recovery in Egypt](/en/insights/debt-recovery-legal-steps-egypt) and [How Are Civil Judgments Enforced?](/en/insights/how-civil-judgments-are-enforced) for more detail.',
+      ],
+    },
+    howWeAssist: {
+      ar: [
+        'نبدأ بتقييم المستندات المتاحة (سند الدين، الفاتورة، أو الحكم القضائي) لتحديد المسار الأقل تكلفة والأسرع في ظروفكم، سواء كان إنذارًا وديًا أو إجراء تنفيذ مباشر.',
+        'لمناقشة دين أو حكم محدد تحتاجون تحصيله أو تنفيذه، يمكنكم حجز استشارة مع فريقنا.',
+      ],
+      en: [
+        'We start by assessing the available documentation (the debt instrument, invoice, or court judgment) to identify the fastest, lowest-cost path in your circumstances, whether an amicable demand or direct enforcement proceedings.',
+        'To discuss a specific debt or judgment you need to collect or enforce, you can book a consultation with our team.',
       ],
     },
   },
@@ -1238,7 +1308,7 @@ export const articles: Array<{
         'العقد هو القانون الذي يحكم العلاقة بين أطرافه، وما يُكتب فيه هو ما يُعتد به عند أي خلاف لاحق — لذلك فإن مراجعته بعناية قبل التوقيع أهم بكثير من محاولة تعديله أو الاعتراض عليه بعد ذلك.',
         'من أهم البنود التي تستحق مراجعة دقيقة: تحديد أطراف العقد ومحله بدقة، الالتزامات المتبادلة بين الطرفين ومواعيد تنفيذها، الشروط المالية وطريقة السداد، شروط الفسخ أو الإنهاء وأسبابه، وأي شروط جزائية أو غرامات تأخير.',
         'يجب أيضًا الانتباه إلى بنود تسوية المنازعات (هل يتم اللجوء للقضاء أم للتحكيم؟) والجهة أو المحكمة المختصة بالفصل في أي خلاف، لأن هذا يحدد الإجراءات المتاحة لك لاحقًا إذا لم يلتزم الطرف الآخر بتعهداته.',
-        'لا تعتمد على الوعود الشفهية مهما كانت الثقة بين الأطراف — فقط ما هو مكتوب وموقَّع هو ما يُمكن إثباته والاستناد إليه. إذا كان لديك عقد تحتاج مراجعته قبل التوقيع، يسعدنا مساعدتك.',
+        'لا تعتمد على الوعود الشفهية مهما كانت الثقة بين الأطراف — فقط ما هو مكتوب وموقَّع هو ما يُمكن إثباته والاستناد إليه. إذا كان لديك عقد تحتاج مراجعته قبل التوقيع، فهذا جزء أساسي من خدماتنا في [صياغة ومراجعة العقود والاتفاقيات التجارية](/ar/practice-areas/contracts-commercial-agreements)، ويسعدنا مساعدتك.',
       ],
       en: [
         'A contract is the law that governs the relationship between its parties — what is written in it is what will be relied upon in any later dispute, so reviewing it carefully before signing matters far more than trying to amend or dispute it afterward.',
@@ -1609,7 +1679,7 @@ export const articles: Array<{
         'سند الشحن هو المستند الذي يُصدره الناقل البحري أو ممثله للشاحن، بناءً على البيانات التي يقدمها الشاحن كتابةً عند تسليم البضاعة، ليُثبت استلام الناقل لهذه البضاعة وشحنها تمهيدًا لنقلها إلى جهة الوصول. في القانون المصري، يخضع عقد النقل البحري وسند الشحن بشكل أساسي لأحكام قانون التجارة البحرية رقم 8 لسنة 1990.',
         'لسند الشحن ثلاث وظائف قانونية: إثبات استلام البضاعة (يتمتع بحجية في إثبات استلام الناقل للبضاعة وكميتها وحالتها وقت الشحن)، وإثبات عقد النقل (شروط العقد بين الشاحن والناقل)، وسند ملكية قابل للتداول — إذ تنتقل الحيازة القانونية للبضاعة بتداول السند نفسه، وهو ما يجعله أداة أساسية في التمويل التجاري وإعادة بيع البضائع أثناء رحلة النقل.',
         'بموجب سند الشحن، يحق لأطراف العلاقة (الشاحن، المرسل إليه، الناقل)، وكذلك أي طرف انتقلت إليه الحقوق أو الحائز الشرعي للسند، أن يتخذ الإجراءات القانونية المرتبطة بعقد النقل، بما في ذلك المطالبة بالتعويض عن تلف البضاعة أو عدم تسليمها.',
-        'أي نزاع يتعلق بتلف البضائع أو تأخر التسليم أو مسؤولية الناقل غالبًا ما يبدأ بفحص دقيق لبنود سند الشحن نفسه. للحصول على مساعدة في صياغة أو تفسير سند شحن، يمكنك حجز استشارة مع فريقنا.',
+        'أي نزاع يتعلق بتلف البضائع أو تأخر التسليم أو مسؤولية الناقل غالبًا ما يبدأ بفحص دقيق لبنود سند الشحن نفسه، وهي من أبرز المسائل التي يتناولها مكتبنا ضمن خدماته في [القانون البحري والشحن والخدمات القانونية المرتبطة بالموانئ](/ar/practice-areas/maritime-shipping-port-law). للحصول على مساعدة في صياغة أو تفسير سند شحن، يمكنك حجز استشارة مع فريقنا.',
       ],
       en: [
         "A bill of lading is the document a maritime carrier or its representative issues to the shipper, based on the data the shipper provides in writing upon delivering the goods, confirming the carrier's receipt of the goods and their loading for transport to the agreed destination. Under Egyptian law, the maritime carriage contract and the bill of lading are primarily governed by the Maritime Trade Law No. 8 of 1990.",
@@ -1731,7 +1801,7 @@ export const articles: Array<{
         'يخضع إبرام العقود في مصر بشكل أساسي لأحكام القانون المدني رقم 131 لسنة 1948، الذي يضع الإطار العام لانعقاد العقد وصحته — أبرزها توافق الإيجاب والقبول بين الأطراف، وتوافر الأهلية القانونية الكاملة لدى الموقِّعين، وأن يكون محل العقد وسببه مشروعين وغير مخالفين للنظام العام. العقد المكتوب بعناية هو ما يحمي الطرفين عند أي خلاف لاحق، لذلك فإن صياغته من البداية بشكل سليم أهم بكثير من محاولة تعديله بعد التوقيع.',
         'عند صياغة أي عقد، هناك بنود أساسية يجب أن يتضمنها بغض النظر عن نوعه: تحديد الأطراف بدقة (الأسماء الكاملة والصفات القانونية وبيانات التواصل)، وموضوع العقد (وصف واضح ومحدد لما يتفق عليه الطرفان)، والالتزامات المتبادلة بين الطرفين وبأي مواعيد، والقيمة المالية وطريقة السداد، ومدة العقد ومتى يبدأ وينتهي.',
         'كذلك: شروط الإنهاء أو الفسخ وأي شرط جزائي متفق عليه مسبقًا، وبند تسوية المنازعات (تقاضٍ أم تحكيم، وأي محكمة مختصة)، والظروف الطارئة والقوة القاهرة — ماذا يحدث إذا أصبح التنفيذ مستحيلاً أو مرهقًا بشكل استثنائي — وأخيرًا تاريخ ومكان تحرير العقد وتوقيع الطرفين.',
-        'كل بند من هذه البنود يحتاج صياغة دقيقة تناسب طبيعة العقد المحدد — فعقد البيع يختلف عن عقد الإيجار، وعقد الخدمات يختلف عن عقد الشراكة، ومحاولة استخدام نموذج عام جاهز دون تكييفه مع تفاصيل كل اتفاق قد يترك ثغرات تظهر فقط عند حدوث خلاف فعلي. لمراجعة أو صياغة عقد يناسب احتياجك تحديدًا، يمكنكم حجز استشارة مع فريقنا. ولو كان لديك عقد جاهز مُقدَّم لك من طرف آخر وتحتاج مراجعته قبل التوقيع، راجع [أهم البنود التي يجب مراجعتها قبل توقيع أي عقد](/ar/insights/what-to-review-before-signing-contract).',
+        'كل بند من هذه البنود يحتاج صياغة دقيقة تناسب طبيعة العقد المحدد — فعقد البيع يختلف عن عقد الإيجار، وعقد الخدمات يختلف عن عقد الشراكة، ومحاولة استخدام نموذج عام جاهز دون تكييفه مع تفاصيل كل اتفاق قد يترك ثغرات تظهر فقط عند حدوث خلاف فعلي. لمراجعة أو صياغة عقد يناسب احتياجك تحديدًا ضمن خدماتنا في [العقود والاتفاقيات التجارية](/ar/practice-areas/contracts-commercial-agreements)، يمكنكم حجز استشارة مع فريقنا. ولو كان لديك عقد جاهز مُقدَّم لك من طرف آخر وتحتاج مراجعته قبل التوقيع، راجع [أهم البنود التي يجب مراجعتها قبل توقيع أي عقد](/ar/insights/what-to-review-before-signing-contract).',
       ],
       en: [
         'Contract formation in Egypt is primarily governed by the Civil Code No. 131 of 1948, which sets out the general framework for a contract\'s formation and validity — most notably the meeting of offer and acceptance between the parties, full legal capacity on the part of the signatories, and a lawful subject matter and cause that does not violate public order. A carefully drafted contract is what protects both parties in the event of a later dispute, which is why getting the drafting right from the start matters far more than trying to amend it after signing.',
