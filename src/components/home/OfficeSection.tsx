@@ -57,7 +57,7 @@ export function OfficeSection({ locale }: { locale: Locale }) {
           </div>
 
           <a
-            href={siteConfig.googleMapsUrl}
+            href={siteConfig.googleBusinessProfileUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-block text-sm font-semibold text-cyan-600 underline-offset-4 hover:underline"
